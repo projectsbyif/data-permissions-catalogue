@@ -1,0 +1,29 @@
+/* Typography */
+@font-face {
+  font-family:'HKGroteskBold';
+  src:url('typefaces/HKGroteskBold.otf') format('opentype');
+  font-weight:bold;
+  font-style:normal;
+}
+
+@font-face {
+  font-family:'HKGroteskItalic';
+  src:url('typefaces/HKGroteskItalic.otf') format('opentype');
+  font-weight:normal;
+  font-style:italic;
+}
+
+@font-face {
+  font-family:'HKGroteskRegular';
+  src:url('typefaces/HKGroteskRegular.otf') format('opentype');
+  font-weight:normal;
+  font-style:normal;
+}
+
+body {
+  font-family:'HKGroteskRegular';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:'HKGroteskBold';
+}
