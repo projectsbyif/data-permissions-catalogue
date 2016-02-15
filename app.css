@@ -22,8 +22,41 @@
 
 body {
   font-family:'HKGroteskRegular';
+  font-size:20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family:'HKGroteskBold';
+}
+
+header p {
+  font-size:1em;
+}
+
+#if-header {
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+#if-header #logo {
+  height:2em;
+}
+
+#table-of-contents ul {
+  list-style-type: none;
+  padding-left:0;
+}
+
+main section {
+border-bottom:#EEE 1px solid;
+padding:0 0 2.5em 0;
+margin:2.5em 0 0 0;
+}
+
+main section h1 {
+  margin:0 0 0.5em 0;
+}
+
+main section h2 {
+  font-size:1em;
 }
