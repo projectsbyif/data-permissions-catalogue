@@ -54,6 +54,15 @@ section {
   padding-top:1em;
 }
 
+section h1 a {
+  text-decoration:none;
+  color:#ccc;
+}
+
+section h1 a:hover {
+  text-decoration:none;
+}
+
 figure {
   margin: 1em 0; 
 }
