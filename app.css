@@ -29,6 +29,51 @@ h1, h2, h3, h4, h5, h6 {
   font-family:'HKGroteskBold';
 }
 
+a, a:hover {
+  text-decoration:underline;
+}
+
+header {
+  background:#2646be;
+  color:#fff;
+  padding-top:2em;
+  padding-bottom:1em;
+  margin-bottom:1em;
+}
+
+header a {
+  color:#fff;
+}
+
+header p {
+  font-size:90%;
+}
+
+section {
+  padding-bottom:2em;
+  padding-top:1em;
+}
+
+figure {
+  margin: 1em 0; 
+}
+
+figure img {
+  max-height:300px;
+}
+
+aside {
+  margin-top:1em;
+  font-size:80%;
+}
+
+aside h2 {
+  font-size:100%;
+  padding-top:0.3em;
+}
+
+
+/*
 header p {
   font-size:1em;
 }
@@ -60,3 +105,4 @@ main section h1 {
 main section h2 {
   font-size:1em;
 }
+*/
