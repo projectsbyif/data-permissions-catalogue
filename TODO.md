@@ -5,3 +5,4 @@
  * make links IF purple
  * mark some as hypothetical
  * add more links
+ * decide if publish on if domain
