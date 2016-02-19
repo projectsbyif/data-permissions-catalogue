@@ -8,3 +8,4 @@
  * decide if publish on if domain
  * design polish
  * double check spelling
+ * add modernizr
