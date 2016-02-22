@@ -1,8 +1,5 @@
-* mark some as hypothetical
  * design polish
- * double check spelling
  * decide if publish on if domain
-
 
  Done:
  * add modernizr
@@ -11,4 +8,5 @@
  * add footer with links to github etc etc
  * give descriptions more user context/focus
  * rewrite intro/title
-  * add more links
+ * add more links
+ * double check spelling
