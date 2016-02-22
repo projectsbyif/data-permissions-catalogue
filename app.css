@@ -62,7 +62,6 @@ header p {
 
 section {
   padding:1em 0;
-  height:100vh;
   border-bottom:#EEE 1px solid;
 }
 
@@ -107,4 +106,10 @@ nav {
 
 #logo {
   height:2.5em;
+}
+
+@media (min-width: 992px) {
+  section {
+    height:100vh;
+  }
 }
