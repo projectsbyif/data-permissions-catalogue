@@ -10,5 +10,5 @@
  * make links IF purple
  * add footer with links to github etc etc
  * give descriptions more user context/focus
- * rewite intro/title
+ * rewrite intro/title
   * add more links
