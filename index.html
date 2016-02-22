@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js">
   <!-- <script src="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.js"></script> -->
   <link rel="stylesheet" href="app.css">
-  <title>Data Permissions Cataloge</title>
+  <title>IF Data Permissions Cataloge</title>
 </head>
 <body>
 
@@ -26,10 +26,8 @@
       <div class="large-12 columns">
         <h1>Data Permissions Cataloge</h1>
         <p>
-          This is an attempt to document different options for data sharing and permissions.
+          Documenting design patterns for personal data sharing, example uses and research.
         </p>
-        <p>It is maintained by <a href="https://project-if.com/">IF</a> and licenced under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-        <p>Please help improve it by contributing on <a href="https://github.com/Project-IF/data-permissions-catalog">GitHub</a></p>
       </div>
     </header>
 
@@ -39,7 +37,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          Someone's consent is assumed through continued use of a service.
+          Someone's consent is assumed through continued use of a service. They are shown a message at the begining of using the service, often with a link to further information.
         </figcaption>
         <img src="images/implied-consent.svg" alt="diagram of a laptop with a web browser accepting cookies" class="medium-6 small-12 columns" />
       </figure>
@@ -53,6 +51,9 @@
           <li>
             <a href="https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/"><acronym title="Information Commissioner's Office">ICO</acronym> &mdash; Cookies and similar technologies</a>
           </li>
+          <li>
+            <a href="https://econsultancy.com/blog/63118-17-useful-examples-of-eu-cookie-law-compliance/">17 useful examples of EU Cookie Law compliance</a>
+          </li>
         </ul>
       </aside>
     </section>
@@ -63,7 +64,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          People are asked to agree to a specific permission, for example access to a phone's camera or contacts, at the point that a service needs it to complete an action.
+          People are asked to agree to a <em>specific</em>em>, <em>atomic</em>em> permission at the point that a service needs it to complete a task. eg access to a phone's camera or contacts.
         </figcaption>
         <img src="images/just-in-time.svg" alt="An app asking for a user's location on their mobile phone" class="medium-6 small-12 columns" />
       </figure>
@@ -72,6 +73,12 @@
         <ul>
           <li>iOS permissions system</li>
           <li>HTML5 permissions system</li>
+        </ul>
+        <h2>Further information</h2>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/community/trustperms/">W3C Tust &amp; Permissions Community Group (inactive?)</a>
+          </li>
         </ul>
       </aside>
     </section>
@@ -82,7 +89,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          People are asked to agree to a specific set of permissions &mdash; for example access to a phone's camera, location and contacts &mdash; <em>before</em> they use or install a service.
+          People are asked to agree to a specific <em>set</em> of permissions &mdash; for example access to a phone's camera, location and contacts &mdash; <em>before</em> they use or install a service.
         </figcaption>
         <img src="images/upfront.svg" alt="Upfront permissions for an app" class="medium-6 small-12 columns" />
       </figure>
@@ -100,7 +107,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          Some services require a forced update to someone's data and then they will be notified of the facet so that they can appeal. An example of this is if points for speeding need to be added to someone's driving licence.
+          Some services require a forced update to someone's data, followed by a notification that it has occured so that they have an oppertunity to appeal. An example of this is if points for speeding need to be added to someone's driving licence.
         </figcaption>
         <img src="images/post-access.svg" alt="A letter informing someone points have been added to their driving licence" class="medium-6 small-12 columns" />
       </figure>
@@ -119,14 +126,14 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          During a transaction or installation of software, people are asked to agree to a fixed set of terms and conditions before they can proceed.
+          During a transaction, or during installation of software, people are asked to agree to a fixed set of terms and conditions before they can proceed.
         </figcaption>
         <img src="images/tcs.svg" alt="An example terms and conditions screen" class="medium-6 small-12 columns" />
       </figure>
       <aside  class="medium-6 small-12 columns">
         <h2>Examples</h2>
         <ul>
-          <li>All software ever</li>
+          <li>Most software</li>
         </ul>
         <h2>Further information</h2>
         <ul>
@@ -152,7 +159,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          A person can generate a unique code that allows a third-party to access their data, once and only once.
+          A person can generate a unique code that allows a third-party to access their data once and only once. It is up to the person who generated the code how they deliver it to the third-party.
         </figcaption>
         <img src="images/onetime.svg" alt="Examples of sharing data via a one-time access code" class="medium-6 small-12 columns" />
       </figure>
@@ -170,7 +177,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          Different to standardised terms and conditions, data licences allow someone to customise the terms they are willing to sue a service under &mdash; choosing who can use their data and for what purposes.
+          Different to standardised terms and conditions, data licences allow someone to customise the terms they are willing to use a service under &mdash; choosing who can use their data and for what purposes.
         </figcaption>
         <img src="images/data-licences.svg" alt="A user choosing a set of terms to share their data" class="medium-6 small-12 columns" />
       </figure>
@@ -187,7 +194,7 @@
 
     <section class="row">
       <h1 id="location-based-request" class="large-12 columns">
-        Location based request <a href="#location-based-request">¶</a>
+        Location based active request <a href="#location-based-request">¶</a>
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
@@ -200,6 +207,17 @@
         <ul>
           <li>No known implementation</li>
         </ul>
+        <h2>
+          Further information
+        </h2>
+        <ul>
+          <li><a href="https://github.com/google/eddystone">Eddystone protocol specification</a></li>
+          <li>
+            <a href="https://www.brooklynmuseum.org/community/blogosphere/2014/10/14/positioning-visitors-with-ibeacons/">
+            Brooklyn Museum &mdash; positioning visitors with iBeacons
+            </a>
+          </li>
+        </ul>
       </aside>
     </section>
 
@@ -209,7 +227,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          A person agrees to accept individual requests to share their data and
+          A person agrees to accept <em>individual</em> requests to share their data, and
           makes a decision based on that request - for example a request to share their location history with a company researching better transport for a city.
         </figcaption>
         <img src="images/active-request.svg" alt="A diagram of a beacon asking a user to volunteer some data" class="medium-6 small-12 columns" />
@@ -223,14 +241,13 @@
       </aside>
     </section>
 
-
     <section class="row">
       <h1 id="encryption" class="large-12 columns">
         Share using public key encryption<a href="#encryption">¶</a>
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          [needs description]
+          A person encrypts their data so that it can only decrypted by the recipient, and then shares it via an email or shared file system.
         </figcaption>
         <img src="images/encryption.svg" alt="Encrypted email software" class="medium-6 small-12 columns" />
       </figure>
@@ -249,7 +266,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          Users sell access to their data for a fee. Buyer finds data on public marketplace.
+          People sell access to their data for a fee via a public marketplace.
         </figcaption>
         <img src="images/market.svg" alt="Encrypted email software" class="medium-6 small-12 columns" />
       </figure>
@@ -288,7 +305,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          Gaining access through a series of answers that only the user should know. This information could be false - like lying about your name at Starbucks. Generally this pattern is used for identity rather than data access.
+          Gaining access to data through a series of answers that only the user should know. (This information could be false - like lying about your name at Starbucks). Generally this pattern is used for identity rather than data access.
         </figcaption>
         <img src="images/secret-questions.svg" alt="A web page asking a user their mother's maiden name and letters from their password" class="medium-6 small-12 columns" />
       </figure>
@@ -308,7 +325,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          Permission only removed if a person chooses to opt out.
+          A person's data is shared by default, but there is the option to opt-out.
         </figcaption>
         <img src="images/opt-out.svg" alt="A phone showing opt-out of location services screen and a laptop showing 'do not track'" class="medium-6 small-12 columns" />
       </figure>
@@ -336,7 +353,7 @@
         <h2>Examples</h2>
         <ul>
           <li>
-            
+            Phone fingerprint readers 
           </li>
         </ul>
       </aside>
@@ -348,7 +365,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          Storing data physically in a secure place. Only those who know the location of the secure place and how to access it have permission to access the data
+          Data is physically stored in a secure place. Only those who know the location of the secure place and how to access it have permission to access the data
         </figcaption>
         <img src="images/physical.svg" alt="A hand with a finger print highlighted" class="medium-6 small-12 columns" />
       </figure>
@@ -385,7 +402,7 @@
 
     <section class="row">
       <h1 id="fact-threshold" class="large-12 columns">
-        Fact Threshold <a href="#fact-threshold">¶</a>
+        Fact Threshold / smart contracts + data <a href="#fact-threshold">¶</a>
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
@@ -417,7 +434,12 @@
         <h2>Examples</h2>
         <ul>
           <li>
-            Apple Watch locks when watch is taken off the wrist
+            <a href="https://support.google.com/accounts/answer/3036546?hl=en">
+              Google Inactive Account Manager
+            </a>
+          </li>
+          <li>
+            Apple Watch (locks when watch it senses it is no longer on a user's wrist)
           </li>
         </ul>
       </aside>
@@ -433,14 +455,6 @@
         </figcaption>
         <img src="images/quorum.svg" alt="3 hand locking a box" class="medium-6 small-12 columns" />
       </figure>
-      <aside  class="medium-6 small-12 columns">
-        <h2>Examples</h2>
-        <ul>
-          <li>
-            
-          </li>
-        </ul>
-      </aside>
     </section>
 
     <section class="row">
@@ -457,7 +471,7 @@
         <h2>Examples</h2>
         <ul>
           <li>
-            [examples of digital medical tags?]
+            Yubikey / Yubikey Neo could possible be using in 'Static Password' mode to achive this.
           </li>
         </ul>
       </aside>
@@ -469,7 +483,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          User gives another person or software the authority to act on their behalf.
+          A person gives someone else, or third-party software, the authority to act on their behalf.
         </figcaption>
         <img src="images/delegate-permissions.svg" alt="Needs diagram" class="medium-6 small-12 columns" />
       </figure>
@@ -477,7 +491,7 @@
         <h2>Examples</h2>
         <ul>
           <li>
-            oAuth
+            <a href="http://oauth.net/2/">oAuth</a>
           </li>
           <li>
             Power of attorney
@@ -492,16 +506,15 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          A chronological record of who has accessed your data and why
+          A person can see a chronological record of who has accessed their data and why.
         </figcaption>
         <img src="images/activity-log.svg" alt="An activity log" class="medium-6 small-12 columns" />
       </figure>
       <aside  class="medium-6 small-12 columns">
         <h2>Examples</h2>
         <ul>
-          <li>iOS frequent locations</li>
-          <li>@Estonia activity log</li>
-          <li>Facebook activity log</li>
+          <li><a href="https://support.apple.com/en-us/HT203033">iOS frequent locations</a></li>
+          <li><a href="https://www.facebook.com/help/activitylog">Facebook activity log</a></li>
         </ul>
       </aside>
     </section>
@@ -512,7 +525,7 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          User gives another person or software the authority to act on their behalf in an emergency but the owner has the right to veto.
+          A person gives someone else they trust the authority to act on their behalf in an emergency by issueing them with an access code in advance. The trusted person can use the code to access the other person's data in an emergency, but only after a set period of time has elapsed (during which there is the opertunity to veto access).
         </figcaption>
         <img src="images/emergency-access.svg" alt="Emergency access" class="medium-6 small-12 columns" />
       </figure>
@@ -530,16 +543,10 @@
       </h1>
       <figure>
         <figcaption  class="medium-6 small-12 columns">
-          Deliberately making it difficult to access data or prove facts, by requiring a set amount of work to complete task.
+          A person publishes their data, but makes it difficult to access &mdash; for example by requiring a set amount of computational work to view the data, or by slicing up the data and placing it in different locations.
         </figcaption>
         <img src="images/digital-breadcrumbs.svg" alt="Needs diagram" class="medium-6 small-12 columns" />
       </figure>
-      <aside  class="medium-6 small-12 columns">
-        <h2>Examples</h2>
-        <ul>
-          <li>No known implementations</li>
-        </ul>
-      </aside>
     </section>
   </article>
   <footer class="row">
