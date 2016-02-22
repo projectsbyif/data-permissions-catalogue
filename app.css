@@ -66,12 +66,12 @@ section {
   border-bottom:#EEE 1px solid;
 }
 
-section h1 a {
+section h2 a {
   text-decoration:none;
   color:#b2b2b2;
 }
 
-section h1 a:hover {
+section h2 a:hover {
   text-decoration:none;
 }
 
