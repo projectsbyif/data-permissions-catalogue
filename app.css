@@ -56,6 +56,14 @@ header ul {
   margin:0;
 }
 
+@media only screen and (min-width: 40.063em) {
+  header ul li {
+    width:32%;
+    float:left;
+    padding-right:1%;
+  }
+}
+
 header p {
   font-size:90%;
 }
