@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js">
   <!-- <script src="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.js"></script> -->
   <link rel="stylesheet" href="app.css">
-  <title>IF Data Permissions Catalogue</title>
+  <title>IF Data Permissions Catalogue (alpha)</title>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
   <article>
     <header class="row">
       <div class="large-12 columns">
-        <h2>Data Permissions Catalogue</h2>
+        <h2>Data Permissions Catalogue (alpha)</h2>
         <p>
           Documenting design patterns for personal data sharing, example uses and research.
         </p>
@@ -45,7 +45,7 @@
           <li><a href="#location-based-request">Location based active request</a></li>
           <li><a href="#market">Market place</a></li>
           <li><a href="#encryption">Message using public key encryption</a></li>
-          <li><a href="#one-time-access">One-time access code</a></li>
+          <li><a href="#one-time-access">One-time code check</a></li>
           <li><a href="#opt-in">Opt in to give consent</a></li>
           <li><a href="#opt-out">Opt out to remove consent</a></li>
           <li><a href="#post-access">Post-access notification</a></li>
@@ -213,6 +213,11 @@
           </figcaption>
           <img src="images/digital-breadcrumbs.svg" alt="Needs diagram" />
         </figure>
+        <aside>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Secret_sharing">Secret sharing/splitting on Wikipedia</a></li>
+          </ul>
+        </aside>
       </section>
 
       <section class="large-9 columns">
@@ -361,7 +366,7 @@
         </h2>
         <figure>
           <figcaption>
-            <p>People sell access to their data for a fee via a public marketplace.</p>
+            <p>People sell access to their data for a fee via a public marketplace. This can be used in conjunction with <a href="#data-licences">data licensing</a> to allow people to set the terms of sale.</p>
           </figcaption>
           <img src="images/market.svg" alt="Encrypted email software" />
         </figure>
@@ -389,17 +394,28 @@
           <ul>
             <li><a href="https://keybase.io/">Keybase</a></li>
             <li><a href="https://gpgtools.org/">GPG Tools</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Off-the-Record_Messaging"></a>Off-the-Record Messaging</li>
+            <li></li>
+            <li><a href="https://whispersystems.org/#page-top">Signal</a></li>
+          </ul>
+          <h3>Further information</h3>
+          <ul>
+            <li><a href="https://github.com/ModernPGP/flows">UX Flows Framework &mdash; Modern PGP Working Group</a></li>
+            <li><a href="https://github.com/ModernPGP/keys">Key management design patterns &mdash; Modern PGP Working Group</a></li>
           </ul>
         </aside>
       </section>
 
       <section class="large-9 columns">
         <h2 id="once-time-access">
-          One-time access code <a href="#one-time-access">¶</a>
+          One-time code <a href="#one-time-access">¶</a>
         </h2>
         <figure>
           <figcaption>
-            <p>A person can generate a unique code that allows a third-party to access their data once and only once. It is up to the person who generated the code how they deliver it to the third-party.</p>
+            <p>A person can generate a unique code that allows a third-party to access their data at a set point in time. The code can only be used once It is up to the person who generated the code how they deliver it to the third-party.</p>
+            <p>
+              <strong>Note:</strong> a one-time code cannot prevent saving / screen capture of data by the person using the code.
+            </p>
           </figcaption>
           <img src="images/onetime.svg" alt="Examples of sharing data via a one-time access code" />
         </figure>
