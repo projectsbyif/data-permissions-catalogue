@@ -14,4 +14,4 @@
  * design polish
  * decide if publish on if domain
  * move text
-* check left align in chrome
+ * check left align in chrome
