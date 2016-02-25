@@ -71,6 +71,7 @@ header p {
 section {
   padding:1em 0;
   border-bottom:#EEE 1px solid;
+  margin-bottom:1em;
 }
 
 section h2 a {

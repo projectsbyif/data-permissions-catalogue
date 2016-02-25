@@ -1,5 +1,6 @@
- * design polish
- * decide if publish on if domain
+ * Add read me 
+
+
 
  Done:
  * add modernizr
@@ -10,3 +11,7 @@
  * rewrite intro/title
  * add more links
  * double check spelling
+ * design polish
+ * decide if publish on if domain
+ * move text
+* check left align in chrome
