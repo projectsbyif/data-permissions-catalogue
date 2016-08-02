@@ -1,8 +1,8 @@
 # Data Permissions ​Catalogue
 
- Documenting design patterns for personal data sharing, with example uses and research. Maintained by [IF](https://projectsbyif.com/).
+Documenting design patterns for personal data sharing, with example uses and research. Maintained by [IF](https://projectsbyif.com/).
 
- ## How to contribute
+## How to contribute
 
 1. Clone this repository.
 
@@ -12,7 +12,6 @@
 
   ```
   ---
-  layout: post
   title:  "New permissions pattern"
   ---
 
