@@ -8,6 +8,18 @@ header {
   background: #FFF;
   z-index: 1001;
 
+  #menu {
+    border-bottom: 0;
+    text-transform: uppercase;
+    height: 0.7em;
+    position: absolute;
+    top: calc(50% - 0.35em);
+    right: 10px;
+    font-family: 'Circular-Bold', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
+
   #logo {
     display: block;
     text-indent: -9999px;

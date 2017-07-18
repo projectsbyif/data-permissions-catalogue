@@ -39,6 +39,7 @@ p, li { line-height: 1.45; }
   h1 { font-size: 55px; }
   h2 { font-size: 36px; } }
 header { width: 100vw; height: 72px; border-bottom: 1px solid #f1f0ee; position: fixed; top: 0; left: 0; background: #FFF; z-index: 1001; }
+header #menu { border-bottom: 0; text-transform: uppercase; height: 0.7em; position: absolute; top: calc(50% - 0.35em); right: 10px; font-family: 'Circular-Bold', 'Helvetica Neue', 'Helvetica', sans-serif; font-size: 0.7em; letter-spacing: 1px; }
 header #logo { display: block; text-indent: -9999px; background-image: url("/images/if-logo.svg"); background-repeat: no-repeat; background-size: contain; margin: 0 auto; border-bottom: 0; height: 54px; width: 40px; position: absolute; top: 10px; left: calc(50% - 20px); }
 
 footer { background: #f0f4f6; padding: 18px; color: #212121; }
