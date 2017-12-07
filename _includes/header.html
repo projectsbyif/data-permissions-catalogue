@@ -1,20 +1,3 @@
 <header>
-  <a id="logo" href="https://projectsbyif.com">Projects by IF</a>
-  <a id="menu" href="#">Menu</a>
+  <a href="/" class="logo">IF</a>
 </header>
-
-<div id="intro">
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.description }} Maintained by <a href="https://projectsbyif.com">IF</a>. <a href="https://github.com/projectsbyif/data-permissions-catalogue">View on GitHub</a>.</p>
-  <p><a class="github-button" href="https://github.com/projectsbyif/data-permissions-catalogue/fork" data-style="mega" data-count-href="/projectsbyif/data-permissions-catalogue/network" data-count-api="/repos/projectsbyif/data-permissions-catalogue#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork projectsbyif/data-permissions-catalogue on GitHub">Fork</a></p>
-</div>
-
-<ul id="contents">
-  {% assign posts = site.posts | sort:"title"  %}
-
-  {% for p in posts %}
-    <li>
-      <p><a href="#{{ p.slug }}">{{ p.title }}</a></p>
-    </li>
-  {% endfor %}
-</ul>

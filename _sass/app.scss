@@ -1,0 +1,173 @@
+$color-seperator-grey: #f1f0ee;
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-moz-selection {
+  background: #212121;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #212121;
+  color: #fff;
+  text-shadow: none;
+}
+
+body {
+  font-family: "Calibre-Regular", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 19px;
+  color: #212121;
+}
+
+h1 {
+  font-family: "Circular-Bold", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Circular-Bold", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Circular-Bold", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 19px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+a, a:hover {
+  color: #000;
+  border-bottom: #000 1px solid;
+}
+
+header {
+  background: #FFF;
+  width: 100vw;
+  height: 72px;
+  border-bottom: #{$color-seperator-grey} 1px solid;
+  margin-bottom: 20px;
+
+  .logo {
+    display: block;
+    text-indent: -9999px;
+    background-image: url('/images/if-logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    border-bottom: 0;
+    height: 54px;
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 20px);
+  }
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #f0f4f6;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.contents {
+  list-style-type: none;
+  margin-left: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.examples {
+
+}
+
+.images {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+
+  img {
+    max-height: 500px;
+  }
+}
+
+main {
+  min-height: calc(100vh - 214px);
+}
+
+.grid-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 55px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  header {
+    margin-bottom: 40px;
+    height: 96px;
+
+    .logo {
+      width: 51px;
+      height: 69px;
+      left: calc(50% - 25.5px);
+      top: 14px;
+    }
+  }
+
+  footer {
+    margin-top: 40px;
+  }
+
+  .contents {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    margin-top: 80px;
+  }
+
+  .images {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .home-title {
+    text-align: center;
+  }
+
+  main {
+    min-height: calc(100vh - 287px);
+  }
+}

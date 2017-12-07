@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
+    <h2>{{ page.title }}</h2>
+
+    {% if page.images %}
+    <div class="images">
+     {% for image in page.images %}
+     <img src="{{ image.url }}" />
+     {% endfor %}
+    </div>
+    {% endif %}
+
+    {{ content }}
+
+    {% if page.examples %}
+    <h3>Examples</h3>
+
+    <ul class="examples">
+      {% for example in page.examples %}
+      <li>
+        <p>{% if example.url %}<a href="{{ example.url }}">{% endif %}{% if example.title %}{{ example.title }}{% endif %}{% if example.url %}</a>{% endif %}{% if example.title and example.description %}: {% endif %}{% if example.description %}{{ example.description }}{% endif %}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if page.further_reading %}
+    <h3>Further reading</h3>
+
+    <ul class="further_reading">
+      {% for item in page.further_reading %}
+      <li>
+        <p><a href="{{ item.url }}">{{ item.title }}</a>{% if item.description %}: {{ item.description }}{% endif %}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</div>

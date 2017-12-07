@@ -1,7 +1,16 @@
-# Site settings
-title: IF Data Permissions Catalogue
+title: Data Permissions Catalogue
 email: hello@projectsbyif.com
-description: Documenting design patterns for personal data sharing, with example uses and research. Work in progress.
+description: >-
+  Documenting design patterns for personal data sharing, with example uses and research.
+baseurl: ""
 url: "https://catalogue.projectsbyif.com"
 twitter_username: projectsbyif
 github_username:  projectsbyif
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+collections:
+  patterns:
+    output: true

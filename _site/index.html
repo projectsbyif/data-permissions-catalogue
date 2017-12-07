@@ -1,791 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IF Data Permissions Catalogue</title>
-  <meta name="description" content="Documenting design patterns for personal data sharing, with example uses and research. Work in progress.">
+  <title>Data Permissions Catalogue - IF</title>
+  <meta name="description" content="Documenting design patterns for personal data sharing, with example uses and research.">
+  <link rel="stylesheet" href="/assets/foundation.min.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://catalogue.projectsbyif.com/">
+  <link rel="icon" id="favicon" href="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/apple_touch_icon.png">
   <meta property="og:url" content="https://catalogue.projectsbyif.com">
-  <meta property="og:title" content="IF Data Permissions Catalogue">
-  <meta property="og:description" content="Documenting design patterns for personal data sharing, with example uses and research. Work in progress.">
+  <meta property="og:title" content="Data Permissions Catalogue - IF">
+  <meta property="og:description" content="Documenting design patterns for personal data sharing, with example uses and research.">
   <meta property="og:image" content="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/fb-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@projectsbyif">
   <meta name="twitter:creator" content="@projectsbyif">
-  <meta name="twitter:title" content="IF Data Permissions Catalogue">
-  <meta name="twitter:description" content="Documenting design patterns for personal data sharing, with example uses and research. Work in progress.">
+  <meta name="twitter:title" content="Data Permissions Catalogue - IF">
+  <meta name="twitter:description" content="Documenting design patterns for personal data sharing, with example uses and research.">
   <meta name="twitter:image" content="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/fb-image.png">
-  <link rel="icon" id="favicon" href="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/favicon.png">
-  <link rel="apple-touch-icon-precomposed" href="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/apple_touch_icon.png">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="https://catalogue.projectsbyif.com/">
-  <link rel="alternate" type="application/rss+xml" title="IF Data Permissions Catalogue" href="https://catalogue.projectsbyif.com/feed.xml">
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="/app.js" type="text/javascript"></script>
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
   <body>
     <header>
-  <a id="logo" href="https://projectsbyif.com">Projects by IF</a>
-  <a id="menu" href="#">Menu</a>
+  <a href="/" class="logo">IF</a>
 </header>
 
-<div id="intro">
-  <h1>IF Data Permissions Catalogue</h1>
-  <p>Documenting design patterns for personal data sharing, with example uses and research. Work in progress. Maintained by <a href="https://projectsbyif.com">IF</a>. <a href="https://github.com/projectsbyif/data-permissions-catalogue">View on GitHub</a>.</p>
-  <p><a class="github-button" href="https://github.com/projectsbyif/data-permissions-catalogue/fork" data-style="mega" data-count-href="/projectsbyif/data-permissions-catalogue/network" data-count-api="/repos/projectsbyif/data-permissions-catalogue#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork projectsbyif/data-permissions-catalogue on GitHub">Fork</a></p>
-</div>
+    <main class="grid-container">
+      <div class="grid-x grid-padding-x">
+  <div class="large-10 large-offset-1 small-12 cell">
+    <div class="home-title">
+      <h1>Data Permissions Catalogue</h1>
+      <p>Documenting design patterns for personal data sharing, with example uses and research.<br />Work in progress. Maintained by <a href="https://projectsbyif.com">IF</a>.</p>
+    </div>
 
-<ul id="contents">
-  
-
-  
-    <li>
-      <p><a href="#access-expiration">Access expiration</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#active-request">Active request</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#activity-log">Activity log</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#behavioural-biometrics">Behavioural biometrics</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#behavioural-patterns">Behavioural patterns</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#biometric-access-control">Biometric access control</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#control-of-physical-object">Control of physical object</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#data-licences">Data licences</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#dead-mans-handle">Dead man's handle</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#delegate-permissions">Delegate permissions</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#digital-breadcrumbs">Digital breadcrumbs</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#digital-proof">Digital proof</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#emergency-access">Emergency access</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#geofencing">Geofencing</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#image-based-authentication">Image-based authentication</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#implied-consent">Implied consent</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#just-in-time-consent">Just-in-time consent</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#location-based-active-request">Location based active request</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#magic-links">Magic links</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#market-place">Market place</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#message-using-public-key-encryption">Message using public key encryption</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#one-time-code">One-time code</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#open-link-sharing">Open link sharing</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#opt-in-to-give-consent">Opt in to give consent</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#opt-out-to-remove-consent">Opt out to remove consent</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#physical-gestures">Physical gestures</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#physical-security">Physical security</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#post-access-notification">Post-access notification</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#quorum">Quorum</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#secret-question">Secret question</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#smart-contract-access">Smart contract access</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#terms-and-conditions">Terms and conditions</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#two-factor-authentication">Two-factor authentication</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#up-front-consent">Up-front consent</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#usage-based-unlock">Usage-based unlock</a></p>
-    </li>
-  
-    <li>
-      <p><a href="#voice-verification">Voice verification</a></p>
-    </li>
-  
-</ul>
-
+    <ul class="contents">
     
-
-
-<div class="item">
-  <a class="anchor" id="access-expiration"></a>
-  <div class="container">
-    <h2>Access expiration<a href="#access-expiration" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/access-expiration.svg');"></div>
-    <p>Someone sets an expiry date for sharing. Permission is revoked after the time has elapsed.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="http://googleappsupdates.blogspot.co.uk/2016/03/set-expiration-dates-for-access-to.html">Google Docs expiration dates</a></li>
-</ul>
-
+      <li>
+        <p>
+          <a href="/patterns/access-through-secondary-means">Access through secondary means</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/active-request">Active request</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/activity-log">Activity log</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/behavioural-biometrics">Behavioural biometrics</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/behavioural-patterns">Behavioural patterns</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/data-licences">Data licences</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/delegate-permissions">Delegate permissions</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/emergency-access">Emergency access</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/end-to-end-encryption">End-to-end encryption</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/geofencing">Geofencing</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/gesture-matching">Gesture matching</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/implied-consent">Implied consent</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/inactivity-checking">Inactivity checking</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/just-in-time-consent">Just-in-time consent</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/key-ceremony">Key ceremony</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/marketplace">Marketplace</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/multi-factor-using-a-generator">Multi-factor using a generator</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/multi-factor-using-an-object">Multi-factor using an object</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/multi-factor-using-text-message">Multi-factor using text message</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/one-time-access">One-time access</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/opt-in-to-give-consent">Opt-in to give consent</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/opt-out-to-remove-consent">Opt-out to remove consent</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/physical-biometrics">Physical biometrics</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/physical-security">Physical security</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/post-access-notification">Post-access notification</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/private-link">Private links</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/secret-answer">Secret answer</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/smart-contract-access">Smart contract access</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/terms-and-conditions">Terms and conditions</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/time-limiting">Time limiting</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/up-front-consent">Up-front consent</a>
+        </p>
+      </li>
+    
+      <li>
+        <p>
+          <a href="/patterns/word-matching">Word matching</a>
+        </p>
+      </li>
+    
+    </ul>
   </div>
 </div>
 
-<div class="item">
-  <a class="anchor" id="active-request"></a>
-  <div class="container">
-    <h2>Active request<a href="#active-request" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/active-request.svg');"></div>
-    <p>A person agrees to accept <em>individual</em> requests to share their data and makes a decision based on that request. For example, a request to share their location history with a company researching better transport for a city.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://prolific.ac">Prolific Academic</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="activity-log"></a>
-  <div class="container">
-    <h2>Activity log<a href="#activity-log" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/activity-log.svg');"></div>
-    <p>A person can see a chronological record of who has accessed their data, when it was accessed and why.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://support.apple.com/en-us/HT203033">iOS frequent locations</a></li>
-  <li><a href="https://www.facebook.com/help/activitylog">Facebook activity log</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="behavioural-biometrics"></a>
-  <div class="container">
-    <h2>Behavioural biometrics<a href="#behavioural-biometrics" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/behavioural-biometrics.svg');"></div>
-    <p>The physical behaviour of a person trying to gain access to data is analysed against the past patterns of an authorised person. If they match, it’s assumed that they are that person and access is allowed.</p>
-
-<h3 id="further-information">Further information</h3>
-<ul>
-  <li><a href="http://www.cs.wm.edu/~hnw/paper/ccs11.pdf">An Efficient User Verification System via Mouse Movements (pdf)</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="behavioural-patterns"></a>
-  <div class="container">
-    <h2>Behavioural patterns<a href="#behavioural-patterns" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/behavioural-patterns.svg');"></div>
-    <p>Access is allowed if a person’s activity matches past behaviour. For example, a card transaction might be declined if used somewhere the user doesn’t usually go to.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Online bank transfer declined sent to an account they’ve not sent to before</li>
-  <li>Facebook blocks a login attempt if it comes from an IP the person doesn’t usually visit from</li>
-  <li>LastPass declines access to the service when it’s accessed from abroad. A link is sent to the account holder by email to confirm the attempt was legitimate</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="biometric-access-control"></a>
-  <div class="container">
-    <h2>Biometric access control<a href="#biometric-access-control" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/biometric-access-control.svg');"></div>
-    <p>Permission to access data is controlled through matching biometric data.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Phone fingerprint readers</li>
-  <li>Iris scanners</li>
-  <li>Voice verification</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="control-of-physical-object"></a>
-  <div class="container">
-    <h2>Control of physical object<a href="#control-of-physical-object" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/control-of-physical-object.svg');"></div>
-    <p>Data can only be shared with control of physical object, or a physical object contains the data.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="http://www.khushibaby.org/">Khushi Baby medical necklace</a></li>
-  <li><a href="https://www.yubico.com/products/yubikey-hardware/">Yubikey / Yubikey Neo</a> used in “static password” mode</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="data-licences"></a>
-  <div class="container">
-    <h2>Data licences<a href="#data-licences" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/data-licences.svg');"></div>
-    <p>Different to standardised terms and conditions, data licences allow someone to customise the terms they are willing to use a service under — choosing who can use their data and for what purposes.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://datalicences.projectsbyif.com">Data Licences exhibit by IF at <em>Big Bang Data</em></a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="dead-mans-handle"></a>
-  <div class="container">
-    <h2>Dead man's handle<a href="#dead-mans-handle" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/dead-mans-handle.svg');"></div>
-    <p>Data is shared if a secondary activity is stopped.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://support.google.com/accounts/answer/3036546?hl=en">Google Inactive Account Manager</a></li>
-  <li>Apple Watch: locks when the watch senses it’s no longer being worn</li>
-  <li>Netflix: asks if someone is still there after automatically playing a few episodes</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="delegate-permissions"></a>
-  <div class="container">
-    <h2>Delegate permissions<a href="#delegate-permissions" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/delegate-permissions.svg');"></div>
-    <p>A person gives someone else, or third-party software, the authority to act on their behalf.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="http://oauth.net/2/">oAuth</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Power_of_attorney">Power of attorney</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="digital-breadcrumbs"></a>
-  <div class="container">
-    <h2>Digital breadcrumbs<a href="#digital-breadcrumbs" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/digital-breadcrumbs.svg');"></div>
-    <p>Someone publishes their data, but makes it difficult to access — for example by requiring a set amount of computational work to view the data, or by slicing up the data and placing it in different locations.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://en.wikipedia.org/wiki/Secret_sharing">Secret sharing on Wikipedia</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="digital-proof"></a>
-  <div class="container">
-    <h2>Digital proof<a href="#digital-proof" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/digital-proof.svg');"></div>
-    <p>A code or paper ticket that can be checked digitally to confirm that someone has permission to do something.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://www.eventbrite.co.uk/">Eventbrite</a></li>
-  <li><a href="https://spideroak.com/solutions/kloak">Kloak Contact Cards</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="emergency-access"></a>
-  <div class="container">
-    <h2>Emergency access<a href="#emergency-access" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/emergency-access.svg');"></div>
-    <p>A person gives someone else they trust the authority to act on their behalf in an emergency by issuing them with an access code in advance. The trusted person can use the code to access the other person’s data in an emergency, but only after a set period of time has elapsed (during which there is the opportunity to veto access).</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://helpdesk.lastpass.com/emergency-access/">LastPass emergency access</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="geofencing"></a>
-  <div class="container">
-    <h2>Geofencing<a href="#geofencing" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/geofencing.svg');"></div>
-    <p>Access is controlled depending on the physical location of the person, using something like GPS.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>iOS reminders triggered by entering or leaving a defined location.</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="image-based-authentication"></a>
-  <div class="container">
-    <h2>Image-based authentication<a href="#image-based-authentication" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/image-based-authentication.svg');"></div>
-    <p>A key is encoded into an image, like a pattern or a two-dimensional barcode. It’s scanned by something which interprets the image and uses it in a cryptographic challenge with a key stored on the device of someone attempting to gain access. If the challenge is successful, access is granted.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://www.grc.com/sqrl/sqrl.htm">Quick Secure Reliable Login</a></li>
-  <li><a href="https://getclef.com/">Clef</a></li>
-  <li><a href="http://appleinsider.com/articles/15/05/05/apple-watch-particle-cloud-pairing-method-likely-revealed-in-new-patent">Apple Watch pairing animation</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="implied-consent"></a>
-  <div class="container">
-    <h2>Implied consent<a href="#implied-consent" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/implied-consent.svg');"></div>
-    <p>Someone’s consent is assumed through continued use of a service. They are shown a message at the beginning of using the service, often with a link to further information.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Websites complying with European Union cookie law</li>
-</ul>
-
-<h3 id="further-information">Further information</h3>
-<ul>
-  <li><a href="https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/">Information Commisioner’s Office: Cookies and similar technologies</a></li>
-  <li><a href="https://econsultancy.com/blog/63118-17-useful-examples-of-eu-cookie-law-compliance/">17 useful examples of EU Cookie Law compliance</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="just-in-time-consent"></a>
-  <div class="container">
-    <h2>Just-in-time consent<a href="#just-in-time-consent" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/just-in-time-consent.svg');"></div>
-    <p>People are asked to agree to a <em>specific, atomic</em> permission at the point that a service needs it to complete a task, e.g. access to a phone’s camera or contacts.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>iOS permissions system</li>
-  <li>HTML5 permissions system</li>
-</ul>
-
-<h3 id="further-information">Further information</h3>
-<ul>
-  <li><a href="https://www.w3.org/community/trustperms/">W3C Trust &amp; Permissions Community Group (inactive?)</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="location-based-active-request"></a>
-  <div class="container">
-    <h2>Location based active request<a href="#location-based-active-request" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/location-based-active-request.svg');"></div>
-    <p>A person is invited to share their data via a location based beacon. For example, when walking through a park they might be asked to volunteer their location data to help improve the design of the park.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>No known implementations</li>
-</ul>
-
-<h3 id="further-information">Further information</h3>
-<ul>
-  <li><a href="https://github.com/google/eddystone">Eddystone protocol specification</a></li>
-  <li><a href="https://www.brooklynmuseum.org/community/blogosphere/2014/10/14/positioning-visitors-with-ibeacons/">Brooklyn Museum: positioning visitors with iBeacons</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="magic-links"></a>
-  <div class="container">
-    <h2>Magic links<a href="#magic-links" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/magic-links.svg');"></div>
-    <p>Access requires clicking a link sent through secondary means. For example, someone signing into an account on a service would be sent a magic link to the email address associated with that account. It’s assumed that the email address is only accessible to the intended person.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="http://littlebigdetails.com/post/86569044847/slack-after-changing-your-password-slack-lets">Slack magic links</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="market-place"></a>
-  <div class="container">
-    <h2>Market place<a href="#market-place" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/market-place.svg');"></div>
-    <p>People sell access to their data for a fee via a public marketplace. This can be used in conjunction with <a href="#data-licences">data licensing</a> to allow people to set the terms of sale.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://datacoup.com/">Datacoup: a personal data market place</a></li>
-  <li><a href="http://www.citizenme.com/">Citizenme: cash rewards for interacting with brands</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="message-using-public-key-encryption"></a>
-  <div class="container">
-    <h2>Message using public key encryption<a href="#message-using-public-key-encryption" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/message-using-public-key-encryption.svg');"></div>
-    <p>A person encrypts their data so that it can only decrypted by the intended recipient and shares their data via an email or shared file system.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://keybase.io/">Keybase</a></li>
-  <li><a href="https://gpgtools.org/">GPG Tools</a></li>
-  <li><a href="https://whispersystems.org/#page-top">Signal</a></li>
-  <li>Off-the-Record messaging</li>
-</ul>
-
-<h3 id="further-information">Further information</h3>
-<ul>
-  <li><a href="https://github.com/ModernPGP/flows">UX Flows Framework by Modern PGP Working Group</a></li>
-  <li><a href="https://github.com/ModernPGP/keys">Key management design patterns by Modern PGP Working Group</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="one-time-code"></a>
-  <div class="container">
-    <h2>One-time code<a href="#one-time-code" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/one-time-code.svg');"></div>
-    <p>A person can generate a unique code that allows a third-party to access their data at a set point in time. The code can only be used once. It is up to the person who generated the code how they deliver it to the third-party.</p>
-
-<p>A one-time code cannot prevent saving/screen capture of data by the person using the code.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://dvladigital.blog.gov.uk/2016/01/12/share-driving-licence-goes-live/">UK Share Driving Licence service</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="open-link-sharing"></a>
-  <div class="container">
-    <h2>Open link sharing<a href="#open-link-sharing" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/open-link-sharing.svg');"></div>
-    <p>A link to data is generated and shared with those who have permission to access it. Sometimes the link is delisted from search engines to prevent other people from discovering it. No further authentication is needed when the link is accessed.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Google Docs: share with anyone that has link</li>
-  <li>Etherpad</li>
-  <li>Keybase file system</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="opt-in-to-give-consent"></a>
-  <div class="container">
-    <h2>Opt in to give consent<a href="#opt-in-to-give-consent" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/opt-in-to-give-consent.svg');"></div>
-    <p>A person gives explicit permission for their data to be shared.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://www.organdonation.nhs.uk/">UK Organ donations register</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="opt-out-to-remove-consent"></a>
-  <div class="container">
-    <h2>Opt out to remove consent<a href="#opt-out-to-remove-consent" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/opt-out-to-remove-consent.svg');"></div>
-    <p>A person’s data is shared by default, but there is the option to opt-out.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Do Not Track</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="physical-gestures"></a>
-  <div class="container">
-    <h2>Physical gestures<a href="#physical-gestures" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/physical-gestures.svg');"></div>
-    <p>Someone physically makes a gesture or pattern which is matched against an expected pattern.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Hand-written signatures</li>
-  <li><a href="https://sinustrom.info/2012/05/21/android-unlock-pattern-security-analysis/">Android unlock pattern</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="physical-security"></a>
-  <div class="container">
-    <h2>Physical security<a href="#physical-security" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/physical-security.svg');"></div>
-    <p>Data is physically stored in a secure place. Only those who know the location of the secure place and how to access it have permission to access the data.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://www.coinbase.com/security">Paper backups of Coinbase Wallets</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="post-access-notification"></a>
-  <div class="container">
-    <h2>Post-access notification<a href="#post-access-notification" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/post-access-notification.svg');"></div>
-    <p>Some services require a forced update to someone’s data, followed by a notification that it has occurred so that they have an opportunity to appeal. An example of this is if points for speeding need to be added to someone’s driving licence.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Driving licence points</li>
-  <li>Land Registry property alerts</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="quorum"></a>
-  <div class="container">
-    <h2>Quorum<a href="#quorum" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/quorum.svg');"></div>
-    <p>Permission is given when over a set amount of people agree, possibly using physical tokens like Yubikeys.</p>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="secret-question"></a>
-  <div class="container">
-    <h2>Secret question<a href="#secret-question" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/secret-question.svg');"></div>
-    <p>Gaining access to data through a series of answers that only an allowed person should know. (This information could be false — like lying about your name at Starbucks.) Generally this pattern is used for identity rather than data access.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Online banking</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="smart-contract-access"></a>
-  <div class="container">
-    <h2>Smart contract access<a href="#smart-contract-access" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/smart-contract-access.svg');"></div>
-    <p>Data is shared when a set of thresholds are met - for example on a certain date.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://www.ethereum.org/">Ethereum smart contracts</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="terms-and-conditions"></a>
-  <div class="container">
-    <h2>Terms and conditions<a href="#terms-and-conditions" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/terms-and-conditions.svg');"></div>
-    <p>During a transaction, or during installation of software, people are asked to agree to a fixed set of terms and conditions before they can proceed.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Most software</li>
-</ul>
-
-<h3 id="further-information">Further information</h3>
-<ul>
-  <li><a href="http://www.biggestlie.com/">The Biggest Lie: campaign against web terms &amp; conditions</a></li>
-  <li><a href="http://www.azarask.in/blog/post/making-privacy-policies-not-suck/">Making privacy policies not suck by Aza Raskin</a></li>
-  <li><a href="http://www.docracy.com/">Docracy: an open collection of legal contracts</a></li>
-  <li><a href="https://tosback.org/">TOSBack.org: tracking terms and conditions online</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="two-factor-authentication"></a>
-  <div class="container">
-    <h2>Two-factor authentication<a href="#two-factor-authentication" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/two-factor-authentication.svg');"></div>
-    <p>Someone intending to access data needs to satisfy two different “factors” of verifying their identity. Frequently, this takes the form of knowing a username and password and having access to a device which a code is sent to or generated from to confirm their possession of it.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://twofactorauth.org/">Two Factor Auth List</a>: a directory of services that use this</li>
-  <li><a href="https://en.wikipedia.org/wiki/Google_Authenticator">Google Authenticator</a></li>
-  <li><a href="https://www.yubico.com/products/yubikey-hardware/">YubiKey</a></li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="up-front-consent"></a>
-  <div class="container">
-    <h2>Up-front consent<a href="#up-front-consent" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/up-front-consent.svg');"></div>
-    <p>People are asked to agree to a specific set of permissions — for example access to a phone’s camera, location and contacts — before they use or install a service.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li>Android permissions system</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="usage-based-unlock"></a>
-  <div class="container">
-    <h2>Usage-based unlock<a href="#usage-based-unlock" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/usage-based-unlock.svg');"></div>
-    <p>Access depends on how frequently someone interacts with something.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android?hl=en">Progressive web app install</a>: On Android, a prompt is shown to add an icon to the home screen if someone visits a web app on two separate days over two weeks.</li>
-</ul>
-
-  </div>
-</div>
-
-<div class="item">
-  <a class="anchor" id="voice-verification"></a>
-  <div class="container">
-    <h2>Voice verification<a href="#voice-verification" class="permalink">&para;</a></h2>
-    <div class="illo" style="background-image:url('/images/voice-verification.svg');"></div>
-    <p>In an end-to-end encrypted system, people can verify each others identities by saying a word from a pair that is generated by a cryptographic function. If their communication is compromised (through a man-in-the-middle attack, for example) the words won’t match.</p>
-
-<h3 id="examples">Examples</h3>
-<ul>
-  <li><a href="https://whispersystems.org/">Signal</a>: encrypted voice chat</li>
-</ul>
-
-  </div>
-</div>
-
-
+    </main>
     <footer>
-  <div>
-    <p>This page is maintained by <a href="https://projectsbyif.com/">Projects by IF</a> and licenced under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="large-10 large-offset-1 small-12 cell">
+        <p>This website is maintained by <a href="https://projectsbyif.com">Projects by IF</a> and licenced under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
+      </div>
+    </div>
   </div>
 </footer>
 
