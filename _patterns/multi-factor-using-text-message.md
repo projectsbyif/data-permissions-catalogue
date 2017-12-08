@@ -4,7 +4,7 @@ layout: pattern
 title: Multi-factor using text message
 
 images:
-  - url: /images/multi-factor-with-sms.svg
+  - url: /images/multi-factor-with-text-message.svg
 
 examples:
 - title: Two Factor Auth List

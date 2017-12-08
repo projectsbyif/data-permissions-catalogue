@@ -7,7 +7,7 @@ images:
   - url: /images/opt-out-to-remove-consent.svg
 
 examples:
-  - name: Do Not Track
+  - title: Do Not Track
     url: https://en.wikipedia.org/wiki/Do_Not_Track
     description: a setting in browsers that helps prevent cross-website tracking. Some browsers have Do Not Track turned on by default.
 ---
