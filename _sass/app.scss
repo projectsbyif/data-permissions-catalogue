@@ -28,14 +28,14 @@ h1 {
   font-family: "Circular-Bold", "Helvetica Neue", "Arial", sans-serif;
   font-size: 28px;
   margin-bottom: 20px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h2 {
   font-family: "Circular-Bold", "Helvetica Neue", "Arial", sans-serif;
   font-size: 28px;
   margin-bottom: 20px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h3 {
@@ -117,6 +117,10 @@ main {
   padding-right: 20px;
 }
 
+.desktop-break {
+  display: none;
+}
+
 @media screen and (min-width: 720px) {
   body {
     font-size: 22px;
@@ -169,5 +173,13 @@ main {
 
   main {
     min-height: calc(100vh - 287px);
+  }
+
+  .mobile-break {
+    display: none;
+  }
+
+  .desktop-break {
+    display: inline;
   }
 }
