@@ -1,19 +1,37 @@
 ---
 layout: default
 ---
+{% assign categories = site.category %}
+{% assign patterns = site.patterns %}
 
 <div class="grid-x grid-padding-x">
-  <div class="large-10 large-offset-1 small-12 cell">
+  <div class="large-12 small-12 cell">
     <div class="home-title">
       <h1>{{ site.title }}</h1>
       <p>Documenting design patterns for personal data sharing, with example uses and research.<span class="mobile-break"> </span><span class="desktop-break"> <br /></span>Work in progress. Maintained by <a href="https://projectsbyif.com">IF</a>.</p>
     </div>
 
-    {% assign categories = site.category %}
-
-    {% for category in categories %}
-    <p><a href="/category/{{ category.title | slugify }}">{{ category.title }}</a></p>
-    {% endfor %}
-
+    <ul class="category-nav">
+      <li class="active"><a href="/all">All</a></li>
+      {% for category in categories %}
+      <li><a href="/category/{{ category.title | slugify }}">{{ category.title }}</a></li>
+      {% endfor %}
+    </ul>
   </div>
+</div>
+
+<div id="patterns-area" class="grid-x grid-padding-x">
+  {% for pattern in patterns %}
+  <div class="large-4 small-12 cell">
+    <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
+      <div class="image">
+        {% if pattern.images[0].url %}
+        <img src="{{ pattern.images[0].url }}" />
+        {% endif %}
+      </div>
+      <p class="title">{{ pattern.title }}</p>
+      <div class="description">{{ pattern.content | strip_html | normalize_whitespace | truncate: 80 | escape }}</div>
+    </a>
+  </div>
+  {% endfor %}
 </div>
