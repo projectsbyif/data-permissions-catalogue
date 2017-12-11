@@ -3,6 +3,8 @@ layout: pattern
 
 title: Activity log
 
+category: Transparency
+
 images:
   - url: /images/activity-log.svg
 

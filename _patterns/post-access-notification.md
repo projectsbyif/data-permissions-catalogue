@@ -3,6 +3,8 @@ layout: pattern
 
 title: Post-access notification
 
+category: Transparency
+
 images:
   - url: /images/post-access-notification.svg
 

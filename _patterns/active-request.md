@@ -3,6 +3,8 @@ layout: pattern
 
 title: Active request
 
+category: Giving consent
+
 images:
   - url: /images/active-request.svg
 

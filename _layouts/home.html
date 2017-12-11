@@ -9,14 +9,11 @@ layout: default
       <p>Documenting design patterns for personal data sharing, with example uses and research.<span class="mobile-break"> </span><span class="desktop-break"> <br /></span>Work in progress. Maintained by <a href="https://projectsbyif.com">IF</a>.</p>
     </div>
 
-    <ul class="contents">
-    {% for item in site.patterns %}
-      <li>
-        <p>
-          <a href="{{ item.slug | prepend: "/patterns/" }}">{{ item.title }}</a>
-        </p>
-      </li>
+    {% assign categories = site.category %}
+
+    {% for category in categories %}
+    <p><a href="/category/{{ category.title | slugify }}">{{ category.title }}</a></p>
     {% endfor %}
-    </ul>
+
   </div>
 </div>

@@ -14,3 +14,5 @@ plugins:
 collections:
   patterns:
     output: true
+  category:
+    output: true
