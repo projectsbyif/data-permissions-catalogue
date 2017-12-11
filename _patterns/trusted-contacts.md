@@ -1,7 +1,7 @@
 ---
 layout: pattern
 
-title: Emergency access
+title: Trust contacts
 
 category: Backup
 

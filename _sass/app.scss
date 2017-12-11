@@ -56,6 +56,10 @@ header {
   height: 72px;
   border-bottom: #{$color-seperator-grey} 1px solid;
   margin-bottom: 20px;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   .logo {
     display: block;
@@ -70,6 +74,23 @@ header {
     position: absolute;
     top: 10px;
     left: calc(50% - 20px);
+
+    &.white {
+      background-image: url('/images/if-logo-white.svg');
+    }
+  }
+
+  .mobile-menu-link {
+    font-family: "Circular-Bold", "Helvetica Neue", Helvetica, sans-serif;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    border-bottom: 0;
+    float: right;
+    margin-top: 26px;
+    margin-right: 20px;
+    color: #212121;
   }
 }
 
@@ -110,6 +131,7 @@ footer {
 
 main {
   min-height: calc(100vh - 214px);
+  margin-top: 91px !important;
 }
 
 .grid-container {
@@ -152,6 +174,45 @@ main {
   }
 }
 
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ff5e23;
+  text-align: center;
+  z-index: 1;
+  display: none;
+
+  ul {
+    margin: 0;
+    font-family: "Circular-Bold", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 36px;
+    height: 108px;
+    margin-top: calc(50vh - (108px / 2) - 20px);
+
+    li {
+      list-style-type: none;
+      margin: 0;
+      margin-bottom: 10px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      a {
+        border: 0;
+        color: #FFF;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
 .category-nav {
   list-style-type: none;
   margin: 0;
@@ -184,6 +245,10 @@ main {
       padding: 0;
     }
   }
+}
+
+.desktop-menu {
+  display: none;
 }
 
 @media screen and (min-width: 720px) {
@@ -238,6 +303,7 @@ main {
 
   main {
     min-height: calc(100vh - 287px);
+    margin-top: 135px !important;
   }
 
   .mobile-break {
@@ -264,5 +330,37 @@ main {
       margin-bottom: 10px;
       padding: 8px 10px 6px 10px;
     }
+  }
+
+  .mobile-menu-link {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: block;
+    margin: 0;
+    overflow: auto;
+    float: right;
+    margin-right: 40px;
+    margin-top: 32px;
+
+    li {
+      list-style-type: none;
+      float: left;
+      margin-right: 20px;
+
+      a {
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
   }
 }
