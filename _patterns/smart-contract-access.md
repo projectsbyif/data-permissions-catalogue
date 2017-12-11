@@ -3,6 +3,8 @@ layout: pattern
 
 title: Smart contract access
 
+category: Control access
+
 images:
   - url: /images/smart-contract-access.svg
 

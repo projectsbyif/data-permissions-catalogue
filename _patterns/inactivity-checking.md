@@ -3,6 +3,8 @@ layout: pattern
 
 title: Inactivity checking
 
+category: Control access
+
 images:
   - url: /images/inactivity-checking.svg
 

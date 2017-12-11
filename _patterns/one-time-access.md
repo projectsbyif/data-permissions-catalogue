@@ -3,6 +3,8 @@ layout: pattern
 
 title: One-time access
 
+category: Share
+
 images:
   - url: /images/one-time-access.svg
 

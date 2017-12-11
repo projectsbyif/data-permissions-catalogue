@@ -3,6 +3,8 @@ layout: pattern
 
 title: Delegate permissions
 
+category: Social consent
+
 images:
   - url: /images/delegate-permissions.svg
 

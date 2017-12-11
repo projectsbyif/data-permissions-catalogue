@@ -3,6 +3,8 @@ layout: pattern
 
 title: Behavioural biometrics
 
+category: Authenticate
+
 images:
   - url: /images/behavioural-biometrics.svg
 

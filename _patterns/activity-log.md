@@ -3,6 +3,8 @@ layout: pattern
 
 title: Activity log
 
+category: See access
+
 images:
   - url: /images/activity-log.svg
 

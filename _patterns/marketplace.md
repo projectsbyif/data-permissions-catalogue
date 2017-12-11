@@ -3,6 +3,8 @@ layout: pattern
 
 title: Marketplace
 
+category: Other
+
 images:
   - url: /images/marketplace.svg
 

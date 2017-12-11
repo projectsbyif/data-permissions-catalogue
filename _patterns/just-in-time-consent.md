@@ -3,6 +3,8 @@ layout: pattern
 
 title: Just-in-time consent
 
+category: Give consent
+
 images:
   - url: /images/just-in-time-consent.svg
 

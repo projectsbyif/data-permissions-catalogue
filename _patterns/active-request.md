@@ -3,6 +3,8 @@ layout: pattern
 
 title: Active request
 
+category: Control access
+
 images:
   - url: /images/active-request.svg
 

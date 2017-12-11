@@ -3,6 +3,8 @@ layout: pattern
 
 title: Terms and conditions
 
+category: Other
+
 images:
   - url: /images/terms-and-conditions.svg
 

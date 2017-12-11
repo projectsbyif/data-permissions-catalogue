@@ -3,6 +3,8 @@ layout: pattern
 
 title: Word matching
 
+category: Authenticate
+
 images:
   - url: /images/word-matching.svg
 

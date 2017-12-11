@@ -3,6 +3,8 @@ layout: pattern
 
 title: Multi-factor using an object
 
+category: Authenticate
+
 examples:
   - title: Estonia e-ID Card
     url: https://e-estonia.com/solutions/e-identity/id-card/

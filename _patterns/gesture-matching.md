@@ -3,6 +3,8 @@ layout: pattern
 
 title: Gesture matching
 
+category: Authenticate
+
 images:
   - url: /images/gesture-matching.svg
 
