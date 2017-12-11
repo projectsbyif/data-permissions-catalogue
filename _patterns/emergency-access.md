@@ -3,6 +3,8 @@ layout: pattern
 
 title: Emergency access
 
+category: Backup
+
 images:
   - url: /images/emergency-access.svg
 

@@ -3,6 +3,8 @@ layout: pattern
 
 title: End-to-end encryption
 
+category: Control access
+
 images:
   - url: /images/end-to-end-encryption.svg
 

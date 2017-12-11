@@ -3,6 +3,8 @@ layout: pattern
 
 title: Private links
 
+category: Share
+
 images:
   - url: /images/private-links.svg
 

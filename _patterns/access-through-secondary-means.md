@@ -3,6 +3,8 @@ layout: pattern
 
 title: Access through secondary means
 
+category: Control access
+
 images:
   - url: /images/access-through-secondary-means.svg
 

@@ -3,6 +3,8 @@ layout: pattern
 
 title: Behavioural patterns
 
+category: Authenticate
+
 images:
   - url: /images/behavioural-patterns.svg
 

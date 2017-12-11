@@ -3,6 +3,8 @@ layout: pattern
 
 title: Physical biometrics
 
+category: Authenticate
+
 images:
   - url: /images/physical-biometrics.svg
 

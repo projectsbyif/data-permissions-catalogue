@@ -3,6 +3,8 @@ layout: pattern
 
 title: Multi-factor using text message
 
+category: Authenticate
+
 images:
   - url: /images/multi-factor-with-text-message.svg
 

@@ -3,6 +3,8 @@ layout: pattern
 
 title: Implied consent
 
+category: Give consent
+
 images:
   - url: /images/implied-consent.svg
 

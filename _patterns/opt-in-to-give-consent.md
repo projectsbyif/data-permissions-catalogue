@@ -3,6 +3,8 @@ layout: pattern
 
 title: Opt-in to give consent
 
+category: Give consent
+
 images:
   - url: /images/opt-in-to-give-consent.svg
 

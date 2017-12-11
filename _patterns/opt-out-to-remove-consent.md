@@ -3,6 +3,8 @@ layout: pattern
 
 title: Opt-out to remove consent
 
+category: Give consent
+
 images:
   - url: /images/opt-out-to-remove-consent.svg
 

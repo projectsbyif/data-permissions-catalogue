@@ -3,6 +3,8 @@ layout: pattern
 
 title: Time limiting
 
+category: Control access
+
 images:
   - url: /images/time-limiting.svg
 

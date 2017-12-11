@@ -3,6 +3,8 @@ layout: pattern
 
 title: Secret answer
 
+category: Authenticate
+
 images:
   - url: /images/secret-answer.svg
 

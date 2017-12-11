@@ -3,6 +3,8 @@ layout: pattern
 
 title: Physical security
 
+category: Control access
+
 images:
   - url: /images/physical-security.svg
 

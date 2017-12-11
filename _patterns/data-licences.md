@@ -3,6 +3,8 @@ layout: pattern
 
 title: Data licences
 
+category: Manage consent
+
 images:
   - url: /images/data-licences.svg
 

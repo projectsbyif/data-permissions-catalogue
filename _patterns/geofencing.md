@@ -3,6 +3,8 @@ layout: pattern
 
 title: Geofencing
 
+category: Control access
+
 images:
   - url: /images/geofencing.svg
 
