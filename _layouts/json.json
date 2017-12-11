@@ -1,0 +1,21 @@
+---
+layout: nil
+---
+{% assign patterns = site.patterns | where: "category": page.category %}
+
+{
+  "title": "{{ page.title }}",
+  "patterns": [
+    {% for pattern in patterns %}
+    {
+      "title": "{{ pattern.title }}",
+      "slug": "{{ pattern.title | slugify }}",
+      "image": "{{ pattern.images[0].url }}",
+      "description": "{{ pattern.content | strip_html | normalize_whitespace | truncate: 80 | escape }}"
+    },
+    {% endfor %}
+    {
+
+    }
+  ]
+}
