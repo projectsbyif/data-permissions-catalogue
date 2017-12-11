@@ -7,7 +7,6 @@ layout: default
 <div class="grid-x grid-padding-x">
   <div class="large-12 small-12 cell">
     <ul class="category-nav">
-      <li><a href="/all">All</a></li>
       {% for category in categories %}
       <li{% if category.title == page.title %} class="active"{% endif %}><a href="/category/{{ category.title | slugify }}">{{ category.title }}</a></li>
       {% endfor %}
@@ -15,7 +14,11 @@ layout: default
   </div>
 </div>
 
+{% if page.category == "All" %}
+{% assign patterns = site.patterns %}
+{% else if %}
 {% assign patterns = site.patterns | where: "category": page.category %}
+{% endif %}
 
 <div id="patterns-area" class="grid-x grid-padding-x">
   {% for pattern in patterns %}

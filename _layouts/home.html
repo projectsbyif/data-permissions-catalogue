@@ -12,9 +12,8 @@ layout: default
     </div>
 
     <ul class="category-nav">
-      <li class="active"><a href="/all">All</a></li>
       {% for category in categories %}
-      <li><a href="/category/{{ category.title | slugify }}">{{ category.title }}</a></li>
+      <li{% if category.title == "All" %} class="active"{% endif %}><a href="/category/{{ category.title | slugify }}">{{ category.title }}</a></li>
       {% endfor %}
     </ul>
   </div>

@@ -1,7 +1,11 @@
 ---
 layout: nil
 ---
+{% if page.category == "All" %}
+{% assign patterns = site.patterns %}
+{% else if %}
 {% assign patterns = site.patterns | where: "category": page.category %}
+{% endif %}
 
 {
   "title": "{{ page.title }}",
