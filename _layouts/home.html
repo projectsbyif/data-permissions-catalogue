@@ -26,7 +26,7 @@ layout: default
 
 <div id="patterns-area" class="grid-x grid-padding-x">
   {% for pattern in patterns %}
-  <div class="large-4 medium-6 small-12 cell">
+  <div class="small-12 medium-6 large-4 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
       <div class="image">
         {% if pattern.cover_image %}

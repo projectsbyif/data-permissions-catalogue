@@ -1,5 +1,5 @@
 $(function() {
-  const TEMPLATE = '<div class="large-4 small-12 cell"><a href="/patterns/{{ slug }}" class="pattern-block"><div class="image">{{ image }}</div><p class="title">{{ title }}</p><div class="description">{{ description }}</div></a></div>';
+  const TEMPLATE = '<div class="large-4 small-12 cell"><a href="/patterns/{{ slug }}" class="pattern-block"><div class="image">{{ image }}</div><p class="title">{{ title }}</p></a></div>';
   const DESKTOP_WIDTH = 720;
 
   $('.category-nav a').click(function(e) {

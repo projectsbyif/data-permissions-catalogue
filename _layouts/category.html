@@ -30,7 +30,6 @@ layout: default
         {% endif %}
       </div>
       <p class="title">{{ pattern.title }}</p>
-      <div class="description">{{ pattern.content | strip_html | normalize_whitespace | truncate: 80 | escape }}</div>
     </a>
   </div>
   {% endfor %}
