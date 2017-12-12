@@ -3,14 +3,12 @@ layout: page
 title: Contribute
 ---
 
-The Data Permissions Catalogue is a open source project, maintained by [IF](https://projectsbyif.com) since 2016.
+Every bit of feedback helps us make sure that this catalogue is a useful, up-to-date resource anyone can use.
 
-Contributions to the catalogue are encouraged. Every suggested new pattern or bit of feedback helps keep this a useful and current resource for everyone to use.
-
-There are two ways to contribute new patterns or feedback:
+If you've got an idea for a pattern, or some suggestions about how we can improve the catalogue, then please get in touch. There are two ways you can contribute:
 
 [ ‘form’ bottom ] or  [ ‘GitHub’ bottom ]
 
-Every contribution is reviewed before it’s potentially committed to the catalogue. People are credited on the pages they’ve contributed.
+The Data Permissions Catalogue is a open source project, built and  maintained by [IF](https://projectsbyif.com). It's licenced under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-The catalogue is licenced under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+##Contributors
