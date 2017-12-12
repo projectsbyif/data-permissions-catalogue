@@ -6,9 +6,9 @@ title: Activity based permission
 category: Control access
 
 images:
-  - url: /images/activity-based-permission.svg
+- url: /images/proximity-sharing.svg
 
-advantages: 
+advantages:
  - Retains convenience while providing some form of security
 
 limitations:
@@ -28,6 +28,3 @@ open-source:
 ---
 
 Controlling access to data based on what someone is currently doing. Devices could guess what a person is doing using sensors like gyroscopes, accelerometers or GPS. For example, a phone could automatically lock when it senses it’s on a table.
-
-
-

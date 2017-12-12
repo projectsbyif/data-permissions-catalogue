@@ -818,7 +818,7 @@ ul.no-bullet, ol.no-bullet {
 .grid-container {
   padding-right: 0.625rem;
   padding-left: 0.625rem;
-  max-width: 75rem;
+  max-width: 92rem;
   margin: 0 auto; }
   @media print, screen and (min-width: 40em) {
     .grid-container {

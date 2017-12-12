@@ -153,15 +153,17 @@ main {
   }
 
   .image {
-    height: 200px;
+    height: 250px;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    background: #FFEBDC;
   }
 
   img {
-    max-height: 200px;
+    max-height: 180px;
     width: 100%;
   }
 
@@ -414,8 +416,8 @@ iframe {
 
     .grid-x {
       margin: 0 auto !important;
-      width: 75rem;
-      max-width: 75rem;
+      width: 92rem;
+      max-width: 92rem;
     }
 
     .logo {
@@ -460,10 +462,6 @@ iframe {
 
   .desktop-break {
     display: inline;
-  }
-
-  .pattern-block {
-    margin-bottom: 80px;
   }
 
   .category-nav {

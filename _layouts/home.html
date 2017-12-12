@@ -26,7 +26,7 @@ layout: default
 
 <div id="patterns-area" class="grid-x grid-padding-x">
   {% for pattern in patterns %}
-  <div class="large-4 small-12 cell">
+  <div class="large-4 medium-6 small-12 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
       <div class="image">
         {% if pattern.cover_image %}
@@ -36,7 +36,6 @@ layout: default
         {% endif %}
       </div>
       <p class="title">{{ pattern.title }}</p>
-      <div class="description">{{ pattern.content | strip_html | normalize_whitespace | truncate: 80 | escape }}</div>
     </a>
   </div>
   {% endfor %}

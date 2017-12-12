@@ -6,7 +6,7 @@ title: Automation detection
 category: Control access
 
 images:
- - url: /images/automation-detection.svg
+- url: /images/proximity-sharing.svg
 
 advantages:
  - Reduces impact of automated access to systems, like denial of service, SPAM
