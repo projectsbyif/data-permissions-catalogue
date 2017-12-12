@@ -1,5 +1,6 @@
 $(function() {
   const TEMPLATE = '<div class="large-4 small-12 cell"><a href="/patterns/{{ slug }}" class="pattern-block"><div class="image">{{ image }}</div><p class="title">{{ title }}</p><div class="description">{{ description }}</div></a></div>';
+  const DESKTOP_WIDTH = 720;
 
   $('.category-nav a').click(function(e) {
     e.preventDefault();
@@ -96,4 +97,88 @@ $(function() {
       });
     }
   });
+
+  // Carousel
+  var currentImage = 0;
+  var numImages = 0;
+  var carouselActive = false;
+
+  function createCarousel() {
+    numImages = $('.pattern-image').find('.cell').length;
+
+    if (numImages <= 1 || (numImages > 1 && $(window).width() > DESKTOP_WIDTH)) {
+      return;
+    }
+
+    for (var i = 0; i < numImages; i++) {
+      $('.carousel-indicator .wrapper').append('<a href="#" class="dot">dot</a>');
+    }
+
+    $('.carousel-indicator .dot').first().addClass('active');
+
+    $('.pattern-image .cell').not(':first').hide();
+    $('.carousel-indicator').css({
+      'opacity': 0,
+      'display': 'flex'
+    });
+    $('.carousel-control').fadeIn(250);
+    $('.carousel-indicator').animate({
+      'opacity': 1
+    }, 250);
+
+    carouselActive = true;
+  }
+
+  function changeImage() {
+    $('.pattern-image .cell').hide();
+    $('.pattern-image .cell').eq(currentImage).show();
+    $('.carousel-indicator .dot').removeClass('active');
+    $('.carousel-indicator .dot').eq(currentImage).addClass('active');
+  }
+
+  function removeCarousel() {
+    currentImage = 0;
+    numImages = 0;
+    carouselActive = false;
+
+    $('.pattern-image .cell').show();
+    $('.carousel-indicator .wrapper').empty();
+    $('.carousel-control, .carousel-indicator').hide();
+  }
+
+  $('.carousel-control.previous').click(function(e) {
+    e.preventDefault();
+
+    if (currentImage == 0) {
+      return;
+    }
+
+    currentImage--;
+
+    changeImage();
+  });
+
+  $('.carousel-control.next').click(function(e) {
+    e.preventDefault();
+
+    if (currentImage == numImages - 1) {
+      return;
+    }
+
+    currentImage++;
+
+    changeImage();
+  });
+
+  $(window).resize(function() {
+    if (($(window).width() > DESKTOP_WIDTH) && carouselActive) {
+      removeCarousel();
+    } else if (($(window).width() < DESKTOP_WIDTH) && !carouselActive) {
+      createCarousel();
+    }
+  });
+
+  if ($(window).width() < DESKTOP_WIDTH) {
+    createCarousel();
+  }
 });

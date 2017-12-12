@@ -26,8 +26,10 @@ layout: default
   {% for pattern in patterns %}
   <div class="large-4 small-12 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
-      <div class="image{% if pattern.layout == "pattern-new" %} new{% endif %}">
-        {% if pattern.images[0].url %}
+      <div class="image">
+        {% if pattern.cover_image %}
+        <img src="{{ pattern.cover_image[0].url }}" />
+        {% else if pattern.images[0].url %}
         <img src="{{ pattern.images[0].url }}" />
         {% endif %}
       </div>
