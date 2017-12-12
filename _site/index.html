@@ -41,30 +41,40 @@
 </head>
 
   <body>
-    <header>
-  <a href="/" class="logo">IF</a>
-  <a href="#" class="mobile-menu-link">Menu</a>
-
-  <ul class="desktop-menu">
-    <li><a href="/about">About</a></li>
-    <li><a href="/contribute">Contribute</a></li>
-  </ul>
+    <header class="grid-container">
+  <div class="grid-x grid-padding-x">
+    <div class="large-6 small-10 cell">
+      <a href="/" class="logo">IF</a>
+      <p class="title">Data Permissions Catalogue</p>
+    </div>
+    <div class="small-2 large-0 cell mobile-menu-container">
+      <a href="#" class="mobile-menu-link">Menu</a>
+    </div>
+    <div class="small-0 large-6 cell desktop-menu-container">
+      <ul class="desktop-menu">
+        <li><a href="/about">About</a></li>
+        <li><a href="/contribute">Contribute</a></li>
+      </ul>
+    </div>
+  </div>
 </header>
 
     <main class="grid-container">
       
 
 
-<div class="grid-x grid-padding-x">
+<div class="grid-x grid-padding-x homepage-intro">
   <div class="large-9 small-12 cell">
-    <p class="mobile-title">Data Permissions Catalogue</p>
-    <h1 class="headline">Design patterns for personal data sharing – build products and services people can trust</h1>
-    <p><a href="/about">What are design patterns?</a></p>
+    <div>
+      <h1>A collection of design patterns for sharing personal data</h1>
+      <a href="/about">What are design patterns?</a>
+    </div>
   </div>
 </div>
 
 <div class="grid-x grid-padding-x">
   <div class="large-12 small-12 cell">
+    <h3>Filter by category</h3>
     <ul class="category-nav">
       
       <li class="active"><a href="/category/all">All</a></li>
@@ -301,6 +311,8 @@
     <a href="/patterns/multi-factor-using-a-generator" class="pattern-block">
       <div class="image">
         
+        <img src="" />
+        
       </div>
       <p class="title">Multi-factor using a generator</p>
       <div class="description">This type of multi-factor authentication involves a person entering a code ge...</div>
@@ -310,6 +322,8 @@
   <div class="large-4 small-12 cell">
     <a href="/patterns/multi-factor-using-an-object" class="pattern-block">
       <div class="image">
+        
+        <img src="" />
         
       </div>
       <p class="title">Multi-factor using an object</p>
@@ -415,7 +429,7 @@
   
   <div class="large-4 small-12 cell">
     <a href="/patterns/proximity-sharing" class="pattern-block">
-      <div class="image new">
+      <div class="image">
         
         <img src="/images/proximity-sharing.svg" />
         
@@ -513,7 +527,7 @@
     <a href="/patterns/verifiable-proof" class="pattern-block">
       <div class="image">
         
-        <img src="/images/verifiable-proof.svg" />
+        <img src="/images/verifiable-proof-cover.svg" />
         
       </div>
       <p class="title">Verifiable proof</p>

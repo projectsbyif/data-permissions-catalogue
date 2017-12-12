@@ -4,16 +4,18 @@ layout: default
 {% assign categories = site.category %}
 {% assign patterns = site.patterns %}
 
-<div class="grid-x grid-padding-x">
+<div class="grid-x grid-padding-x homepage-intro">
   <div class="large-9 small-12 cell">
-    <p class="mobile-title">{{ site.title }}</p>
-    <h1 class="headline">A collection of design patterns for sharing personal data</h1>
-    <p><a href="/about">What are design patterns?</a></p>
+    <div>
+      <h1>A collection of design patterns for sharing personal data</h1>
+      <a href="/about">What are design patterns?</a>
+    </div>
   </div>
 </div>
 
 <div class="grid-x grid-padding-x">
   <div class="large-12 small-12 cell">
+    <h3>Filter by category</h3>
     <ul class="category-nav">
       {% for category in categories %}
       <li{% if category.title == "All" %} class="active"{% endif %}><a href="/category/{{ category.title | slugify }}">{{ category.title }}</a></li>
