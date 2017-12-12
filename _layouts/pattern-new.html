@@ -3,18 +3,42 @@ layout: default
 ---
 
 <div class="grid-x grid-padding-x">
-  <div class="large-8 large-offset-2 small-12 cell">
+  <div class="large-12 small-12 cell pattern-image">
     {% if page.images %}
-    <div class="images">
      {% for image in page.images %}
      <img src="{{ image.url }}" />
      {% endfor %}
-    </div>
+    {% endif %}
+  </div>
+
+  <div class="large-8 large-offset-2 small-12 cell">
+    <h2>{{ page.title }}<span class="pattern-category">{{ page.category }}</span></h2>
+    
+    {{ content }}
+
+    {% if page.advantages %}
+    <h3>Advantages</h3>
+
+    <ul>
+      {% for advantage in page.advantages %}
+      <li>
+        <p>{{ advantage }}</p>
+      </li>
+      {% endfor %}
+    </ul>
     {% endif %}
 
-    <h2>{{ page.title }}</h2>
+    {% if page.limitations %}
+    <h3>Limitations</h3>
 
-    {{ content }}
+    <ul>
+      {% for limitation in page.limitations %}
+      <li>
+        <p>{{ limitation }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
 
     {% if page.examples %}
     <h3>Examples</h3>

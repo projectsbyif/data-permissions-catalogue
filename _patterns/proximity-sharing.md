@@ -1,5 +1,5 @@
 ---
-layout: pattern
+layout: pattern-new
 
 title: Proximity sharing
 

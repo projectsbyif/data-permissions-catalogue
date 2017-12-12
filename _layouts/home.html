@@ -5,12 +5,15 @@ layout: default
 {% assign patterns = site.patterns %}
 
 <div class="grid-x grid-padding-x">
-  <div class="large-12 small-12 cell">
-    <div class="home-title">
-      <h1>{{ site.title }}</h1>
-      <p>Documenting design patterns for personal data sharing, with example uses and research.<span class="mobile-break"> </span><span class="desktop-break"> <br /></span>Work in progress. Maintained by <a href="https://projectsbyif.com">IF</a>.</p>
-    </div>
+  <div class="large-9 small-12 cell">
+    <p class="mobile-title">{{ site.title }}</p>
+    <h1 class="headline">Design patterns for personal data sharing – build products and services people can trust</h1>
+    <p><a href="/about">What are design patterns?</a></p>
+  </div>
+</div>
 
+<div class="grid-x grid-padding-x">
+  <div class="large-12 small-12 cell">
     <ul class="category-nav">
       {% for category in categories %}
       <li{% if category.title == "All" %} class="active"{% endif %}><a href="/category/{{ category.title | slugify }}">{{ category.title }}</a></li>
@@ -23,7 +26,7 @@ layout: default
   {% for pattern in patterns %}
   <div class="large-4 small-12 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
-      <div class="image">
+      <div class="image{% if pattern.layout == "pattern-new" %} new{% endif %}">
         {% if pattern.images[0].url %}
         <img src="{{ pattern.images[0].url }}" />
         {% endif %}
