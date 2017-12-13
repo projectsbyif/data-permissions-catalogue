@@ -38,7 +38,7 @@ layout: default
     <div class="carousel-indicator"><div class="wrapper"></div></div>
 
     <h2 style="margin-bottom: 10px;">{{ page.title }}</h2>
-    <p class="pattern-category-label">{{ page.category }}</p>
+    <p class="pattern-category-label"><a href="/category/{{ page.category | slugify }}">{{ page.category }}</a></p>
 
     {{ content }}
 

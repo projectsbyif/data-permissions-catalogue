@@ -330,6 +330,10 @@ main {
   background: #DDD;
   display: inline-block;
   margin-bottom: 40px;
+
+  a {
+    border-bottom: 0;
+  }
 }
 
 // PATTERN PAGE: IMAGES
