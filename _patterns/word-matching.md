@@ -1,6 +1,8 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Word matching
 
 category: Authenticate

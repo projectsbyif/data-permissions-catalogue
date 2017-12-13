@@ -1,6 +1,8 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Post-access notification
 
 category: See access

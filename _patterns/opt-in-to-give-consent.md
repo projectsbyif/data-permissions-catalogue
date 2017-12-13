@@ -1,6 +1,8 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Opt-in to give consent
 
 category: Give consent

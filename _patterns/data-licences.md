@@ -1,6 +1,8 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Data licences
 
 category: Manage consent

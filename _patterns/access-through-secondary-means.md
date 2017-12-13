@@ -1,6 +1,8 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Access through secondary means
 
 category: Control access

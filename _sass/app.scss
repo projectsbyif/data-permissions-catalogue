@@ -315,13 +315,20 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     background: #FFEBDC;
-  }
 
-  img {
-    max-height: 180px;
-    width: 100%;
+    img {
+      width: 100%;
+    }
+
+    &.illustration_version_1 {
+      padding: 20px;
+
+      img {
+        max-height: 180px;
+      }
+    }
   }
 
   .title {
@@ -357,6 +364,18 @@ main {
   left: -0.625rem;
   width: 100vw;
   height: 100vw;
+
+  &.illustration_version_1 {
+    background: #FFF;
+    position: inherit;
+    width: initial;
+    height: initial;
+
+    .cell {
+      display: block;
+      padding: 0;
+    }
+  }
 
   .cell {
     display: flex;
