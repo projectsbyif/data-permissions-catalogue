@@ -99,7 +99,7 @@ $(function() {
     // When past category title and scrolling down,
     // show category menu and hide header
     if (
-      scrollTop > ($('.homepage-intro').outerHeight() + $('.pattern-category-title').outerHeight()) &&
+      scrollTop > ($('.pattern-category-title').position().top + $('.pattern-category-title').outerHeight()) &&
       scrollTop > prevScrollTop
     ) {
       setInactiveTimeout();
@@ -111,7 +111,7 @@ $(function() {
     // When past category title and scrolling up,
     // hide category menu and show header
     if (
-      scrollTop > ($('.homepage-intro').outerHeight() + $('.pattern-category-title').outerHeight()) &&
+      scrollTop > ($('.pattern-category-title').position().top  + $('.pattern-category-title').outerHeight()) &&
       scrollTop < prevScrollTop
     ) {
       // Except when category menu is open
