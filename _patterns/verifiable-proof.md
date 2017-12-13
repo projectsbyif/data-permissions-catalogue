@@ -6,12 +6,12 @@ title: Verifiable proof
 category: Control access
 
 images:
-  - url: /images/test-1.svg
-  - url: /images/test-2.svg
-  - url: /images/test-3.svg
+  - url: /images/verifiable-proof-1.svg
+  - url: /images/verifiable-proof-2.svg
+  - url: /images/verifiable-proof-3.svg
 
 cover_image:
-  - url: /images/verifiable-proof-cover.svg
+  - url: /images/verifiable-proof-1.svg
 
 advantages:
  - Doesn’t rely on external infrastructure that could be malicious
