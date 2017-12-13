@@ -1,14 +1,14 @@
 ---
 layout: pattern
 
-title: Pseudo anonymous data
+title: Pseudo-anonymous data
 
 category: Share
 
 images:
   - url: /images/pseudo-anonymous-data.svg
 
-advantages: 
+advantages:
  - Data can be processed without revealing who it relates to
  - Gives people plausible deniability by not directly relating data and a person together
 
@@ -25,6 +25,3 @@ examples:
 Labelling data in a way that it can’t be traced back to a specific person. Rather than using a name, a random unique identifier is used.
 
 If data needs to be re-identified, the random identifier can be cross-referenced with data held elsewhere.
-
-
-
