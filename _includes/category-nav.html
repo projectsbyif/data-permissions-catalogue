@@ -2,7 +2,13 @@
 
 <nav class="category-nav">
   <a href="#" class="category-nav-button">
-    <p class="current-category">All patterns</p>
+    <p class="current-category">
+      {% if page.layout == "home" or page.category == "All" %}
+        All patterns
+      {% else %}
+        {{ page.category }}
+      {% endif %}
+    </p>
     <p class="arrow"></p>
   </a>
   <ul>
