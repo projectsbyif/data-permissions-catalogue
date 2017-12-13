@@ -14,6 +14,13 @@ layout: default
 
 {% include category-nav.html %}
 
+<div class="grid-x grid-padding-x pattern-category-title">
+  <div class="large-9 small-12 cell">
+    <h2>All patterns</h2>
+    <p>{{ patterns.size }} patterns</p>
+  </div>
+</div>
+
 <div id="patterns-area" class="grid-x grid-padding-x">
   {% for pattern in patterns %}
   <div class="small-12 medium-6 large-4 cell">

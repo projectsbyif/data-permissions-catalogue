@@ -62,11 +62,13 @@ $(function() {
 
       $('.page-menu').fadeOut(250);
 
-      $('header').animate({
-        'background-color': 'rgba(255, 255, 255, 0.0)'
-      }, 250, function() {
-        $('header').attr('style', '');
-      });
+      if ($(window).scrollTop() < $('.homepage-intro').outerHeight()) {
+        $('header').animate({
+          'background-color': 'rgba(255, 255, 255, 0.0)'
+        }, 250, function() {
+          $('header').attr('style', '');
+        });
+      }
 
       $('header .menu').removeClass('menu-opened');
     } else {
@@ -87,9 +89,9 @@ $(function() {
     }
   });
 
-  // Header interaction
+  // Scrolling interactions
   $(window).scroll(function() {
-    if (isMenuActive || isCategoryMenuActive) {
+    if (isMenuActive) {
       return;
     }
 
@@ -98,48 +100,51 @@ $(function() {
     // Menu timeout
     clearTimeout(menuTimeout);
 
-    if (scrollTop > $('.homepage-intro').outerHeight() / 2) {
+    // When past category title and scrolling down,
+    // show category menu and hide header
+    if (
+      scrollTop > ($('.homepage-intro').outerHeight() + $('.pattern-category-title').outerHeight()) &&
+      scrollTop > prevScrollTop
+    ) {
       setInactiveTimeout();
+      
+      $('.category-nav-button').fadeIn(250);
+      $('header').fadeOut(250);
     }
 
-    // Show category menu button when scrolling down,
-    // and half way past homepage header
-    if (scrollTop > ($('.homepage-intro').outerHeight() / 2)) {
-      if (scrollTop > prevScrollTop) {
-        $('.category-nav-button').fadeIn(250);
-      }
-    }
-
-    // When past the homepage header
-    if (scrollTop > $('.homepage-intro').outerHeight()) {
-      if (scrollTop > prevScrollTop) {
-        // Scrolling down
-        // Hide header if visible
-        if ($('header').is(':visible')) {
-          $('header').fadeOut(250, function() {
-            $('header').removeClass('fixed');
-          });
-        }
-      } else {
-        // Scrolling up
-        // Fade in header
-        $('header').addClass('fixed').fadeIn(250);
-
-        // Show category menu button
+    // When past category title and scrolling up,
+    // hide category menu and show header
+    if (
+      scrollTop > ($('.homepage-intro').outerHeight() + $('.pattern-category-title').outerHeight()) &&
+      scrollTop < prevScrollTop
+    ) {
+      // Except when category menu is open
+      if (!isCategoryMenuActive) {
         $('.category-nav-button').fadeOut(250);
       }
+
+      $('header').addClass('fixed').fadeIn(250);
     }
 
-    if (scrollTop < ($('.homepage-intro').outerHeight()) && scrollTop > ($('.homepage-intro').outerHeight() / 2) && scrollTop < prevScrollTop) {
-      $('header').fadeOut(250);
-      $('.category-nav-button').clearQueue().fadeOut(250);
+    // When past homepage banner and scrolling up,
+    // hide header and reset and close category menu if open
+    if (
+      scrollTop < ($('.homepage-intro').outerHeight() + $('.pattern-category-title').outerHeight()) &&
+      scrollTop < prevScrollTop
+    ) {
+      $('header, .category-nav-button').fadeOut(250);
+      closeCategoryMenu();
+      clearTimeout(menuTimeout);
     }
 
-    if (scrollTop < ($('.homepage-intro').outerHeight() / 2) && scrollTop < prevScrollTop) {
-      $('header').removeClass('fixed').attr('style', '');
+    // Force header reset when close to top of page
+    if (
+      scrollTop < ($('.homepage-intro').outerHeight() / 2)
+    ) {
+      $('header').finish().removeClass('fixed').attr('style', '').show();
     }
 
-    // Hide category when at bottom of page
+    // When at bottom of the page, hide category menu
     if (scrollTop + $(window).height() === $('html').height()) {
       $('.category-nav-button').fadeOut(250);
     }

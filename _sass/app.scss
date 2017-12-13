@@ -119,12 +119,14 @@ header {
 }
 
 footer {
-  padding-top: 20px;
+  padding-top: 14px;
   padding-bottom: 10px;
   background: #f0f4f6;
 
   p {
     margin-bottom: 0;
+    font-size: 0.8em;
+    line-height: 1.5;
   }
 }
 
@@ -215,6 +217,25 @@ footer {
   left: 0;
   opacity: 0;
   display: none;
+}
+
+.pattern-category-title {
+  margin-bottom: 20px;
+
+  h2, p {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    float: left;
+  }
+
+  p {
+    float: right;
+    text-align: right;
+    color: #AAA;
+    margin-top: 12px;
+  }
 }
 
 .page-menu {
