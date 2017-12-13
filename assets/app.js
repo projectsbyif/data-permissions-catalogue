@@ -56,6 +56,18 @@ $(function() {
   }
 
   // Mobile menu
+  $('header .title').click(function(e) {
+    e.preventDefault();
+
+    if (scrollTop !== 0) {
+      $('html, body').animate({
+        'scrollTop': 0
+      }, 250);
+    } else {
+      window.location.href = $(this).attr('href');
+    }
+  });
+
   $('header .menu').click(function(e) {
     e.preventDefault();
 
