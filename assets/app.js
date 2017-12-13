@@ -150,15 +150,18 @@ $(function() {
     // Show header if scrolling up and header is not in view
     if (scrollTop > $('header').outerHeight() && scrollTop < prevScrollTop) {
       $('header').addClass('fixed').fadeIn(250);
+      setInactiveTimeout();
     }
 
     // Hide header if scrolling down and header is in view
     if (scrollTop > $('header').outerHeight() && scrollTop > prevScrollTop) {
       $('header').fadeOut(250);
+      clearTimeout(menuTimeout);
     }
 
     if (scrollTop < $('header').outerHeight() && scrollTop < prevScrollTop) {
       $('header').removeClass('fixed').attr('style', '');
+      clearTimeout(menuTimeout);
     }
   }
 
@@ -172,7 +175,6 @@ $(function() {
 
     // Menu timeouts
     clearTimeout(menuTimeout);
-    setInactiveTimeout();
 
     if (currentPageUrl[1] === "") {
       homeScrollingRules();
