@@ -6,7 +6,7 @@ title: Activity based permission
 category: Control access
 
 images:
-- url: /images/proximity-sharing.svg
+- url: /images/activity-based-permission.svg
 
 advantages:
  - Retains convenience while providing some form of security
