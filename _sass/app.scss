@@ -130,6 +130,26 @@ footer {
   }
 }
 
+iframe {
+  width: 100%;
+}
+
+// PAGE STRUCTURE
+main {
+  min-height: calc(100vh - 241px);
+  padding-top: 58px;
+
+  &.home {
+    padding-top: 0;
+  }
+}
+
+.grid-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// MENUS
 .category-nav {
   z-index: 9999;
 
@@ -219,25 +239,6 @@ footer {
   display: none;
 }
 
-.pattern-category-title {
-  margin-bottom: 20px;
-
-  h2, p {
-    margin-bottom: 0;
-  }
-
-  h2 {
-    float: left;
-  }
-
-  p {
-    float: right;
-    text-align: right;
-    color: #AAA;
-    margin-top: 12px;
-  }
-}
-
 .page-menu {
   width: 100vw;
   height: calc(100vh - 57px);
@@ -265,45 +266,27 @@ footer {
   }
 }
 
-.contents {
-  list-style-type: none;
-  margin-left: 0;
-  margin-top: 40px;
-  margin-bottom: 40px;
+// CATEGORY PAGES: TITLE
+.pattern-category-title {
+  margin-bottom: 20px;
+
+  h2, p {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    float: left;
+  }
 
   p {
-    margin-bottom: 10px;
+    float: right;
+    text-align: right;
+    color: #AAA;
+    margin-top: 12px;
   }
 }
 
-.images {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  text-align: center;
-
-  img {
-    max-height: 500px;
-  }
-}
-
-main {
-  min-height: calc(100vh - 241px);
-  padding-top: 58px;
-
-  &.home {
-    padding-top: 0;
-  }
-}
-
-.grid-container {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.desktop-break {
-  display: none;
-}
-
+// CATEGORY PAGES: PATTERN BLOCK
 .pattern-block {
   border-bottom: 0;
   display: block;
@@ -341,62 +324,15 @@ main {
   }
 }
 
-#mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #ff5e23;
-  text-align: center;
-  z-index: 1;
-  display: none;
-
-  ul {
-    margin: 0;
-    font-family: "Circular-Bold", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 36px;
-    height: 108px;
-    margin-top: calc(50vh - (108px / 2) - 20px);
-
-    li {
-      list-style-type: none;
-      margin: 0;
-      margin-bottom: 10px;
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-
-      a {
-        border: 0;
-        color: #FFF;
-      }
-
-      p {
-        margin: 0;
-      }
-    }
-  }
+// PATTERN PAGE: CATEGORY
+.pattern-category-label {
+  padding: 5px 10px 0px 10px;
+  background: #DDD;
+  display: inline-block;
+  margin-bottom: 40px;
 }
 
-.pattern-category {
-  font-size: 0.5em;
-  margin-left: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: #212121 2px solid;
-  padding: 5px 10px;
-}
-
-.desktop-menu {
-  display: none;
-}
-
-iframe {
-  width: 100%;
-}
-
+// PATTERN PAGE: IMAGES
 .pattern-image {
   background: #ff5e23;
   margin-bottom: 10px;
@@ -407,6 +343,7 @@ iframe {
   }
 }
 
+// PATTERN PAGE: CAROUSEL
 .carousel-control {
   display: block;
   width: 32px;
@@ -470,6 +407,7 @@ iframe {
   }
 }
 
+// HOMEPAGE
 .homepage-intro {
   background-image: url('/images/homepage-background.svg');
   background-size: cover;
@@ -478,7 +416,6 @@ iframe {
   padding-right: 0.625rem !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
-  // margin-top: -19px !important;
   margin-bottom: 20px;
   position: relative;
   left: -20px;
@@ -503,10 +440,6 @@ iframe {
   }
 }
 
-.desktop-menu-container {
-  display: none;
-}
-
 @media screen and (min-width: 639px) {
   body {
     font-size: 22px;
@@ -529,63 +462,8 @@ iframe {
     margin-top: 40px;
   }
 
-  .contents {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    margin-top: 80px;
-  }
-
-  .images {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-
-  .home-title {
-    text-align: center;
-  }
-
   main {
     min-height: calc(100vh - 240px);
-  }
-
-  .mobile-break {
-    display: none;
-  }
-
-  .desktop-break {
-    display: inline;
-  }
-
-  .mobile-menu-link {
-    display: none;
-  }
-
-  .desktop-menu {
-    display: block;
-    margin: 0;
-    overflow: auto;
-    float: right;
-    margin-top: 23px;
-
-    li {
-      list-style-type: none;
-      float: left;
-      margin-right: 20px;
-
-      a {
-        border-bottom: 0;
-        margin-bottom: 0;
-      }
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
-  }
-
-  .mobile-menu {
-    display: none;
   }
 
   iframe {
@@ -593,10 +471,12 @@ iframe {
     height: 430px;
   }
 
+  // PATTERN PAGE: IMAGES
   .pattern-image {
     margin-bottom: 40px;
   }
 
+  // HOMEPAGE
   .homepage-intro {
     width: 100%;
     height: 400px;
@@ -609,13 +489,5 @@ iframe {
     .cell {
       margin-top: 5%;
     }
-  }
-
-  .mobile-menu-container {
-    display: none;
-  }
-
-  .desktop-menu-container {
-    display: block;
   }
 }
