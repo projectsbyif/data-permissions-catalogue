@@ -1,30 +1,29 @@
 ---
 layout: default
 ---
-{% assign categories = site.category %}
 {% assign patterns = site.patterns %}
 
-<div class="grid-x grid-padding-x">
+<div class="grid-x grid-padding-x homepage-intro">
   <div class="large-9 small-12 cell">
-    <p class="mobile-title">{{ site.title }}</p>
-    <h1 class="headline">A collection of design patterns for sharing personal data</h1>
-    <p><a href="/about">What are design patterns?</a></p>
+    <div>
+      <h1>A collection of design patterns for sharing personal data</h1>
+      <a href="/about" class="cta">What are design patterns?</a>
+    </div>
   </div>
 </div>
 
-<div class="grid-x grid-padding-x">
-  <div class="large-12 small-12 cell">
-    <ul class="category-nav">
-      {% for category in categories %}
-      <li{% if category.title == "All" %} class="active"{% endif %}><a href="/category/{{ category.title | slugify }}">{{ category.title }}</a></li>
-      {% endfor %}
-    </ul>
+{% include category-nav.html %}
+
+<div class="grid-x grid-padding-x pattern-category-title">
+  <div class="large-9 small-12 cell">
+    <h2>All patterns</h2>
+    <p>{{ patterns.size }} patterns</p>
   </div>
 </div>
 
 <div id="patterns-area" class="grid-x grid-padding-x">
   {% for pattern in patterns %}
-  <div class="large-4 small-12 cell">
+  <div class="small-12 medium-6 large-4 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
       <div class="image">
         {% if pattern.cover_image %}
@@ -34,7 +33,6 @@ layout: default
         {% endif %}
       </div>
       <p class="title">{{ pattern.title }}</p>
-      <div class="description">{{ pattern.content | strip_html | normalize_whitespace | truncate: 80 | escape }}</div>
     </a>
   </div>
   {% endfor %}

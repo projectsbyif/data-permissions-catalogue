@@ -3,19 +3,9 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main class="grid-container">
+    <main class="grid-container{% if page.layout == "home" %} home{% endif %}">
       {{ content }}
     </main>
     {% include footer.html %}
-    <div id="mobile-menu">
-      <ul>
-        <li>
-          <p><a href="/about">About</a></p>
-        </li>
-        <li>
-          <p><a href="/contribute">Contribute</a></p>
-        </li>
-      </ul>
-    </div>
   </body>
 </html>
