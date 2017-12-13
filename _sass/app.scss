@@ -409,34 +409,40 @@ iframe {
 
 .carousel-control {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   text-indent: -9999px;
   border-bottom: 0 !important;
   position: absolute;
-  top: calc(50% - 20px);
+  top: calc(50% - (32px / 2));
   display: none;
   border-bottom: 0;
 
   &.previous {
-    background: red;
+    background-image: url('/images/previous.svg');
     left: 0;
+    opacity: 0.25;
   }
 
   &.next {
-    background: green;
+    background-image: url('/images/next.svg');
     right: 0;
   }
 }
 
 .carousel-indicator {
   width: 100%;
-  height: 8px;
-  margin-bottom: 20px;
-  display: flex;
+  height: 0px;
+  margin-bottom: 22px;
   justify-content: center;
   align-items: center;
-  display: none;
+
+  &.active {
+    height: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    opacity: 0;
+  }
 
   .wrapper {
     overflow: auto;

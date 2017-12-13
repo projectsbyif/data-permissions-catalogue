@@ -174,10 +174,8 @@ $(function() {
     $('.carousel-indicator .dot').first().addClass('active');
 
     $('.pattern-image .cell').not(':first').hide();
-    $('.carousel-indicator').css({
-      'opacity': 0,
-      'display': 'flex'
-    });
+    $('.carousel-indicator').addClass('active');
+
     $('.carousel-control').fadeIn(250);
     $('.carousel-indicator').animate({
       'opacity': 1
@@ -191,6 +189,20 @@ $(function() {
     $('.pattern-image .cell').eq(currentImage).show();
     $('.carousel-indicator .dot').removeClass('active');
     $('.carousel-indicator .dot').eq(currentImage).addClass('active');
+
+    if (currentImage == 0) {
+      $('.carousel-control.previous').css({ 'opacity': 0.25 });
+    }
+
+    if (currentImage >= 1) {
+      $('.carousel-control.previous').css({ 'opacity': 1 });
+    }
+
+    if (currentImage == numImages - 1) {
+      $('.carousel-control.next').css({ 'opacity': 0.25 });
+    } else {
+      $('.carousel-control.next').css({ 'opacity': 1 });
+    }
   }
 
   function removeCarousel() {
