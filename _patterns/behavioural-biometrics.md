@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Behavioural biometrics
 
-category: Authenticate
+category: Authentication
 
 images:
   - url: /images/behavioural-biometrics.svg

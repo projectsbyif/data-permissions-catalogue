@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: One-time access
 
-category: Share
+category: Share data
 
 images:
   - url: /images/one-time-access.svg

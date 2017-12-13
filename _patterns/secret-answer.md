@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Secret answer
 
-category: Authenticate
+category: Authentication
 
 images:
   - url: /images/secret-answer.svg

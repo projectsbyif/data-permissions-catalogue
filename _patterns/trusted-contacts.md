@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Trust contacts
 
-category: Backup
+category: Backup data
 
 images:
   - url: /images/emergency-access.svg

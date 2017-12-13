@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Behavioural patterns
 
-category: Authenticate
+category: Authentication
 
 images:
   - url: /images/behavioural-patterns.svg

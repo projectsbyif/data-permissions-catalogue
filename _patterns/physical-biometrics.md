@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Physical biometrics
 
-category: Authenticate
+category: Authentication
 
 images:
   - url: /images/physical-biometrics.svg

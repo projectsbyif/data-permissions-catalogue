@@ -3,7 +3,7 @@ layout: pattern
 
 title: Multi-factor using a generator
 
-category: Authenticate
+category: Authentication
 
 examples:
   - title: Two Factor Auth List

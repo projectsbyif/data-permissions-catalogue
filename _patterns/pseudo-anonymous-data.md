@@ -3,7 +3,7 @@ layout: pattern
 
 title: Pseudo-anonymous data
 
-category: Share
+category: Share data
 
 images:
   - url: /images/pseudo-anonymous-data.svg

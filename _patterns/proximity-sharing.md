@@ -3,7 +3,7 @@ layout: pattern
 
 title: Proximity sharing
 
-category: Share
+category: Share data
 
 images:
  - url: /images/proximity-sharing.svg

@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Multi-factor using text message
 
-category: Authenticate
+category: Authentication
 
 images:
   - url: /images/multi-factor-with-text-message.svg

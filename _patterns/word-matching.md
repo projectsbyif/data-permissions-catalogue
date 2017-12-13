@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Word matching
 
-category: Authenticate
+category: Authentication
 
 images:
   - url: /images/word-matching.svg

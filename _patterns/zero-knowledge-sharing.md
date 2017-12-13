@@ -3,7 +3,7 @@ layout: pattern
 
 title: Zero-knowledge sharing
 
-category: Share
+category: Share data
 
 images:
   - url: /images/zero-knowledge-sharing.svg

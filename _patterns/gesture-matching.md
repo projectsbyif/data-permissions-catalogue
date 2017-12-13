@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Gesture matching
 
-category: Authenticate
+category: Authentication
 
 images:
   - url: /images/gesture-matching.svg

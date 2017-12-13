@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Private link
 
-category: Share
+category: Share data
 
 images:
   - url: /images/private-link.svg
