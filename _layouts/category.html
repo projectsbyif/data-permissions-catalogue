@@ -11,10 +11,10 @@ layout: default
 {% include category-nav.html %}
 
 <div class="grid-x grid-padding-x pattern-category-title">
-  <div class="small-9 cell">
-    <h2>{{ page.title }}</h2>
+  <div class="small-8 cell">
+    <h2>{% if page.title == "All" %}All patterns{% else %}{{ page.title }}{% endif %}</h2>
   </div>
-  <div class="small-3 cell category-counter">
+  <div class="small-4 cell category-counter">
     <p>{{ patterns.size }} pattern{% if patterns.size > 1 %}s{% endif %}</p>
   </div>
 </div>

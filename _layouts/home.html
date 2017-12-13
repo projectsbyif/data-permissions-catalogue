@@ -15,9 +15,11 @@ layout: default
 {% include category-nav.html %}
 
 <div class="grid-x grid-padding-x pattern-category-title">
-  <div class="large-9 small-12 cell">
+  <div class="small-8 cell">
     <h2>All patterns</h2>
-    <p>{{ patterns.size }} patterns</p>
+  </div>
+  <div class="small-4 cell category-counter">
+    <p>{{ patterns.size }} pattern{% if patterns.size > 1 %}s{% endif %}</p>
   </div>
 </div>
 
