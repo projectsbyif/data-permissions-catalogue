@@ -139,11 +139,6 @@ $(function() {
     ) {
       $('header').finish().removeClass('fixed').attr('style', '').show();
     }
-
-    // When at bottom of the page, hide category menu
-    if (scrollTop + $(window).height() === $('html').height()) {
-      $('.category-nav-button').fadeOut(250);
-    }
   }
 
   function normalScrollingRules() {
@@ -211,6 +206,11 @@ $(function() {
       }
 
       normalScrollingRules();
+    }
+
+    // When at bottom of the page, hide category menu
+    if (scrollTop + $(window).height() === $(document).height()) {
+      $('.category-nav-button').fadeOut(250);
     }
 
     prevScrollTop = scrollTop;
