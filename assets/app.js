@@ -147,6 +147,21 @@ $(function() {
   }
 
   function normalScrollingRules() {
+    // Show category selector when past category title and scrolling down
+    if (
+      scrollTop > ($('header').outerHeight() + $('.pattern-category-title').outerHeight()) &&
+      scrollTop > prevScrollTop
+    ) {
+      setInactiveTimeout();
+
+      $('.category-nav-button').fadeIn(250);
+    }
+
+    // Hide category selector when scrolling up
+    if (scrollTop < prevScrollTop) {
+      $('.category-nav-button').fadeOut(250);
+    }
+
     // Show header if scrolling up and header is not in view
     if (scrollTop > $('header').outerHeight() && scrollTop < prevScrollTop) {
       $('header').addClass('fixed').fadeIn(250);
