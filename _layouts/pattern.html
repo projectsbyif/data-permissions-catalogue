@@ -89,5 +89,28 @@ layout: default
       {% endfor %}
     </ul>
     {% endif %}
+
+    {% assign other_patterns = site.patterns | where: "category": page.category %}
+
+    {% if other_patterns.size > 1 %}
+      <h3 id="related-patterns-title">Related patterns</h3>
+
+      {% include category-nav.html %}
+
+      {% for pattern in other_patterns %}
+      <div class="small-12 medium-6 large-4 cell">
+        <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
+          <div class="image">
+            {% if pattern.cover_image %}
+            <img src="{{ pattern.cover_image[0].url }}" />
+            {% else if pattern.images[0].url %}
+            <img src="{{ pattern.images[0].url }}" />
+            {% endif %}
+          </div>
+          <p class="title">{{ pattern.title }}</p>
+        </a>
+      </div>
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
