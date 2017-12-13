@@ -90,6 +90,8 @@ layout: default
     </ul>
     {% endif %}
 
+    {% include work-in-progress.html %}
+
     {% assign other_patterns = site.patterns | where: "category": page.category %}
 
     {% if other_patterns.size > 1 %}

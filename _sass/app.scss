@@ -149,6 +149,19 @@ main {
   padding-right: 20px;
 }
 
+.wip-banner {
+  background: #EEE;
+  position: relative;
+  left: -20px;
+  width: 100vw;
+  padding: 15px 20px 5px 20px;
+  margin-bottom: 20px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
 // MENUS
 .category-nav {
   z-index: 9999;
@@ -420,7 +433,6 @@ main {
   padding-right: 0.625rem !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
-  margin-bottom: 20px;
   position: relative;
   left: -20px;
   width: 100vw;
