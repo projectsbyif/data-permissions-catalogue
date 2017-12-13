@@ -274,15 +274,15 @@ main {
     margin-bottom: 0;
   }
 
-  h2 {
-    float: left;
-  }
+  .category-counter {
+    position: relative;
 
-  p {
-    float: right;
-    text-align: right;
-    color: #AAA;
-    margin-top: 12px;
+    p {
+      color: #AAA;
+      position: absolute;
+      bottom: -2px;
+      right: 0.625rem;
+    }
   }
 }
 
