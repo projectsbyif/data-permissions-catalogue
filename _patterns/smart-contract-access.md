@@ -8,6 +8,12 @@ category: Control access
 images:
   - url: /images/smart-contract-access.svg
 
+advantages:
+  - conditions of accessed can be set in advance
+
+limitations:
+  - access is only possible when conditions are met, for example a certain date
+
 examples:
   - title: Ethereum
     url: https://www.ethereum.org/

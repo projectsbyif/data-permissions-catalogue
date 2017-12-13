@@ -8,6 +8,13 @@ category: Authenticate
 images:
   - url: /images/behavioural-biometrics.svg
 
+advantages:
+  - subtlety of behaviour being matched is hard to forge
+
+limitations:
+  - continuously tracking people activity
+  - people can be identified across services
+
 further_reading:
   - title: An Efficient User Verification System via Mouse Movements (PDF)
     url: http://www.cs.wm.edu/~hnw/paper/ccs11.pdf

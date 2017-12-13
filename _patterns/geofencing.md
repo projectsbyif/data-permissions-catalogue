@@ -8,6 +8,14 @@ category: Control access
 images:
   - url: /images/geofencing.svg
 
+advantages:
+  - data access can be stricted to chosen locations
+
+limitations:
+  - location can be spoofed (IAN)
+  - relies on reliable network connections
+  - requires third party infrastructure 
+
 examples:
   - title: iOS reminder app
     description: can trigger a reminder by leaving or entering a selected location

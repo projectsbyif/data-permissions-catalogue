@@ -1,12 +1,19 @@
 ---
 layout: pattern
 
-title: Trust contacts
+title: Emergency contact
 
 category: Backup
 
 images:
   - url: /images/emergency-access.svg
+
+advantages:
+  - regaining access doesn't rely on remembering secret answers or having other multi-factors like a generators, object or text message 
+
+limitations:
+  - relies on trust between people and who they nominate
+  - people can be socially engineered into nominating
 
 examples:
   - title: LastPass

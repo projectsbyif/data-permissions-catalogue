@@ -8,6 +8,14 @@ category: Give consent
 images:
   - url: /images/implied-consent.svg
 
+advantages:
+  - notifies someone about data accesss
+  - complies with certain regulations
+
+limitations:
+  - its often not clear what information is being accessed
+  - people are tracked across services
+
 examples:
   - title: EU 'Cookie Law'
     url: https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/
@@ -15,6 +23,8 @@ examples:
   - description: Privately-owned public spaces often have signs outlining conditions of access
 
 further_reading:
+  - title: What’s next for cookie regulation
+    url: https://projectsbyif.com/blog/whats-next-for-cookie-regulation
   - title: Information Commisioner’s Office
     url: https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/
     description: Cookies and similar technologies

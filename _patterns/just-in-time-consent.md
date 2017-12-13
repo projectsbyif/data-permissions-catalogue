@@ -8,6 +8,14 @@ category: Give consent
 images:
   - url: /images/just-in-time-consent.svg
 
+advantages:
+  - access is only requested at the moment a service needs it
+  - consent is specific to data being accessed
+
+limitations:
+  - peoople can be forced to consent as they need to use a service
+  - consent is sometimes taken to mean all future access
+
 examples:
   - title: iOS permissions
     description: apps will ask permission to use hardware or content the first time an app requires it

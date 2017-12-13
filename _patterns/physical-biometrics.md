@@ -8,6 +8,14 @@ category: Authenticate
 images:
   - url: /images/physical-biometrics.svg
 
+advantages:
+  - hard to forge
+  - freely available
+
+limitations:
+  - biometric infrastructe is expensive
+  - biometric databases are targets for attacked
+
 examples:
   - title: Touch ID
     url: https://support.apple.com/en-gb/HT204587

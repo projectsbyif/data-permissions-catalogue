@@ -8,6 +8,14 @@ category: Other
 images:
   - url: /images/marketplace.svg
 
+advantages:
+  - consent requires multiple people to agree
+  - keys make consent difficult to forge
+
+limitations:
+  - once data cannot be unsold
+  - second thing
+
 examples:
   - title: Datacoup
     url: https://datacoup.com/

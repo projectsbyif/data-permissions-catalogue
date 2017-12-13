@@ -8,6 +8,13 @@ category: See access
 images:
   - url: /images/activity-log.svg
 
+advantages:
+  - history of data access can be seen 
+
+limitations:
+  - logs cannot always be independently checked
+  - logs have to be proactively checked
+
 examples:
   - title: Frequent locations in iOS
     url: https://support.apple.com/en-us/HT203033

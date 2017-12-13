@@ -8,6 +8,12 @@ category: Authenticate
 images:
   - url: /images/word-matching.svg
 
+advantages:
+  - blank
+
+limitations:
+  - blank
+
 examples:
   - title: Signal
     url: https://signal.org

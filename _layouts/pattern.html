@@ -16,6 +16,30 @@ layout: default
 
     {{ content }}
 
+        {% if page.advantages %}
+    <h3>Advantages</h3>
+
+    <ul>
+      {% for advantage in page.advantages %}
+      <li>
+        <p>{{ advantage }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if page.limitations %}
+    <h3>Limitations</h3>
+
+    <ul>
+      {% for limitation in page.limitations %}
+      <li>
+        <p>{{ limitation }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
     {% if page.examples %}
     <h3>Examples</h3>
 
