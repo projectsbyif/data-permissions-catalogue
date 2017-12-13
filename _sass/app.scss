@@ -168,7 +168,7 @@ main {
 
   &.active {
     .category-nav-button .arrow {
-      transform: rotate(180deg);
+      background-image: url('/images/down.svg');
     }
   }
 
@@ -197,19 +197,16 @@ main {
     }
 
     .arrow {
-      height: 58px;
-      width: 58px;
+      height: 50px;
+      width: 50px;
       position: absolute;
       top: 0;
       right: 0;
       display: block;
-      font-size: 32px;
-      line-height: 58px;
-      color: #AAA;
-
-      &:after {
-        content: "▴";
-      }
+      background-image: url('/images/up.svg');
+      background-size: 35% 35%;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
   }
 
