@@ -1,5 +1,5 @@
 ---
-layout: pattern-new
+layout: pattern
 
 title: Verifiable proof
 
