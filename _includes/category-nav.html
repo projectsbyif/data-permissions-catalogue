@@ -1,0 +1,23 @@
+{% assign categories = site.category %}
+
+<nav class="category-nav">
+  <a href="#" class="category-nav-button">
+    <p class="current-category">All patterns</p>
+    <p class="arrow"></p>
+  </a>
+  <ul>
+    {% for category in categories %}
+    <li>
+      <a href="/category/{{ category.title | slugify }}">
+        {% if category.title == "All" %}
+        All patterns
+        {% else if %}
+        {{ category.title }}
+        {% endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<div class="category-nav-dismiss"></div>
