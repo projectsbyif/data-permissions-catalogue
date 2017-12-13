@@ -50,44 +50,6 @@ a, a:hover {
   border-bottom: #000 1px solid;
 }
 
-header {
-  background: #FFF;
-  height: 50px;
-  border-bottom: #{$color-seperator-grey} 1px solid;
-  margin-bottom: 19px !important;
-
-  .logo {
-    display: block;
-    text-indent: -9999px;
-    background-image: url('/images/if-logo.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-bottom: 0;
-    height: 30px;
-    width: 21px;
-    float: left;
-    margin-top: 11px;
-    margin-right: 10px;
-  }
-
-  .title {
-    float: left;
-    margin-top: 15px;
-    font-family: "Calibre-Semibold", "Helvetica Neue", Helvetica, sans-serif;
-  }
-
-  .mobile-menu-link {
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-bottom: 0;
-    background-image: url('/images/menu.svg');
-    background-size: 40% 40%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    text-indent: -9999px;
-  }
-}
 
 footer {
   padding-top: 20px;
@@ -381,28 +343,6 @@ iframe {
 
   h3 {
     font-size: 22px;
-  }
-
-  header {
-    height: 70px;
-    margin-bottom: 40px !important;
-    max-width: 100vw !important;
-
-    .grid-x {
-      margin: 0 auto !important;
-      max-width: 92rem;
-    }
-
-    .logo {
-      width: 33px;
-      height: 45px;
-      margin-top: 12px;
-      margin-right: 20px;
-    }
-
-    .title {
-      margin-top: 23px;
-    }
   }
 
   footer {
