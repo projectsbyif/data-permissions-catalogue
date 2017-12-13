@@ -180,6 +180,18 @@ $(function() {
     }
   }
 
+  function patternScrollingRules() {
+    var relatedPatternsTitlePos = $('#related-patterns-title').position().top;
+
+    if (scrollTop > relatedPatternsTitlePos && scrollTop > prevScrollTop) {
+      $('.category-nav-button').fadeIn(250);
+    }
+
+    if (scrollTop < prevScrollTop) {
+      $('.category-nav-button').fadeOut(250);
+    }
+  }
+
   // Scrolling interactions
   $(window).scroll(function() {
     if (isMenuActive) {
@@ -194,6 +206,10 @@ $(function() {
     if (currentPageUrl[1] === "") {
       homeScrollingRules();
     } else {
+      if (currentPageUrl[1] === "patterns") {
+        patternScrollingRules();
+      }
+
       normalScrollingRules();
     }
 
