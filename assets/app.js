@@ -1,14 +1,16 @@
 $(function() {
   // Constants
   const DESKTOP_WIDTH = 720;
-  
+
   // Runtime variables
   var isFixedHeaderVisible = false;
   var isMenuActive = false;
   var isCategoryMenuActive = false;
   var prevScrollTop = 0;
   var menuScrollTop = 0;
+  var scrollTop = 0;
   var menuTimeout;
+  var currentPageUrl = window.location.href.replace("http://", '').replace("https://", '').split('/');
 
   function setInactiveTimeout() {
     menuTimeout = setTimeout(function() {
@@ -92,17 +94,8 @@ $(function() {
     }
   });
 
-  // Scrolling interactions
-  $(window).scroll(function() {
-    if (isMenuActive) {
-      return;
-    }
-
-    var scrollTop = $(window).scrollTop();
-
-    // Menu timeout
-    clearTimeout(menuTimeout);
-
+  // Scrolling rules
+  function homeScrollingRules() {
     // When past category title and scrolling down,
     // show category menu and hide header
     if (
@@ -150,6 +143,41 @@ $(function() {
     // When at bottom of the page, hide category menu
     if (scrollTop + $(window).height() === $('html').height()) {
       $('.category-nav-button').fadeOut(250);
+    }
+  }
+
+  function normalScrollingRules() {
+    // Show header if scrolling up and header is not in view
+    if (scrollTop > $('header').outerHeight() && scrollTop < prevScrollTop) {
+      $('header').addClass('fixed').fadeIn(250);
+    }
+
+    // Hide header if scrolling down and header is in view
+    if (scrollTop > $('header').outerHeight() && scrollTop > prevScrollTop) {
+      $('header').fadeOut(250);
+    }
+
+    if (scrollTop < $('header').outerHeight() && scrollTop < prevScrollTop) {
+      $('header').removeClass('fixed').attr('style', '');
+    }
+  }
+
+  // Scrolling interactions
+  $(window).scroll(function() {
+    if (isMenuActive) {
+      return;
+    }
+
+    scrollTop = $(window).scrollTop();
+
+    // Menu timeouts
+    clearTimeout(menuTimeout);
+    setInactiveTimeout();
+
+    if (currentPageUrl[1] === "") {
+      homeScrollingRules();
+    } else {
+      normalScrollingRules();
     }
 
     prevScrollTop = scrollTop;
