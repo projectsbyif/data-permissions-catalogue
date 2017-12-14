@@ -1,7 +1,7 @@
 $(function() {
   // Constants
   const DESKTOP_WIDTH = 720;
-  const TEMPLATE = '<div class="small-12 medium-6 large-4 cell"><a href="/patterns/{{ slug }}" class="pattern-block"><div class="image{{ illustration_version }}">{{ image }}</div><p class="title">{{ title }}</p></a></div>';
+  const TEMPLATE = '<div class="small-12 medium-6 large-4 cell"><a href="/patterns/{{ slug }}" class="pattern-block"><div class="image{{ illustration_version }} color-{{ category }}">{{ image }}</div><p class="title">{{ title }}</p></a></div>';
 
   // Runtime variables
   var isFixedHeaderVisible = false;
@@ -200,7 +200,7 @@ $(function() {
     }
   }
 
-  // Scrolling interactions
+  // Scrolling interactions mobile
   $(window).scroll(function() {
     if (isMenuActive || $(window).width() > DESKTOP_WIDTH) {
       return;
@@ -227,6 +227,24 @@ $(function() {
     }
 
     prevScrollTop = scrollTop;
+  });
+
+  // Cache navigation original position on desktop
+  var desktopCategoryNavPos = 0;
+
+  // Scrolling interactions desktop
+  $(window).scroll(function() {
+    if (isMenuActive || $(window).width() < DESKTOP_WIDTH) {
+      return;
+    }
+
+    scrollTop = $(window).scrollTop();
+
+    if (scrollTop >= $('#category-nav-anchor').position().top) {
+      $('.category-nav').addClass('desktop-fixed');
+    } else {
+      $('.category-nav').removeClass('desktop-fixed');
+    }
   });
 
   // Carousel
@@ -362,6 +380,7 @@ $(function() {
           patternHtml = patternHtml.replace("{{ image }}", '<img src="' + pattern.image + '" />');
           patternHtml = patternHtml.replace("{{ title }}", pattern.title);
           patternHtml = patternHtml.replace("{{ description }}", pattern.description);
+          patternHtml = patternHtml.replace("{{ category }}", pattern.category_slug);
 
           if (pattern.illustration_version === "1") {
             patternHtml = patternHtml.replace("{{ illustration_version }}", " illustration_version_1");
@@ -389,6 +408,10 @@ $(function() {
         }
 
         $('.pattern-category-title .category-counter p').text(sizeString);
+
+        $('html, body').animate({
+          'scrollTop': $('.pattern-category-title h2').position().top
+        }, 250);
       });
     });
 

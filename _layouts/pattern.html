@@ -40,7 +40,7 @@ layout: default
     <div class="carousel-indicator"><div class="wrapper"></div></div>
 
     <h2 style="margin-bottom: 10px;">{{ page.title }}</h2>
-    <p class="pattern-category-label"><a href="/category/{{ page.category | slugify }}">{{ page.category }}</a></p>
+    <p class="pattern-category-label color-{{ page.category | slugify }}"><a href="/category/{{ page.category | slugify }}">{{ page.category }}</a></p>
 
     {{ content }}
 
@@ -108,7 +108,7 @@ layout: default
   {% if pattern.title != page.title %}
   <div class="small-12 large-6 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
-      <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %}">
+      <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ pattern.category | slugify }}">
         {% if pattern.cover_image %}
         <img src="{{ pattern.cover_image[0].url }}" />
         {% else if pattern.images[0].url %}

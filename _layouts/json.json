@@ -17,7 +17,8 @@ layout: nil
       "slug": "{{ pattern.title | slugify }}",
       "image": "{{ pattern.images[0].url }}",
       "description": "{{ pattern.content | strip_html | normalize_whitespace | truncate: 80 | escape }}",
-      "illustration_version": "{{ pattern.illustration_version }}"
+      "illustration_version": "{{ pattern.illustration_version }}",
+      "category_slug": "{{ pattern.category | slugify }}"
     },
     {% endfor %}
     {
