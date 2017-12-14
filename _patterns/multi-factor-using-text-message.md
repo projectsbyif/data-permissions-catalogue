@@ -1,8 +1,6 @@
 ---
 layout: pattern
 
-illustration_version: 1
-
 title: Multi-factor using text message
 
 category: Authentication
