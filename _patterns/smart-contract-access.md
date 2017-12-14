@@ -9,10 +9,10 @@ images:
   - url: /images/smart-contract-access.svg
 
 advantages:
-  - conditions of accessed can be set in advance
+  - Conditions of accessed can be set in advance
 
 limitations:
-  - access is only possible when conditions are met, for example a certain date
+  - Access is only possible when conditions are met, for betweens two dates
 
 examples:
   - title: Ethereum

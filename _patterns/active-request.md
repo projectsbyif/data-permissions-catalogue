@@ -9,12 +9,12 @@ images:
   - url: /images/active-request.svg
 
 advantages:
-  - consent choice is specific to data being shared
-  - consent is requested proactively
+  - Consent is specific to data being accessed
+  - Consent is requested proactively
 
 limitations:
-  - frequent and multiple requests can become a burdensome
-  - rejected requests can exclude people from parts of a service
+  - Frequent and multiple requests can become burdensome
+  - Rejected requests can exclude people from parts of a service
 
 examples:
   - title: Prolific Academic

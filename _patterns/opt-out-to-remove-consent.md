@@ -9,12 +9,12 @@ images:
   - url: /images/opt-out-to-remove-consent.svg
 
 advantages:
-  - someone has the choice to opt-out
-  - data is freely available for the public good, for example health research
+  - Someone has the choice to opt-out
+  - Data is freely available for the public good, for example health research
 
 limitations:
-  - someone has to proactively opt-out of sharing information
-  - often no grandular control on when, why and where data is share
+  - Someone has to proactively opt-out of sharing information
+  - Often no grandular control on what data is accessed
 
 examples:
   - title: Do Not Track

@@ -9,12 +9,12 @@ images:
   - url: /images/implied-consent.svg
 
 advantages:
-  - notifies someone about data accesss
-  - complies with certain regulations
+  - Notifies someone about data accesss
+  - Complies with certain regulations
 
 limitations:
-  - its often not clear what information is being accessed
-  - people are tracked across services
+  - Its often not clear what information is being accessed
+  - People are tracked across services
 
 examples:
   - title: EU 'Cookie Law'

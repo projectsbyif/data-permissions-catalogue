@@ -9,12 +9,12 @@ images:
   - url: /images/terms-and-conditions.svg
 
 advantages:
-  - simple to implement
+  - Simple to implement
 
 limitations:
-  - someone has no option but to agree or not use the service
-  - no granular control of what data is share
-  - multiple permissions are combined with other terms of service
+  - Someone has no option but to agree or not use the service
+  - No granular control of what data is share
+  - Multiple permissions are combined with other terms of service
 
 examples:
   - description: Most software during installation and digital services during registration

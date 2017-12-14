@@ -13,7 +13,7 @@ advantages:
 
 limitations:
  - Matching sensor data to actual activity can be error prone
- - Can’t prove identity through activity
+ - Identity cannot be authenticated by activity
 
 examples:
   - title: Do Not Disturb Apple iOS

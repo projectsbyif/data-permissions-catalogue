@@ -9,12 +9,12 @@ images:
   - url: /images/gesture-matching.svg
 
 advantages:
-  - time saving to unlock devices and access data
-  - more intuitive information for someone to remember
+  - Time saving to unlock devices and access data
+  - More intuitive information to remember than say a secret answer
 
 limitations:
-  - requires hardware such as touchscreens or in-device cameras
-  - gestures are stored locally on a device and can be potentially lost
+  - Requires hardware such as touchscreens or in-device cameras
+  - Gestures are stored locally on a device and can be potentially lost
 
 examples:
   - title: Unlock pattern on Android

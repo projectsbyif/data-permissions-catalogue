@@ -9,11 +9,11 @@ images:
   - url: /images/access-through-secondary-means.svg
 
 advantages:
-  - alternative to passwords
-  - uses existing authentication from other services
+  - Alternative to [passwords](/patterns/secret-answer) that can be guessed or stolen.
+  - Uses existing authentication from other services
 
 limitations:
-  - data becomes vulnerable should secondary means, such as a email account, gets hacked
+  - Data becomes vulnerable should secondary means, such as a email account, gets hacked
 
 examples:
   - title: Slack magic links

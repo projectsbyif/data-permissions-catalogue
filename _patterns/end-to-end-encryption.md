@@ -8,6 +8,12 @@ category: Control access
 images:
   - url: /images/end-to-end-encryption.svg
 
+advantages:
+  - Blank
+
+limitations:
+  - Blank
+
 examples:
   - title: PGP
     url: https://en.wikipedia.org/wiki/Pretty_Good_Privacy

@@ -9,13 +9,13 @@ images:
   - url: /images/behavioural-patterns.svg
 
 advantages:
-  - access is limited to past behaviours
-  - new access requires someone to authenticate again
-  - makes it easier to access data that is frequently requested
+  - Access is limited to past behaviours
+  - New access requires someone to authenticate again
+  - Makes it easier to access data that is frequently requested
 
 limitations:
-  - software the patterns identifies can be too simplistic
-  - matching past activities does not guarantee the access is valid
+  - Software the patterns identifies can be too simplistic
+  - Matching past activities does not guarantee the access is valid
 
 examples:
   - description: Google and Facebook require people to sign in again if they're accessing services from a new location

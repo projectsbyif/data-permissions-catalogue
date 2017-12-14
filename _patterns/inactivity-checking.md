@@ -9,11 +9,11 @@ images:
   - url: /images/inactivity-checking.svg
 
 advantages:
-  - access is limited to when someone is actively using a service
-  - simple to implement
+  - Access is limited to when someone is actively using a service
+  - Simple to implement
 
 limitations:
-  - inactivity can be defined too simply
+  - Inactivity can be defined too simply
 
 examples:
   - title: Apple Watch

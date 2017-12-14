@@ -9,12 +9,12 @@ images:
   - url: /images/opt-in-to-give-consent.svg
 
 advantages:
-  - data is not shared by default
-  - someone has a choice to not to share data
+  - Data is not shared by default
+  - Someone has a choice to not to share data
 
 limitations:
-  - data is not freely available for the public good, for example health research
-  - someone might need extra time and information to make informed decision
+  - Data is not freely available for the public good, for example health research
+  - Someone might need extra time and information to give informed consent
 
 examples:
   - title: UK organ donations register

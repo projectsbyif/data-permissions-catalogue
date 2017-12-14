@@ -9,11 +9,11 @@ images:
   - url: /images/up-front-consent.svg
 
 advantages:
-  - consent is sought before any data is accessed
-  - granular control of what data is share
+  - Consent is sought before any data is accessed
+  - Granular control of what data is accessed
 
 limitations:
-  - consent is asked without context of when data collected or used
+  - Consent is asked without context of when data is collected or used
 
 examples:
   - title: Google Play Store

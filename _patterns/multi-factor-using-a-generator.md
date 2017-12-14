@@ -6,13 +6,13 @@ title: Multi-factor using a generator
 category: Authenticate
 
 advantages:
-  - code is only valid short period of time
-  - alternative to [passwords](/patterns/secret-answer) that can be guessed or stolen.
-  - by requiring extra information sent to a device controlled by a particular person, it increases the confidence that the request to access data should be allowed.
+  - Code is only valid short period of time
+  - Alternative to [passwords](/patterns/secret-answer) that can be guessed or stolen.
+  - By requiring extra information sent to a device controlled by a particular person, it increases the confidence that the request to access data should be allowed.
 
 limitations:
-  - access to app or device can be lost
-  - requires someone to have the device on them
+  - Access to app or device can be lost
+  - Requires someone to have the device on them
 
 examples:
   - title: Two Factor Auth List
@@ -21,8 +21,6 @@ examples:
   - title: Google Authenticator
     url: https://en.wikipedia.org/wiki/Google_Authenticator
     description: a mobile phone app that manages and generates codes for digital services
-  - title: Yubikey
-    url: https://www.yubico.com/products/yubikey-hardware/
   - description: Some banks provide code generators to customers for logging in to online banking
 
 further_reading:

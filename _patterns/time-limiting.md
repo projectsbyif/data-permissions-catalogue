@@ -9,10 +9,10 @@ images:
   - url: /images/time-limiting.svg
 
 advantages:
-  - data can only be accessed within a set time
+  - Data can only be accessed within a set time
 
 limitations:
-  - date cannot be accessed once the defined time
+  - Date cannot be accessed once the defined time passed
 
 examples:
   - title: Google Docs

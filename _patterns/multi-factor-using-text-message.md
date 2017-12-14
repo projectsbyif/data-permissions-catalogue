@@ -9,13 +9,13 @@ images:
   - url: /images/multi-factor-with-text-message.svg
 
 advantages:
-  - requires access to a mobile phone number
-  - text (SMS) messages are widely available
-  - alternative to [passwords](/patterns/secret-answer) that can be guessed or stolen.
+  - Requires access to a mobile phone number
+  - Text (SMS) messages are widely available
+  - Alternative to [passwords](/patterns/secret-answer) that can be guessed or stolen.
 
 limitations:
-  - text messages can be intercepted 
-  - mobile phone numnber (SIM cards) can be cloned
+  - Text messages can be intercepted 
+  - Mobile phone numnber (SIM cards) can be cloned
 
 examples:
 - title: Two Factor Auth List

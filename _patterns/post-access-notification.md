@@ -9,12 +9,12 @@ images:
   - url: /images/post-access-notification.svg
 
 advantages:
-  - someone has a record of data access
-  - opportunity to appeal access or changes to data
+  - Someone has a record of data access
+  - Opportunity to appeal access or changes to data
 
 limitations:
-  - notifications can be slow especially when delivered by post
-  - relies on email and postal addresses being in use and up-to-date
+  - Notifications can be slow especially when delivered by post
+  - Relies on email and postal addresses being in use and up-to-date
 
 examples:
   - description: Driving licence points

@@ -9,12 +9,10 @@ images:
   - url: /images/marketplace.svg
 
 advantages:
-  - consent requires multiple people to agree
-  - keys make consent difficult to forge
+  - Blank
 
 limitations:
-  - once data cannot be unsold
-  - second thing
+  - Once data cannot be unsold
 
 examples:
   - title: Datacoup

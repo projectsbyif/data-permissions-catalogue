@@ -9,11 +9,11 @@ images:
   - url: /images/secret-answer.svg
 
 advantages:
-  - simple to implement
+  - Simple to implement
 
 limitations:
-  - secret answers can be guessed or stolen
-  - secret answers are often reused in multiple services
+  - Secret answers can be guessed or stolen
+  - Secret answers are often reused in multiple services
 
 examples:
   - description: Most authentication uses a form of secret answer

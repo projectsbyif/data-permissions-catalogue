@@ -9,12 +9,12 @@ images:
   - url: /images/key-ceremony.svg
 
 advantages:
-  - consent requires multiple people to agree
-  - keys make consent difficult to forge
+  - Consent requires multiple people to agree
+  - Keys make consent difficult to forge
 
 limitations:
-  - requires infrastructure like keys and [insert noun for 'digital lock']
-  - people can pressured into agree and have no means to change their decision
+  - Requires infrastructure like keys and [insert noun for 'digital lock']
+  - People can pressured into agree and have no means to change their decision
 
 further_reading:
   - title: Meet the seven people who hold the keys to worldwide internet security

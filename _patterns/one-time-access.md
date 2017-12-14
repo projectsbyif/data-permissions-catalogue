@@ -9,12 +9,12 @@ images:
   - url: /images/one-time-access.svg
 
 advantages:
-  - data can only be accessed once
-  - someone can share using a method of their choice
+  - Data can only be accessed once
+  - Someone can share using a method of their choice
 
 limitations:
-  - data can be screenshot and used even after the code or link expires
-  - cannot always validate who accessed the data
+  - Data can be screenshot and used even after the code or link is used
+  - Cannot always validate who accessed the data
 
 examples:
   - title: UK Share Driving Licence service

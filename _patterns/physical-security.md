@@ -9,11 +9,11 @@ images:
   - url: /images/physical-security.svg
 
 advantages:
-  - access is only possible by someone being in a physical location
-  - data cannot be access from the internet
+  - Access is only possible by someone being in a physical location
+  - Data cannot be access from the internet
 
 limitations:
-  - data can be lost, should something like a fire, happen to the secure place
+  - Data can be lost, should something like a fire, happen to the secure place
 
 examples:
   - title: Coinbase

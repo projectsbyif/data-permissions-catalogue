@@ -9,12 +9,12 @@ images:
   - url: /images/delegate-permissions.svg
 
 advantages:
-  - people don't have to make decisions they don't have time or ability to make themselves
-  - decision making can be shared between people
+  - People don't have to make decisions they have limited time or ability to make themselves
+  - Decision making can be shared between people
 
 limitations:
-  - people can be socially engineered in delegating permissions to someone else
-  - history of delegated permissions need to be logged
+  - People can be socially engineered in delegating permissions to someone else
+  - History of delegated permissions need to be logged
 
 examples:
   - title: OAuth

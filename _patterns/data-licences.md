@@ -9,9 +9,9 @@ images:
   - url: /images/data-licences.svg
 
 advantages:
-  - terms of access are set by the person using the service
-  - access can be customised
-  - licence can be set and applied across multiple services
+  - Terms of access are set by the person using the service
+  - Access can be customised
+  - Licence can be set and applied across multiple services
 
 limitations:
   - not sure

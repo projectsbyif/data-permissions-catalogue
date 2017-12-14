@@ -6,13 +6,12 @@ title: Multi-factor using an object
 category: Authenticate
 
 advantages:
-  - access requires possession of a unique object 
-  - object is harder to forge
-  - alternative to [passwords](/patterns/secret-answer) that can be guessed or stolen.
+  - Access requires possession of a unique object 
+  - Object is harder to forge
+  - Alternative to [passwords](/patterns/secret-answer) that can be guessed or stolen.
 
 limitations:
-  - object can be lost or damaged
-  - access requires someone to have the object on them
+  - Object can be lost or damaged
 
 examples:
   - title: YubiKey

@@ -9,11 +9,11 @@ images:
   - url: /images/activity-log.svg
 
 advantages:
-  - history of data access can be seen 
+  - History of data access can be seen 
 
 limitations:
-  - logs cannot always be independently checked
-  - logs have to be proactively checked
+  - Logs cannot always be independently checked
+  - Logs have to be proactively checked
 
 examples:
   - title: Frequent locations in iOS

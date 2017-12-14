@@ -9,12 +9,12 @@ images:
   - url: /images/geofencing.svg
 
 advantages:
-  - data access can be stricted to chosen locations
+  - Access can be stricted to chosen locations
 
 limitations:
-  - location can be spoofed (IAN)
-  - relies on reliable network connections
-  - requires third party infrastructure 
+  - Location can be spoofed (IAN)
+  - Relies on reliable network connections
+  - Requires third party infrastructure 
 
 examples:
   - title: iOS reminder app

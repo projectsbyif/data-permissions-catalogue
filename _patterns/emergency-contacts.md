@@ -1,7 +1,7 @@
 ---
 layout: pattern
 
-title: Emergency contact
+title: Emergency contacts
 
 category: Backup
 
@@ -9,11 +9,11 @@ images:
   - url: /images/emergency-access.svg
 
 advantages:
-  - regaining access doesn't rely on remembering secret answers or having other multi-factors like a generators, object or text message 
+  - Regaining access doesn't rely on remembering secret answers or having other multi-factors like a generators, object or text message 
 
 limitations:
-  - relies on trust between people and who they nominate
-  - people can be socially engineered into nominating
+  - Relies on trust between people and who they nominate
+  - People can be socially engineered into nominating someone
 
 examples:
   - title: LastPass
