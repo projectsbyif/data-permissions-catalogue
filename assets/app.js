@@ -2,6 +2,16 @@ $(function() {
   // Constants
   const DESKTOP_WIDTH = 720;
   const TEMPLATE = '<div class="small-12 medium-6 large-4 cell"><a href="/patterns/{{ slug }}" class="pattern-block"><div class="image{{ illustration_version }} color-{{ category }}">{{ image }}</div><p class="title">{{ title }}</p></a></div>';
+  const BACKGROUND_COLORS = [
+    '#FFEB82',
+    '#FAAF73',
+    '#F77787',
+    '#FAAFD7',
+    '#BE96FF',
+    '#7D9BE1',
+    '#96E1FA',
+    '#A0F0C3'
+  ];
 
   // Runtime variables
   var isFixedHeaderVisible = false;
@@ -10,8 +20,27 @@ $(function() {
   var prevScrollTop = 0;
   var menuScrollTop = 0;
   var scrollTop = 0;
+  var backgroundColorCounter = 1;
   var menuTimeout;
   var currentPageUrl = window.location.href.replace("http://", '').replace("https://", '').split('/');
+
+  // Homepage intro animation
+  animateHomepageIntro();
+
+  function animateHomepageIntro() {
+    $('.homepage-intro').animate({
+      'background-color': BACKGROUND_COLORS[backgroundColorCounter]
+    }, 9000, function() {
+      backgroundColorCounter++;
+
+      if (backgroundColorCounter === BACKGROUND_COLORS.length) {
+        backgroundColorCounter = 0;
+      }
+
+      animateHomepageIntro();
+    });
+  }
+
 
   function setInactiveTimeout() {
     menuTimeout = setTimeout(function() {

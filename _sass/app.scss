@@ -21,7 +21,7 @@ html {
 body {
   font-family: "Calibre-Regular", "Helvetica Neue", "Arial", sans-serif;
   font-size: 19px;
-  color: #212121;
+  color: #000F7D;
 }
 
 h1 {
@@ -46,7 +46,7 @@ h3 {
 }
 
 a:link, a:visited, a:hover, a:active {
-  color: #212121;
+  color: #000F7D;
   border-bottom: #212121 1px solid;
 }
 
@@ -492,9 +492,7 @@ main {
 
 // HOMEPAGE
 .homepage-intro {
-  background-image: url('/images/homepage-background.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #FFEB82;
   padding-left: 0.625rem !important;
   padding-right: 0.625rem !important;
   margin-left: 0 !important;
@@ -509,7 +507,7 @@ main {
   }
 
   .cta {
-    border: #000 2px solid;
+    border: #000F7D 2px solid;
     padding: 15px 15px 15px 15px;
     font-family: "Circular-Bold", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 0.7em;
