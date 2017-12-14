@@ -2,13 +2,15 @@
 layout: default
 ---
 
+{% assign other_patterns = site.patterns | where: "category": page.category %}
+
 <div class="grid-x grid-padding-x pattern-image{% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
   <a href="#" class="carousel-control previous">Previous</a>
   <a href="#" class="carousel-control next">Next</a>
   {% if page.images %}
     {% case page.images.size %}
       {% when 1 %}
-      <div class="large-4 large-offset-4 small-12 cell">
+      <div class="{% if page.illustration_version == 1%}large-12{% else %}large-4 large-offset-4{% endif %} small-12 cell">
         <img src="{{ page.images[0].url }}" />
       </div>
       {% when 2 %}
@@ -30,19 +32,21 @@ layout: default
       </div>
       {% endfor %}
     {% endcase %}
+    <div class="carousel-indicator"><div class="wrapper"></div></div>
   {% endif %}
 </div>
 
 <div class="grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
-    <div class="carousel-indicator"><div class="wrapper"></div></div>
-
     <h2 style="margin-bottom: 10px;">{{ page.title }}</h2>
-    <p class="pattern-category-label"><a href="/category/{{ page.category | slugify }}">{{ page.category }}</a></p>
+    <p class="pattern-category-label color-{{ page.category | slugify }}"><a href="/category/{{ page.category | slugify }}">{{ page.category }}</a></p>
 
+    <div class="pattern-section">
     {{ content }}
+    </div>
 
     {% if page.advantages %}
+    <div class="pattern-section">
     <h3>Advantages</h3>
 
     <ul>
@@ -52,9 +56,11 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% if page.limitations %}
+    <div class="pattern-section">
     <h3>Limitations</h3>
 
     <ul>
@@ -64,9 +70,11 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% if page.examples %}
+    <div class="pattern-section">
     <h3>Examples</h3>
 
     <ul>
@@ -76,9 +84,11 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% if page.further_reading %}
+    <div class="pattern-section">
     <h3>Further reading</h3>
 
     <ul class="further_reading">
@@ -88,33 +98,37 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% include work-in-progress.html %}
 
-    {% assign other_patterns = site.patterns | where: "category": page.category %}
-
     {% if other_patterns.size > 1 %}
-      <h3 id="related-patterns-title">Related patterns</h3>
-
-      {% include category-nav.html %}
-
-      {% for pattern in other_patterns %}
-      {% if pattern.title != page.title %}
-      <div class="small-12 medium-6 large-4 cell">
-        <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
-          <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %}">
-            {% if pattern.cover_image %}
-            <img src="{{ pattern.cover_image[0].url }}" />
-            {% else if pattern.images[0].url %}
-            <img src="{{ pattern.images[0].url }}" />
-            {% endif %}
-          </div>
-          <p class="title">{{ pattern.title }}</p>
-        </a>
-      </div>
-      {% endif %}
-      {% endfor %}
+    <h3 id="related-patterns-title">Related patterns</h3>
+    {% include category-nav.html %}
     {% endif %}
   </div>
 </div>
+
+{% if other_patterns.size > 1 %}
+<div class="related-patterns">
+  <div class="grid-x grid-padding-x">
+  {% for pattern in other_patterns %}
+  {% if pattern.title != page.title %}
+  <div class="small-12 large-6 cell">
+    <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
+      <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ pattern.category | slugify }}">
+        {% if pattern.cover_image %}
+        <img src="{{ pattern.cover_image[0].url }}" />
+        {% else if pattern.images[0].url %}
+        <img src="{{ pattern.images[0].url }}" />
+        {% endif %}
+      </div>
+      <p class="title">{{ pattern.title }}</p>
+    </a>
+  </div>
+  {% endif %}
+  {% endfor %}
+  </div>
+</div>
+{% endif %}

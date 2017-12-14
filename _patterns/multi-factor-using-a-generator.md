@@ -3,6 +3,9 @@ layout: pattern
 
 title: Multi-factor using a generator
 
+images:
+  - url: /images/multi-factor-with-generator.svg
+
 category: Authentication
 
 examples:

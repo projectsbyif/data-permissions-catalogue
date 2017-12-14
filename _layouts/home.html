@@ -4,7 +4,7 @@ layout: default
 {% assign patterns = site.patterns %}
 
 <div class="grid-x grid-padding-x homepage-intro">
-  <div class="large-9 small-12 cell">
+  <div class="large-8 small-12 cell">
     <div>
       <h1>A collection of design patterns for sharing personal data</h1>
       <a href="/about" class="cta">What are design patterns?</a>
@@ -21,7 +21,7 @@ layout: default
     <h2>All patterns</h2>
   </div>
   <div class="small-4 cell category-counter">
-    <p>{{ patterns.size }} pattern{% if patterns.size > 1 %}s{% endif %}</p>
+    <h2>({{ patterns.size }})</h2>
   </div>
 </div>
 
@@ -29,7 +29,7 @@ layout: default
   {% for pattern in patterns %}
   <div class="small-12 medium-6 large-4 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
-      <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %}">
+      <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ pattern.category | slugify }}">
         {% if pattern.cover_image %}
         <img src="{{ pattern.cover_image[0].url }}" />
         {% else if pattern.images[0].url %}
