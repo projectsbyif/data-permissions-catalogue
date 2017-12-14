@@ -1,6 +1,7 @@
 $(function() {
   // Constants
   const DESKTOP_WIDTH = 720;
+  const TEMPLATE = '<div class="small-12 medium-6 large-4 cell"><a href="/patterns/{{ slug }}" class="pattern-block"><div class="image{{ illustration_version }}">{{ image }}</div><p class="title">{{ title }}</p></a></div>';
 
   // Runtime variables
   var isFixedHeaderVisible = false;
@@ -201,7 +202,7 @@ $(function() {
 
   // Scrolling interactions
   $(window).scroll(function() {
-    if (isMenuActive) {
+    if (isMenuActive || $(window).width() > DESKTOP_WIDTH) {
       return;
     }
 
@@ -323,4 +324,75 @@ $(function() {
   if ($(window).width() < DESKTOP_WIDTH) {
     createCarousel();
   }
+
+  // Dynamic category filtering
+  $('.category-nav ul a').click(function(e) {
+    if ($(window).width() < DESKTOP_WIDTH) {
+      return;
+    }
+
+    e.preventDefault();
+
+    var targetTitle = $(this).text();
+    var targetSlug = $(this).text().toLowerCase().replace(' ', '-');
+
+    $('#patterns-area').animate({
+      'opacity': 0.25
+    }, 100, function() {
+      var jsonPath;
+
+      if (targetSlug === "all-patterns") {
+        jsonPath = "/category_json/all.json";
+        targetSlug = "all";
+      } else {
+        jsonPath = "/category_json/" + targetSlug + ".json"
+      }
+
+      $.getJSON(jsonPath, function(data) {
+        var patterns = data.patterns.slice(0, -1);
+
+        $('#patterns-area').empty();
+
+        for (var pattern in patterns) {
+          pattern = patterns[pattern];
+
+          var patternHtml = TEMPLATE;
+
+          patternHtml = patternHtml.replace("{{ slug }}", pattern.slug);
+          patternHtml = patternHtml.replace("{{ image }}", '<img src="' + pattern.image + '" />');
+          patternHtml = patternHtml.replace("{{ title }}", pattern.title);
+          patternHtml = patternHtml.replace("{{ description }}", pattern.description);
+
+          if (pattern.illustration_version === "1") {
+            patternHtml = patternHtml.replace("{{ illustration_version }}", " illustration_version_1");
+          } else {
+            patternHtml = patternHtml.replace("{{ illustration_version }}", '');
+          }
+
+          $('#patterns-area').append(patternHtml);
+        }
+
+        $('#patterns-area').animate({
+          'opacity': 1
+        }, 100);
+
+        var newTitle = targetTitle + " - Data Permissions Catalogue - IF";
+
+        $(document).attr("title", newTitle);
+        history.pushState(null, newTitle, "/category/" + targetSlug);
+        $('.pattern-category-title h2').text(targetTitle);
+
+        var sizeString = data.size + " pattern";
+
+        if (parseInt(sizeString) > 1) {
+          sizeString += 's';
+        }
+
+        $('.pattern-category-title .category-counter p').text(sizeString);
+      });
+    });
+
+    $('.category-nav ul a').removeClass('active');
+    $(this).addClass('active');
+  });
 });

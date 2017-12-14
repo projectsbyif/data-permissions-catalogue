@@ -14,13 +14,7 @@
   <ul>
     {% for category in categories %}
     <li>
-      <a href="/category/{{ category.title | slugify }}">
-        {% if category.title == "All" %}
-        All patterns
-        {% else if %}
-        {{ category.title }}
-        {% endif %}
-      </a>
+      <a href="/category/{{ category.title | slugify }}" class="{% if page.layout == "home" and category.title == "All" %}active{% endif %}{% if page.title == category.title %}active{% endif %}">{% if category.title == "All" %}All patterns{% else if %}{{ category.title }}{% endif %}</a>
     </li>
     {% endfor %}
   </ul>
