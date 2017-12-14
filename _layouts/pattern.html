@@ -32,19 +32,21 @@ layout: default
       </div>
       {% endfor %}
     {% endcase %}
+    <div class="carousel-indicator"><div class="wrapper"></div></div>
   {% endif %}
 </div>
 
 <div class="grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
-    <div class="carousel-indicator"><div class="wrapper"></div></div>
-
     <h2 style="margin-bottom: 10px;">{{ page.title }}</h2>
     <p class="pattern-category-label color-{{ page.category | slugify }}"><a href="/category/{{ page.category | slugify }}">{{ page.category }}</a></p>
 
+    <div class="pattern-section">
     {{ content }}
+    </div>
 
     {% if page.advantages %}
+    <div class="pattern-section">
     <h3>Advantages</h3>
 
     <ul>
@@ -54,9 +56,11 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% if page.limitations %}
+    <div class="pattern-section">
     <h3>Limitations</h3>
 
     <ul>
@@ -66,9 +70,11 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% if page.examples %}
+    <div class="pattern-section">
     <h3>Examples</h3>
 
     <ul>
@@ -78,9 +84,11 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% if page.further_reading %}
+    <div class="pattern-section">
     <h3>Further reading</h3>
 
     <ul class="further_reading">
@@ -90,6 +98,7 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    </div>
     {% endif %}
 
     {% include work-in-progress.html %}
