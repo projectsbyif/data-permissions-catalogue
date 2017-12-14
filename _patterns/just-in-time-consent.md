@@ -1,8 +1,6 @@
 ---
 layout: pattern
 
-illustration_version: 1
-
 title: Just-in-time consent
 
 category: Give consent

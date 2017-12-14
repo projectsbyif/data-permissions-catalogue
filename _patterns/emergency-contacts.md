@@ -1,14 +1,12 @@
 ---
 layout: pattern
 
-illustration_version: 1
-
-title: Trust contacts
+title: Emergency contacts
 
 category: Backup data
 
 images:
-  - url: /images/emergency-access.svg
+  - url: /images/emergency-contacts.svg
 
 examples:
   - title: LastPass
