@@ -1,22 +1,12 @@
 # Data Permissions ​Catalogue
 
-Documenting design patterns for personal data sharing, with example uses and research. Maintained by [IF](https://projectsbyif.com/).
-
-**Contents**
-
-* How to contribute
-* Getting started
-* Creating and editing patterns
-* Creating and editing categories
-* Images
-* Feedback
-* Licence
+An evolving collection of design patterns for sharing data. Maintained by [IF](https://projectsbyif.com/).
 
 ## How to contribute
 
-You can contribute to catalogue on GitHub by creating an issue or submitting a pull request. The catalogue website runs on [Jekyll]().
+You can contribute to the catalogue on GitHub by creating an issue or submitting a pull request. The catalogue website runs on [Jekyll](https://jekyllrb.com/).
 
-There's also a [Google Form]() for sending us proposals for a new pattern.
+There's also a [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScFapR7V1TQ45IA7wW0heNGR-OtT-sICkmje31OUeSsAM1NRQ/viewform?usp=sf_link) for contributing missing patterns.
 
 ## Getting started
 
@@ -38,7 +28,7 @@ There's also a [Google Form]() for sending us proposals for a new pattern.
 
 ## Creating and editing patterns
 
-Each pattern has a [Markdown]() file in the `_patterns` folder. To create a new pattern, create a new Markdown file. Name the new file with the [slugified]() version of the pattern name.
+Each pattern has a [Markdown](https://daringfireball.net/projects/markdown/syntax) file in the `_patterns` folder. To create a new pattern, create a new Markdown file. Name the new file with the slugified version of the pattern name.
 
 For example `This is a new pattern` would be called `this-is-a-new-pattern.md`.
 
@@ -72,7 +62,7 @@ Preventing automated access to data by setting challenges that are easy for huma
 
 ```
 
-The *front matter* of the Markdown file (the bit at the top between the three dashes) can have the following [YAML]() fields:
+The *front matter* of the Markdown file (the bit at the top between the three dashes) can have the following [YAML](https://en.wikipedia.org/wiki/YAML) fields:
 
 * `layout`: should always be `pattern` (required)
 
@@ -97,12 +87,12 @@ The body of the Markdown file (the bit underneath the three dashes) is a short d
 We've created several categories that patterns can belong to. Right now, these are:
 
 * Authentication
-* Backup Data
-* Control Access
-* Give Consent
-* Manage Consent
+* Backup data
+* Control access
+* Give consent
+* Manage consent
 * Other
-* See Access
+* See access
 * Share data
 * Social Consent
 
@@ -116,21 +106,14 @@ category: (Name of category)
 ---
 ```
 
-Next, create a new JSON file in the `_category_json` folder, and use this template:
-
-```
----
-layout: json
-title: (Name of category)
-category: (Name of category)
----
-```
-
 ## Images
 
+Please include examples of where you've seen this pattern in use. We'll use these as reference for creating an illustration for a new pattern.
 
 ## Feedback
 
-Get in touch with us on [Twitter @projectsbyif](https://twitter.com/projectsbyif) or [email (hello@proejctsbyif.com)](mailto:hello@projectsbyif.com).
+Get in touch with us on [Twitter @projectsbyif](https://twitter.com/projectsbyif) or [email hello@projectsbyif.com](mailto:hello@projectsbyif.com).
 
 ## Licence
+
+This website licenced under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
