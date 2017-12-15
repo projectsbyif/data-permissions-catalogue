@@ -45,9 +45,11 @@ $(function() {
   });
 
   function openCategoryMenu() {
-    $('.category-nav').css({
-      'top': $('.pattern-category-title')[0].getBoundingClientRect().top + $('.pattern-category-title').outerHeight()
-    }).fadeIn(250);
+    if ($('.pattern-category-title').hasClass('fixed')) {
+      $('.category-nav').css({
+        'top': $('.pattern-category-title')[0].getBoundingClientRect().top + $('.pattern-category-title').outerHeight()
+      }).fadeIn(250);
+    }
 
     $('.category-nav').fadeIn(250);
 
@@ -277,18 +279,40 @@ $(function() {
   });
 
   $(window).resize(function() {
+    // Carousel
     if ($(window).width() > DESKTOP_WIDTH) {
       if (carouselActive) {
         removeCarousel();
+      }
+
+      if ($('.pattern-category-title').hasClass('fixed')) {
+        $('header .menu').hide();
+        $('header .page-menu').show();
+        $('header').addClass('desktop-fixed');
       }
     } else if ($(window).width() < DESKTOP_WIDTH) {
       if (!carouselActive) {
         createCarousel();
       }
+
+      if ($('.pattern-category-title').hasClass('fixed')) {
+        $('header .menu').show();
+      }
     }
+
+    // WIP banner height
+    wipBannerHeight();
   });
 
   if ($(window).width() < DESKTOP_WIDTH) {
     createCarousel();
+  } else {
+    wipBannerHeight();
+  }
+
+  function wipBannerHeight() {
+    $('.wip-banner-full-length').css({
+      'height': $('.wip-banner').outerHeight()
+    });
   }
 });

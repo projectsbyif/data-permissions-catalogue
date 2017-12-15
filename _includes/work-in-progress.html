@@ -1,3 +1,8 @@
-<div class="wip-banner">
+<div class="wip-banner {% if page.layout != "home" %}padding{% endif %}">
   <p>The catalogue is work in progress. We'll be finishing some things off in the new year.</p>
 </div>
+
+
+{% if page.layout == "home" %}
+<div class="wip-banner-full-length"></div>
+{% endif %}
