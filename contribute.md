@@ -1,18 +1,13 @@
 ---
 layout: page
-title: Contribute a missing pattern
+title: Contribute
 ---
 
-If you've got an idea for a missing pattern, then get in touch. 
+These patterns are curated by IF for the community. There are two ways you can contribute:
 
-There are two ways you can contribute:
+<p style="margin-top: 20px; margin-bottom: 20px; height: 50px;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScFapR7V1TQ45IA7wW0heNGR-OtT-sICkmje31OUeSsAM1NRQ/viewform?usp=sf_link" class="cta" style="margin-right: 10px;">Google Form</a>
+  <a href="https://github.com/projectsbyif/data-permissions-catalogue" class="cta" style="">GitHub</a>
+</p>
 
-[Fill in a form](https://docs.google.com/forms/d/e/1FAIpQLScFapR7V1TQ45IA7wW0heNGR-OtT-sICkmje31OUeSsAM1NRQ/viewform?usp=sf_link) 
-
-[GitHub](https://github.com/projectsbyif/data-permissions-catalogue)
-
-Contributions are really valued, but unfortunately it’s not always possible to add every contribution to the catalogue.
-
-Every contribution is reviewed by [IF](https://projectsbyif.com/). They are reviewed intermittently throughout the year. 
-
-If you have feedback about the catalogue, then email hello@projectsbyif.com
+We review contributions throughout the year.

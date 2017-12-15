@@ -9,7 +9,7 @@ images:
 - url: /images/activity-based-permission.svg
 
 advantages:
- - Remains convenient while offering some form of securityrity
+ - Remains convenient while offering some form of security
 
 limitations:
  - Matching sensor data to actual activity can be error prone

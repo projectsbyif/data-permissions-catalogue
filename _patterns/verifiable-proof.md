@@ -15,7 +15,6 @@ cover_image:
 
 advantages:
  - Doesn’t rely on external infrastructure that could be malicious
- - Doesn’t explicitly share data
 
 limitations:
  - Some people won’t understand what is being checked

@@ -175,7 +175,7 @@ $(function() {
 
         if (scrollTop > $('header').outerHeight()) {
           if ($(window).width() > DESKTOP_WIDTH) {
-            $('header .page-menu').hide();
+            //$('header .page-menu').hide();
             $('header').removeClass('desktop-fixed');
           } else {
             $('header .menu').hide().removeClass('fixed');

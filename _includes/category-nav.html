@@ -3,10 +3,15 @@
 <nav class="category-nav">
   <ul>
     {% for category in categories %}
+    {% if category.title != "Other" %}
     <li>
       <a href="/category/{{ category.title | slugify }}" class="border-{{ category.title  | slugify }} {% if page.layout == "home" and category.title == "All" %}active{% endif %}{% if page.title == category.title %}active{% endif %}">{% if category.title == "All" %}All patterns{% else if %}{{ category.title }}{% endif %}</a>
     </li>
+    {% endif %}
     {% endfor %}
+    <li>
+      <a href="/category/other" class="border-other">Other</a>
+    </li>
   </ul>
 </nav>
 
