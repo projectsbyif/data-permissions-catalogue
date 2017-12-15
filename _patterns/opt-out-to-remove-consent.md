@@ -1,7 +1,11 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Opt-out to remove consent
+
+category: Give consent
 
 images:
   - url: /images/opt-out-to-remove-consent.svg

@@ -1,22 +1,42 @@
 ---
 layout: default
 ---
+{% assign patterns = site.patterns %}
 
-<div class="grid-x grid-padding-x">
-  <div class="large-10 large-offset-1 small-12 cell">
-    <div class="home-title">
-      <h1>{{ site.title }}</h1>
-      <p>Documenting design patterns for personal data sharing, with example uses and research.<span class="mobile-break"> </span><span class="desktop-break"> <br /></span>Work in progress. Maintained by <a href="https://projectsbyif.com">IF</a>.</p>
+<div class="full-width-banner"></div>
+
+<div class="homepage-intro">
+    <div>
+      <h1>An evolving collection of design patterns for sharing data</h1>
+      <a href="/about" class="cta">What are design patterns?</a>
     </div>
+</div>
 
-    <ul class="contents">
-    {% for item in site.patterns %}
-      <li>
-        <p>
-          <a href="{{ item.slug | prepend: "/patterns/" }}">{{ item.title }}</a>
-        </p>
-      </li>
-    {% endfor %}
-    </ul>
+<div class="pattern-category-title-anchor"></div>
+
+<div class="grid-x grid-padding-x pattern-category-title">
+  <div class="wrapper">
+    <div class="small-12 cell">
+      <a href="#"><h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2><img src="/images/down.svg" /></a>
+    </div>
   </div>
+</div>
+
+{% include category-nav.html %}
+
+<div class="patterns-grid grid-x grid-padding-x">
+  {% for pattern in patterns %}
+  <div class="small-12 medium-6 large-4 cell">
+    <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
+      <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ pattern.category | slugify }}">
+        {% if pattern.cover_image %}
+        <img src="{{ pattern.cover_image[0].url }}" />
+        {% else if pattern.images[0].url %}
+        <img src="{{ pattern.images[0].url }}" />
+        {% endif %}
+      </div>
+      <p class="title">{{ pattern.title }}</p>
+    </a>
+  </div>
+  {% endfor %}
 </div>

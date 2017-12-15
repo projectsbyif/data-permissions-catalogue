@@ -1,7 +1,11 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Active request
+
+category: Give consent
 
 images:
   - url: /images/active-request.svg
@@ -9,7 +13,7 @@ images:
 examples:
   - title: Prolific Academic
     url: https://prolific.ac
-    description: requests to participate in a research project include the type of information a person will need to share
+    description: any request to the person to participate in a research project include the type of information they’ll need to share
 ---
 
 A person agrees to accept individual requests to share data and makes a decision based on the needs of that request.

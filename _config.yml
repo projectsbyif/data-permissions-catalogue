@@ -1,7 +1,6 @@
 title: Data Permissions Catalogue
 email: hello@projectsbyif.com
-description: >-
-  Documenting design patterns for personal data sharing, with example uses and research.
+description: A collection of design patterns for sharing personal data
 baseurl: ""
 url: "https://catalogue.projectsbyif.com"
 twitter_username: projectsbyif
@@ -13,4 +12,6 @@ plugins:
 
 collections:
   patterns:
+    output: true
+  category:
     output: true

@@ -1,7 +1,11 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Delegate permissions
+
+category: Social consent
 
 images:
   - url: /images/delegate-permissions.svg

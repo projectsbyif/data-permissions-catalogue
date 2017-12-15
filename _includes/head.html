@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %} - IF</title>
+  <title>{% if page.title %}{{ page.title | escape }}{% if page.title == "All" %} patterns{% endif %} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %} - IF</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link rel="stylesheet" href="{{ "/assets/foundation.min.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
@@ -33,4 +33,7 @@
     })();
   </script>
   <!-- End Piwik Code -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="/assets/app.js"></script>
 </head>

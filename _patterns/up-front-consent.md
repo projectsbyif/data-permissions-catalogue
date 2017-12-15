@@ -1,7 +1,11 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Up-front consent
+
+category: Give consent
 
 images:
   - url: /images/up-front-consent.svg

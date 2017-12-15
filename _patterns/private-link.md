@@ -1,10 +1,14 @@
 ---
 layout: pattern
 
-title: Private links
+illustration_version: 1
+
+title: Private link
+
+category: Share data
 
 images:
-  - url: /images/private-links.svg
+  - url: /images/private-link.svg
 
 examples:
   - description: Services like Google Docs, Etherpad, Keybase file system and Dropbox have link sharing options

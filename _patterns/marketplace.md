@@ -1,7 +1,11 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Marketplace
+
+category: Other
 
 images:
   - url: /images/marketplace.svg

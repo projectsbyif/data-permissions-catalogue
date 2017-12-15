@@ -1,7 +1,11 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Time limiting
+
+category: Control access
 
 images:
   - url: /images/time-limiting.svg
@@ -15,4 +19,4 @@ examples:
     description: you can share your location with another person for the duration of a single journey
 ---
 
-Someone can set a start and end time for sharing. When the current time is outside the allowed access time, then access is not allowed.
+A person can set a start and end time for sharing. When the current time is outside the allowed access time, access is not allowed.

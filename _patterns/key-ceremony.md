@@ -3,6 +3,8 @@ layout: pattern
 
 title: Key ceremony
 
+category: Social consent
+
 images:
   - url: /images/key-ceremony.svg
 
@@ -15,4 +17,4 @@ further_reading:
     description: the minimum number of people who need to be present in a legislative assembly
 ---
 
-Data access is allowed when a set amount of people agree to it.
+Data access is allowed when a set group of people agree to it.

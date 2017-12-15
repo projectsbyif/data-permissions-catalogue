@@ -1,7 +1,11 @@
 ---
 layout: pattern
 
+illustration_version: 1
+
 title: Terms and conditions
+
+category: Other
 
 images:
   - url: /images/terms-and-conditions.svg
