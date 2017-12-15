@@ -3,7 +3,7 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    <main class="grid-container{% if page.layout == "home" %} home{% endif %}">
+    <main class="grid-container {{ page.layout }}">
       {{ content }}
     </main>
     {% include footer.html %}

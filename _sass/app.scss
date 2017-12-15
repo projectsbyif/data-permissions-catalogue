@@ -20,6 +20,7 @@ body {
   font-family: "Calibre-Regular", "Helvetica Neue", "Arial", sans-serif;
   font-size: 19px;
   color: #000F7D;
+  background: #FFF;
 }
 
 h1 {
@@ -43,7 +44,7 @@ h3 {
 }
 
 p {
-  line-height: 1.5em;
+  line-height: 1.4em;
   margin-bottom: 30px;
 }
 
@@ -52,7 +53,7 @@ ul {
 
   li {
     p {
-      margin-bottom: 5px;
+      margin-bottom: 0px;
     }
   }
 }
@@ -158,7 +159,7 @@ iframe {
 }
 
 .no-margin {
-  margin: 0;
+  margin-bottom: -5px;
 }
 
 // Colors
@@ -256,10 +257,14 @@ $color-social-consent: #98D9CA;
 // PAGE STRUCTURE
 main {
   min-height: calc(100vh - 90px);
-  padding-top: 57px;
+  padding-top: 50px;
 
   &.home {
     padding-top: 0;
+  }
+
+  &.page {
+    padding-top: 150px;
   }
 }
 
@@ -345,6 +350,7 @@ main {
     text-align: center;
     font-size: 2em;
     font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
+    margin-bottom: 20px;
 
     &:first-of-type {
       margin-top: 125px;
@@ -395,8 +401,7 @@ main {
   }
 
   .category-counter {
-    color: #B1B6DF;
-    font-size: 0.6em;
+    font-size: 0.75em;
     font-family: "Calibre-Regular", "Helvetica Neue", Helvetica, sans-serif;
     margin-left: 10px;
   }
@@ -421,7 +426,7 @@ main {
     }
 
     &.illustration_version_1 {
-      padding: 20px;
+      padding: 40px;
 
       img {
         max-height: 180px;
@@ -432,7 +437,7 @@ main {
   .title {
     margin-bottom: 5px;
     font-family: "Calibre-Regular", "Helvetica Neue", "Helvetica", sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .description {
@@ -446,7 +451,7 @@ main {
 // PATTERN PAGE: IMAGES
 .pattern-image {
   background-color: #ff5e23;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   position: relative;
   left: -0.625rem;
   width: 100vw;
@@ -547,14 +552,17 @@ main {
 // HOMEPAGE
 .homepage-intro {
   background-color: #FFEB82;
-  padding-left: 0.625rem !important;
-  padding-right: 0.625rem !important;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: 0 !important;
   margin-right: 0 !important;
   position: relative;
   left: -20px;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   h1 {
     margin-bottom: 40px;
@@ -569,12 +577,6 @@ main {
     font-size: 0.8em;
     letter-spacing: 1px;
     text-transform: uppercase;
-  }
-
-  .cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -609,6 +611,7 @@ main {
 
   h2 {
     font-size: 36px;
+    margin-bottom: 40px;
   }
 
   h3 {
@@ -644,6 +647,7 @@ main {
 
       .page-menu {
         pointer-events: all;
+        margin-top: 4px;
       }
     }
 
@@ -694,6 +698,9 @@ main {
 
   footer {
     margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 1.2em !important;
   }
 
   main {
@@ -724,17 +731,18 @@ main {
   // HOMEPAGE
   .homepage-intro {
     width: 100%;
-    height: 404px;
+    height: 360px;
     position: inherit;
     left: 0;
     margin-bottom: 0px;
     background-color: rgba(0,0,0,0) !important;
     padding: 0 !important;
     margin-top: -40px;
+    justify-content: left;
 
-    .cell {
-      padding: 0;
-      justify-content: left;
+    div {
+      width: 550px;
+      padding-left: 42px;
     }
   }
 
@@ -744,16 +752,11 @@ main {
     margin-bottom: 20px;
     padding-left: 0px;
     padding-right: 0px;
-
-    &.padding {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
   }
 
   .pattern-block {
     .image {
-      padding: 20px;
+      padding: 10px;
 
       img {
         height: 100%;
@@ -768,12 +771,15 @@ main {
     padding-right: 0;
     padding-top: 20px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
     pointer-events: all;
 
     img {
-      margin-top: 16px;
+      margin-top: 10px;
       margin-left: 16px;
+    }
+
+    h2 {
+      font-size: 1.2em;
     }
 
     &.fixed {
@@ -823,7 +829,7 @@ main {
 
   .full-width-banner {
     display: block;
-    height: 465px;
+    height: 421px;
 
     &.pattern {
       height: 435px;
@@ -833,11 +839,74 @@ main {
   .wip-banner-full-length {
     width: 100vw;
     position: absolute;
-    top: 465px;
+    top: 421px;
     left: 0;
     background: #EEE;
     height: 58px;
     display: block;
     z-index: -1;
   }
+
+  .patterns-grid {
+    .cell {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &:nth-child(2n) {
+        padding-left: 10px;
+        padding-right: 15px;
+      }
+
+      &:nth-child(2n-1) {
+        padding-left: 15px;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 92rem) {
+  .homepage-intro {
+    div {
+      width: 520px;
+      padding-left: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .patterns-grid {
+    .cell {
+      padding-left: calc(0.9375rem / 2) !important;
+      padding-right: calc(0.9375rem / 2) !important;
+
+      &:nth-child(2n) {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      &:nth-child(2n-1) {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      &:nth-child(3n) {
+        padding-left: 0.9375rem !important;
+        padding-right: 0.9375rem !important;
+      }
+
+      &:nth-child(3n-1) {
+
+      }
+
+      &:nth-child(3n-2) {
+        padding-left: 0.9375rem !important;
+        padding-right: 0.9375rem !important;
+      }
+    }
+  }
+}
+
+.wip-footer {
+  background: red;
 }

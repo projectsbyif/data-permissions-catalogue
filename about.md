@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About the Data Permissions Catalogue
+title: About
 ---
 
 We’ve compiled this catalogue as a tool for teams building digital services.
