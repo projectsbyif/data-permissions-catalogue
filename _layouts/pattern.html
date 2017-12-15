@@ -4,22 +4,24 @@ layout: default
 
 {% assign other_patterns = site.patterns | where: "category": page.category %}
 
-<div class="grid-x grid-padding-x pattern-image{% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
+<div class="full-width-banner pattern color-{{ page.category | slugify }}"></div>
+
+<div class="grid-x grid-padding-x pattern-image color-{{ page.category | slugify }}{% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
   <a href="#" class="carousel-control previous">Previous</a>
   <a href="#" class="carousel-control next">Next</a>
   {% if page.images %}
     {% case page.images.size %}
       {% when 1 %}
-      <div class="{% if page.illustration_version == 1%}large-12{% else %}large-4 large-offset-4{% endif %} small-12 cell">
+      <div class="{% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
         <img src="{{ page.images[0].url }}" />
       </div>
       {% when 2 %}
       {% assign count = 0 %}
       {% for image in page.images %}
         {% if count == 0 %}
-          <div class="large-4 large-offset-2 small-12 cell">
+          <div class="large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
         {% else %}
-          <div class="large-4 small-12 cell">
+          <div class="large-4 medium-4 small-12 cell">
         {% endif %}
             <img src="{{ image.url }}" />
           </div>
@@ -27,7 +29,7 @@ layout: default
       {% endfor %}
       {% when 3 %}
       {% for image in page.images %}
-      <div class="large-4 small-12 cell">
+      <div class="large-4 medium-4 small-12 cell">
         <img src="{{ image.url }}" />
       </div>
       {% endfor %}
@@ -38,15 +40,12 @@ layout: default
 
 <div class="grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
-    <h2 style="margin-bottom: 10px;">{{ page.title }}</h2>
-    <p class="pattern-category-label color-{{ page.category | slugify }}"><a href="/category/{{ page.category | slugify }}">{{ page.category }}</a></p>
+    <h2 class="no-margin">{{ page.title }}</h2>
+    <p><a href="/category/{{ page.category | slugify }}" class="border-{{ page.category | slugify }}">{{ page.category }}</a></p>
 
-    <div class="pattern-section">
     {{ content }}
-    </div>
 
     {% if page.advantages %}
-    <div class="pattern-section">
     <h3>Advantages</h3>
 
     <ul>
@@ -56,11 +55,9 @@ layout: default
       </li>
       {% endfor %}
     </ul>
-    </div>
     {% endif %}
 
     {% if page.limitations %}
-    <div class="pattern-section">
     <h3>Limitations</h3>
 
     <ul>
@@ -70,11 +67,9 @@ layout: default
       </li>
       {% endfor %}
     </ul>
-    </div>
     {% endif %}
 
     {% if page.examples %}
-    <div class="pattern-section">
     <h3>Examples</h3>
 
     <ul>
@@ -84,11 +79,9 @@ layout: default
       </li>
       {% endfor %}
     </ul>
-    </div>
     {% endif %}
 
     {% if page.further_reading %}
-    <div class="pattern-section">
     <h3>Further reading</h3>
 
     <ul class="further_reading">
@@ -98,37 +91,23 @@ layout: default
       </li>
       {% endfor %}
     </ul>
-    </div>
+    {% endif %}
+
+
+    {% if other_patterns.size > 1 %}
+    <h3>Related patterns</h3>
+
+    <ul>
+    {% for pattern in other_patterns %}
+    {% if pattern.title != page.title %}
+      <li>
+        <p><a href="/patterns/{{ pattern.title | slugify }}">{{ pattern.title }}</a></p>
+      </li>
+    {% endif %}
+    {% endfor %}
+    </ul>
     {% endif %}
 
     {% include work-in-progress.html %}
-
-    {% if other_patterns.size > 1 %}
-    <h3 id="related-patterns-title">Related patterns</h3>
-    {% include category-nav.html %}
-    {% endif %}
   </div>
 </div>
-
-{% if other_patterns.size > 1 %}
-<div class="related-patterns">
-  <div class="grid-x grid-padding-x">
-  {% for pattern in other_patterns %}
-  {% if pattern.title != page.title %}
-  <div class="small-12 large-6 cell">
-    <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
-      <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ pattern.category | slugify }}">
-        {% if pattern.cover_image %}
-        <img src="{{ pattern.cover_image[0].url }}" />
-        {% else if pattern.images[0].url %}
-        <img src="{{ pattern.images[0].url }}" />
-        {% endif %}
-      </div>
-      <p class="title">{{ pattern.title }}</p>
-    </a>
-  </div>
-  {% endif %}
-  {% endfor %}
-  </div>
-</div>
-{% endif %}

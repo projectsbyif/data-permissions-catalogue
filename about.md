@@ -16,5 +16,6 @@ It collects different patterns for a range of data sharing activities, from  get
 
 The catalogue is built and maintained by [IF](https://projectsbyif.com/).
 
-<iframe src="https://player.vimeo.com/video/231723090" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
+<div class="iframe-container">
+  <iframe src="https://player.vimeo.com/video/231723090" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
