@@ -1,24 +1,13 @@
 {% assign categories = site.category %}
 
 <nav class="category-nav">
-  <a href="#" class="category-nav-button">
-    <p class="current-category">
-      {% if page.layout == "home" or page.category == "All" %}
-        All patterns
-      {% else %}
-        {{ page.category }}
-      {% endif %}
-    </p>
-    <p class="arrow"></p>
-  </a>
   <ul>
     {% for category in categories %}
-    <li class="color-{{ category.title | slugify }}">
-      <a href="/category/{{ category.title | slugify }}" class="{% if page.layout == "home" and category.title == "All" %}active{% endif %}{% if page.title == category.title %}active{% endif %} color-{{ category.title | slugify }}">{% if category.title == "All" %}All patterns{% else if %}{{ category.title }}{% endif %}</a>
+    <li>
+      <a href="/category/{{ category.title | slugify }}" class="border-{{ category.title  | slugify }} {% if page.layout == "home" and category.title == "All" %}active{% endif %}{% if page.title == category.title %}active{% endif %}">{% if category.title == "All" %}All patterns{% else if %}{{ category.title }}{% endif %}</a>
     </li>
     {% endfor %}
   </ul>
 </nav>
 
-<div id="category-nav-anchor"></div>
 <div class="category-nav-dismiss"></div>

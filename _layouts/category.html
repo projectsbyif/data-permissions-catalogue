@@ -8,18 +8,19 @@ layout: default
   {% assign patterns = site.patterns | where: "category": page.category %}
 {% endif %}
 
-{% include category-nav.html %}
+<div class="pattern-category-title-anchor"></div>
 
 <div class="grid-x grid-padding-x pattern-category-title">
-  <div class="small-8 cell">
-    <h2>{% if page.title == "All" %}All patterns{% else %}{{ page.title }}{% endif %}</h2>
-  </div>
-  <div class="small-4 cell category-counter">
-    <p>{{ patterns.size }} pattern{% if patterns.size > 1 %}s{% endif %}</p>
+  <div class="wrapper">
+    <div class="small-12 cell">
+      <a href="#"><h2>{{ page.title }}<span class="category-counter">({{ patterns.size }})</span></h2><img src="/images/down.svg" /></a>
+    </div>
   </div>
 </div>
 
-<div id="patterns-area" class="grid-x grid-padding-x">
+{% include category-nav.html %}
+
+<div class="patterns-grid grid-x grid-padding-x">
   {% for pattern in patterns %}
   <div class="large-4 small-12 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">

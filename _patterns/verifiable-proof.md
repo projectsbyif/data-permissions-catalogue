@@ -11,7 +11,7 @@ images:
   - url: /images/verifiable-proof-3.svg
 
 cover_image:
-  - url: /images/verifiable-proof-1.svg
+  - url: /images/verifiable-proof-2.svg
 
 advantages:
  - Doesn’t rely on external infrastructure that could be malicious

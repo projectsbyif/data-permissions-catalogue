@@ -3,8 +3,10 @@ layout: default
 ---
 {% assign patterns = site.patterns %}
 
+<div class="full-width-banner"></div>
+
 <div class="grid-x grid-padding-x homepage-intro">
-  <div class="large-8 small-12 cell">
+  <div class="large-6 small-12 cell">
     <div>
       <h1>A collection of design patterns for sharing personal data</h1>
       <a href="/about" class="cta">What are design patterns?</a>
@@ -14,18 +16,19 @@ layout: default
 
 {% include work-in-progress.html %}
 
-{% include category-nav.html %}
+<div class="pattern-category-title-anchor"></div>
 
 <div class="grid-x grid-padding-x pattern-category-title">
-  <div class="small-8 cell">
-    <h2>All patterns</h2>
-  </div>
-  <div class="small-4 cell category-counter">
-    <h2>({{ patterns.size }})</h2>
+  <div class="wrapper">
+    <div class="small-12 cell">
+      <a href="#"><h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2><img src="/images/down.svg" /></a>
+    </div>
   </div>
 </div>
 
-<div id="patterns-area" class="grid-x grid-padding-x">
+{% include category-nav.html %}
+
+<div class="patterns-grid grid-x grid-padding-x">
   {% for pattern in patterns %}
   <div class="small-12 medium-6 large-4 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
