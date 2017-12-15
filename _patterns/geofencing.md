@@ -20,4 +20,4 @@ examples:
     url: https://developers.google.com/beacons/
 ---
 
-Access to data is controlled dependent on whether a device is in a particular place, determined by something like GPS, mobile phone towers, or proximity beacons. Being in a location could trigger an active request for sharing data.
+Access to data is controlled dependent on whether a device is in a particular place, determined by GPS, mobile phone towers, proximity beacons or similar. Being in a certain location could trigger an active request for sharing data.

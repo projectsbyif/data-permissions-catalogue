@@ -9,7 +9,7 @@ images:
 - url: /images/automation-detection.svg
 
 advantages:
- - Reduces impact of automated access to systems, like denial of service, SPAM
+ - Reduces impact of automated access to systems, such as denial of service or spam
  - Can be used to train machine learning models
 
 limitations:
@@ -21,4 +21,4 @@ examples:
     url: https://www.google.com/recaptcha/intro/
 ---
 
-Preventing automated access to data by setting challenges that are easy for humans and hard for computers to complete. Common challenges include reading distorted text and identifying objects in a photo.
+Preventing automated access to data by setting challenges that are easy for humans to complete, but hard for computers. Common challenges include reading distorted text and identifying objects in a photo.

@@ -24,4 +24,4 @@ further_reading:
     url: https://econsultancy.com/blog/63118-17-useful-examples-of-eu-cookie-law-compliance/
 ---
 
-Someone's consent is assumed through continued use of a service. They are often shown a message about this when starting to use a service.
+A person’s consent is assumed through their continued use of a service. They are often shown a message about this when starting to use a service.

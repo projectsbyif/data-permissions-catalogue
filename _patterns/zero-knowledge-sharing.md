@@ -13,7 +13,7 @@ advantages:
  - Reduces need to duplicate or send sensitive data through third parties
 
 limitations: 
- - Can not always revoke access
+ - Cannot always revoke access
  - Requires additional infrastructure to validate data
 
 examples:
@@ -26,6 +26,6 @@ further reading:
 
 ---
 
-Sharing the result of using some data without disclosing the data itself. For example, proving that someone is over 18 without sharing their date of birth.
+Sharing the result of data use without disclosing the data itself, for example, proving that someone is over 18 without sharing their date of birth.
 
 
