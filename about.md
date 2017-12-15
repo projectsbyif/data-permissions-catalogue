@@ -13,7 +13,7 @@ It collects different patterns for a range of data sharing activities, from gett
 - Give product teams and organisations a shared language by giving patterns names
 - Help product teams and organisations make better decisions to help empower people
 
-You can improve our shared knowledge by [contributing missing patterns](/contribute).
+You can improve the community’s shared knowledge by [contributing missing patterns](/contribute).
 
 If you have feedback about the catalogue, then email [hello@projectsbyif.com](mailto:hello@projectsbyif.com).
 
