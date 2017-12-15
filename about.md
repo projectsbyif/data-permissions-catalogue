@@ -3,14 +3,16 @@ layout: page
 title: About the Data Permissions Catalogue
 ---
 
-The catalogue is a tool for teams building digital services. 
+We’ve compiled this catalogue as a tool for teams building digital services.
 
-- Better products and services by influencing product teams
-- Make better decisions about the way we can give people more rights and powers
+It collects different patterns for a range of data sharing activities, from getting consent from users to asking for access to personal data and sharing data with third parties.
+
+Our aim is to:
+
+- Introduce people to subject of data sharing
 - Give people a shared language to talk about data sharing
-- Introduces people to subject of data sharing
-
-It collects different patterns for a range of data sharing activities, from  getting consent from users, asking for access to personal data and for sharing data with third parties. 
+- Help teams make better products and services by influencing product teams
+- Ensure we can all make better decisions about how to empower people and give them more rights
 
 [Contribute by documenting missing patterns](/contribute).
 

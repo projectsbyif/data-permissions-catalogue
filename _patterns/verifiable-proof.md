@@ -33,4 +33,4 @@ open-source:
 
 ---
 
-Sharing data in a form that is hard to forge. It can be checked using mathematical formulas. For example to verify that messages are end-to-end encrypted.
+Sharing data in a form that is hard to forge. It can be checked using mathematical formulas, for example to verify that messages are end-to-end encrypted.

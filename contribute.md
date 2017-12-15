@@ -11,7 +11,7 @@ There are two ways you can contribute:
 
 [GitHub](https://github.com/projectsbyif/data-permissions-catalogue)
 
-Contributions are really valued. It's not always possible to add each contribution to the catalogue. 
+Contributions are really valued, but unfortunately it’s not always possible to add every contribution to the catalogue.
 
 Every contribution is reviewed by [IF](https://projectsbyif.com/). They are reviewed intermittently throughout the year. 
 

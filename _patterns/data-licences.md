@@ -13,4 +13,4 @@ examples:
     url: https://projectsbyif.com/projects/data-licences
 ---
 
-Different to standardised terms and conditions, data licences allow someone to customise the terms they are willing to use a service under — choosing who can use their data and for what purposes.
+In contrast to standardised terms and conditions, in which people must agree to everything at once, data licences allow someone to customise the terms they are willing to use a service under — thereby choosing who can use their data and for what purposes.

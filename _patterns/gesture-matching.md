@@ -16,4 +16,4 @@ examples:
   - title: Hand-written signatures
 ---
 
-Someone physically makes a gesture or pattern which is matched against an expected pattern when requesting access to data.
+When requesting access to data, someone physically makes a gesture or pattern which is matched against an expected pattern.

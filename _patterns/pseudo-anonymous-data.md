@@ -22,6 +22,6 @@ examples:
     url: https://evoting.bismark.se/verifiable-electronic-voting/
 ---
 
-Labelling data in a way that it can’t be traced back to a specific person. Rather than using a name, a random unique identifier is used.
+Labelling data in such a way that is hard to traced back to a specific person – rather than using a name, a random unique identifier is used.
 
 If data needs to be re-identified, the random identifier can be cross-referenced with data held elsewhere.

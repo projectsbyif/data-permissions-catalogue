@@ -14,10 +14,10 @@ advantages:
 
 limitations:
   - If lost, access to data is potentially lost permanently
-  - If found unauthorised access to data can happen
+  - If found, it can lead to unauthorised access to data
 
 examples:
   - description: Most services that use multi-factor authentication create recovery codes for use when the other factor is unavailable
 ---
 
-Regaining access to data with single-use codes. Codes are downloaded and stored in a safe place for when a person loses other authenticate factors such as text-messages, objects or authenticator app.
+This allows a person to regain access to their data with single-use codes. Codes are downloaded and stored in a safe place, in case the user loses other authenticate factors such as text-messages, objects or the authenticator app.

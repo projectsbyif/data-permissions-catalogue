@@ -18,4 +18,4 @@ examples:
     description: message sharing using a link that can only be opened once
 ---
 
-A person shares data with a third-party through a means that only works once. This could be using a unique code or a unique link that someone can share using a method of their choice.
+A person shares data with a third party through a means that only works once. This could be using a unique code or a unique link that someone can share using a method of their choice.

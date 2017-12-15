@@ -1,7 +1,7 @@
 ---
 layout: pattern
 
-title: Activity based permission
+title: Activity-based permission
 
 category: Control access
 
@@ -9,7 +9,7 @@ images:
 - url: /images/activity-based-permission.svg
 
 advantages:
- - Retains convenience while providing some form of security
+ - Remains convenient while offering some form of securityrity
 
 limitations:
  - Matching sensor data to actual activity can be error prone
