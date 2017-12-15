@@ -21,7 +21,7 @@ $(function() {
   var backgroundColorCounter = 1;
 
   // Homepage intro animation
-  animateHomepageIntro();
+  // animateHomepageIntro();
 
   function animateHomepageIntro() {
     $('.homepage-intro, .full-width-banner').animate({

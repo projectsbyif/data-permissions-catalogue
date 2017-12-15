@@ -45,19 +45,28 @@ layout: default
 
     {{ content }}
 
-    {% if page.advantages %}
-    <h3>Advantages</h3>
+  </div>
+</div>
 
-    <ul>
-      {% for advantage in page.advantages %}
-      <li>
-        <p>{{ advantage }}</p>
-      </li>
-      {% endfor %}
-    </ul>
+<div class="grid-x grid-padding-x">
+
+    {% if page.advantages %}
+    <div class="large-4 large-offset-2 small-12 cell">
+      <h3>Advantages</h3>
+
+      <ul>
+        {% for advantage in page.advantages %}
+        <li>
+          <p>{{ advantage }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
     {% endif %}
 
     {% if page.limitations %}
+    <div class="large-4 small-12 cell">
+
     <h3>Limitations</h3>
 
     <ul>
@@ -67,7 +76,12 @@ layout: default
       </li>
       {% endfor %}
     </ul>
+    </div>
     {% endif %}
+</div>
+
+<div class="grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
 
     {% if page.examples %}
     <h3>Examples</h3>
@@ -107,7 +121,5 @@ layout: default
     {% endfor %}
     </ul>
     {% endif %}
-
-    {% include work-in-progress.html %}
   </div>
 </div>
