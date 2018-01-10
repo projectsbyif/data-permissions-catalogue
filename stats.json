@@ -1,0 +1,13 @@
+---
+layout: json
+---
+{% assign foo = 0 %}
+{% for pattern in site.patterns %}
+{% if pattern.from_community == true %}
+{% assign foo = foo | plus: 1 %}
+{% endif %}
+{% endfor %}
+{
+  "all_patterns": {{ site.patterns.size }},
+  "community_patterns": {{ foo }}
+}
