@@ -1,8 +1,6 @@
 ---
 layout: pattern
 
-illustration_version: 1
-
 title: Physical security
 
 category: Control access
