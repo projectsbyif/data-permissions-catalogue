@@ -132,9 +132,13 @@ footer {
   background: #f0f4f6;
 
   p {
-    margin-bottom: 0;
     font-size: 0.8em;
     line-height: 1.3;
+    margin-bottom: 0.3em;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 
   a {
@@ -582,6 +586,20 @@ main {
     height: 429px;
   }
 }
+
+
+.footer-nav {
+  font-size: 0.8em;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin-right: 0.3em;
+  }
+}
+
 
 @media screen and (min-width: 639px) {
   body {
