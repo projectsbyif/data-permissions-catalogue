@@ -178,6 +178,7 @@ iframe {
 // Colors
 $color-all: #EEE;
 $color-authentication: #FFF2B3;
+$color-automation: #d8edb0;
 $color-backup-data: #FAC9A3;
 $color-control-access: #F7ADB6;
 $color-give-consent: #FAC8E9;
@@ -193,6 +194,10 @@ $color-social-consent: #98D9CA;
 
 .border-authentication {
   border-bottom: $color-authentication 4px solid !important;
+}
+
+.border-automation {
+  border-bottom: $color-automation 4px solid !important;
 }
 
 .border-backup-data {
@@ -233,6 +238,10 @@ $color-social-consent: #98D9CA;
 
 .color-authentication {
   background-color: $color-authentication !important;
+}
+
+.color-automation {
+  background-color: $color-automation !important;
 }
 
 .color-backup-data {
