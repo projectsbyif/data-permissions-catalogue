@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '2.4.2'
+ruby '2.5.1'
 
 gem 'bundler'
 gem 'jekyll'
@@ -12,4 +12,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
