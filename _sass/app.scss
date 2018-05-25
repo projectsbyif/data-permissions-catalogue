@@ -616,33 +616,29 @@ $colour8: #A0F0C3;
   0% {
     background-color: $colour1;
   }
-
   13% {
     background-color: $colour2;
   }
-
   25% {
     background-color: $colour3;
   }
-
   37% {
     background-color: $colour4;
   }
-
-  50%{
+  49% {
     background-color: $colour5;
   }
-
-  63% {
+  61% {
     background-color: $colour6;
   }
-
-  76% {
+  73% {
     background-color: $colour7;
   }
-
-  100%{
+  85% {
     background-color: $colour8;
+  }
+  100% {
+    background-color: $colour1;
   }
 }
 
@@ -921,6 +917,12 @@ $colour8: #A0F0C3;
     pointer-events: none;
   }
 }
+
+// category-nav to show when javascript is disabled.
+// .category-nav-noscript {
+//   @extend .category-nav
+//   display: block;
+// }
 
 @media screen and (min-width: 92rem) {
   .homepage-intro {
