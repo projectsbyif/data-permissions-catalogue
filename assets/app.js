@@ -1,16 +1,16 @@
 $(function() {
   // Constants
   const DESKTOP_WIDTH = 639;
-  const BACKGROUND_COLORS = [
-    '#FFEB82',
-    '#FAAF73',
-    '#F77787',
-    '#FAAFD7',
-    '#BE96FF',
-    '#7D9BE1',
-    '#96E1FA',
-    '#A0F0C3'
-  ];
+  // const BACKGROUND_COLORS = [
+  //   '#FFEB82',
+  //   '#FAAF73',
+  //   '#F77787',
+  //   '#FAAFD7',
+  //   '#BE96FF',
+  //   '#7D9BE1',
+  //   '#96E1FA',
+  //   '#A0F0C3'
+  // ];
 
   // Runtime variables
   var isMenuActive = false;
@@ -21,21 +21,21 @@ $(function() {
   var backgroundColorCounter = 1;
 
   // Homepage intro animation
-  animateHomepageIntro();
-
-  function animateHomepageIntro() {
-    $('.homepage-intro, .full-width-banner').animate({
-      'background-color': BACKGROUND_COLORS[backgroundColorCounter]
-    }, 9000, function() {
-      backgroundColorCounter++;
-
-      if (backgroundColorCounter === BACKGROUND_COLORS.length) {
-        backgroundColorCounter = 0;
-      }
-
-      animateHomepageIntro();
-    });
-  }
+  // animateHomepageIntro();
+  //
+  // function animateHomepageIntro() {
+  //   $('.homepage-intro, .full-width-banner').animate({
+  //     'background-color': BACKGROUND_COLORS[backgroundColorCounter]
+  //   }, 9000, function() {
+  //     backgroundColorCounter++;
+  //
+  //     if (backgroundColorCounter === BACKGROUND_COLORS.length) {
+  //       backgroundColorCounter = 0;
+  //     }
+  //
+  //     animateHomepageIntro();
+  //   });
+  // }
 
   // Category floating menu
   $('.category-nav-dismiss').click(function(e) {
