@@ -1,7 +1,27 @@
+/* Desktop - show menu when JS disabled. */
+.pattern-category-title {
+  display: none;
+}
 
-  .pattern-category-title {
-    display: none;
-  }
-  .category-nav {
-    display: block;
-  }
+.category-nav {
+  display: block;
+}
+
+/* Mobile menu adjustments */
+main {
+  padding-top: 70px;
+}
+header .logo {
+  background-position: center right;
+}
+
+header .title {
+  width: calc(100% - 42px);
+}
+header .menu {
+  display: none;
+}
+
+.cta {
+  margin-bottom: 10px;
+}
