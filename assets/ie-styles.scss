@@ -1,0 +1,68 @@
+---
+---
+* {
+  outline: red solid 1px;
+}
+
+// HEADER
+
+// Re-position title and menu
+header {
+  width: 100%;
+  overflow: hidden;
+}
+
+header .title, .page-menu {
+  width: auto;
+  height: 100%;
+}
+
+.page-menu {
+  position: relative;
+  top: 0px;
+  float: right;
+}
+
+// Adjust main.home layout
+
+main.home {
+  padding-top: 175px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.homepage-intro {
+  height: 288px;
+}
+
+.homepage-intro div {
+  height: 100%;
+}
+
+// Adjust pattern category menu layout
+.pattern-category-menu:after{
+  visibility: hidden;
+display: block;
+content: "";
+clear: both;
+height: 0;
+}
+
+.pattern-category-title {
+  left: 0;
+  margin-bottom: 4px;
+}
+
+// Fix open pattern category menu layout
+.category-nav {
+  left: 0;
+  width: auto;
+}
+
+.category-nav ul {
+  width: 100%;
+}
+
+.category-nav ul li {
+  width: auto;
+}

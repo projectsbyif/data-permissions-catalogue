@@ -1,7 +1,8 @@
 $(function() {
   // Constants
-  const DESKTOP_WIDTH = 639;
-  const BACKGROUND_COLORS = [
+  // Changed to Var for compatibility with IE9, IE10.
+  var DESKTOP_WIDTH = 639;
+  var BACKGROUND_COLORS = [
     '#FFEB82',
     '#FAAF73',
     '#F77787',
