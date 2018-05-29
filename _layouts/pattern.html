@@ -6,7 +6,11 @@ layout: default
 
 <div class="full-width-banner pattern color-{{ page.category | slugify }}"></div>
 
-<div class="grid-x grid-padding-x pattern-image color-{{ page.category | slugify }}{% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
+<noscript>
+  {% include images-no-js.html %}
+</noscript>
+
+<div id="when-no-script" class="grid-x grid-padding-x pattern-image color-{{ page.category | slugify }}{% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
   <a href="#" class="carousel-control previous">Previous</a>
   <a href="#" class="carousel-control next">Next</a>
   {% if page.images %}

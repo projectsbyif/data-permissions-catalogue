@@ -1,0 +1,68 @@
+---
+---
+// @import "foundation.min.css";
+/* Desktop - show menu when JS disabled. */
+.pattern-category-title {
+  display: none;
+}
+
+.category-nav {
+  display: block;
+}
+
+/* Mobile menu adjustments */
+.no-script-menu {
+  display: none;
+}
+
+@media screen and (max-width: 638px) {
+  main {
+    padding-top: 70px;
+  }
+  header .logo {
+    background-position: center right;
+  }
+  header .title {
+    width: calc(100% - 42px);
+  }
+  header .menu {
+    display: none;
+  }
+  .no-script-menu {
+    display: block;
+  }
+  .cta {
+    margin-bottom: 10px;
+  }
+}
+
+/* Verifiable Proof carousel replacement */
+
+#when-no-script {
+  display: none;
+}
+
+.no-script-image-div{
+  left: -1.625rem;
+  height: 100%;
+}
+
+.carousel-control, .carousel-indicator {
+  display: none;
+}
+
+.three-image > .phone {
+  display: none;
+}
+
+@media screen and (max-width: 638px) {
+  .pattern-image{
+    height: 359px;
+  }
+  .three-image > .desktop {
+    display: none;
+  }
+  .three-image > .phone {
+    display: block;
+  }
+}
