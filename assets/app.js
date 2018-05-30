@@ -23,7 +23,7 @@ $(function() {
   var backgroundColorCounter = 1;
 
   // Homepage intro animation
-  // animateHomepageIntro();
+  animateHomepageIntro();
 
   function animateHomepageIntro() {
     $('.homepage-intro, .full-width-banner').animate({
@@ -165,7 +165,7 @@ $(function() {
         });
 
         // Specific styling for screens larger than desktop-width.
-    
+
         if ($(window).width() > DESKTOP_WIDTH) {
           $('header').addClass('desktop-fixed');
           $('header .page-menu').show();

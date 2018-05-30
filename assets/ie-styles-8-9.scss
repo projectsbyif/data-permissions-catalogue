@@ -40,8 +40,7 @@ header .title, .page-menu {
 
 .page-menu {
   position: relative;
-  top: 0px;
-  float: right;
+  top: -7px;
 }
 
 .grid-container.home {
@@ -67,22 +66,19 @@ main.home {
 // MENU
 
 .pattern-category-title {
-  left: 0;
+  left: 14px;
   margin-bottom: 4px;
-}
-
-.pattern-category-title .cell {
-  padding-left: 20px;
 }
 
 // Fix open pattern category menu layout
 .category-nav {
   left: 0;
-  width: auto;
+  width: 100%;
 }
 
 .category-nav ul {
   width: 100%;
+  padding-right: 0;
 }
 
 .category-nav ul li {
@@ -91,10 +87,9 @@ main.home {
 
 // GRID
 
-.patterns-grid {
+.grid-container.home .patterns-grid {
   width: 100%;
-  margin: 0 !important;
-  padding: 0px 25px;
+  margin:0;
 }
 
 .patterns-grid .cell {
@@ -106,10 +101,6 @@ main.home {
 /* Patterns Page */
 
 // General page layout
-.grid-container.pattern {
-  // margin-top: 100px;
-}
-
 .limitations-div{
   margin-left: 16.66%;
 }
@@ -118,6 +109,7 @@ main.home {
 .pattern-image.illustration_version_1 {
   height: 372px;
   padding: 20px;
+
   & .cell {
     height: 100%;
   }
