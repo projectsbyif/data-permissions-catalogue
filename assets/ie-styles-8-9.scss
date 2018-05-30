@@ -1,0 +1,170 @@
+---
+---
+// * {
+//   outline-color: red;
+//   outline-style: solid;
+//   outline-width:1px;
+// }
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+// Clearfix
+.clear:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+
+/* Home Page */
+// HEADER
+
+// Re-position title and menu
+header {
+  position: static;
+  width: 100%;
+  overflow: hidden;
+}
+
+header .title, .page-menu {
+  width: auto;
+  height: 100%;
+}
+
+.page-menu {
+  position: relative;
+  top: 0px;
+  float: right;
+}
+
+.grid-container.home {
+  padding-top: 71px;
+}
+
+// Adjust main.home layout
+
+main.home {
+  padding-top: 175px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.homepage-intro {
+  height: 288px;
+}
+
+.homepage-intro div {
+  height: 100%;
+}
+
+// MENU
+
+.pattern-category-title {
+  left: 0;
+  margin-bottom: 4px;
+}
+
+.pattern-category-title .cell {
+  padding-left: 20px;
+}
+
+// Fix open pattern category menu layout
+.category-nav {
+  left: 0;
+  width: auto;
+}
+
+.category-nav ul {
+  width: 100%;
+}
+
+.category-nav ul li {
+  width: auto;
+}
+
+// GRID
+
+.patterns-grid {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0px 25px;
+}
+
+.patterns-grid .cell {
+  display: inline-block;
+  width: 33%;
+  margin: 0 auto;
+}
+
+/* Patterns Page */
+
+// General page layout
+.grid-container.pattern {
+  // margin-top: 100px;
+}
+
+.limitations-div{
+  margin-left: 16.66%;
+}
+
+// Main image height (illustration_version_1)
+.pattern-image.illustration_version_1 {
+  height: 372px;
+  padding: 20px;
+  & .cell {
+    height: 100%;
+  }
+  & .cell img {
+    height: 100%;
+  }
+}
+
+// Main image height
+.pattern-image {
+  height: 374px;
+  padding: 0;
+  & .cell {
+    height: 100%;
+  }
+  & .cell img {
+    height: 100%;
+  }
+  & .two-image {
+    margin: 0;
+    width: 49%;
+  }
+  & .three-image {
+    margin: 0;
+    width: 33%;
+  }
+}
+
+// Display multiple images in a line.
+.two-image, .three-image {
+  display: inline-block;
+}
+
+/* Content Pages */
+
+.page-content h2 {
+  margin-top: 30px;
+}
+
+/* Category pages */
+
+header {
+  &.desktop-fixed {
+    position: fixed;
+  }
+}
+
+.pattern-category-title.category-page {
+  height: auto;
+}
