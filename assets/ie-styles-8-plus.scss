@@ -4,6 +4,13 @@
   outline: red solid 1px;
 }
 
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 // HEADER
 
 // Re-position title and menu
@@ -39,6 +46,8 @@ main.home {
   height: 100%;
 }
 
+// MENU
+
 // Adjust pattern category menu layout
 .pattern-category-menu:after{
   visibility: hidden;
@@ -53,6 +62,10 @@ height: 0;
   margin-bottom: 4px;
 }
 
+.pattern-category-title .cell {
+  padding-left: 20px;
+}
+
 // Fix open pattern category menu layout
 .category-nav {
   left: 0;
@@ -65,4 +78,13 @@ height: 0;
 
 .category-nav ul li {
   width: auto;
+}
+
+// GRID
+
+// Patterns Grid
+.patterns-grid {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0px 25px;
 }
