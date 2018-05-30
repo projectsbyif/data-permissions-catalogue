@@ -1,6 +1,7 @@
 $(function() {
   // Constants
-  // Changed to Var for compatibility with IE9, IE10.
+
+  // Changed to var for compatbility with IE8-10
   var DESKTOP_WIDTH = 639;
   var BACKGROUND_COLORS = [
     '#FFEB82',
@@ -146,7 +147,7 @@ $(function() {
     }
   });
 
-  // Scrolling interactions mobile
+  // Scrolling interactions (mobile and Desktop)
   $(window).scroll(function() {
     if (isMenuActive) {
       return;
@@ -164,6 +165,7 @@ $(function() {
         });
 
         // Specific styling for screens larger than desktop-width.
+    
         if ($(window).width() > DESKTOP_WIDTH) {
           $('header').addClass('desktop-fixed');
           $('header .page-menu').show();

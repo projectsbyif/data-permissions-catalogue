@@ -9,9 +9,9 @@
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | replace: '.html', '' | absolute_url }}">
   <link rel="icon" id="favicon" href="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/favicon.png">
   <link rel="apple-touch-icon-precomposed" href="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/apple_touch_icon.png">
-  <!-- Styles only applied to browsers greater than Internet Explorer 8 -->
-  <!--[if gte IE 8]>
-    <link href="/assets/ie-styles-8-plus.css" rel="stylesheet" type="text/css">
+  <!-- Styles only applied to IE versions prior to Internet Explorer 9 -->
+  <!--[if lte IE 9]>
+    <link href="/assets/ie-styles-8-9.css" rel="stylesheet" type="text/css">
   <![endif]-->
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %} - IF">

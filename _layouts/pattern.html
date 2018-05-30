@@ -12,16 +12,16 @@ layout: default
   {% if page.images %}
     {% case page.images.size %}
       {% when 1 %}
-      <div class="{% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
+      <div class="one-image {% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
         <img src="{{ page.images[0].url }}" />
       </div>
       {% when 2 %}
       {% assign count = 0 %}
       {% for image in page.images %}
         {% if count == 0 %}
-          <div class="large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
+          <div class="two-image large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
         {% else %}
-          <div class="large-4 medium-4 small-12 cell">
+          <div class="two-image large-4 medium-4 small-12 cell">
         {% endif %}
             <img src="{{ image.url }}" />
           </div>
@@ -29,7 +29,8 @@ layout: default
       {% endfor %}
       {% when 3 %}
       {% for image in page.images %}
-      <div class="large-4 medium-4 small-12 cell">
+      <!-- Patterns with three images: Verifiable Proof -->
+      <div class="three-image large-4 medium-4 small-12 cell">
         <img src="{{ image.url }}" />
       </div>
       {% endfor %}
