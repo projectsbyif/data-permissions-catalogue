@@ -1,5 +1,6 @@
 ---
 ---
+$main-wrapper-height: 288px;
 * {
   outline: red solid 1px;
 }
@@ -11,6 +12,8 @@ html, body {
   overflow-x: hidden;
 }
 
+
+/* Home Page */
 // HEADER
 
 // Re-position title and menu
@@ -39,7 +42,7 @@ main.home {
 }
 
 .homepage-intro {
-  height: 288px;
+  height: $main-wrapper-height;
 }
 
 .homepage-intro div {
@@ -87,4 +90,23 @@ height: 0;
   width: 100%;
   margin: 0 !important;
   padding: 0px 25px;
+}
+
+.patterns-grid .cell {
+  display: inline-block;
+  width: 33%;
+  margin: 0 auto;
+}
+
+/* Patterns Page */
+
+.grid-container.pattern {
+  margin-top: 50px;
+}
+.pattern-image {
+  height: auto;
+}
+
+.limitations-div{
+  margin-left: 16.66%;
 }
