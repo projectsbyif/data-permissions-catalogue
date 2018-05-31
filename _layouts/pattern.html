@@ -13,7 +13,13 @@ layout: default
     {% case page.images.size %}
       {% when 1 %}
       <div class="one-image {% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
-        <img src="{{ page.images[0].url }}" />
+        <!-- Adding specific class for certain images that don't fit in Firefox/Edge mobile versions -->
+        <img class="{% if page.images[0].url == '/images/behavioural-patterns.svg'
+                        or page.images[0].url == '/images/inactivity-checking.svg'
+                        or page.images[0].url == '/images/marketplace.svg'
+                        or page.images[0].url == '/images/word-matching.svg' %}
+                          shrink-height
+                        {% endif %}" src="{{ page.images[0].url }}" />
       </div>
       {% when 2 %}
       {% assign count = 0 %}
