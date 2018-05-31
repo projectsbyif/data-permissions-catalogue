@@ -6,11 +6,7 @@ layout: default
 
 <div class="full-width-banner pattern color-{{ page.category | slugify }}"></div>
 
-<noscript>
-  {% include images-no-js.html %}
-</noscript>
-
-<div id="when-no-script" class="grid-x grid-padding-x pattern-image color-{{ page.category | slugify }}{% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
+<div class="grid-x grid-padding-x pattern-image color-{{ page.category | slugify }}{% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
   <a href="#" class="carousel-control previous">Previous</a>
   <a href="#" class="carousel-control next">Next</a>
   {% if page.images %}
@@ -32,8 +28,22 @@ layout: default
         {% assign count = count | plus: 1 %}
       {% endfor %}
       {% when 3 %}
+      <!-- When no script, multiple images and mobile screen size, display only 1 image. -->
+      <noscript>
+        <div class="no-script-image-div grid-x">
+          <div class="three-image small-12 cell phone">
+            <img src="{{ page.images[1].url }}" alt="">
+          </div>
+        {% for image in page.images %}
+          <div class="three-image desktop large-4 medium-4 small-4 cell">
+            <img src="{{ image.url }}" />
+          </div>
+        {% endfor %}
+        </div>
+      </noscript>
       {% for image in page.images %}
-      <div class="large-4 medium-4 small-12 cell">
+      <!-- Hide this when script is turned off -->
+      <div id="when-no-script" class="large-4 medium-4 small-12 cell">
         <img src="{{ image.url }}" />
       </div>
       {% endfor %}

@@ -1,6 +1,6 @@
 ---
 ---
-// @import "foundation.min.css";
+
 /* Desktop - show menu when JS disabled. */
 .pattern-category-title {
   display: none;
@@ -42,8 +42,17 @@
   display: none;
 }
 
+.pattern-image noscript {
+  width: 100%;
+}
+
 .no-script-image-div{
   left: -1.625rem;
+  height: 100%;
+  width: 100%;
+}
+
+.no-script-image-div .three-image {
   height: 100%;
 }
 
@@ -51,7 +60,7 @@
   display: none;
 }
 
-.three-image > .phone {
+.three-image.phone {
   display: none;
 }
 
@@ -59,10 +68,10 @@
   .pattern-image{
     height: 359px;
   }
-  .three-image > .desktop {
+  .three-image.desktop {
     display: none;
   }
-  .three-image > .phone {
+  .three-image.phone {
     display: block;
   }
 }
