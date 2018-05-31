@@ -904,3 +904,23 @@ main {
     }
   }
 }
+
+// IE doesn't support nested media queries, so media queries for IE 10 and 11 are listed here.
+
+@media screen and (max-width: 638px) {
+  header .menu {
+    z-index: 10
+  }
+  header .title.ie {
+    height: auto;
+  }
+  .category-nav ul li {
+    margin-right: 10px;
+  }
+  .grid-container.home.ie {
+    padding-top: 0px;
+    & .homepage-intro div{
+      padding-top: 50px;
+    }
+  }
+}
