@@ -29,7 +29,8 @@ layout: default
         <img src="{{ pattern.images[0].url }}" />
         {% endif %}
       </div>
-      <p class="title">{{ pattern.title }}</p>
+      <!-- Added this class for IE8 -->
+      <p class="title color-ie-{{ pattern.category | slugify }}">{{ pattern.title }}</p>
     </a>
   </div>
   {% endfor %}

@@ -1,41 +1,275 @@
 ---
 ---
+$border-color: #000F7D;
+$color-all: #EEE;
+$color-authentication: #FFF2B3;
+$color-automation: #FAC9A3;
+$color-backup-data: #F7ADB6;
+$color-control-access: #FAC8E9;
+$color-give-consent: #DFCCFF;
+$color-manage-consent: #BBEAFA;
+$color-other: #A9BAE1;
+$color-see-access: #C0F0D5;
+$color-share-data: #D8EDB0;
+$color-social-consent: #98D9CA;
+$color-footer: #f0f4f6;
 
-.support {
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* html .clear {
+    height: 1%;
+}
+
+// Hide all the things
+img,
+.image.color-control-access,
+.image.illustration_version_1,
+.image.color-authentication,
+.image.color-automation,
+.image.color-see-access,
+.image.color-share-data,
+.image.color-manage-consent,
+.image.color-backup-data,
+.image.color-give-consent,
+.image.color-social-consent,
+.wrapper .pattern-category-menu h2,
+.pattern-category-title,
+.logo,
+#ie-menu{
   display: none;
+  width: 0;
 }
 
-.no-support {
+a {
+  text-decoration: none !important;
+}
+
+/* HOMEPAGE */
+
+// Pattern Grid
+
+.pattern-block p.title {
+  // width: 100%;
+  text-align: center;
+  padding: 30px 0px;
+  margin: 15px 15px;
+  border: 2px solid #000F7D;
+}
+
+// Re-position title and menu
+header {
+  position: static;
+  width: 100%;
+  overflow: hidden;
+}
+
+header div.ie-float-clear {
+  width: 1200px;
+}
+
+#showMe {
+  display: inline-block;
+  width: 60px;
+}
+
+.page-menu {
+  position: relative;
+  top: 10px;
+  float: right;
   display: block;
-  font-family: Helvetica, sans-serif;
+  font-size: 10px;
 }
 
-// Header
-
-.no-support__header {
-  height: 650px;
-  // background-color: black;
-  color: black;
-  font-size: 75px;
-}
-
-a, a:link, a:focus  {
+#ie-title {
+  width: 300px;
+  margin-left: 50px;
+  display: inline-block;
   text-decoration: none;
-  margin-left: 45%;
+  height: 25px;
+  position: relative;
 }
 
-.no-support__header img {
-  width: 10%;
-  // margin-left: 45%;
+header .title p {
+  display: inline-block;
+  width: 100%;
 }
 
-.no-support__header h1 {
-  text-align: center;
-  padding-top: 150px;
+.page-menu li, .page-menu li p {
+  display: inline;
+  padding: 0 10px;
+  width: 25px;
 }
 
-.no-support__header p {
-  padding: 40px;
-  font-size: 25px;
-  text-align: center;
+.grid-container.home {
+  padding-top: 71px;
 }
+
+.grid-container.home .patterns-grid {
+  width: 100%;
+  margin:0;
+}
+
+.patterns-grid .cell {
+  display: inline-block;
+  width: 33%;
+  margin: 0 auto;
+}
+
+.color-ie-all {
+  background-color: $color-all !important;
+}
+
+.color-ie-authentication {
+  background-color: $color-authentication !important;
+}
+
+.color-ie-automation {
+  background-color: $color-automation !important;
+}
+
+.color-ie-backup-data {
+  background-color: $color-backup-data !important;
+}
+
+.color-ie-control-access {
+  background-color: $color-control-access !important;
+}
+
+.color-ie-give-consent {
+  background-color: $color-give-consent !important;
+}
+
+.color-ie-manage-consent {
+  background-color: $color-manage-consent !important;
+}
+
+.color-ie-other {
+  background-color: $color-other !important;
+}
+
+.color-ie-see-access {
+  background-color: $color-see-access !important;
+}
+
+.color-ie-share-data {
+  background-color: $color-share-data !important;
+}
+
+.color-ie-social-consent {
+  background-color: $color-social-consent !important;
+}
+
+div.homepage-intro{
+  height: 350px;
+  width: 100%;
+}
+
+.homepage-intro div h1 {
+  padding-top: 100px;
+  padding-left: 20px;
+}
+
+.homepage-intro div a {
+  margin-left: 20px;
+}
+
+main.clear.ie {
+  display: inline-block;
+  width: 1200px;
+  height: 1200px;
+
+}
+
+.ie-category-nav {
+  display: inline-block !important;
+  width: 100% !important;
+  height: 25px !important;
+}
+
+.ie-category-nav ul li {
+  width: 10px !important;
+  display: inline-block !important;
+}
+// Clearfix
+.clear:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* Patterns Page */
+
+// General page layout
+.ie-content {
+  padding: 0 20px;
+}
+
+.ie-h3 {
+  text-decoration: underline;
+}
+
+.ie-heading-links {
+  font-style: italic;
+}
+
+.ie-list {
+  list-style: circle;
+}
+
+.ie-list-no-bullets {
+  list-style: none;
+}
+
+/* FOOTER */
+.footer {
+  background-color: $color-footer;
+}
+
+/* UNSUPPORTED BROWSERS */
+
+// .support {
+//   display: none;
+// }
+//
+// .no-support {
+//   display: block;
+//   font-family: Helvetica, sans-serif;
+// }
+//
+// // Header
+//
+// .no-support__header {
+//   height: 650px;
+//   // background-color: black;
+//   color: black;
+//   font-size: 75px;
+// }
+//
+// a, a:link, a:focus  {
+//   text-decoration: none;
+//   margin-left: 45%;
+// }
+//
+// .no-support__header img {
+//   width: 10%;
+//   // margin-left: 45%;
+// }
+//
+// .no-support__header h1 {
+//   text-align: center;
+//   padding-top: 150px;
+// }
+//
+// .no-support__header p {
+//   padding: 40px;
+//   font-size: 25px;
+//   text-align: center;
+// }

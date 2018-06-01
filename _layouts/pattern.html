@@ -45,7 +45,7 @@ layout: default
   {% endif %}
 </div>
 
-<div class="grid-x grid-padding-x">
+<div class="ie-content grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
     <h2 class="no-margin">{{ page.title }}</h2>
     <p><a href="/category/{{ page.category | slugify }}" class="border-{{ page.category | slugify }}">{{ page.category }}</a></p>
@@ -55,13 +55,13 @@ layout: default
   </div>
 </div>
 
-<div class="grid-x grid-padding-x">
+<div class="ie-content grid-x grid-padding-x">
 
     {% if page.advantages %}
     <div class="large-4 large-offset-2 small-12 cell">
-      <h3>Advantages</h3>
+      <h3 class="ie-h3">Advantages</h3>
 
-      <ul>
+      <ul class="ie-list">
         {% for advantage in page.advantages %}
         <li>
           <p>{{ advantage }}</p>
@@ -74,9 +74,9 @@ layout: default
     {% if page.limitations %}
     <div class="limitations-div large-4 small-12 cell">
 
-    <h3>Limitations</h3>
+    <h3 class="ie-h3">Limitations</h3>
 
-    <ul>
+    <ul class="ie-list">
       {% for limitation in page.limitations %}
       <li>
         <p>{{ limitation }}</p>
@@ -87,13 +87,13 @@ layout: default
     {% endif %}
 </div>
 
-<div class="grid-x grid-padding-x">
+<div class="ie-content grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
 
     {% if page.examples %}
-    <h3>Examples</h3>
+    <h3 class="ie-heading-links">Examples</h3>
 
-    <ul>
+    <ul class="ie-list-no-bullets">
       {% for example in page.examples %}
       <li>
         <p>{% if example.url %}<a href="{{ example.url }}">{% endif %}{% if example.title %}{{ example.title }}{% endif %}{% if example.url %}</a>{% endif %}{% if example.title and example.description %}: {% endif %}{% if example.description %}{{ example.description }}{% endif %}</p>
@@ -103,9 +103,9 @@ layout: default
     {% endif %}
 
     {% if page.further_reading %}
-    <h3>Further reading</h3>
+    <h3 class="ie-heading-links">Further reading</h3>
 
-    <ul class="further_reading">
+    <ul class="ie-list-no-bullets further_reading">
       {% for item in page.further_reading %}
       <li>
         <p><a href="{{ item.url }}">{{ item.title }}</a>{% if item.description %}: {{ item.description }}{% endif %}</p>
@@ -116,9 +116,9 @@ layout: default
 
 
     {% if other_patterns.size > 1 %}
-    <h3>Related patterns</h3>
+    <h3 class="ie-heading-links">Related patterns</h3>
 
-    <ul>
+    <ul class="ie-list-no-bullets">
     {% for pattern in other_patterns %}
     {% if pattern.title != page.title %}
       <li>
