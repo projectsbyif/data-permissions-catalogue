@@ -228,9 +228,20 @@ main.clear.ie {
   list-style: none;
 }
 
+/* PAGES */
+.ie-content-pages {
+  padding-top: 50px;
+}
+
+.ie-content-pages .page-content h2 {
+  font-weight: bold;
+}
+
 /* FOOTER */
 .footer {
   background-color: $color-footer;
+  position: fixed;
+  bottom: 0px;
 }
 
 /* UNSUPPORTED BROWSERS */
