@@ -37,10 +37,12 @@ img,
 .image.color-backup-data,
 .image.color-give-consent,
 .image.color-social-consent,
+.image.color-all,
 .wrapper .pattern-category-menu h2,
 .pattern-category-title,
 .logo,
-#ie-menu{
+#ie-menu,
+.pattern-image {
   display: none;
   width: 0;
 }
@@ -72,6 +74,10 @@ header div.ie-float-clear {
   width: 1200px;
 }
 
+.ie-logo {
+  border-bottom: none !important;
+}
+
 #showMe {
   display: inline-block;
   width: 60px;
@@ -79,7 +85,7 @@ header div.ie-float-clear {
 
 .page-menu {
   position: relative;
-  top: 10px;
+  top: 12px;
   float: right;
   display: block;
   font-size: 10px;
@@ -90,6 +96,7 @@ header div.ie-float-clear {
   margin-left: 50px;
   display: inline-block;
   text-decoration: none;
+  border: none;
   height: 25px;
   position: relative;
 }
@@ -177,22 +184,15 @@ div.homepage-intro{
 .homepage-intro div a {
   margin-left: 20px;
 }
-//
-// #ie8 {
-//   display: inline-block;
-// height: 1200px;
-// width: 1200px;
-// }
-//
-// .ie-category-nav {
-//   display: inline-block !important;
-//   width: 100% !important;
-//   height: 25px !important;
-// }
+
+.ie-category-nav {
+  padding-top: 15px;
+}
 
 .ie-category-nav li {
   width: 140px;
   margin: 0 5px;
+  padding: 5px 0;
   display: inline-block;
 }
 
@@ -213,6 +213,11 @@ div.homepage-intro{
 /* Patterns Page */
 
 // General page layout
+.ie-title {
+  font-weight: bold;
+  padding: 20px 0;
+}
+
 .ie-content {
   padding: 0 20px;
 }
@@ -231,6 +236,7 @@ div.homepage-intro{
 
 .ie-list-no-bullets {
   list-style: none;
+  padding-left: 20px;
 }
 
 /* PAGES */
