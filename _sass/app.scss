@@ -601,15 +601,18 @@ $colour8: #A0F0C3;
   width: 100vw;
   z-index: -1;
   background-color: #FFEB82;
-  // Run animation on full-width-banner on desktop.
-  animation-name: colourChange;
-  animation-duration: 72s;
-  animation-iteration-count: infinite;
 
   &.pattern {
     display: block;
     height: 429px;
   }
+}
+
+.full-width-banner.home {
+  // Run animation on full-width-banner on desktop.
+  animation-name: colourChange;
+  animation-duration: 72s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes colourChange {
