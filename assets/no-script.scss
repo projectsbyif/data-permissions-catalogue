@@ -30,6 +30,15 @@
   }
   .no-script-menu {
     display: block;
+    width: auto;
+  }
+  .homepage-intro noscript a {
+    display: inline-block;
+    width: 256px;
+  }
+
+  .homepage-intro .first {
+    margin-top: 21px;
   }
   .cta {
     margin-bottom: 10px;
