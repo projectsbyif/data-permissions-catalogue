@@ -177,23 +177,28 @@ div.homepage-intro{
 .homepage-intro div a {
   margin-left: 20px;
 }
+//
+// #ie8 {
+//   display: inline-block;
+// height: 1200px;
+// width: 1200px;
+// }
+//
+// .ie-category-nav {
+//   display: inline-block !important;
+//   width: 100% !important;
+//   height: 25px !important;
+// }
 
-main.clear.ie {
+.ie-category-nav li {
+  width: 140px;
+  margin: 0 5px;
   display: inline-block;
-  width: 1200px;
-  height: 1200px;
-
 }
 
-.ie-category-nav {
-  display: inline-block !important;
-  width: 100% !important;
-  height: 25px !important;
-}
-
-.ie-category-nav ul li {
-  width: 10px !important;
-  display: inline-block !important;
+.ie-category-nav li a {
+  // width: 150px;
+  text-align: center;
 }
 // Clearfix
 .clear:after {
@@ -238,10 +243,9 @@ main.clear.ie {
 }
 
 /* FOOTER */
-.footer {
+.ie-footer {
   background-color: $color-footer;
-  position: fixed;
-  bottom: 0px;
+  width: 100%;
 }
 
 /* UNSUPPORTED BROWSERS */
