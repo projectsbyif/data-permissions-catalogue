@@ -53,12 +53,15 @@ ul {
 
   li {
     p {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 }
 
-a:link, a:visited, a:hover, a:active {
+a:active,
+a:hover,
+a:link,
+a:visited {
   color: #000F7D;
   border-bottom: #000F7D 1px solid;
 }
@@ -69,14 +72,12 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 15px;
-  padding-bottom: 0px;
+  padding: 15px 20px 0;
   z-index: 9999;
   color: #212121;
 
-  .logo, .menu {
+  .logo,
+  .menu {
     background-repeat: no-repeat;
     height: 42px;
     width: 42px;
@@ -87,19 +88,19 @@ header {
 
   .logo {
     float: left;
-    background-image: url('/images/if-logo.svg');
+    background-image: url("/images/if-logo.svg");
     background-size: 60%;
     background-position: center left;
   }
 
   .menu {
     float: right;
-    background-image: url('/images/menu.svg');
+    background-image: url("/images/menu.svg");
     background-size: 50% 50%;
     background-position: center right;
 
     &.menu-opened {
-      background-image: url('/images/close.svg');
+      background-image: url("/images/close.svg");
       background-size: 45% 45%;
     }
 
@@ -168,13 +169,12 @@ iframe {
 
 .cta {
   border: #000F7D 2px solid !important;
-  padding: 20px 15px 15px 15px;
+  padding: 20px 15px 15px;
   font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.8em;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
 // Colors
 $color-all: #EEE;
 $color-authentication: #FFF2B3;
@@ -275,7 +275,6 @@ $color-social-consent: #98D9CA;
 .color-social-consent {
   background-color: $color-social-consent !important;
 }
-
 // PAGE STRUCTURE
 main {
   min-height: calc(100vh - 81px);
@@ -294,7 +293,6 @@ main {
   padding-left: 20px;
   padding-right: 20px;
 }
-
 // MENUS
 .category-nav {
   display: none;
@@ -316,7 +314,7 @@ main {
 
   ul {
     list-style-type: none;
-    padding: 20px 20px 0px 20px;
+    padding: 20px 20px 0;
     margin: 0;
     overflow: auto;
 
@@ -366,16 +364,17 @@ main {
   }
 }
 
+
 // CATEGORY PAGES: TITLE
 .pattern-category-title {
   background: #FFF;
   position: relative;
   left: -20px;
   width: 100vw;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-  margin-bottom: 0px;
-  padding: 20px 20px 10px 20px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0;
+  padding: 20px 20px 10px;
 
   .wrapper {
     width: 100%;
@@ -414,7 +413,6 @@ main {
     margin-left: 10px;
   }
 }
-
 // CATEGORY PAGES: PATTERN BLOCK
 .pattern-block {
   border-bottom: 0 !important;
@@ -427,7 +425,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px;
+    padding: 0;
 
     img {
       width: 100%;
@@ -456,7 +454,6 @@ main {
     }
   }
 }
-
 // PATTERN PAGE: IMAGES
 .pattern-image {
   background-color: #ff5e23;
@@ -471,29 +468,37 @@ main {
     width: initial;
     height: 372px;
     padding: 20px;
-
+    // Adapted height properties for compatbility with Edge and Firefox
     .cell {
       display: block;
       padding: 0;
+      height: inherit;
 
       img {
-        max-height: 100vw;
+        height: 100%;
+        // To fix certain images on Firefox/Edge (e.g. behavioural-patterns image)
+        &.shrink-height {
+          @media screen and (max-width: 638px) {
+            height: 95%;
+          }
+        }
       }
     }
   }
 
+  // Adapted height properties for compatbility with Edge and Firefox
   .cell {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: inherit;
 
     img {
       width: 100%;
-      height: 100%;
+      height: inherit;
     }
   }
 }
-
 // PATTERN PAGE: CAROUSEL
 .carousel-control {
   display: block;
@@ -507,20 +512,20 @@ main {
   border-bottom: 0;
 
   &.previous {
-    background-image: url('/images/previous.svg');
+    background-image: url("/images/previous.svg");
     left: 0.625rem;
     opacity: 0.25;
   }
 
   &.next {
-    background-image: url('/images/next.svg');
+    background-image: url("/images/next.svg");
     right: 0.625rem;
   }
 }
 
 .carousel-indicator {
   width: 100%;
-  height: 0px;
+  height: 0;
   position: absolute;
   bottom: 0.625rem;
   justify-content: center;
@@ -549,7 +554,7 @@ main {
     margin-right: 4px;
 
     &:last-of-type {
-      margin-right: 0px;
+      margin-right: 0;
     }
 
     &.active {
@@ -557,8 +562,8 @@ main {
     }
   }
 }
-
 // HOMEPAGE
+
 .homepage-intro {
   background-color: #FFEB82;
   padding-left: 20px;
@@ -596,7 +601,6 @@ main {
   }
 }
 
-
 .footer-nav {
   font-size: 0.8em;
   padding: 0;
@@ -608,8 +612,6 @@ main {
     margin-right: 0.3em;
   }
 }
-
-
 @media screen and (min-width: 639px) {
   body {
     font-size: 22px;
@@ -648,11 +650,12 @@ main {
     &.desktop-fixed {
       position: sticky;
       position: -webkit-sticky;
-
       top: 18px;
       pointer-events: none;
 
-      .menu, .title, .logo {
+      .logo,
+      .menu,
+      .title {
         display: none;
       }
 
@@ -701,7 +704,7 @@ main {
         }
 
         &:last-of-type {
-          margin-right: 0px;
+          margin-right: 0;
         }
       }
     }
@@ -716,16 +719,16 @@ main {
 
   main {
     min-height: calc(100vh - 195px);
-    padding-top: 0px;
+    padding-top: 0;
 
     &.page {
       padding-top: 50px;
     }
   }
-
   // PATTERN PAGE: IMAGES
   .pattern-image {
-    height: 374px;
+    // Adjusted for Firefox/Edge compatbility
+    height: 373px;
     position: initial;
     width: 100%;
     margin-left: auto !important;
@@ -734,7 +737,8 @@ main {
 
     &.illustration_version_1 {
       .cell {
-        padding: 40px;
+        // Changed this for a larger photo.
+        padding: 0px 40px 40px 40px;
 
         img {
           max-height: 413px;
@@ -742,7 +746,6 @@ main {
       }
     }
   }
-
   // HOMEPAGE
   .homepage-intro {
     width: 100%;
@@ -772,10 +775,7 @@ main {
   .pattern-category-title {
     width: 100%;
     position: initial;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding: 20px 0 10px;
     pointer-events: all;
 
     img {
@@ -862,16 +862,14 @@ main {
     pointer-events: none;
   }
 }
-
 @media screen and (min-width: 92rem) {
   .homepage-intro {
     div {
       width: 520px;
-      padding-left: 0px;
+      padding-left: 0;
     }
   }
 }
-
 @media screen and (min-width: 1024px) {
   .patterns-grid {
     .cell {
@@ -879,13 +877,13 @@ main {
       padding-right: calc(0.9375rem / 2) !important;
 
       &:nth-child(2n) {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0;
       }
 
       &:nth-child(2n-1) {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0;
       }
 
       &:nth-child(3n) {
@@ -893,14 +891,34 @@ main {
         padding-right: 0.9375rem !important;
       }
 
-      &:nth-child(3n-1) {
-
-      }
+      &:nth-child(3n-1) {}
 
       &:nth-child(3n-2) {
         padding-left: 0.9375rem !important;
         padding-right: 0.9375rem !important;
       }
+    }
+  }
+}
+// IE doesn't support nested media queries, so media queries for IE 10 and 11 are listed here.
+@media screen and (max-width: 638px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  header .menu {
+    z-index: 10;
+  }
+
+  header .title.ie {
+    height: auto;
+  }
+
+  .category-nav ul li {
+    margin-right: 10px;
+  }
+
+  .grid-container.home.ie {
+    padding-top: 0;
+
+    & .homepage-intro div {
+      padding-top: 50px;
     }
   }
 }

@@ -4,11 +4,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title | escape }}{% if page.title == "All" %} patterns{% endif %} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %} - IF</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <link rel="stylesheet" href="{{ "/assets/foundation.min.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/foundation.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | replace: '.html', '' | absolute_url }}">
   <link rel="icon" id="favicon" href="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/favicon.png">
   <link rel="apple-touch-icon-precomposed" href="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/apple_touch_icon.png">
+  <!-- Styles only applied to IE 8 -->
+  <!--[if IE 8 ]>
+    <link href="/assets/ie-styles-8.css" rel="stylesheet" type="text/css">
+  <![endif]-->
+  <!-- Styles only applied to IE 9 -->
+  <!--[if IE 9 ]>
+    <link href="/assets/ie-styles-9.css" rel="stylesheet" type="text/css">
+  <![endif]-->
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %} - IF">
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
@@ -25,11 +33,17 @@
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
-      var u="//projectsbyif.com/piwik/";
-      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      var u = "//projectsbyif.com/piwik/";
+      _paq.push(['setTrackerUrl', u + 'piwik.php']);
       _paq.push(['setSiteId', '2']);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      var d = document,
+        g = d.createElement('script'),
+        s = d.getElementsByTagName('script')[0];
+      g.type = 'text/javascript';
+      g.async = true;
+      g.defer = true;
+      g.src = u + 'piwik.js';
+      s.parentNode.insertBefore(g, s);
     })();
   </script>
   <!-- End Piwik Code -->

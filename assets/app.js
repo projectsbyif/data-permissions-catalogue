@@ -1,7 +1,9 @@
 $(function() {
   // Constants
-  const DESKTOP_WIDTH = 639;
-  const BACKGROUND_COLORS = [
+
+  // Changed to var for compatbility with IE8-10
+  var DESKTOP_WIDTH = 639;
+  var BACKGROUND_COLORS = [
     '#FFEB82',
     '#FAAF73',
     '#F77787',
@@ -21,7 +23,7 @@ $(function() {
   var backgroundColorCounter = 1;
 
   // Homepage intro animation
-  animateHomepageIntro();
+  // animateHomepageIntro();
 
   function animateHomepageIntro() {
     $('.homepage-intro, .full-width-banner').animate({
@@ -45,16 +47,20 @@ $(function() {
   });
 
   function openCategoryMenu() {
+    // If menu is open, category list is fixed underneath category title.
     if ($('.pattern-category-title').hasClass('fixed')) {
       $('.category-nav').css({
         'top': $('.pattern-category-title')[0].getBoundingClientRect().top + $('.pattern-category-title').outerHeight()
       }).fadeIn(250);
     }
 
+    // Fades in menu.
     $('.category-nav').fadeIn(250);
 
+    // Enables 'clickout'
     $('.category-nav-dismiss').show();
 
+    // Changes down arrow to up arrow.
     $('.pattern-category-title img').attr('src', '/images/up.svg');
 
     isCategoryMenuActive = true;
@@ -74,12 +80,15 @@ $(function() {
     e.preventDefault();
 
     if (isMenuActive) {
+      // Close menu.
       isMenuActive = false;
 
+      // Restores position of body behind menu.
       $('html, body').scrollTop(menuScrollTop);
 
       $('.page-menu').fadeOut(250);
 
+      // If scrolled past header, fades out header and keeps it hidden.
       if (scrollTop > $('header').outerHeight()) {
         $('header .logo, header .title').animate({
           'opacity': 0
@@ -88,19 +97,23 @@ $(function() {
         });
       }
 
+      // Fades out header background to transparent. Resets style.
       $('header').animate({
         'background-color': 'rgba(255, 255, 255, 0.0)'
       }, 250, function() {
         $('header').attr('style', '');
       });
 
+      // Changes menu icon back to burger.
       $('header .menu').removeClass('menu-opened');
     } else {
+      // Opening menu.
       isMenuActive = true;
       menuScrollTop = $(window).scrollTop();
 
       $('.page-menu').fadeIn(250);
 
+      // Show header in menu if no longer visible on screen.
       if (scrollTop > $('header').outerHeight()) {
         $('header .logo, header .title').css({
           'opacity': 0
@@ -109,6 +122,7 @@ $(function() {
         }, 250);
       }
 
+      // Changes background colour of header to white and fixes position to top of screen.
       $('header').attr('class', 'grid-container').animate({
         'background-color': 'rgb(255, 255, 255)'
       }, 250).css({
@@ -117,6 +131,7 @@ $(function() {
         'left': 0
       });
 
+      // Changes menu icon to X.
       $('header .menu').addClass('menu-opened');
     }
   });
@@ -132,7 +147,7 @@ $(function() {
     }
   });
 
-  // Scrolling interactions mobile
+  // Scrolling interactions (mobile and Desktop)
   $(window).scroll(function() {
     if (isMenuActive) {
       return;
@@ -142,12 +157,14 @@ $(function() {
 
     if ($('.pattern-category-title').length > 0) {
       if (scrollTop > $('.pattern-category-title-anchor').position().top) {
-        // Make category menu and pages menu fixed
+        // Make category menu and pages menu fixed to top of page.
         $('.pattern-category-title').addClass('fixed');
 
         $('.category-nav').addClass('fixed').css({
           'top': $('.pattern-category-title')[0].getBoundingClientRect().top + $('.pattern-category-title').outerHeight()
         });
+
+        // Specific styling for screens larger than desktop-width.
 
         if ($(window).width() > DESKTOP_WIDTH) {
           $('header').addClass('desktop-fixed');
@@ -202,16 +219,21 @@ $(function() {
   function createCarousel() {
     numImages = $('.pattern-image').find('.cell').length;
 
+    // Checks image numbers and screen width.
     if (numImages <= 1 || (numImages > 1 && $(window).width() > DESKTOP_WIDTH)) {
       return;
     }
 
+    // Appends dots (depending on # of images)
+    // [Bonus accessibility - screen readers will read "dot" for each dot.]
     for (var i = 0; i < numImages; i++) {
       $('.carousel-indicator .wrapper').append('<a href="#" class="dot">dot</a>');
     }
 
+    // Make first dot active (change opacity)
     $('.carousel-indicator .dot').first().addClass('active');
 
+    // Hide everything but first image.
     $('.pattern-image .cell').not(':first').hide();
     $('.carousel-indicator').addClass('active');
 
@@ -224,6 +246,7 @@ $(function() {
   }
 
   function changeImage() {
+    // Hide images and dots (line 247), make relevant dot and image visible.
     $('.pattern-image .cell').hide();
     $('.pattern-image .cell').eq(currentImage).show();
     $('.carousel-indicator .dot').removeClass('active');

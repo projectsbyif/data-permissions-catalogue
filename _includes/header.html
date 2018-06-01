@@ -1,9 +1,17 @@
 <header class="grid-container">
   <div class="grid-x grid-padding-x">
-    <div class="small-12 large-12 cell">
+    <!-- Clears floats on IE 9 -->
+    <div class="clear small-12 large-12 cell">
       <a href="https://projectsbyif.com" class="logo">IF</a>
-      <a href="/" class="title"><p>{{ site.title }}</p></a>
-      <a href="#" class="menu">Menu</a>
+      <!--[if IE 8 ]>
+      <a class="ie-logo" href="https://projectsbyif.com/">
+        <img id="showMe" src="/images/if-logo-circle-01.jpg" alt="Projects By If Logo">
+      </a>
+      <![endif]-->
+
+      <!-- IE class added for extra specificity when targeting elements for IE-specific styling -->
+      <a href="/" id="ie-title" class="ie title"><p>{{ site.title }}</p></a>
+      <a href="#" id="ie-menu" class="menu">Menu</a>
 
       <ul class="page-menu">
         <li>

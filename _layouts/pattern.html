@@ -12,16 +12,22 @@ layout: default
   {% if page.images %}
     {% case page.images.size %}
       {% when 1 %}
-      <div class="{% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
-        <img src="{{ page.images[0].url }}" />
+      <div class="one-image {% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
+        <!-- Adding specific class for certain images that don't fit in Firefox/Edge mobile versions -->
+        <img class="{% if page.images[0].url == '/images/behavioural-patterns.svg'
+                        or page.images[0].url == '/images/inactivity-checking.svg'
+                        or page.images[0].url == '/images/marketplace.svg'
+                        or page.images[0].url == '/images/word-matching.svg' %}
+                          shrink-height
+                        {% endif %}" src="{{ page.images[0].url }}" />
       </div>
       {% when 2 %}
       {% assign count = 0 %}
       {% for image in page.images %}
         {% if count == 0 %}
-          <div class="large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
+          <div class="two-image large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
         {% else %}
-          <div class="large-4 medium-4 small-12 cell">
+          <div class="two-image large-4 medium-4 small-12 cell">
         {% endif %}
             <img src="{{ image.url }}" />
           </div>
@@ -29,7 +35,8 @@ layout: default
       {% endfor %}
       {% when 3 %}
       {% for image in page.images %}
-      <div class="large-4 medium-4 small-12 cell">
+      <!-- Patterns with three images: Verifiable Proof -->
+      <div class="three-image large-4 medium-4 small-12 cell">
         <img src="{{ image.url }}" />
       </div>
       {% endfor %}
@@ -38,9 +45,9 @@ layout: default
   {% endif %}
 </div>
 
-<div class="grid-x grid-padding-x">
+<div class="ie-content grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
-    <h2 class="no-margin">{{ page.title }}</h2>
+    <h2 class="ie-title no-margin">{{ page.title }}</h2>
     <p><a href="/category/{{ page.category | slugify }}" class="border-{{ page.category | slugify }}">{{ page.category }}</a></p>
 
     {{ content }}
@@ -48,13 +55,13 @@ layout: default
   </div>
 </div>
 
-<div class="grid-x grid-padding-x">
+<div class="ie-content grid-x grid-padding-x">
 
     {% if page.advantages %}
     <div class="large-4 large-offset-2 small-12 cell">
-      <h3>Advantages</h3>
+      <h3 class="ie-h3">Advantages</h3>
 
-      <ul>
+      <ul class="ie-list">
         {% for advantage in page.advantages %}
         <li>
           <p>{{ advantage }}</p>
@@ -65,11 +72,11 @@ layout: default
     {% endif %}
 
     {% if page.limitations %}
-    <div class="large-4 small-12 cell">
+    <div class="limitations-div large-4 small-12 cell">
 
-    <h3>Limitations</h3>
+    <h3 class="ie-h3">Limitations</h3>
 
-    <ul>
+    <ul class="ie-list">
       {% for limitation in page.limitations %}
       <li>
         <p>{{ limitation }}</p>
@@ -80,13 +87,13 @@ layout: default
     {% endif %}
 </div>
 
-<div class="grid-x grid-padding-x">
+<div class="ie-content grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
 
     {% if page.examples %}
-    <h3>Examples</h3>
+    <h3 class="ie-heading-links">Examples</h3>
 
-    <ul>
+    <ul class="ie-list-no-bullets">
       {% for example in page.examples %}
       <li>
         <p>{% if example.url %}<a href="{{ example.url }}">{% endif %}{% if example.title %}{{ example.title }}{% endif %}{% if example.url %}</a>{% endif %}{% if example.title and example.description %}: {% endif %}{% if example.description %}{{ example.description }}{% endif %}</p>
@@ -96,9 +103,9 @@ layout: default
     {% endif %}
 
     {% if page.further_reading %}
-    <h3>Further reading</h3>
+    <h3 class="ie-heading-links">Further reading</h3>
 
-    <ul class="further_reading">
+    <ul class="ie-list-no-bullets further_reading">
       {% for item in page.further_reading %}
       <li>
         <p><a href="{{ item.url }}">{{ item.title }}</a>{% if item.description %}: {{ item.description }}{% endif %}</p>
@@ -109,9 +116,9 @@ layout: default
 
 
     {% if other_patterns.size > 1 %}
-    <h3>Related patterns</h3>
+    <h3 class="ie-heading-links">Related patterns</h3>
 
-    <ul>
+    <ul class="ie-list-no-bullets">
     {% for pattern in other_patterns %}
     {% if pattern.title != page.title %}
       <li>

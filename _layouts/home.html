@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign patterns = site.patterns %}
 
-<div class="full-width-banner"></div>
+<div class="clear full-width-banner"></div>
 
 <div class="homepage-intro">
     <div>
@@ -17,7 +17,7 @@ layout: default
 <div class="grid-x grid-padding-x pattern-category-title">
   <div class="wrapper">
     <div class="small-12 cell">
-      <a href="#"><h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2><img src="/images/down.svg" /></a>
+      <a class="pattern-category-menu clear" href="#"><h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2><img src="/images/down.svg" /></a>
     </div>
   </div>
 </div>
@@ -35,7 +35,8 @@ layout: default
         <img src="{{ pattern.images[0].url }}" />
         {% endif %}
       </div>
-      <p class="title">{{ pattern.title }}</p>
+      <!-- Added this class for IE8 -->
+      <p class="title color-ie-{{ pattern.category | slugify }}">{{ pattern.title }}</p>
     </a>
   </div>
   {% endfor %}
