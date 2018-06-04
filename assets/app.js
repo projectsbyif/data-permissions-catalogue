@@ -2,6 +2,10 @@ $(function() {
   // Constants
   const DESKTOP_WIDTH = 639;
 
+  // Conditionals used b/c new Vimeo.Player throws error if argument is undefined.
+  const iframe = ($('iframe').length !== 0) ? ($('iframe')) : undefined;
+  const player = iframe ? new Vimeo.Player(iframe) : undefined;
+
   // Runtime variables
   var isMenuActive = false;
   var isCategoryMenuActive = false;
@@ -307,5 +311,69 @@ $(function() {
     $('.wip-banner-full-length').css({
       'height': $('.wip-banner').outerHeight()
     });
+  }
+
+  // Controlling the embedded video with keyboard.
+  $('.iframe-container').focus(function(){
+    let count = 0;
+    $(document).keydown(function(e){
+      switch (e.which) {
+        case 32:
+          if (count % 2 === 0) {
+            vimeoPlay();
+            count++;
+          } else {
+            vimeoPause();
+            count++;
+          }
+          break;
+        default:
+          return;
+      }
+
+    })
+  })
+
+  function vimeoPlay(){
+    player.play().then(function(){
+      console.log('Video is playing.')
+    }).catch(function(error) {
+    switch (error.name) {
+        case 'PasswordError':
+            // the video is password-protected and the viewer needs to enter the
+            // password first
+            break;
+
+        case 'PrivacyError':
+            // the video is private
+            break;
+
+        default:
+            // some other error occurred
+            break;
+    }
+  })
+}
+
+  function vimeoPause() {
+    player.pause().then(function() {
+    // the video was paused
+    console.log('Video is paused.')
+}).catch(function(error) {
+    switch (error.name) {
+        case 'PasswordError':
+            // the video is password-protected and the viewer needs to enter the
+            // password first
+            break;
+
+        case 'PrivacyError':
+            // the video is private
+            break;
+
+        default:
+            // some other error occurred
+            break;
+    }
+});
   }
 });

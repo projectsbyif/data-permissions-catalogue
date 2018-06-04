@@ -58,7 +58,9 @@ ul {
   }
 }
 
-a:link, a:visited, a:hover, a:active {
+$color-focus: #FFD464;
+
+a:link, a:visited, a:active {
   color: #000F7D;
   border-bottom: #000F7D 1px solid;
 }
@@ -417,7 +419,6 @@ main {
 
 // CATEGORY PAGES: PATTERN BLOCK
 .pattern-block {
-  border-bottom: 0 !important;
   display: block;
   margin-bottom: 40px;
 
@@ -456,6 +457,11 @@ main {
     }
   }
 }
+
+.patterns-grid .pattern-block {
+  border-bottom: none;
+}
+
 
 // PATTERN PAGE: IMAGES
 .pattern-image {
@@ -960,5 +966,23 @@ $colour8: #A0F0C3;
         padding-right: 0.9375rem !important;
       }
     }
+  }
+}
+
+/* ACCESSIBILITY */
+
+// Seperate visual styles for focus and hover states.
+// https://ux.stackexchange.com/questions/73403/should-focus-and-hover-styles-be-the-same-or-distinct
+
+// Not sure how to get around specificity issue with links?
+a:focus, .iframe-container:focus{
+  border: 3px black solid !important;
+
+  // From Materialize: https://materializecss.com/shadow.html
+  // offset-x, offset-y, blur radius, spread radius, colour
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+
+  &.pattern-block {
+    padding: 5px;
   }
 }
