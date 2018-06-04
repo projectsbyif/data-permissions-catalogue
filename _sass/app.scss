@@ -559,8 +559,19 @@ main {
 }
 
 // HOMEPAGE
+// Copied colour scheme from app.js
+$colour1: #FFEB82;
+$colour2: #FAAF73;
+$colour3: #F77787;
+$colour4: #FAAFD7;
+$colour5: #BE96FF;
+$colour6: #7D9BE1;
+$colour7: #96E1FA;
+$colour8: #A0F0C3;
+
+
 .homepage-intro {
-  background-color: #FFEB82;
+  background-color: $colour1;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: 0 !important;
@@ -581,6 +592,7 @@ main {
   }
 }
 
+
 .full-width-banner {
   display: none;
   position: absolute;
@@ -593,6 +605,43 @@ main {
   &.pattern {
     display: block;
     height: 429px;
+  }
+}
+
+.full-width-banner.home {
+  // Run animation on full-width-banner on desktop.
+  animation-name: colourChange;
+  animation-duration: 72s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colourChange {
+  0% {
+    background-color: $colour1;
+  }
+  13% {
+    background-color: $colour2;
+  }
+  25% {
+    background-color: $colour3;
+  }
+  37% {
+    background-color: $colour4;
+  }
+  49% {
+    background-color: $colour5;
+  }
+  61% {
+    background-color: $colour6;
+  }
+  73% {
+    background-color: $colour7;
+  }
+  85% {
+    background-color: $colour8;
+  }
+  100% {
+    background-color: $colour1;
   }
 }
 
@@ -609,6 +658,15 @@ main {
   }
 }
 
+@media screen and (max-width: 638px) {
+  .homepage-intro {
+    // Run animation on homepage-intro on small screens (less than smallest
+    // media query)
+    animation-name: colourChange;
+    animation-duration: 72s;
+    animation-iteration-count: infinite;
+  }
+}
 
 @media screen and (min-width: 639px) {
   body {

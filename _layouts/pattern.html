@@ -28,8 +28,22 @@ layout: default
         {% assign count = count | plus: 1 %}
       {% endfor %}
       {% when 3 %}
+      <!-- When no script, multiple images and mobile screen size, display only 1 image. -->
+      <noscript>
+        <div class="no-script-image-div grid-x">
+          <div class="three-image small-12 cell phone">
+            <img src="{{ page.images[1].url }}" alt="">
+          </div>
+        {% for image in page.images %}
+          <div class="three-image desktop large-4 medium-4 small-4 cell">
+            <img src="{{ image.url }}" />
+          </div>
+        {% endfor %}
+        </div>
+      </noscript>
       {% for image in page.images %}
-      <div class="large-4 medium-4 small-12 cell">
+      <!-- Hide this when script is turned off -->
+      <div id="when-no-script" class="large-4 medium-4 small-12 cell">
         <img src="{{ image.url }}" />
       </div>
       {% endfor %}

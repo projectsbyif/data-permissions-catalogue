@@ -19,6 +19,11 @@
   <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %} - IF">
   <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta name="twitter:image" content="https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/fb-image.png">
+  <!-- Styles without JS -->
+  <noscript>
+  	<link rel="stylesheet" href="/assets/no-script.css">
+  </noscript>
+
   <!-- Piwik -->
   <script type="text/javascript">
     var _paq = _paq || [];
