@@ -321,9 +321,11 @@ $(function() {
         case 32:
           if (count % 2 === 0) {
             vimeoPlay();
+            $('#video-tip').css("display", "none");
             count++;
           } else {
             vimeoPause();
+            $('#video-tip').css("display", "inline-block");
             count++;
           }
           break;

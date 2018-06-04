@@ -21,8 +21,14 @@ layout: default
 
 <div class="grid-x grid-padding-x pattern-category-title">
   <div class="wrapper">
-    <div class="small-12 cell">
-      <a href="#"><h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2><img src="/images/down.svg" /></a>
+    <div class="small-12 cell grid-x">
+      <a href="#" aria-describedby="category-menu-tip">
+        <h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2>
+        <img src="/images/down.svg" />
+      </a>
+      <div role="tooltip" id="category-menu-tip">
+        Press enter key to open and close pattern category menu.
+      </div>
     </div>
   </div>
 </div>

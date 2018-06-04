@@ -318,8 +318,10 @@ main {
 
   ul {
     list-style-type: none;
-    padding: 20px 20px 0px 20px;
-    margin: 0;
+    // Added margin and removed padding so as not to cut off
+    // the bottom of the focused item.
+    padding: 0 20px;
+    margin: 20px 0 0 0;
     overflow: auto;
 
     li {
@@ -980,7 +982,7 @@ a:focus, .iframe-container:focus{
 
   // From Materialize: https://materializecss.com/shadow.html
   // offset-x, offset-y, blur radius, spread radius, colour
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+  // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
 
   &.pattern-block {
     padding: 5px;
@@ -1000,4 +1002,36 @@ a:focus, .iframe-container:focus{
 .pattern-category-title a {
   display: inline-block;
   width: auto;
+}
+
+// Styling for pattern category menu tooltip
+
+[role="tooltip"] {
+  display: none;
+}
+
+.pattern-category-title a:focus + [role="tooltip"] {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+
+#category-menu-tip {
+  margin-left: 2%;
+  margin-top: 5px;
+  border: 3px black solid;
+  // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+// Styling for video tooltip
+
+.iframe-container:focus [role="tooltip"] {
+  display: inline-block;
+  position: absolute;
+  top: 41%;
+  left: 28%;
+  width: 44%;
+  border: 3px black solid;
+  background-color: white;
+  padding: 4% 10%;
 }
