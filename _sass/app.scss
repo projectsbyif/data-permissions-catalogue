@@ -986,3 +986,18 @@ a:focus, .iframe-container:focus{
     padding: 5px;
   }
 }
+
+// Expanding focusable link for Pattern Category menu so it's more obvious what it is for. First clearfix on link
+// to fix float errors
+.pattern-category-title a:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.pattern-category-title a {
+  display: inline-block;
+  width: auto;
+}
