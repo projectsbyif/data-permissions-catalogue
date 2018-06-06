@@ -54,7 +54,7 @@ layout: default
 
 <div class="grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
-    <h2 class="no-margin">{{ page.title }}</h2>
+    <h2 id="content" class="no-margin">{{ page.title }}</h2>
     <p><a href="/category/{{ page.category | slugify }}" class="border-{{ page.category | slugify }}">{{ page.category }}</a></p>
 
     {{ content }}

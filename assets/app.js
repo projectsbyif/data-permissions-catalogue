@@ -6,6 +6,9 @@ $(function() {
   const iframe = ($('iframe').length !== 0) ? ($('iframe')) : undefined;
   const player = iframe ? new Vimeo.Player(iframe) : undefined;
 
+  // About and Content page headers (for 'skip navigation links')
+  const pageHeader = ($('main h2'));
+
   // Runtime variables
   var isMenuActive = false;
   var isCategoryMenuActive = false;
@@ -166,7 +169,9 @@ $(function() {
           'padding-top': 0
         });
 
-        $('.category-nav').removeClass('fixed').css({ 'top': '0px' });
+        $('.category-nav').removeClass('fixed').css({
+          'top': '0px'
+        });
 
         if (scrollTop > $('header').outerHeight()) {
           if ($(window).width() > DESKTOP_WIDTH) {
@@ -231,17 +236,25 @@ $(function() {
     $('.carousel-indicator .dot').eq(currentImage).addClass('active');
 
     if (currentImage == 0) {
-      $('.carousel-control.previous').css({ 'opacity': 0.25 });
+      $('.carousel-control.previous').css({
+        'opacity': 0.25
+      });
     }
 
     if (currentImage >= 1) {
-      $('.carousel-control.previous').css({ 'opacity': 1 });
+      $('.carousel-control.previous').css({
+        'opacity': 1
+      });
     }
 
     if (currentImage == numImages - 1) {
-      $('.carousel-control.next').css({ 'opacity': 0.25 });
+      $('.carousel-control.next').css({
+        'opacity': 0.25
+      });
     } else {
-      $('.carousel-control.next').css({ 'opacity': 1 });
+      $('.carousel-control.next').css({
+        'opacity': 1
+      });
     }
   }
 
@@ -317,13 +330,13 @@ $(function() {
     });
   }
 
-  // Controlling the embedded video with keyboard.
-  $('.iframe-container').focus(function(){
+  // Functions for controlling the embedded video with keyboard.
+  $('.iframe-container').focus(function() {
     let videoIsPlaying = false;
-    $(document).keydown(function(e){
+    $(document).keydown(function(e) {
       switch (e.which) {
         case 32:
-        // If video is not playing, start playing it.
+          // If video is not playing, start playing it.
           if (!videoIsPlaying) {
             videoIsPlaying = true;
             vimeoPlay();
@@ -342,46 +355,53 @@ $(function() {
     })
   })
 
-  function vimeoPlay(){
-    player.play().then(function(){
+  function vimeoPlay() {
+    player.play().then(function() {
       console.log('Video is playing.')
     }).catch(function(error) {
-    switch (error.name) {
+      switch (error.name) {
         case 'PasswordError':
-            // the video is password-protected and the viewer needs to enter the
-            // password first
-            break;
+          // the video is password-protected and the viewer needs to enter the
+          // password first
+          break;
 
         case 'PrivacyError':
-            // the video is private
-            break;
+          // the video is private
+          break;
 
         default:
-            // some other error occurred
-            break;
-    }
-  })
-}
+          // some other error occurred
+          break;
+      }
+    })
+  }
 
   function vimeoPause() {
     player.pause().then(function() {
-    // the video was paused
-    console.log('Video is paused.')
-}).catch(function(error) {
-    switch (error.name) {
+      // the video was paused
+      console.log('Video is paused.')
+    }).catch(function(error) {
+      switch (error.name) {
         case 'PasswordError':
-            // the video is password-protected and the viewer needs to enter the
-            // password first
-            break;
+          // the video is password-protected and the viewer needs to enter the
+          // password first
+          break;
 
         case 'PrivacyError':
-            // the video is private
-            break;
+          // the video is private
+          break;
 
         default:
-            // some other error occurred
-            break;
-    }
-});
+          // some other error occurred
+          break;
+      }
+    });
   }
+
+  // Adding Skip Navigation anchords to Jekyll template pages
+  // (e.g. About and Content pages)
+  if (pageHeader["0"].innerHTML === "About" ||
+      pageHeader["0"].innerHTML === "Contribute"){
+        pageHeader.attr("id", "content");
+      }
 });

@@ -980,8 +980,17 @@ $colour8: #A0F0C3;
 
 /* ACCESSIBILITY */
 
-// Seperate visual styles for focus and hover states.
-// https://ux.stackexchange.com/questions/73403/should-focus-and-hover-styles-be-the-same-or-distinct
+// Skip to main content link
+.skip-to-content {
+  position: relative;
+  top: -200px;
+  left: 35px;
+  line-height: 50px;
+}
+
+.skip-to-content:focus {
+  top: 2px;
+}
 
 // Not sure how to get around specificity issue with links?
 a:focus, .iframe-container:focus{
