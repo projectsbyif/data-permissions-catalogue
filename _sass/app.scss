@@ -91,7 +91,9 @@ header {
     float: left;
     background-image: url('/images/if-logo.svg');
     background-size: 60%;
-    background-position: center left;
+    // To center logo in focus rectangle.
+    background-position: center center;
+    margin-top: 5px;
   }
 
   .menu {
@@ -118,6 +120,10 @@ header {
     width: calc(100% - (2 * 42px));
     height: 100%;
     border-bottom: 0;
+    // Adjustments to position to make up for centering logo in focus rectangle.
+    position: relative;
+    left: 10px;
+    top: 5px;
 
     p {
       height: 42px;
@@ -743,7 +749,7 @@ $colour8: #A0F0C3;
       height: initial;
       float: right;
       position: initial;
-      margin-top: 10px;
+      margin-top: 15px;
       background-color: rgba(0,0,0,0);
 
       &.fixed {
@@ -821,8 +827,9 @@ $colour8: #A0F0C3;
     justify-content: left;
 
     div {
-      width: 550px;
-      padding-left: 42px;
+      // Adjustments made to center if logo in focus rectangle.
+      width: 560px;
+      padding-left: 52px;
       margin-top: -40px;
     }
   }
@@ -978,15 +985,7 @@ $colour8: #A0F0C3;
 
 // Not sure how to get around specificity issue with links?
 a:focus, .iframe-container:focus{
-  border: 3px black solid !important;
-
-  // From Materialize: https://materializecss.com/shadow.html
-  // offset-x, offset-y, blur radius, spread radius, colour
-  // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
-
-  &.pattern-block {
-    padding: 5px;
-  }
+  outline: 3px black solid !important;
 }
 
 // Expanding focusable link for Pattern Category menu so it's more obvious what it is for. First clearfix on link
@@ -1004,26 +1003,11 @@ a:focus, .iframe-container:focus{
   width: auto;
 }
 
-// Styling for pattern category menu tooltip
 
+// Styling for video tooltip
 [role="tooltip"] {
   display: none;
 }
-
-.pattern-category-title a:focus + [role="tooltip"] {
-  display: inline-block;
-  width: auto;
-  height: 100%;
-}
-
-#category-menu-tip {
-  margin-left: 2%;
-  margin-top: 5px;
-  border: 3px black solid;
-  // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
-}
-
-// Styling for video tooltip
 
 .iframe-container:focus [role="tooltip"] {
   display: inline-block;

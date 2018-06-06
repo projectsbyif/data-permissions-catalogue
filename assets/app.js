@@ -38,6 +38,10 @@ $(function() {
     // Changes down arrow to up arrow.
     $('.pattern-category-title img').attr('src', '/images/up.svg');
 
+    // Changes ARIA states and labels to indicate menu is open.
+    $('.pattern-category-title a').attr('aria-expanded', 'true')
+
+
     isCategoryMenuActive = true;
   }
 
@@ -315,18 +319,20 @@ $(function() {
 
   // Controlling the embedded video with keyboard.
   $('.iframe-container').focus(function(){
-    let count = 0;
+    let videoIsPlaying = false;
     $(document).keydown(function(e){
       switch (e.which) {
         case 32:
-          if (count % 2 === 0) {
+        // If video is not playing, start playing it.
+          if (!videoIsPlaying) {
+            videoIsPlaying = true;
             vimeoPlay();
             $('#video-tip').css("display", "none");
-            count++;
           } else {
+            // Else, pause it.
+            videoIsPlaying = false;
             vimeoPause();
             $('#video-tip').css("display", "inline-block");
-            count++;
           }
           break;
         default:

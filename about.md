@@ -19,5 +19,8 @@ If you have feedback about the catalogue, then email [hello@projectsbyif.com](ma
 
 <div tabindex="0" aria-describedby="video-tip" class="iframe-container">
   <iframe tabindex="-1" src="https://player.vimeo.com/video/231723090" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    <div role="tooltip" tabindex='-1' id="video-tip">Press the spacebar to start and pause the video.</div>
+  <!-- Tooltip to show on start and stop when navigating by keyboard. -->
+  <div role="tooltip" tabindex='-1' id="video-tip">
+    Press the spacebar to start and pause the video.
+  </div>
 </div>
