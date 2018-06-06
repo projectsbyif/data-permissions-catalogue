@@ -53,6 +53,7 @@ $(function() {
     $('.category-nav-dismiss').hide();
 
     $('.pattern-category-title img').attr('src', '/images/down.svg');
+    $('.pattern-category-title a').attr('aria-expanded', 'false')
 
     isCategoryMenuActive = false;
   }

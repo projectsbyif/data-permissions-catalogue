@@ -352,13 +352,16 @@ main {
   width: 100vw;
   height: calc(100vh - 57px);
   background: #FFF;
-  list-style-type: none;
   margin: 0;
   position: fixed;
   top: 57px;
   left: 0;
   z-index: 9999;
   display: none;
+
+  ul {
+    list-style-type: none;
+  }
 
   a {
     border-bottom: 0;
@@ -988,13 +991,17 @@ $colour8: #A0F0C3;
   line-height: 50px;
 }
 
+// .skip-to-content:hover{
+//
+// }
+
 .skip-to-content:focus {
   top: 2px;
 }
 
 // Not sure how to get around specificity issue with links?
-a:focus, .iframe-container:focus{
-  outline: 3px black solid !important;
+a:focus, a:hover, .iframe-container:focus{
+  outline: #000F7D 2px solid !important
 }
 
 // Expanding focusable link for Pattern Category menu so it's more obvious what it is for. First clearfix on link
@@ -1013,7 +1020,7 @@ a:focus, .iframe-container:focus{
 }
 
 
-// Styling for video tooltip
+// Styling for video and pattern category menu tooltip
 [role="tooltip"] {
   display: none;
 }
@@ -1027,4 +1034,5 @@ a:focus, .iframe-container:focus{
   border: 3px black solid;
   background-color: white;
   padding: 4% 10%;
+  text-align: center;
 }

@@ -22,10 +22,13 @@ layout: default
 <div class="grid-x grid-padding-x pattern-category-title">
   <div class="wrapper">
     <div class="small-12 cell grid-x">
-      <a role="button" aria-expanded="false" href="#"> <!-- aria-describedby="category-menu-tip"> -->
+      <a aria-expanded="false" aria-describedby="category-menu-tip" href="#"> <!-- aria-describedby="category-menu-tip"> -->
         <h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2>
         <img src="/images/down.svg" />
       </a>
+      <div role="tooltip" id="category-menu-tip">
+        Click to toggle Pattern Category Menu open and closed.
+      </div>
     </div>
   </div>
 </div>
