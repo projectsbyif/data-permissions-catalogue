@@ -24,7 +24,8 @@ layout: default
     <div class="small-12 cell grid-x">
       <a aria-expanded="false" aria-describedby="category-menu-tip" href="#"> <!-- aria-describedby="category-menu-tip"> -->
         <h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2>
-        <img src="/images/down.svg" />
+        <!-- Added to stop image being read out when using VoiceOver with Chrome -->
+        <img aria-hidden="true" src="/images/down.svg" />
       </a>
       <div role="tooltip" id="category-menu-tip">
         Click to toggle Pattern Category Menu open and closed.
@@ -41,9 +42,9 @@ layout: default
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
       <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ pattern.category | slugify }}">
         {% if pattern.cover_image %}
-        <img src="{{ pattern.cover_image[0].url }}" />
+        <img aria-hidden="true" src="{{ pattern.cover_image[0].url }}" />
         {% else if pattern.images[0].url %}
-        <img src="{{ pattern.images[0].url }}" />
+        <img aria-hidden="true" src="{{ pattern.images[0].url }}" />
         {% endif %}
       </div>
       <p class="title">{{ pattern.title }}</p>

@@ -991,13 +991,27 @@ $colour8: #A0F0C3;
   line-height: 50px;
 }
 
-// .skip-to-content:hover{
-//
-// }
-
 .skip-to-content:focus {
   top: 2px;
+  background-color: #000F7D;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
 }
+
+.back-to-top {
+  position: absolute;
+  right:-100px;
+}
+
+.back-to-top:focus {
+  right: 0%;
+  background-color: #000F7D;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
 
 // Not sure how to get around specificity issue with links?
 a:focus, a:hover, .iframe-container:focus{
@@ -1019,7 +1033,6 @@ a:focus, a:hover, .iframe-container:focus{
   width: auto;
 }
 
-
 // Styling for video and pattern category menu tooltip
 [role="tooltip"] {
   display: none;
@@ -1035,4 +1048,12 @@ a:focus, a:hover, .iframe-container:focus{
   background-color: white;
   padding: 4% 10%;
   text-align: center;
+}
+
+// Styling for Category Link tip link.
+.border-control-access {
+  display: inline-block;
+  line-height: 1.4em;
+  max-height: 30px;
+  margin-bottom: 40px;
 }

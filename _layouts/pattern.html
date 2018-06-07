@@ -55,7 +55,12 @@ layout: default
 <div class="grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
     <h2 id="content" class="no-margin">{{ page.title }}</h2>
-    <p><a href="/category/{{ page.category | slugify }}" class="border-{{ page.category | slugify }}">{{ page.category }}</a></p>
+    <!-- Deleted <p> tags because it wasn't possible for VoiceOver to read describedby text in Chrome -->
+    <!-- while <a> tag was nested. -->
+    <a aria-describedby="category-link-tip" href="/category/{{ page.category | slugify }}" class="border-{{ page.category | slugify }}">{{ page.category }}</a>
+    <div role="tooltip" id="category-link-tip">
+      Click on link to see all patterns in the {{ page.category }} category.
+    </div>
 
     {{ content }}
 

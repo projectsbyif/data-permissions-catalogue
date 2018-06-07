@@ -8,12 +8,18 @@ layout: default
   {% assign patterns = site.patterns | where: "category": page.category %}
 {% endif %}
 
-<div class="pattern-category-title-anchor"></div>
+<div id="content" class="pattern-category-title-anchor"></div>
 
 <div class="grid-x grid-padding-x pattern-category-title">
   <div class="wrapper">
     <div class="small-12 cell">
-      <a href="#"><h2>{{ page.title }}<span class="category-counter">({{ patterns.size }})</span></h2><img src="/images/down.svg" /></a>
+      <a aria-expanded="false" aria-describedby="category-menu-tip" href="#">
+        <h2>{{ page.title }}<span class="category-counter">({{ patterns.size }})</span></h2>
+        <img aria-hidden="true" src="/images/down.svg" />
+      </a>
+      <div role="tooltip" id="category-menu-tip">
+        Click to toggle Pattern Category Menu open and closed.
+      </div>
     </div>
   </div>
 </div>
