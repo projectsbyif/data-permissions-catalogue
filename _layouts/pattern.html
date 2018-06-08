@@ -57,7 +57,7 @@ layout: default
     <h2 id="content" class="no-margin">{{ page.title }}</h2>
     <!-- Deleted <p> tags because it wasn't possible for VoiceOver to read describedby text in Chrome -->
     <!-- while <a> tag was nested. -->
-    <a aria-describedby="category-link-tip" href="/category/{{ page.category | slugify }}" class="border-{{ page.category | slugify }}">{{ page.category }}</a>
+    <a aria-describedby="category-link-tip" href="/category/{{ page.category | slugify }}" class="pattern-page-category-link border-{{ page.category | slugify }}">{{ page.category }}</a>
     <div role="tooltip" id="category-link-tip">
       Click on link to see all patterns in the {{ page.category }} category.
     </div>

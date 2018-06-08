@@ -32,7 +32,6 @@ $(function() {
       }).fadeIn(250);
     }
 
-    // Fades in menu.
     $('.category-nav').fadeIn(250);
 
     // Enables 'clickout'
@@ -43,7 +42,6 @@ $(function() {
 
     // Changes ARIA states and labels to indicate menu is open.
     $('.pattern-category-title a').attr('aria-expanded', 'true')
-
 
     isCategoryMenuActive = true;
   }
@@ -143,6 +141,9 @@ $(function() {
         // Make category menu and pages menu fixed to top of page.
         $('.pattern-category-title').addClass('fixed');
 
+        // Makes 'Skip to Content' button non-focuseable and disappear (as already in content)
+        $('.skip-to-content').attr('tabindex', '-1');
+
         $('.category-nav').addClass('fixed').css({
           'top': $('.pattern-category-title')[0].getBoundingClientRect().top + $('.pattern-category-title').outerHeight()
         });
@@ -165,6 +166,7 @@ $(function() {
       } else {
         // Make category menu and pages menu unfixed
         $('.pattern-category-title').removeClass('fixed');
+        $('.skip-to-content').attr('tabindex', '0');
 
         $('.patterns-grid').css({
           'padding-top': 0
@@ -332,77 +334,94 @@ $(function() {
   }
 
   // Functions for controlling the embedded video with keyboard.
-  $('.iframe-container').focus(function() {
-    let videoIsPlaying = false;
-    $(document).keydown(function(e) {
-      switch (e.which) {
-        case 32:
-          // If video is not playing, start playing it.
-          if (!videoIsPlaying) {
-            videoIsPlaying = true;
-            vimeoPlay();
-            $('#video-tip').css("display", "none");
-          } else {
-            // Else, pause it.
-            videoIsPlaying = false;
-            vimeoPause();
-            $('#video-tip').css("display", "inline-block");
-          }
-          break;
-        default:
-          return;
-      }
-
-    })
-  })
-
-  function vimeoPlay() {
-    player.play().then(function() {
-      console.log('Video is playing.')
-    }).catch(function(error) {
-      switch (error.name) {
-        case 'PasswordError':
-          // the video is password-protected and the viewer needs to enter the
-          // password first
-          break;
-
-        case 'PrivacyError':
-          // the video is private
-          break;
-
-        default:
-          // some other error occurred
-          break;
-      }
-    })
-  }
-
-  function vimeoPause() {
-    player.pause().then(function() {
-      // the video was paused
-      console.log('Video is paused.')
-    }).catch(function(error) {
-      switch (error.name) {
-        case 'PasswordError':
-          // the video is password-protected and the viewer needs to enter the
-          // password first
-          break;
-
-        case 'PrivacyError':
-          // the video is private
-          break;
-
-        default:
-          // some other error occurred
-          break;
-      }
-    });
-  }
-
+  // $('.iframe-container').focus(function() {
+  //   let videoIsPlaying = false;
+  //   $(document).keydown(function(e) {
+  //     switch (e.which) {
+  //       case 32:
+  //         // If video is not playing, start playing it.
+  //         if (!videoIsPlaying) {
+  //           vimeoPlay();
+  //           videoIsPlaying = true;
+  //           $('#video-tip').css("display", "none");
+  //         } else {
+  //           // Else, pause it.
+  //           vimeoPause();
+  //           videoIsPlaying = false;
+  //           $('#video-tip').css("display", "inline-block");
+  //         }
+  //         break;
+  //       default:
+  //         return;
+  //     }
+  //
+  //   })
+  // })
+  //
+  // function vimeoPlay() {
+  //   player.play().then(function() {
+  //     console.log('Video is playing.')
+  //   }).catch(function(error) {
+  //     switch (error.name) {
+  //       case 'PasswordError':
+  //         // the video is password-protected and the viewer needs to enter the
+  //         // password first
+  //         break;
+  //
+  //       case 'PrivacyError':
+  //         // the video is private
+  //         break;
+  //
+  //       default:
+  //         // some other error occurred
+  //         break;
+  //     }
+  //   })
+  // }
+  //
+  // function vimeoPause() {
+  //   player.pause().then(function() {
+  //     // the video was paused
+  //     console.log('Video is paused.')
+  //   }).catch(function(error) {
+  //     switch (error.name) {
+  //       case 'PasswordError':
+  //         // the video is password-protected and the viewer needs to enter the
+  //         // password first
+  //         break;
+  //
+  //       case 'PrivacyError':
+  //         // the video is private
+  //         break;
+  //
+  //       default:
+  //         // some other error occurred
+  //         break;
+  //     }
+  //   });
+  // }
+  //
   // Adding Skip Navigation anchords to Jekyll template pages
   // (e.g. About and Content pages)
   if (pageHeader["0"].innerHTML === "About" ||
       pageHeader["0"].innerHTML === "Contribute"){
         pageHeader.attr("id", "content");
+        pageHeader.attr('tabindex', '0');
       }
+
+  // Preventing URL change when Skip to Content links are used.
+    // Would have to update this for no-js pages (move back to regular url changes)
+
+  function skipToContent(event){
+    event.preventDefault();
+    $("#content").focus();
+  }
+
+  $('.skip-to-content').click((e) => {
+    skipToContent(e)
+  });
+
+  $('.back-to-top').click((e) => {
+    skipToContent(e)
+  })
 });

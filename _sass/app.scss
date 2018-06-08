@@ -675,6 +675,7 @@ $colour8: #A0F0C3;
   }
 }
 
+// Mobile media queries
 @media screen and (max-width: 638px) {
   .homepage-intro {
     // Run animation on homepage-intro on small screens (less than smallest
@@ -683,6 +684,16 @@ $colour8: #A0F0C3;
     animation-duration: 72s;
     animation-iteration-count: infinite;
   }
+
+  // Remove Skip to Content button on mobile.
+  .skip-to-content {
+    display: none;
+  }
+
+  .menu {
+    margin-top: 5px;
+  }
+
 }
 
 @media screen and (min-width: 639px) {
@@ -752,7 +763,7 @@ $colour8: #A0F0C3;
       height: initial;
       float: right;
       position: initial;
-      margin-top: 15px;
+      margin-top: 12px;
       background-color: rgba(0,0,0,0);
 
       &.fixed {
@@ -889,7 +900,7 @@ $colour8: #A0F0C3;
       border-bottom: #EEE 1px solid;
 
       ul {
-        margin: 0 auto;
+        margin: 20px auto 0 auto;
       }
     }
 
@@ -1018,6 +1029,8 @@ a:focus, a:hover, .iframe-container:focus{
   outline: #000F7D 2px solid !important
 }
 
+/* CONTEXTUAL LABELS */
+
 // Expanding focusable link for Pattern Category menu so it's more obvious what it is for. First clearfix on link
 // to fix float errors
 .pattern-category-title a:after {
@@ -1033,27 +1046,32 @@ a:focus, a:hover, .iframe-container:focus{
   width: auto;
 }
 
-// Styling for video and pattern category menu tooltip
-[role="tooltip"] {
+[role="tooltip"]{
   display: none;
 }
 
-.iframe-container:focus [role="tooltip"] {
-  display: inline-block;
-  position: absolute;
-  top: 41%;
-  left: 28%;
-  width: 44%;
-  border: 3px black solid;
-  background-color: white;
-  padding: 4% 10%;
-  text-align: center;
-}
+// Styling for video and pattern category menu tooltip
+// #video-tip {
+//   display: none;
+// }
+//
+// .iframe-container:focus #video-tip {
+//   display: inline-block;
+//   position: absolute;
+//   top: 41%;
+//   left: -28%;
+//   width: 28%;
+//   border: 3px black solid;
+//   background-color: white;
+//   text-align: center;
+// }
 
-// Styling for Category Link tip link.
-.border-control-access {
+// Styling for Category link on pattern page.
+.pattern-page-category-link {
   display: inline-block;
   line-height: 1.4em;
   max-height: 30px;
   margin-bottom: 40px;
 }
+
+// Main content LABELS

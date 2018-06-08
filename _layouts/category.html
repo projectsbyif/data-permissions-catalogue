@@ -8,12 +8,12 @@ layout: default
   {% assign patterns = site.patterns | where: "category": page.category %}
 {% endif %}
 
-<div id="content" class="pattern-category-title-anchor"></div>
+<div class="pattern-category-title-anchor"></div>
 
 <div class="grid-x grid-padding-x pattern-category-title">
   <div class="wrapper">
     <div class="small-12 cell">
-      <a aria-expanded="false" aria-describedby="category-menu-tip" href="#">
+      <a id="content" aria-expanded="false" aria-describedby="category-menu-tip" href="#">
         <h2>{{ page.title }}<span class="category-counter">({{ patterns.size }})</span></h2>
         <img aria-hidden="true" src="/images/down.svg" />
       </a>
@@ -32,7 +32,7 @@ layout: default
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
       <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ page.category | slugify }}">
         {% if pattern.images[0].url %}
-        <img src="{{ pattern.images[0].url }}" />
+        <img aria-hidden="true" src="{{ pattern.images[0].url }}" />
         {% endif %}
       </div>
       <p class="title">{{ pattern.title }}</p>
