@@ -3,12 +3,18 @@ layout: default
 ---
 {% assign patterns = site.patterns %}
 
-<div class="clear full-width-banner"></div>
+
+<!-- Added class home so colour change animation only happens on main page. -->
+<div class="clear full-width-banner home"></div>
 
 <div class="homepage-intro">
     <div>
       <h1>An evolving collection of design patterns for sharing data</h1>
       <a href="/about" class="cta">What are design patterns?</a>
+      <noscript>
+        <a href="/contribute" class="first no-script-menu cta">How can I contribute?</a>
+        <a href="https://trustanddesign.projectsbyif.com/" class="no-script-menu cta">Where can I learn more?</a>
+      </noscript>
     </div>
 </div>
 
