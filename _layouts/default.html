@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {% include head.html %}
-  <body>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include head.html %}
+
+<body>
+  <div>
     {% include header.html %}
-    <main class="grid-container {{ page.layout }}">
+    <!-- IE class added for extra specificity when targeting elements for IE-specific styling -->
+    <main class="clear grid-container {{ page.layout }} {% if page.layout == 'home' %}ie{% endif %}">
       {{ content }}
     </main>
     {% include footer.html %}
-  </body>
+  </div>
+</body>
+
 </html>

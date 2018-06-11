@@ -1,7 +1,8 @@
 $(function() {
   // Constants
-  const DESKTOP_WIDTH = 639;
 
+  var DESKTOP_WIDTH = 639;
+  
   // Runtime variables
   var isMenuActive = false;
   var isCategoryMenuActive = false;
@@ -118,7 +119,7 @@ $(function() {
     }
   });
 
-  // Scrolling interactions mobile
+  // Scrolling interactions (mobile and Desktop)
   $(window).scroll(function() {
     if (isMenuActive) {
       return;
@@ -136,6 +137,7 @@ $(function() {
         });
 
         // Specific styling for screens larger than desktop-width.
+
         if ($(window).width() > DESKTOP_WIDTH) {
           $('header').addClass('desktop-fixed');
           $('header .page-menu').show();

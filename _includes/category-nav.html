@@ -1,6 +1,9 @@
 {% assign categories = site.category %}
 
 <nav class="category-nav">
+  <!--[if IE 8 ]>
+    <div class="ie-category-nav">
+  <![endif]-->
   <ul>
     {% for category in categories %}
     {% if category.title != "Other" %}
@@ -13,6 +16,9 @@
       <a href="/category/other" class="border-other">Other</a>
     </li>
   </ul>
+  <!--[if IE 8 ]>
+  </div>
+  <![endif]-->
 </nav>
 
 <!-- Allows you to click out of the menu in mobile -->
