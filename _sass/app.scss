@@ -24,15 +24,16 @@ body {
 }
 
 .homepage-intro h2,
-  h2.about-contribute-heading,
-  .pattern-category-title h2 {
+.pattern-category-title h2,
+h2.about-contribute-heading {
   font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
   font-size: 28px;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
-h3, h2.no-margin {
+h2.no-margin,
+h3 {
   font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
   font-size: 19px;
   font-weight: 500;
@@ -48,14 +49,15 @@ ul {
 
   li {
     p {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 }
-
 $color-focus: #FFD464;
 
-a:link, a:visited, a:active {
+a:active,
+a:link,
+a:visited {
   color: #000F7D;
   border-bottom: #000F7D 1px solid;
 }
@@ -66,14 +68,12 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 15px;
-  padding-bottom: 0px;
+  padding: 15px 20px 0;
   z-index: 9999;
   color: #212121;
 
-  .logo, .menu {
+  .logo,
+  .menu {
     background-repeat: no-repeat;
     height: 42px;
     width: 42px;
@@ -84,7 +84,7 @@ header {
 
   .logo {
     float: left;
-    background-image: url('/images/if-logo.svg');
+    background-image: url("/images/if-logo.svg");
     background-size: 60%;
     // To center logo in focus rectangle.
     background-position: center center;
@@ -93,12 +93,12 @@ header {
 
   .menu {
     float: right;
-    background-image: url('/images/menu.svg');
+    background-image: url("/images/menu.svg");
     background-size: 50% 50%;
     background-position: center right;
 
     &.menu-opened {
-      background-image: url('/images/close.svg');
+      background-image: url("/images/close.svg");
       background-size: 45% 45%;
     }
 
@@ -108,27 +108,28 @@ header {
       right: 20px;
     }
   }
+}
+
+h1 {
+  height: 42px;
+  display: inline-block;
+  line-height: 50px;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  // Adjustments to position to make up for centering logo in focus rectangle.
+  position: relative;
+  left: 10px;
+  top: 5px;
 
   .title {
     float: left;
     display: block;
-    width: calc(100% - (2 * 42px));
+    width: auto;
     height: 100%;
     border-bottom: 0;
-    // Adjustments to position to make up for centering logo in focus rectangle.
-    position: relative;
-    left: 10px;
-    top: 5px;
-
-    h1 {
-      height: 42px;
-      line-height: 50px;
-      margin-bottom: 0;
-      text-align: center;
-      font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
-      font-weight: normal;
-      font-size: 22px;
-    }
   }
 }
 
@@ -174,13 +175,12 @@ main h2.no-margin {
 
 .cta {
   border: #000F7D 2px solid !important;
-  padding: 20px 15px 15px 15px;
+  padding: 20px 15px 15px;
   font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.8em;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
 // Colors
 $color-all: #EEE;
 $color-authentication: #FFF2B3;
@@ -281,8 +281,8 @@ $color-social-consent: #98D9CA;
 .color-social-consent {
   background-color: $color-social-consent !important;
 }
-
 // PAGE STRUCTURE
+
 main {
   min-height: calc(100vh - 81px);
   padding-top: 40px;
@@ -300,8 +300,8 @@ main {
   padding-left: 20px;
   padding-right: 20px;
 }
-
 // MENUS
+
 .category-nav {
   display: none;
   z-index: 9998;
@@ -325,7 +325,7 @@ main {
     // Added margin and removed padding so as not to cut off
     // the bottom of the focused item.
     padding: 0 20px;
-    margin: 20px 0 0 0;
+    margin: 20px 0 0;
     overflow: auto;
 
     li {
@@ -376,17 +376,17 @@ main {
     }
   }
 }
-
 // CATEGORY PAGES: TITLE
+
 .pattern-category-title {
   background: #FFF;
   position: relative;
   left: -20px;
   width: 100vw;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-  margin-bottom: 0px;
-  padding: 20px 20px 10px 20px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0;
+  padding: 20px 20px 10px;
 
   .wrapper {
     width: 100%;
@@ -430,8 +430,8 @@ main {
     margin-left: 10px;
   }
 }
-
 // CATEGORY PAGES: PATTERN BLOCK
+
 .pattern-block {
   display: block;
   margin-bottom: 40px;
@@ -442,7 +442,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px;
+    padding: 0;
 
     img {
       width: 100%;
@@ -475,9 +475,8 @@ main {
 .patterns-grid .pattern-block {
   border-bottom: none;
 }
-
-
 // PATTERN PAGE: IMAGES
+
 .pattern-image {
   background-color: #ff5e23;
   margin-bottom: 50px;
@@ -513,8 +512,8 @@ main {
     }
   }
 }
-
 // PATTERN PAGE: CAROUSEL
+
 .carousel-control {
   display: block;
   width: 32px;
@@ -527,20 +526,20 @@ main {
   border-bottom: 0;
 
   &.previous {
-    background-image: url('/images/previous.svg');
+    background-image: url("/images/previous.svg");
     left: 0.625rem;
     opacity: 0.25;
   }
 
   &.next {
-    background-image: url('/images/next.svg');
+    background-image: url("/images/next.svg");
     right: 0.625rem;
   }
 }
 
 .carousel-indicator {
   width: 100%;
-  height: 0px;
+  height: 0;
   position: absolute;
   bottom: 0.625rem;
   justify-content: center;
@@ -569,7 +568,7 @@ main {
     margin-right: 4px;
 
     &:last-of-type {
-      margin-right: 0px;
+      margin-right: 0;
     }
 
     &.active {
@@ -577,7 +576,6 @@ main {
     }
   }
 }
-
 // HOMEPAGE
 // Copied colour scheme from app.js
 $colour1: #FFEB82;
@@ -588,7 +586,6 @@ $colour5: #BE96FF;
 $colour6: #7D9BE1;
 $colour7: #96E1FA;
 $colour8: #A0F0C3;
-
 
 .homepage-intro {
   background-color: $colour1;
@@ -612,7 +609,6 @@ $colour8: #A0F0C3;
   }
 }
 
-
 .full-width-banner {
   display: none;
   position: absolute;
@@ -634,37 +630,43 @@ $colour8: #A0F0C3;
   animation-duration: 72s;
   animation-iteration-count: infinite;
 }
-
 @keyframes colourChange {
   0% {
     background-color: $colour1;
   }
+
   13% {
     background-color: $colour2;
   }
+
   25% {
     background-color: $colour3;
   }
+
   37% {
     background-color: $colour4;
   }
+
   49% {
     background-color: $colour5;
   }
+
   61% {
     background-color: $colour6;
   }
+
   73% {
     background-color: $colour7;
   }
+
   85% {
     background-color: $colour8;
   }
+
   100% {
     background-color: $colour1;
   }
 }
-
 
 .footer-nav {
   font-size: 0.8em;
@@ -677,7 +679,6 @@ $colour8: #A0F0C3;
     margin-right: 0.3em;
   }
 }
-
 // Mobile media queries
 @media screen and (max-width: 638px) {
   .homepage-intro {
@@ -687,7 +688,6 @@ $colour8: #A0F0C3;
     animation-duration: 72s;
     animation-iteration-count: infinite;
   }
-
   // Remove Skip to Content button on mobile.
   .skip-to-content {
     display: none;
@@ -696,15 +696,15 @@ $colour8: #A0F0C3;
   .menu {
     margin-top: 5px;
   }
-
 }
-
 @media screen and (min-width: 639px) {
   body {
     font-size: 22px;
   }
 
-  h3, h2.no-margin, h2.about-contribute-heading {
+  h2.about-contribute-heading,
+  h2.no-margin,
+  h3 {
     font-size: 36px;
     margin-bottom: 40px;
   }
@@ -733,11 +733,12 @@ $colour8: #A0F0C3;
     &.desktop-fixed {
       position: sticky;
       position: -webkit-sticky;
-
       top: 18px;
       pointer-events: none;
 
-      .menu, .title, .logo {
+      .logo,
+      .menu,
+      .title {
         display: none;
       }
 
@@ -749,11 +750,6 @@ $colour8: #A0F0C3;
 
     .menu {
       display: none;
-    }
-
-    .title {
-      height: initial;
-      width: initial;
     }
 
     .page-menu {
@@ -786,7 +782,7 @@ $colour8: #A0F0C3;
         }
 
         &:last-of-type {
-          margin-right: 0px;
+          margin-right: 0;
         }
       }
     }
@@ -801,13 +797,12 @@ $colour8: #A0F0C3;
 
   main {
     min-height: calc(100vh - 195px);
-    padding-top: 0px;
+    padding-top: 0;
 
     &.page {
       padding-top: 50px;
     }
   }
-
   // PATTERN PAGE: IMAGES
   .pattern-image {
     height: 374px;
@@ -827,7 +822,6 @@ $colour8: #A0F0C3;
       }
     }
   }
-
   // HOMEPAGE
   .homepage-intro {
     width: 100%;
@@ -858,10 +852,7 @@ $colour8: #A0F0C3;
   .pattern-category-title {
     width: 100%;
     position: initial;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding: 20px 0 10px;
     pointer-events: all;
 
     img {
@@ -903,7 +894,7 @@ $colour8: #A0F0C3;
       border-bottom: #EEE 1px solid;
 
       ul {
-        margin: 20px auto 0 auto;
+        margin: 20px auto 0;
       }
     }
 
@@ -952,16 +943,14 @@ $colour8: #A0F0C3;
     pointer-events: none;
   }
 }
-
 @media screen and (min-width: 92rem) {
   .homepage-intro {
     div {
       width: 520px;
-      padding-left: 0px;
+      padding-left: 0;
     }
   }
 }
-
 @media screen and (min-width: 1024px) {
   .patterns-grid {
     .cell {
@@ -969,13 +958,13 @@ $colour8: #A0F0C3;
       padding-right: calc(0.9375rem / 2) !important;
 
       &:nth-child(2n) {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0;
       }
 
       &:nth-child(2n-1) {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0;
       }
 
       &:nth-child(3n) {
@@ -983,9 +972,7 @@ $colour8: #A0F0C3;
         padding-right: 0.9375rem !important;
       }
 
-      &:nth-child(3n-1) {
-
-      }
+      &:nth-child(3n-1) {}
 
       &:nth-child(3n-2) {
         padding-left: 0.9375rem !important;
@@ -994,10 +981,9 @@ $colour8: #A0F0C3;
     }
   }
 }
-
 /* ACCESSIBILITY */
-
 // Skip to main content link
+
 .skip-to-content {
   position: relative;
   top: -200px;
@@ -1006,7 +992,7 @@ $colour8: #A0F0C3;
 }
 
 .skip-to-content:focus {
-  top: 2px;
+  top: -13px;
   background-color: #000F7D;
   color: white;
   font-weight: bold;
@@ -1015,27 +1001,27 @@ $colour8: #A0F0C3;
 
 .back-to-top {
   position: absolute;
-  right:-100px;
+  right: -500px;
 }
 
 .back-to-top:focus {
-  right: 0%;
+  right: 0;
   background-color: #000F7D;
   color: white;
   font-weight: bold;
   padding: 5px 10px;
 }
-
-
 // Not sure how to get around specificity issue with links?
-a:focus, a:hover, .iframe-container:focus{
-  outline: #000F7D 2px solid !important
+
+.iframe-container:focus,
+a:focus,
+a:hover {
+  outline: #000F7D 2px solid !important;
 }
-
 /* CONTEXTUAL LABELS */
-
 // Expanding focusable link for Pattern Category menu so it's more obvious what it is for. First clearfix on link
 // to fix float errors
+
 .pattern-category-title a:after {
   visibility: hidden;
   display: block;
@@ -1049,10 +1035,9 @@ a:focus, a:hover, .iframe-container:focus{
   width: auto;
 }
 
-[role="tooltip"]{
+[role="tooltip"] {
   display: none;
 }
-
 // Styling for video and pattern category menu tooltip
 // #video-tip {
 //   display: none;
@@ -1068,13 +1053,50 @@ a:focus, a:hover, .iframe-container:focus{
 //   background-color: white;
 //   text-align: center;
 // }
-
 // Styling for Category link on pattern page.
+
 .pattern-page-category-link {
   display: inline-block;
   line-height: 1.4em;
   max-height: 30px;
   margin-bottom: 40px;
 }
+// To meet WCAG 2.1 success criterion 1.4.10 (Reflow):
+// Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:
+//  - Vertical scrolling content at a width equivalent to 320 CSS pixels
+@media screen and (max-width: 320px) {
+  header {
+    &.grid-container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
-// Main content LABELS
+    h1 {
+      font-size: 17px;
+      left: 7px;
+    }
+  }
+
+  main {
+    .homepage-intro {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 60px;
+
+      h2 {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+      }
+    }
+
+    .cta {
+      padding: 13px 10px 10px;
+    }
+  }
+  // Still to do - change mobile menu list open li top margin.
+  // change mobile menu view to 100vh
+  // Sort out the skip to content button on the mobile site.
+  // Same thing with Category menu, might need to scroll to fit all this in? maybe take the overflow:hidden off of the menu.
+  // pattern page need to change the photo so is 100% of view height.
+  // category page have to change the height of the category menu. 
+}
