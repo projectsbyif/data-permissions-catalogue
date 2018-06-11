@@ -1,9 +1,10 @@
-<header class="grid-container">
+<header role="banner" class="grid-container">
   <div class="grid-x grid-padding-x">
     <div class="small-12 large-12 cell">
       <!-- Added more contextual information to Logo link  -->
       <a href="https://projectsbyif.com" class="logo">Projects By IF Homepage</a>
-      <a href="/" class="title"><p>{{ site.title }}</p></a>
+      <!-- Changed to h1 as some pages exist without an h1 element -->
+      <a href="/" class="title"><h1>{{ site.title }}</h1></a>
       <!-- To be hidden and displayed when focused on the keyboard -->
       <a class="skip-to-content" href="#content">Skip to content</a>
       <a href="#" class="menu">Menu</a>

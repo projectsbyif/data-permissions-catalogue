@@ -23,21 +23,16 @@ body {
   background: #FFF;
 }
 
-h1 {
+.homepage-intro h2,
+  h2.about-contribute-heading,
+  .pattern-category-title h2 {
   font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
   font-size: 28px;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
-h2 {
-  font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
-h3 {
+h3, h2.no-margin {
   font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
   font-size: 19px;
   font-weight: 500;
@@ -125,11 +120,14 @@ header {
     left: 10px;
     top: 5px;
 
-    p {
+    h1 {
       height: 42px;
       line-height: 50px;
       margin-bottom: 0;
       text-align: center;
+      font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
+      font-weight: normal;
+      font-size: 22px;
     }
   }
 }
@@ -170,7 +168,7 @@ iframe {
   margin-bottom: 30px;
 }
 
-.no-margin {
+main h2.no-margin {
   margin-bottom: -5px;
 }
 
@@ -405,6 +403,11 @@ main {
     border-bottom: #EEE 1px solid;
   }
 
+  h3 {
+    float: left;
+    margin-bottom: 0;
+  }
+
   h2 {
     float: left;
     margin-bottom: 0;
@@ -602,7 +605,7 @@ $colour8: #A0F0C3;
   justify-content: center;
   align-items: center;
 
-  h1 {
+  h2 {
     margin-bottom: 40px;
     font-size: 1.8em;
     line-height: 1.2em;
@@ -701,18 +704,14 @@ $colour8: #A0F0C3;
     font-size: 22px;
   }
 
-  h1 {
-    font-size: 55px;
-    margin-bottom: 40px;
-  }
-
-  h2 {
+  h3, h2.no-margin, h2.about-contribute-heading {
     font-size: 36px;
     margin-bottom: 40px;
   }
 
-  h3 {
+  .pattern-subheading {
     font-size: 22px;
+    margin-bottom: 0.5rem;
   }
 
   p {
@@ -868,6 +867,10 @@ $colour8: #A0F0C3;
     img {
       margin-top: 10px;
       margin-left: 16px;
+    }
+
+    h3 {
+      font-size: 1.2em;
     }
 
     h2 {

@@ -71,7 +71,7 @@ layout: default
 
     {% if page.advantages %}
     <div class="large-4 large-offset-2 small-12 cell">
-      <h3>Advantages</h3>
+      <h3 class="pattern-subheading">Advantages</h3>
 
       <ul>
         {% for advantage in page.advantages %}
@@ -86,7 +86,7 @@ layout: default
     {% if page.limitations %}
     <div class="large-4 small-12 cell">
 
-    <h3>Limitations</h3>
+    <h3 class="pattern-subheading">Limitations</h3>
 
     <ul>
       {% for limitation in page.limitations %}
@@ -103,7 +103,7 @@ layout: default
   <div class="large-8 large-offset-2 small-12 cell">
 
     {% if page.examples %}
-    <h3>Examples</h3>
+    <h3 class="pattern-subheading">Examples</h3>
 
     <ul>
       {% for example in page.examples %}
@@ -115,7 +115,7 @@ layout: default
     {% endif %}
 
     {% if page.further_reading %}
-    <h3>Further reading</h3>
+    <h3 class="pattern-subheading">Further reading</h3>
 
     <ul class="further_reading">
       {% for item in page.further_reading %}
@@ -128,7 +128,7 @@ layout: default
 
 
     {% if other_patterns.size > 1 %}
-    <h3>Related patterns</h3>
+    <h3 class="pattern-subheading">Related patterns</h3>
 
     <ul>
     {% for pattern in other_patterns %}
