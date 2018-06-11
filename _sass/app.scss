@@ -900,7 +900,6 @@ main {
     }
   }
 }
-// IE doesn't support nested media queries, so media queries for IE 10 and 11 are listed here.
 @media screen and (max-width: 638px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   header .menu {
     z-index: 10;

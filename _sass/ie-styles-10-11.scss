@@ -1,5 +1,6 @@
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-
+  // IE doesn't support nested media queries, so media queries for IE 10 and 11
+  // are listed in app.scss.
   html, body {
     width: 100%;
     margin: 0;
@@ -7,7 +8,7 @@
     overflow-x: hidden;
   }
 
-  // // Clearfix
+  // Clearfix
   .clear:after {
     visibility: hidden;
     display: block;

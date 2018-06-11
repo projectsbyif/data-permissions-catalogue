@@ -18,6 +18,5 @@ You can improve the community’s shared knowledge by [contributing missing patt
 If you have feedback about the catalogue, then email [hello@projectsbyif.com](mailto:hello@projectsbyif.com).
 
 <div class="iframe-container">
-  <!-- Removed frameborder RE: deprecated in HTML5 -->
   <iframe src="https://player.vimeo.com/video/231723090" webkitallowfullscreen mozallowfullscreen msallowfullscreen allowfullscreen></iframe>
 </div>
