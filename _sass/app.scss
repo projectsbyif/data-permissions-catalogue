@@ -679,24 +679,77 @@ $colour8: #A0F0C3;
     margin-right: 0.3em;
   }
 }
-// Mobile media queries
-@media screen and (max-width: 638px) {
-  .homepage-intro {
-    // Run animation on homepage-intro on small screens (less than smallest
-    // media query)
-    animation-name: colourChange;
-    animation-duration: 72s;
-    animation-iteration-count: infinite;
-  }
-  // Remove Skip to Content button on mobile.
-  .skip-to-content {
-    display: none;
-  }
+/* ACCESSIBILITY */
+// Skip to main content link
 
-  .menu {
-    margin-top: 5px;
-  }
+.skip-to-content {
+  position: absolute;
+  top: -200px;
+  left: 35px;
+  line-height: 25px;
 }
+
+.skip-to-content:focus {
+  top: 0;
+  background-color: #000F7D;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  left: 0;
+}
+
+h2#content {
+  tabindex: 0;
+}
+// Back to top button
+
+.back-to-top {
+  position: absolute;
+  right: -500px;
+}
+
+.back-to-top:focus {
+  right: 0;
+  background-color: #000F7D;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+// Not sure how to get around specificity issue with links? Have to use !important, it seems...
+
+.iframe-container:focus,
+a:focus,
+a:hover {
+  outline: #000F7D 2px solid !important;
+}
+/* CONTEXTUAL LABELS */
+// Expanding focusable link for Pattern Category menu so it's more obvious what it is for.
+
+.pattern-category-title a:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.pattern-category-title a {
+  display: inline-block;
+  width: auto;
+}
+
+[role="tooltip"] {
+  display: none;
+}
+// Styling for Category link on pattern page.
+
+.pattern-page-category-link {
+  display: inline-block;
+  line-height: 1.4em;
+  max-height: 30px;
+  margin-bottom: 40px;
+}
+/* MEDIA QUERIES */
 @media screen and (min-width: 639px) {
   body {
     font-size: 22px;
@@ -981,90 +1034,79 @@ $colour8: #A0F0C3;
     }
   }
 }
-/* ACCESSIBILITY */
-// Skip to main content link
+// Mobile media queries
+// Phone (landscape)
+@media screen and (min-width: 416px) and (max-width: 825px) {
+  // Pattern Page
+  div.pattern-image {
+    height: 369px;
 
-.skip-to-content {
-  position: relative;
-  top: -200px;
-  left: 35px;
-  line-height: 50px;
+    &.illustration_version_1 {
+      height: 369px;
+    }
+  }
+  // ACCESSIBILITY
+  // [role="banner"] div.cell {
+  //   position: relative;
+  // }
+  //
+  // .skip-to-content {
+  //   position: absolute;
+  // }
+  //
+  // .skip-to-content:focus {
+  //   top: -1px;
+  //   left: 318px;
+  //   font-size: 19px;
+  //   height: 84%;
+  // }
+
+  footer {
+    position: relative;
+  }
+
+  .back-to-top {
+    opacity: 0;
+    right: 10px;
+    font-size: 0.8em;
+    bottom: 87px;
+  }
+
+  .back-to-top:focus {
+    opacity: 1;
+  }
 }
+// To correspond to the 638px media query above.
+@media screen and (max-width: 638px) {
+  // Because the top menu collapses into a burger, it takes one click to skip it
+  // entirely. Having buttons positioned relatively/absolutely "off-screen" is
+  // fine on desktop, but causes problems with overflow mobile-sized screens.
+  .back-to-top,
+  .skip-to-content {
+    display: none;
+  }
 
-.skip-to-content:focus {
-  top: -13px;
-  background-color: #000F7D;
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
+  .homepage-intro {
+    // Run animation on homepage-intro on small screens (less than smallest
+    // media query)
+    animation-name: colourChange;
+    animation-duration: 72s;
+    animation-iteration-count: infinite;
+  }
+
+  .menu {
+    margin-top: 5px;
+  }
 }
-
-.back-to-top {
-  position: absolute;
-  right: -500px;
-}
-
-.back-to-top:focus {
-  right: 0;
-  background-color: #000F7D;
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-}
-// Not sure how to get around specificity issue with links? Have to use !important, it seems...
-
-.iframe-container:focus,
-a:focus,
-a:hover {
-  outline: #000F7D 2px solid !important;
-}
-/* CONTEXTUAL LABELS */
-// Expanding focusable link for Pattern Category menu so it's more obvious what it is for. First clearfix on link
-// to fix float errors
-
-.pattern-category-title a:after {
-  visibility: hidden;
-  display: block;
-  content: "";
-  clear: both;
-  height: 0;
-}
-
-.pattern-category-title a {
-  display: inline-block;
-  width: auto;
-}
-
-[role="tooltip"] {
-  display: none;
-}
-
-// Styling for Category link on pattern page.
-
-.pattern-page-category-link {
-  display: inline-block;
-  line-height: 1.4em;
-  max-height: 30px;
-  margin-bottom: 40px;
-}
-
+// Phone (portrait)
+// @media screen and (max-width: 415px) {
+//
+// }
 // To meet WCAG 2.1 success criterion 1.4.10 (Reflow):
-// Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:
+// Content can be presented without loss of information or functionality,
+// and without requiring scrolling in two dimensions for:
 //  - Vertical scrolling content at a width equivalent to 320 CSS pixels
 @media screen and (max-width: 320px) {
-  .skip-to-content {
-    position: absolute;
-    display: inline-block;
-    top: -100px;
-    line-height: 10px;
-    width: auto;
-    left: 117px;
-    font-size: 10px;
-  }
-
-  .skip-to-content:focus {
-    top: 5px;
-  }
   header {
     &.grid-container {
       padding-left: 10px;
@@ -1083,6 +1125,7 @@ a:hover {
       padding-right: 10px;
       padding-top: 60px;
       margin-bottom: 0;
+
       h2 {
         font-size: 1.1em;
         margin-bottom: 20px;
@@ -1108,6 +1151,7 @@ a:hover {
       height: 32px;
       justify-content: center;
     }
+
     img {
       margin-top: 5px;
     }
@@ -1148,8 +1192,10 @@ a:hover {
       height: 100vh;
     }
   }
+
   .pattern-image {
     height: 150px;
+
     &.illustration_version_1 {
       height: 155px;
     }
@@ -1157,8 +1203,9 @@ a:hover {
 
   .pattern-block {
     .title {
-    font-size: 0.8em;
+      font-size: 0.8em;
     }
+
     .image {
       height: 200px;
     }
