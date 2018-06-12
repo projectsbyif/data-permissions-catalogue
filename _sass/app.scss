@@ -1011,7 +1011,7 @@ $colour8: #A0F0C3;
   font-weight: bold;
   padding: 5px 10px;
 }
-// Not sure how to get around specificity issue with links?
+// Not sure how to get around specificity issue with links? Have to use !important, it seems...
 
 .iframe-container:focus,
 a:focus,
@@ -1038,21 +1038,7 @@ a:hover {
 [role="tooltip"] {
   display: none;
 }
-// Styling for video and pattern category menu tooltip
-// #video-tip {
-//   display: none;
-// }
-//
-// .iframe-container:focus #video-tip {
-//   display: inline-block;
-//   position: absolute;
-//   top: 41%;
-//   left: -28%;
-//   width: 28%;
-//   border: 3px black solid;
-//   background-color: white;
-//   text-align: center;
-// }
+
 // Styling for Category link on pattern page.
 
 .pattern-page-category-link {
@@ -1061,6 +1047,7 @@ a:hover {
   max-height: 30px;
   margin-bottom: 40px;
 }
+
 // To meet WCAG 2.1 success criterion 1.4.10 (Reflow):
 // Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:
 //  - Vertical scrolling content at a width equivalent to 320 CSS pixels
@@ -1082,7 +1069,7 @@ a:hover {
       padding-left: 10px;
       padding-right: 10px;
       padding-top: 60px;
-
+      margin-bottom: 0;
       h2 {
         font-size: 1.1em;
         margin-bottom: 20px;
@@ -1093,10 +1080,66 @@ a:hover {
       padding: 13px 10px 10px;
     }
   }
-  // Still to do - change mobile menu list open li top margin.
-  // change mobile menu view to 100vh
+
+  .menu.fixed {
+    top: -10px;
+  }
+
+  .pattern-category-title {
+    padding-bottom: 0;
+    padding-top: 29px;
+    height: 59px;
+
+    &.fixed {
+      padding-top: 5px;
+      height: 32px;
+      justify-content: center;
+    }
+    img {
+      margin-top: 5px;
+    }
+
+    h2 {
+      font-size: 19px;
+    }
+  }
+
+  .category-nav {
+    height: 158px;
+
+    ul {
+      margin-top: 2px;
+
+      li {
+        padding-bottom: 6px;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .page-menu {
+    height: 100vh;
+
+    li:first-of-type {
+      margin-top: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+  }
+
+  .full-width-banner {
+    &.pattern {
+      height: 100vh;
+    }
+  }
+  .pattern-image {
+    height: 150px;
+    &.illustration_version_1 {
+      height: 155px;
+    }
+  }
   // Sort out the skip to content button on the mobile site.
-  // Same thing with Category menu, might need to scroll to fit all this in? maybe take the overflow:hidden off of the menu.
-  // pattern page need to change the photo so is 100% of view height.
-  // category page have to change the height of the category menu. 
 }
