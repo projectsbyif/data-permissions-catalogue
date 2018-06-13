@@ -696,6 +696,7 @@ $colour8: #A0F0C3;
   font-weight: bold;
   padding: 5px 10px;
   left: 0;
+  text-decoration: underline;
 }
 
 h2#content {
@@ -1045,22 +1046,11 @@ a:hover {
       height: 369px;
     }
   }
-  // ACCESSIBILITY
-  // [role="banner"] div.cell {
-  //   position: relative;
-  // }
-  //
-  // .skip-to-content {
-  //   position: absolute;
-  // }
-  //
-  // .skip-to-content:focus {
-  //   top: -1px;
-  //   left: 318px;
-  //   font-size: 19px;
-  //   height: 84%;
-  // }
 
+  .page-menu li:first-of-type {
+    margin-top: 50px;
+  }
+  // ACCESSIBILITY
   footer {
     position: relative;
   }
@@ -1078,7 +1068,7 @@ a:hover {
 }
 // To correspond to the 638px media query above.
 @media screen and (max-width: 638px) {
-  // Because the top menu collapses into a burger, it takes one click to skip it
+  // Because the top menu collapses into a single icon, it takes one click to skip it
   // entirely. Having buttons positioned relatively/absolutely "off-screen" is
   // fine on desktop, but causes problems with overflow mobile-sized screens.
   .back-to-top,
@@ -1099,14 +1089,46 @@ a:hover {
   }
 }
 // Phone (portrait)
-// @media screen and (max-width: 415px) {
-//
-// }
+@media screen and (max-width: 415px) {
+  // HOME PAGE
+  header {
+    h1 {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+
+  .pattern-category-title {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .menu.fixed {
+    margin-top: 0;
+  }
+
+  // PATTERN PAGE
+  .pattern-image {
+    width: 102vw;
+  }
+
+  // CATEGORY PAGE
+  .grid-container.category {
+    .pattern-category-title {
+      height: 69px;
+    }
+
+    .pattern-category-title img {
+      margin-top: 10px;
+    }
+  }
+}
 // To meet WCAG 2.1 success criterion 1.4.10 (Reflow):
 // Content can be presented without loss of information or functionality,
 // and without requiring scrolling in two dimensions for:
 //  - Vertical scrolling content at a width equivalent to 320 CSS pixels
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 319px) {
   header {
     &.grid-container {
       padding-left: 10px;
@@ -1114,8 +1136,13 @@ a:hover {
     }
 
     h1 {
-      font-size: 17px;
+      font-size: 18px;
       left: 7px;
+    }
+
+    a {
+      display: inline-block;
+      margin: 0 auto;
     }
   }
 
@@ -1157,7 +1184,7 @@ a:hover {
     }
 
     h2 {
-      font-size: 19px;
+      font-size: 1rem;
     }
   }
 
@@ -1211,3 +1238,6 @@ a:hover {
     }
   }
 }
+// mobile
+// portrait media queries.
+// landscape media queries.
