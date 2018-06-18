@@ -7,8 +7,8 @@
       <a href="https://projectsbyif.com" class="logo">Projects By IF Homepage</a>
       <!-- Changed to h1 as some pages exist without an h1 element -->
       <h1><a href="/" class="title">{{ site.title }}</a></h1>
-      <a href="#" class="menu">Menu</a>
-      <!-- Added nav class for more semantic HTML -->
+      <a href="#" aria-expanded="false" class="menu">Menu</a>
+      <!-- Added nav element for more semantic HTML -->
       <nav class="page-menu" role="navigation">
         <ul>
           <li>
@@ -18,7 +18,7 @@
             <p><a href="/contribute">Contribute</a></p>
           </li>
           <li>
-            <p><a href="https://trustanddesign.projectsbyif.com">Meetup</a></p>
+            <p><a class="page-menu--Meetup" href="https://trustanddesign.projectsbyif.com">Meetup</a></p>
           </li>
         </ul>
       </nav>

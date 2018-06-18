@@ -88,11 +88,8 @@ $(function() {
       // Changes menu icon back to burger.
       $('header .menu').removeClass('menu-opened');
 
-      // Return visibility to all elements when menu is closed.
-    $('main, footer').css({
-        'visibility': 'visible'
-      });
-      
+      $('header .menu').attr('aria-expanded', 'false');
+
     } else {
       // Opening menu.
       isMenuActive = true;
@@ -121,10 +118,7 @@ $(function() {
       // Changes menu icon to X.
       $('header .menu').addClass('menu-opened');
 
-      // Hide elements not in view when menu is open.
-      $('main, footer').css({
-        'visibility': 'hidden'
-      });
+      $('header .menu').attr('aria-expanded', 'true');
     }
   });
 

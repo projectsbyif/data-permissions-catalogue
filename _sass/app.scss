@@ -750,6 +750,7 @@ a:hover {
   max-height: 30px;
   margin-bottom: 40px;
 }
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 639px) {
   body {
@@ -1093,7 +1094,7 @@ a:hover {
   // HOME PAGE
   header {
     h1 {
-      font-size: 1rem;
+      font-size: 1.15rem;
       text-align: center;
     }
   }
@@ -1124,11 +1125,12 @@ a:hover {
     }
   }
 }
+
 // To meet WCAG 2.1 success criterion 1.4.10 (Reflow):
 // Content can be presented without loss of information or functionality,
 // and without requiring scrolling in two dimensions for:
 //  - Vertical scrolling content at a width equivalent to 320 CSS pixels
-@media screen and (max-width: 319px) {
+@media screen and (max-width: 320px) {
   header {
     &.grid-container {
       padding-left: 10px;
@@ -1203,15 +1205,6 @@ a:hover {
 
   .page-menu {
     height: 100vh;
-
-    li:first-of-type {
-      margin-top: 20px;
-    }
-
-    li {
-      margin-bottom: 5px;
-      font-size: 20px;
-    }
   }
 
   .full-width-banner {
