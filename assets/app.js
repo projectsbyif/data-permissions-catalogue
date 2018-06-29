@@ -345,7 +345,6 @@ $(function() {
   $('.iframe-container').focusout(removeVideoKeyboardControls);
 
   function videoKeyboardControls() {
-    console.log('in videoKeyboardControls')
     $(document).on('keydown', keyControl);
   };
 
@@ -355,7 +354,6 @@ $(function() {
   }
 
   function keyControl(e) {
-    console.log('in keyControl')
     if (e.which === 32 || e.which === 13) {
       player.getPaused()
         .then(function(paused) {
@@ -372,19 +370,15 @@ $(function() {
   }
 
   function vimeoPlay() {
-    console.log('in vimeo play')
     player.play().then(function() {
-      console.log('Video is playing.')
     }).catch(function(error) {
       console.log(error);
     })
   }
 
   function vimeoPause() {
-    console.log('in vimeoPause')
     player.pause().then(function() {
       // the video was paused
-      console.log('Video is paused.')
     }).catch(function(error) {
       console.log(error)
       });
