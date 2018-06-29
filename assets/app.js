@@ -339,75 +339,60 @@ $(function() {
   }
 
   // Functions for controlling the embedded video with keyboard.
-  // $('.iframe-container').focus(function() {
-  //   let videoIsPlaying = false;
-  //   $(document).keydown(function(e) {
-  //     switch (e.which) {
-  //       case 32:
-  //         // If video is not playing, start playing it.
-  //         if (!videoIsPlaying) {
-  //           vimeoPlay();
-  //           videoIsPlaying = true;
-  //           $('#video-tip').css("display", "none");
-  //         } else {
-  //           // Else, pause it.
-  //           vimeoPause();
-  //           videoIsPlaying = false;
-  //           $('#video-tip').css("display", "inline-block");
-  //         }
-  //         break;
-  //       default:
-  //         return;
-  //     }
-  //
-  //   })
-  // })
-  //
-  // function vimeoPlay() {
-  //   player.play().then(function() {
-  //     console.log('Video is playing.')
-  //   }).catch(function(error) {
-  //     switch (error.name) {
-  //       case 'PasswordError':
-  //         // the video is password-protected and the viewer needs to enter the
-  //         // password first
-  //         break;
-  //
-  //       case 'PrivacyError':
-  //         // the video is private
-  //         break;
-  //
-  //       default:
-  //         // some other error occurred
-  //         break;
-  //     }
-  //   })
-  // }
-  //
-  // function vimeoPause() {
-  //   player.pause().then(function() {
-  //     // the video was paused
-  //     console.log('Video is paused.')
-  //   }).catch(function(error) {
-  //     switch (error.name) {
-  //       case 'PasswordError':
-  //         // the video is password-protected and the viewer needs to enter the
-  //         // password first
-  //         break;
-  //
-  //       case 'PrivacyError':
-  //         // the video is private
-  //         break;
-  //
-  //       default:
-  //         // some other error occurred
-  //         break;
-  //     }
-  //   });
-  // }
+
+  $('.iframe-container').focus(videoKeyboardControls);
+
+  $('.iframe-container').focusout(removeVideoKeyboardControls);
+
+  function videoKeyboardControls() {
+    console.log('in videoKeyboardControls')
+    $(document).on('keydown', keyControl);
+  };
+
+  function removeVideoKeyboardControls() {
+    vimeoPause(); // Stop playback.
+    $(document).off('keydown', keyControl); // Turn off keyboard controls.
+  }
+
+  function keyControl(e) {
+    console.log('in keyControl')
+    if (e.which === 32 || e.which === 13) {
+      player.getPaused()
+        .then(function(paused) {
+          if (paused) {
+            vimeoPlay();
+          } else {
+            vimeoPause();
+          }
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
+  }
+
+  function vimeoPlay() {
+    console.log('in vimeo play')
+    player.play().then(function() {
+      console.log('Video is playing.')
+    }).catch(function(error) {
+      console.log(error);
+    })
+  }
+
+  function vimeoPause() {
+    console.log('in vimeoPause')
+    player.pause().then(function() {
+      // the video was paused
+      console.log('Video is paused.')
+    }).catch(function(error) {
+      console.log(error)
+      });
+  }
   //
   // Adding Skip Navigation anchords to Jekyll template pages
   // (e.g. About and Content pages)
+
   if (pageHeader["0"].innerHTML === "About" ||
       pageHeader["0"].innerHTML === "Contribute"){
         pageHeader.attr("id", "content");
@@ -428,5 +413,5 @@ $(function() {
 
   $('.back-to-top').click((e) => {
     skipToContent(e)
-  })
+  });
 });
