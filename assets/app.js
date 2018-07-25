@@ -340,6 +340,26 @@ $(function() {
 
   // Functions for controlling the embedded video with keyboard.
 
+  // Turn on captions by default
+
+  player.enableTextTrack('en-GB').then(function(track) {
+    console.log(track)
+  }).catch(function(error) {
+    switch (error.name) {
+      case 'InvalidTrackLanguageError':
+          // no track was available with the specified language
+          break;
+
+      case 'InvalidTrackError':
+          // no track was available with the specified language and kind
+          break;
+
+      default:
+          // some other error occurred
+          break;
+    }
+  })
+
   $('.iframe-container').focus(videoKeyboardControls);
 
   $('.iframe-container').focusout(removeVideoKeyboardControls);
@@ -383,7 +403,7 @@ $(function() {
       console.log(error)
       });
   }
-  //
+
   // Adding Skip Navigation anchords to Jekyll template pages
   // (e.g. About and Content pages)
 
