@@ -1,12 +1,20 @@
 ---
 ---
 
-/* Desktop - show menu when JS disabled. */
+/* Desktop - show menu when JS disabled and re-set Skip To Content button link.. */
 .pattern-category-title {
   display: none;
 }
 
 .category-nav {
+  display: block;
+}
+
+.skip-to-content {
+  display: none;
+}
+
+.skip-to-content-noscript {
   display: block;
 }
 

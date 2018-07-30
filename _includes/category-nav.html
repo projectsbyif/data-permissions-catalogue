@@ -4,9 +4,15 @@
   <ul>
     {% for category in categories %}
     {% if category.title != "Other" %}
+    {% if forloop.first == true %}
+    <li>
+      <a id="content-noscript" href="/category/{{ category.title | slugify }}" class="border-{{ category.title  | slugify }} {% if page.layout == "home" and category.title == "All" %}active{% endif %}{% if page.title == category.title %}active{% endif %}">{% if category.title == "All" %}All patterns{% else if %}{{ category.title }}{% endif %}</a>
+    </li>
+    {% else %}
     <li>
       <a href="/category/{{ category.title | slugify }}" class="border-{{ category.title  | slugify }} {% if page.layout == "home" and category.title == "All" %}active{% endif %}{% if page.title == category.title %}active{% endif %}">{% if category.title == "All" %}All patterns{% else if %}{{ category.title }}{% endif %}</a>
     </li>
+    {% endif %}
     {% endif %}
     {% endfor %}
     <li>
