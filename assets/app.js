@@ -6,9 +6,6 @@ $(function() {
   const iframe = ($('iframe').length !== 0) ? ($('iframe')) : undefined;
   const player = iframe ? new Vimeo.Player(iframe) : undefined;
 
-  // About and Content page headers (for 'skip navigation links')
-  const pageHeader = ($('main h2'));
-
   // Runtime variables
   var isMenuActive = false;
   var isCategoryMenuActive = false;
@@ -403,15 +400,6 @@ $(function() {
       console.log(error)
       });
   }
-
-  // Adding Skip Navigation anchords to Jekyll template pages
-  // (e.g. About and Content pages)
-
-  if (pageHeader["0"].innerHTML === "About" ||
-      pageHeader["0"].innerHTML === "Contribute"){
-        pageHeader.attr("id", "content");
-        pageHeader.attr('tabindex', '0');
-      }
 
   // Preventing URL change when Skip to Content links are used.
     // Would have to update this for no-js pages (move back to regular url changes)
