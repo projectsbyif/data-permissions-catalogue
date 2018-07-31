@@ -13,7 +13,7 @@ layout: default
     {% case page.images.size %}
       {% when 1 %}
       <div class="{% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
-        <img src="{{ page.images[0].url }}" />
+        <img id="content" tabindex="0" src="{{ page.images[0].url }}" />
       </div>
       {% when 2 %}
       {% assign count = 0 %}
@@ -23,7 +23,7 @@ layout: default
         {% else %}
           <div class="large-4 medium-4 small-12 cell">
         {% endif %}
-            <img src="{{ image.url }}" />
+            <img id="content" tabindex="0" src="{{ image.url }}" />
           </div>
         {% assign count = count | plus: 1 %}
       {% endfor %}
@@ -32,11 +32,11 @@ layout: default
       <noscript>
         <div class="no-script-image-div grid-x">
           <div class="three-image small-12 cell phone">
-            <img src="{{ page.images[1].url }}" alt="">
+            <img id="content" tabindex="0" src="{{ page.images[1].url }}" alt="">
           </div>
         {% for image in page.images %}
           <div class="three-image desktop large-4 medium-4 small-4 cell">
-            <img src="{{ image.url }}" />
+            <img id="content" tabindex="0" src="{{ image.url }}" />
           </div>
         {% endfor %}
         </div>
@@ -44,7 +44,7 @@ layout: default
       {% for image in page.images %}
       <!-- Hide this when script is turned off -->
       <div id="when-no-script" class="large-4 medium-4 small-12 cell">
-        <img src="{{ image.url }}" />
+        <img id="content" tabindex="0" src="{{ image.url }}" />
       </div>
       {% endfor %}
     {% endcase %}
@@ -54,7 +54,7 @@ layout: default
 
 <div class="grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
-    <h2 tabindex="0" id="content" class="no-margin">{{ page.title }}</h2>
+    <h2 class="no-margin">{{ page.title }}</h2>
     <!-- Deleted <p> tags because it wasn't possible for VoiceOver to read describedby text in Chrome -->
     <!-- while <a> tag was nested. -->
     <a aria-describedby="category-link-tip" href="/category/{{ page.category | slugify }}" class="pattern-page-category-link border-{{ page.category | slugify }}">{{ page.category }}</a>
