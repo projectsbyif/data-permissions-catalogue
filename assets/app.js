@@ -338,7 +338,7 @@ $(function() {
   // Functions for controlling the embedded video with keyboard.
 
   // Turn on captions by default
-
+if(player) {
   player.enableTextTrack('en-GB').then(function(track) {
     console.log(track)
   }).catch(function(error) {
@@ -356,6 +356,7 @@ $(function() {
           break;
     }
   })
+}
 
   $('.iframe-container').focus(videoKeyboardControls);
 
