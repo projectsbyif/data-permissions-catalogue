@@ -7,6 +7,7 @@ category: Control access
 
 images:
 - url: /images/access-through-letter.svg
+- alt: A person's hand hovers their mobile phone over a bar code in an energy bill.
 
 advantages:
  - Relies on some having access to a specific address
@@ -23,4 +24,4 @@ examples:
 
 ---
 
-Accessing data using a code contained in a physical letter. For example accessing energy usage data from a monthly bill. 
+Accessing data using a code contained in a physical letter. For example accessing energy usage data from a monthly bill.

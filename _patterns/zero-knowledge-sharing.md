@@ -7,12 +7,13 @@ category: Share data
 
 images:
   - url: /images/zero-knowledge-sharing.svg
+  - alt: A service confirms a person's age without revealing their date of birth to a second device.
 
 advantages:
  - Quicker to reach outcomes without having to process data
  - Reduces need to duplicate or send sensitive data through third parties
 
-limitations: 
+limitations:
  - Cannot always revoke access
  - Requires additional infrastructure to validate data
 
@@ -27,5 +28,3 @@ further reading:
 ---
 
 Sharing the result of data use without disclosing the data itself, for example, proving that someone is over 18 without sharing their date of birth.
-
-

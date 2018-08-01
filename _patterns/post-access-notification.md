@@ -7,6 +7,7 @@ category: See access
 
 images:
   - url: /images/post-access-notification.svg
+  - alt: A letter reading 3 points added to your license after your recent road traffic offence.
 
 examples:
   - description: Driving licence points

@@ -7,6 +7,7 @@ category: Authentication
 
 images:
   - url: /images/gesture-matching.svg
+  - alt: A hand tracing an unlock pattern on the lockscreen of a mobile device.
 
 examples:
   - title: Unlock pattern on Android

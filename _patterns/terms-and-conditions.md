@@ -9,6 +9,7 @@ category: Other
 
 images:
   - url: /images/terms-and-conditions.svg
+  - alt: A dialog box showing a terms and conditions agreement above Agree and Disagree buttons.
 
 examples:
   - description: Most software during installation and digital services during registration

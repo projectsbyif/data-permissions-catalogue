@@ -13,7 +13,13 @@ layout: default
 <div class="grid-x grid-padding-x pattern-category-title category-page clear">
   <div class="wrapper">
     <div class="small-12 cell">
-      <a href="#"><h2>{{ page.title }}<span class="category-counter">({{ patterns.size }})</span></h2><img src="/images/down.svg" /></a>
+      <a id="content" aria-expanded="false" aria-describedby="category-menu-tip" href="#">
+        <h2>{{ page.title }}<span class="category-counter">({{ patterns.size }})</span></h2>
+        <img aria-hidden="true" src="/images/down.svg" />
+      </a>
+      <div role="tooltip" id="category-menu-tip">
+        Click to toggle Pattern Category Menu open and closed.
+      </div>
     </div>
   </div>
 </div>
@@ -26,7 +32,7 @@ layout: default
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
       <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ page.category | slugify }}">
         {% if pattern.images[0].url %}
-        <img src="{{ pattern.images[0].url }}" />
+        <img aria-hidden="true" src="{{ pattern.images[0].url }}" />
         {% endif %}
       </div>
       <!-- Added this class for IE8 -->

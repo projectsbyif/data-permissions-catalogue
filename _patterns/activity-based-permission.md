@@ -7,6 +7,7 @@ category: Control access
 
 images:
 - url: /images/activity-based-permission.svg
+- alt: A mobile phone is tilted, putting it in to sleep mode.
 
 advantages:
  - Remains convenient while offering some form of security
