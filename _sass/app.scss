@@ -482,7 +482,6 @@ main {
 // PATTERN PAGE: IMAGES
 
 .pattern-image {
-  background-color: #ff5e23;
   margin-bottom: 50px;
   position: relative;
   left: -0.625rem;
@@ -737,9 +736,9 @@ h2#content {
 // Not sure how to get around specificity issue with links? Have to use !important, it seems...
 
 .iframe-container:focus,
-a:focus,
-a:hover {
+a:focus{
   outline: #000F7D 2px solid !important;
+  outline-offset: 3px;
 }
 /* CONTEXTUAL LABELS */
 // Expanding focusable link for Pattern Category menu so it's more obvious what it is for.
