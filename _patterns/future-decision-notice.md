@@ -7,7 +7,7 @@ category: Automation
 
 images:
 - url: /images/future-decision-notice.svg
-- alt: A prompt on a mobile device reading "Pending - You're about save £7.23" and underneath a button reading "Stop".
+- alt: A prompt on a mobile device reading Pending - You're about save £7.23 and underneath a button reading Stop.
 
 advantages:
  - More control of a  automated decision
