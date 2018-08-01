@@ -7,6 +7,7 @@ category: Automation
 
 images:
 - url: /images/decision-testing.svg
+- alt: Two mobile phones side by side showing different outcomes of an automated decision.
 
 advantages:
  - Learning by doing how an automated decision gets made
@@ -22,4 +23,4 @@ examples:
     url: https://flockcover.com/
 ---
 
-Learning how a service makes automated decisions, by giving it test information to use. 
+Learning how a service makes automated decisions, by giving it test information to use.

@@ -9,6 +9,7 @@ category: Share data
 
 images:
   - url: /images/one-time-access.svg
+  - alt: A dialog box shows a single-use code and a button which reads "Use now." 
 
 examples:
   - title: UK Share Driving Licence service

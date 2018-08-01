@@ -9,6 +9,7 @@ category: Control access
 
 images:
   - url: /images/smart-contract-access.svg
+  - alt: An envelope with the words "Open on your birthday" written across it.
 
 examples:
   - title: Ethereum

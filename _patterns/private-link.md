@@ -9,6 +9,7 @@ category: Share data
 
 images:
   - url: /images/private-link.svg
+  - alt: A private link that enables people to share and view a document.
 
 examples:
   - description: Services like Google Docs, Etherpad, Keybase file system and Dropbox have link sharing options

@@ -9,6 +9,7 @@ category: Authentication
 
 images:
   - url: /images/behavioural-patterns.svg
+  - alt: A message on a phone asking to confirm your password because it is a new or unfamiliar device.
 
 examples:
   - description: Google and Facebook require people to sign in again if they're accessing services from a new location

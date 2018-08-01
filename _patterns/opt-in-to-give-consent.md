@@ -9,6 +9,7 @@ category: Give consent
 
 images:
   - url: /images/opt-in-to-give-consent.svg
+  - alt: An organ donor card in front a form for joining the Organ Donor's Register.
 
 examples:
   - title: UK organ donations register

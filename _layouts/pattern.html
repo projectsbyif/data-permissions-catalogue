@@ -11,11 +11,11 @@ layout: default
   <a href="#" class="carousel-control next">Next</a>
   {% if page.images %}
     {% case page.images.size %}
-      {% when 1 %}
-      <div class="{% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
-        <img id="content" tabindex="0" src="{{ page.images[0].url }}" />
-      </div>
       {% when 2 %}
+      <div class="{% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
+        <img id="content" tabindex="0" src="{{ page.images[0].url }}" alt="{{ page.images[1].alt }}"/>
+      </div>
+      {% when 3 %}
       {% assign count = 0 %}
       {% for image in page.images %}
         {% if count == 0 %}
@@ -23,29 +23,40 @@ layout: default
         {% else %}
           <div class="large-4 medium-4 small-12 cell">
         {% endif %}
-            <img id="content" tabindex="0" src="{{ image.url }}" />
+            <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ image.alt }}" />
           </div>
         {% assign count = count | plus: 1 %}
       {% endfor %}
-      {% when 3 %}
+      {% when 4 %}
       <!-- When no script, multiple images and mobile screen size, display only 1 image. -->
       <noscript>
         <div class="no-script-image-div grid-x">
           <div class="three-image small-12 cell phone">
-            <img id="content" tabindex="0" src="{{ page.images[1].url }}" alt="">
+            <img id="content" tabindex="0" src="{{ page.images[1].url }}" alt="{{ page.images[3].alt }}"/>
           </div>
         {% for image in page.images %}
           <div class="three-image desktop large-4 medium-4 small-4 cell">
-            <img id="content" tabindex="0" src="{{ image.url }}" />
+            <!-- Hard-coded alt text as there is currently only one pattern with three images. Change this when new patterns added. -->
+            <img id="content" tabindex="0" src="{{ image.url }}" alt="A person generates a code on their device for another person to scan."/>
           </div>
         {% endfor %}
         </div>
       </noscript>
       {% for image in page.images %}
-      <!-- Hide this when script is turned off -->
-      <div id="when-no-script" class="large-4 medium-4 small-12 cell">
-        <img id="content" tabindex="0" src="{{ image.url }}" />
-      </div>
+        {% if forloop.last == true %}
+        <!-- Do not print altText as separate image. -->
+        {% elsif forloop.index == 2 %}
+        <!-- Set second image as skip-to-content anchor -->
+        <!-- Hide this when script is turned off -->
+        <div class="large-4 medium-4 small-12 cell when-no-script">
+          <img id="content" tabindex="0" src="{{ image.url }}" alt="A person generates a code on their device for another person to scan." />
+        </div>
+        {% else %}
+          <!-- Hide this when script is turned off -->
+          <div class="large-4 medium-4 small-12 cell when-no-script">
+            <img src="{{ image.url }}" alt="A person generates a code on their device for another person to scan." />
+          </div>
+        {% endif %}
       {% endfor %}
     {% endcase %}
     <div class="carousel-indicator"><div class="wrapper"></div></div>

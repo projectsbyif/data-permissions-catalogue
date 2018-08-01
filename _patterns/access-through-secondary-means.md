@@ -9,6 +9,8 @@ category: Control access
 
 images:
   - url: /images/access-through-secondary-means.svg
+  - alt: An email has a link which logs you in to another service.
+
 
 examples:
   - title: Slack magic links
@@ -16,6 +18,5 @@ examples:
     description: a link is sent to a Slack user’s registered email address, allowing them to log into the service without a password
 ---
 
-Access to data relies on someone being already authenticated somewhere else. 
+Access to data relies on someone being already authenticated somewhere else.
 For example, a person can log into a service by clicking a link sent to an email account they’re already logged into.
-
