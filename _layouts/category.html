@@ -10,7 +10,7 @@ layout: default
 
 <div class="pattern-category-title-anchor"></div>
 
-<div class="grid-x grid-padding-x pattern-category-title">
+<div class="grid-x grid-padding-x pattern-category-title category-page clear">
   <div class="wrapper">
     <div class="small-12 cell">
       <a id="content" aria-expanded="false" aria-describedby="category-menu-tip" href="#">
@@ -26,7 +26,7 @@ layout: default
 
 {% include category-nav.html %}
 
-<div class="patterns-grid grid-x grid-padding-x">
+<div class="patterns-grid category-page grid-x grid-padding-x">
   {% for pattern in patterns %}
   <div class="large-4 small-12 cell">
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
@@ -35,7 +35,8 @@ layout: default
         <img aria-hidden="true" src="{{ pattern.images[0].url }}" />
         {% endif %}
       </div>
-      <p class="title">{{ pattern.title }}</p>
+      <!-- Added this class for IE8 -->
+      <p class="title color-ie-{{ pattern.category | slugify }}">{{ pattern.title }}</p>
     </a>
   </div>
   {% endfor %}

@@ -3,13 +3,18 @@
   <a class="skip-to-content" href="#content">Skip to content</a>
   <a class="skip-to-content-noscript" href="#content-noscript">Skip to content</a>
   <div class="grid-x grid-padding-x">
-    <div class="small-12 large-12 cell">
-      <!-- Added more contextual information to Logo link  -->
+    <!-- Clears floats on IE 9 -->
+    <div class="clear small-12 large-12 cell">
       <a href="https://projectsbyif.com" class="logo">Projects By IF Homepage</a>
-      <!-- Changed to h1 as some pages exist without an h1 element -->
-      <h1><a href="/" class="title">{{ site.title }}</a></h1>
-      <a href="#" aria-expanded="false" class="menu">Menu</a>
-      <!-- Added nav element for more semantic HTML -->
+      <!--[if IE 8 ]>
+      <a class="ie-logo" href="https://projectsbyif.com/">
+        <img id="showMe" src="/images/if-logo-circle-01.jpg" alt="Projects By If Logo">
+      </a>
+      <![endif]-->
+
+      <!-- IE class added for extra specificity when targeting elements for IE-specific styling -->
+      <h1 id="ie-title"><a href="/" class="ie title">{{ site.title }}</a></h1>
+      <a href="#" aria-expanded="false" id="ie-menu" class="menu">Menu</a>
       <nav class="page-menu" role="navigation">
         <ul>
           <li>

@@ -1,11 +1,11 @@
 $(function() {
   // Constants
-  const DESKTOP_WIDTH = 639;
 
   // Conditionals used b/c new Vimeo.Player throws error if argument is undefined.
   const iframe = ($('iframe').length !== 0) ? ($('iframe')) : undefined;
   const player = iframe ? new Vimeo.Player(iframe) : undefined;
-
+  var DESKTOP_WIDTH = 639;
+   
   // Runtime variables
   var isMenuActive = false;
   var isCategoryMenuActive = false;
@@ -130,7 +130,7 @@ $(function() {
     }
   });
 
-  // Scrolling interactions mobile
+  // Scrolling interactions (mobile and Desktop)
   $(window).scroll(function() {
     if (isMenuActive) {
       return;
@@ -151,6 +151,7 @@ $(function() {
         });
 
         // Specific styling for screens larger than desktop-width.
+
         if ($(window).width() > DESKTOP_WIDTH) {
           $('header').addClass('desktop-fixed');
           $('header .page-menu').show();

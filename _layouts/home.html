@@ -3,8 +3,9 @@ layout: default
 ---
 {% assign patterns = site.patterns %}
 
+
 <!-- Added class home so colour change animation only happens on main page. -->
-<div class="full-width-banner home"></div>
+<div class="clear full-width-banner home"></div>
 
 <div class="homepage-intro">
     <div>
@@ -23,12 +24,11 @@ layout: default
 <div class="grid-x grid-padding-x pattern-category-title">
   <div class="wrapper">
     <div class="small-12 cell grid-x">
-      <a id="content" aria-expanded="false" aria-describedby="category-menu-tip" href="#"> <!-- aria-describedby="category-menu-tip"> -->
-        <h3>All patterns<span class="category-counter">({{ patterns.size }})</span></h3>
-        <!-- Added to stop image being read out when using VoiceOver with Chrome -->
+      <a id="content" aria-expanded="false" aria-describedby="category-menu-tip" class="pattern-category-menu clear" href="#">
+        <h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2>
         <img aria-hidden="true" src="/images/down.svg" />
       </a>
-      <div role="tooltip" id="category-menu-tip">
+       <div role="tooltip" id="category-menu-tip">
         Click to toggle Pattern Category Menu open and closed.
       </div>
     </div>
@@ -48,7 +48,8 @@ layout: default
         <img aria-hidden="true" src="{{ pattern.images[0].url }}" />
         {% endif %}
       </div>
-      <p class="title">{{ pattern.title }}</p>
+      <!-- Added this class for IE8 -->
+      <p class="title color-ie-{{ pattern.category | slugify }}">{{ pattern.title }}</p>
     </a>
   </div>
   {% endfor %}

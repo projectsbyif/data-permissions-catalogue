@@ -57,6 +57,7 @@ ul {
 $color-focus: #FFD464;
 
 a:active,
+a:hover,
 a:link,
 a:visited {
   color: #000F7D;
@@ -377,6 +378,7 @@ main {
     }
   }
 }
+
 // CATEGORY PAGES: TITLE
 
 .pattern-category-title {
@@ -476,6 +478,7 @@ main {
 .patterns-grid .pattern-block {
   border-bottom: none;
 }
+
 // PATTERN PAGE: IMAGES
 
 .pattern-image {
@@ -491,25 +494,34 @@ main {
     width: initial;
     height: 372px;
     padding: 20px;
-
+    // Adapted height properties for compatbility with Edge and Firefox
     .cell {
       display: block;
       padding: 0;
+      height: inherit;
 
       img {
-        max-height: 100vw;
+        height: 100%;
+        // To fix certain images on Firefox/Edge (e.g. behavioural-patterns image)
+        &.shrink-height {
+          @media screen and (max-width: 638px) {
+            height: 95%;
+          }
+        }
       }
     }
   }
 
+  // Adapted height properties for compatbility with Edge and Firefox
   .cell {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: inherit;
 
     img {
       width: 100%;
-      height: 100%;
+      height: inherit;
     }
   }
 }
@@ -578,6 +590,7 @@ main {
   }
 }
 // HOMEPAGE
+
 // Copied colour scheme from app.js
 $colour1: #FFEB82;
 $colour2: #FAAF73;
@@ -865,7 +878,8 @@ a:hover {
   }
   // PATTERN PAGE: IMAGES
   .pattern-image {
-    height: 374px;
+    // Adjusted for Firefox/Edge compatbility
+    height: 373px;
     position: initial;
     width: 100%;
     margin-left: auto !important;
@@ -874,7 +888,8 @@ a:hover {
 
     &.illustration_version_1 {
       .cell {
-        padding: 40px;
+        // Changed this for a larger photo.
+        padding: 0px 40px 40px 40px;
 
         img {
           max-height: 413px;
@@ -1041,6 +1056,7 @@ a:hover {
     }
   }
 }
+
 // Mobile media queries
 // Phone (landscape)
 @media screen and (min-width: 416px) and (max-width: 825px) {
@@ -1236,6 +1252,25 @@ a:hover {
     }
   }
 }
-// mobile
-// portrait media queries.
-// landscape media queries.
+
+@media screen and (max-width: 638px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  header .menu {
+    z-index: 10;
+  }
+
+  header .title.ie {
+    height: auto;
+  }
+
+  .category-nav ul li {
+    margin-right: 10px;
+  }
+
+  .grid-container.home.ie {
+    padding-top: 0;
+
+    & .homepage-intro div {
+      padding-top: 50px;
+    }
+  }
+}
