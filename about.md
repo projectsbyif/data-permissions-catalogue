@@ -17,7 +17,7 @@ You can improve the community’s shared knowledge by [contributing missing patt
 
 If you have feedback about the catalogue, then email [hello@projectsbyif.com](mailto:hello@projectsbyif.com).
 
-<div tabindex="1" class="iframe-container">
+<div tabindex="0" class="iframe-container">
   <iframe
     aria-label="What are design patterns? From Projects By If on Vimeo. Press the space bar to start and pause the video."
     tabindex="-1"
