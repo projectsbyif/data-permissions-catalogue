@@ -21,22 +21,19 @@ body {
   font-size: 19px;
   color: #000F7D;
   background: #FFF;
+  overflow-x: hidden;
 }
 
-h1 {
+.homepage-intro h2,
+.pattern-category-title h2,
+h2.about-contribute-heading {
   font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
   font-size: 28px;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
-h2 {
-  font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
-  font-size: 28px;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
+h2.no-margin,
 h3 {
   font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
   font-size: 19px;
@@ -57,6 +54,7 @@ ul {
     }
   }
 }
+$color-focus: #FFD464;
 
 a:active,
 a:hover,
@@ -90,7 +88,9 @@ header {
     float: left;
     background-image: url("/images/if-logo.svg");
     background-size: 60%;
-    background-position: center left;
+    // To center logo in focus rectangle.
+    background-position: center center;
+    margin-top: 5px;
   }
 
   .menu {
@@ -110,20 +110,28 @@ header {
       right: 20px;
     }
   }
+}
+
+h1 {
+  height: 42px;
+  display: inline-block;
+  line-height: 50px;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  // Adjustments to position to make up for centering logo in focus rectangle.
+  position: relative;
+  left: 10px;
+  top: 5px;
 
   .title {
     float: left;
     display: block;
-    width: calc(100% - (2 * 42px));
+    width: auto;
     height: 100%;
     border-bottom: 0;
-
-    p {
-      height: 42px;
-      line-height: 50px;
-      margin-bottom: 0;
-      text-align: center;
-    }
   }
 }
 
@@ -163,7 +171,7 @@ iframe {
   margin-bottom: 30px;
 }
 
-.no-margin {
+main h2.no-margin {
   margin-bottom: -5px;
 }
 
@@ -276,6 +284,7 @@ $color-social-consent: #98D9CA;
   background-color: $color-social-consent !important;
 }
 // PAGE STRUCTURE
+
 main {
   min-height: calc(100vh - 81px);
   padding-top: 40px;
@@ -294,6 +303,7 @@ main {
   padding-right: 20px;
 }
 // MENUS
+
 .category-nav {
   display: none;
   z-index: 9998;
@@ -314,8 +324,10 @@ main {
 
   ul {
     list-style-type: none;
-    padding: 20px 20px 0;
-    margin: 0;
+    // Added margin and removed padding so as not to cut off
+    // the bottom of the focused item.
+    padding: 0 20px;
+    margin: 20px 0 0;
     overflow: auto;
 
     li {
@@ -340,13 +352,16 @@ main {
   width: 100vw;
   height: calc(100vh - 57px);
   background: #FFF;
-  list-style-type: none;
   margin: 0;
   position: fixed;
   top: 57px;
   left: 0;
   z-index: 9999;
   display: none;
+
+  ul {
+    list-style-type: none;
+  }
 
   a {
     border-bottom: 0;
@@ -364,8 +379,8 @@ main {
   }
 }
 
-
 // CATEGORY PAGES: TITLE
+
 .pattern-category-title {
   background: #FFF;
   position: relative;
@@ -391,6 +406,11 @@ main {
     border-bottom: #EEE 1px solid;
   }
 
+  h3 {
+    float: left;
+    margin-bottom: 0;
+  }
+
   h2 {
     float: left;
     margin-bottom: 0;
@@ -414,8 +434,8 @@ main {
   }
 }
 // CATEGORY PAGES: PATTERN BLOCK
+
 .pattern-block {
-  border-bottom: 0 !important;
   display: block;
   margin-bottom: 40px;
 
@@ -454,9 +474,14 @@ main {
     }
   }
 }
+
+.patterns-grid .pattern-block {
+  border-bottom: none;
+}
+
 // PATTERN PAGE: IMAGES
+
 .pattern-image {
-  background-color: #ff5e23;
   margin-bottom: 50px;
   position: relative;
   left: -0.625rem;
@@ -500,6 +525,7 @@ main {
   }
 }
 // PATTERN PAGE: CAROUSEL
+
 .carousel-control {
   display: block;
   width: 32px;
@@ -589,13 +615,12 @@ $colour8: #A0F0C3;
   justify-content: center;
   align-items: center;
 
-  h1 {
+  h2 {
     margin-bottom: 40px;
     font-size: 1.8em;
     line-height: 1.2em;
   }
 }
-
 
 .full-width-banner {
   display: none;
@@ -618,32 +643,39 @@ $colour8: #A0F0C3;
   animation-duration: 72s;
   animation-iteration-count: infinite;
 }
-
 @keyframes colourChange {
   0% {
     background-color: $colour1;
   }
+
   13% {
     background-color: $colour2;
   }
+
   25% {
     background-color: $colour3;
   }
+
   37% {
     background-color: $colour4;
   }
+
   49% {
     background-color: $colour5;
   }
+
   61% {
     background-color: $colour6;
   }
+
   73% {
     background-color: $colour7;
   }
+
   85% {
     background-color: $colour8;
   }
+
   100% {
     background-color: $colour1;
   }
@@ -660,34 +692,98 @@ $colour8: #A0F0C3;
     margin-right: 0.3em;
   }
 }
+/* ACCESSIBILITY */
+// Skip to main content link
 
-@media screen and (max-width: 638px) {
-  .homepage-intro {
-    // Run animation on homepage-intro on small screens (less than smallest
-    // media query)
-    animation-name: colourChange;
-    animation-duration: 72s;
-    animation-iteration-count: infinite;
-  }
+.skip-to-content, .skip-to-content-noscript {
+  position: absolute;
+  top: -200px;
+  left: 35px;
+  line-height: 25px;
 }
 
+.skip-to-content:focus, .skip-to-content-noscript:focus {
+  top: 0;
+  background-color: #000F7D;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  left: 0;
+  text-decoration: underline;
+}
+
+.skip-to-content-noscript {
+  display: none;
+}
+
+h2#content {
+  tabindex: 0;
+}
+// Back to top button
+
+.back-to-top {
+  position: absolute;
+  right: -500px;
+}
+
+.back-to-top:focus {
+  right: 0;
+  background-color: #000F7D;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+// Not sure how to get around specificity issue with links? Have to use !important, it seems...
+
+.iframe-container:focus,
+a:focus{
+  outline: #000F7D 2px solid !important;
+  outline-offset: 3px;
+}
+/* CONTEXTUAL LABELS */
+// Expanding focusable link for Pattern Category menu so it's more obvious what it is for.
+
+.pattern-category-title a:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.pattern-category-title a {
+  display: inline-block;
+  width: auto;
+}
+
+[role="tooltip"] {
+  display: none;
+}
+// Styling for Category link on pattern page.
+
+.pattern-page-category-link {
+  display: inline-block;
+  line-height: 1.4em;
+  max-height: 30px;
+  margin-bottom: 40px;
+}
+
+/* MEDIA QUERIES */
 @media screen and (min-width: 639px) {
   body {
     font-size: 22px;
   }
 
-  h1 {
-    font-size: 55px;
-    margin-bottom: 40px;
-  }
-
-  h2 {
+  h2.about-contribute-heading,
+  h2.no-margin,
+  h3 {
     font-size: 36px;
     margin-bottom: 40px;
   }
 
-  h3 {
+  .pattern-subheading {
     font-size: 22px;
+    margin-bottom: 0.5rem;
   }
 
   p {
@@ -728,18 +824,13 @@ $colour8: #A0F0C3;
       display: none;
     }
 
-    .title {
-      height: initial;
-      width: initial;
-    }
-
     .page-menu {
       display: block;
       width: initial;
       height: initial;
       float: right;
       position: initial;
-      margin-top: 10px;
+      margin-top: 12px;
       background-color: rgba(0,0,0,0);
 
       &.fixed {
@@ -817,8 +908,9 @@ $colour8: #A0F0C3;
     justify-content: left;
 
     div {
-      width: 550px;
-      padding-left: 42px;
+      // Adjustments made to center if logo in focus rectangle.
+      width: 560px;
+      padding-left: 52px;
       margin-top: -40px;
     }
   }
@@ -840,6 +932,10 @@ $colour8: #A0F0C3;
     img {
       margin-top: 10px;
       margin-left: 16px;
+    }
+
+    h3 {
+      font-size: 1.2em;
     }
 
     h2 {
@@ -872,7 +968,7 @@ $colour8: #A0F0C3;
       border-bottom: #EEE 1px solid;
 
       ul {
-        margin: 0 auto;
+        margin: 20px auto 0;
       }
     }
 
@@ -959,6 +1055,203 @@ $colour8: #A0F0C3;
     }
   }
 }
+
+// Mobile media queries
+// Phone (landscape)
+@media screen and (min-width: 416px) and (max-width: 825px) {
+  // Pattern Page
+  div.pattern-image {
+    height: 369px;
+
+    &.illustration_version_1 {
+      height: 369px;
+    }
+  }
+
+  .page-menu li:first-of-type {
+    margin-top: 50px;
+  }
+  // ACCESSIBILITY
+  footer {
+    position: relative;
+  }
+
+  .back-to-top {
+    opacity: 0;
+    right: 10px;
+    font-size: 0.8em;
+    bottom: 87px;
+  }
+
+  .back-to-top:focus {
+    opacity: 1;
+  }
+}
+// To correspond to the 638px media query above.
+@media screen and (max-width: 638px) {
+  // Because the top menu collapses into a single icon, it takes one click to skip it
+  // entirely. Having buttons positioned relatively/absolutely "off-screen" is
+  // fine on desktop, but causes problems with overflow mobile-sized screens.
+  .back-to-top,
+  .skip-to-content {
+    display: none;
+  }
+
+  .homepage-intro {
+    // Run animation on homepage-intro on small screens (less than smallest
+    // media query)
+    animation-name: colourChange;
+    animation-duration: 72s;
+    animation-iteration-count: infinite;
+  }
+
+  .menu {
+    margin-top: 5px;
+  }
+}
+// Phone (portrait)
+@media screen and (max-width: 415px) {
+  // HOME PAGE
+  header {
+    h1 {
+      font-size: 1.15rem;
+      text-align: center;
+    }
+  }
+
+  .pattern-category-title {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .menu.fixed {
+    margin-top: 0;
+  }
+
+  // PATTERN PAGE
+  .pattern-image {
+    width: 102vw;
+  }
+
+  // CATEGORY PAGE
+  .grid-container.category {
+    .pattern-category-title {
+      height: 69px;
+    }
+
+    .pattern-category-title img {
+      margin-top: 10px;
+    }
+  }
+}
+
+// To meet WCAG 2.1 success criterion 1.4.10 (Reflow):
+// Content can be presented without loss of information or functionality,
+// and without requiring scrolling in two dimensions for:
+//  - Vertical scrolling content at a width equivalent to 320 CSS pixels
+@media screen and (max-width: 320px) {
+  header {
+    &.grid-container {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    h1 {
+      font-size: 18px;
+      left: 7px;
+    }
+
+    a {
+      display: inline-block;
+      margin: 0 auto;
+    }
+  }
+
+  main {
+    .homepage-intro {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 60px;
+      margin-bottom: 0;
+
+      h2 {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+      }
+    }
+
+    .cta {
+      padding: 13px 10px 10px;
+    }
+  }
+
+  .menu.fixed {
+    top: -10px;
+  }
+
+  .pattern-category-title {
+    padding-bottom: 0;
+    padding-top: 29px;
+    height: 59px;
+
+    &.fixed {
+      padding-top: 5px;
+      height: 32px;
+      justify-content: center;
+    }
+
+    img {
+      margin-top: 5px;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+  }
+
+  .category-nav {
+    height: 158px;
+
+    ul {
+      margin-top: 2px;
+
+      li {
+        padding-bottom: 6px;
+        font-size: 11px;
+      }
+    }
+  }
+
+  .page-menu {
+    height: 100vh;
+  }
+
+  .full-width-banner {
+    &.pattern {
+      height: 100vh;
+    }
+  }
+
+  .pattern-image {
+    height: 150px;
+
+    &.illustration_version_1 {
+      height: 155px;
+    }
+  }
+
+  .pattern-block {
+    .title {
+      font-size: 0.8em;
+    }
+
+    .image {
+      height: 200px;
+    }
+  }
+}
+
 @media screen and (max-width: 638px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   header .menu {
     z-index: 10;

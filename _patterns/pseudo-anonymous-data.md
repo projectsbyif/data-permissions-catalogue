@@ -7,6 +7,7 @@ category: Share data
 
 images:
   - url: /images/pseudo-anonymous-data.svg
+  - alt: A test tube labelled with a bar code.
 
 advantages:
  - Data can be processed without revealing who it relates to

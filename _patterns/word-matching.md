@@ -9,6 +9,7 @@ category: Authentication
 
 images:
   - url: /images/word-matching.svg
+  - alt: The same security words are displayed on two different mobile phones.
 
 examples:
   - title: Signal

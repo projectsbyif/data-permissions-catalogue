@@ -7,6 +7,7 @@ category: Manage consent
 
 images:
   - url: /images/data-licences.svg
+  - alt: Four icons representing different types of data sharing.
 
 examples:
   - title: Data licences by IF

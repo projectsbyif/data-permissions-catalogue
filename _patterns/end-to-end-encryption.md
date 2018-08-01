@@ -9,6 +9,7 @@ category: Control access
 
 images:
   - url: /images/end-to-end-encryption.svg
+  - alt: An email where encryption is indicated by a lock icon and a checkmark.
 
 examples:
   - title: PGP

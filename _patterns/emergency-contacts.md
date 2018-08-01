@@ -9,6 +9,7 @@ category: Backup data
 
 images:
   - url: /images/emergency-contacts.svg
+  - alt: A dialog box asking if you if you want to give someone access to your account in an emergency.
 
 examples:
   - title: LastPass

@@ -9,7 +9,8 @@ layout: default
 
 <div class="homepage-intro">
     <div>
-      <h1>An evolving collection of design patterns for sharing data</h1>
+      <!-- Changed to h2 for heading list compatibility. -->
+      <h2>An evolving collection of design patterns for sharing data</h2>
       <a href="/about" class="cta">What are design patterns?</a>
       <noscript>
         <a href="/contribute" class="first no-script-menu cta">How can I contribute?</a>
@@ -22,8 +23,14 @@ layout: default
 
 <div class="grid-x grid-padding-x pattern-category-title">
   <div class="wrapper">
-    <div class="small-12 cell">
-      <a class="pattern-category-menu clear" href="#"><h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2><img src="/images/down.svg" /></a>
+    <div class="small-12 cell grid-x">
+      <a id="content" aria-expanded="false" aria-describedby="category-menu-tip" class="pattern-category-menu clear" href="#">
+        <h2>All patterns<span class="category-counter">({{ patterns.size }})</span></h2>
+        <img aria-hidden="true" src="/images/down.svg" />
+      </a>
+       <div role="tooltip" id="category-menu-tip">
+        Click to toggle Pattern Category Menu open and closed.
+      </div>
     </div>
   </div>
 </div>
@@ -36,9 +43,9 @@ layout: default
     <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
       <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ pattern.category | slugify }}">
         {% if pattern.cover_image %}
-        <img src="{{ pattern.cover_image[0].url }}" />
+        <img aria-hidden="true" src="{{ pattern.cover_image[0].url }}" />
         {% else if pattern.images[0].url %}
-        <img src="{{ pattern.images[0].url }}" />
+        <img aria-hidden="true" src="{{ pattern.images[0].url }}" />
         {% endif %}
       </div>
       <!-- Added this class for IE8 -->

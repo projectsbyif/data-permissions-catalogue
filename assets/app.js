@@ -1,8 +1,11 @@
 $(function() {
   // Constants
 
+  // Conditionals used b/c new Vimeo.Player throws error if argument is undefined.
+  const iframe = ($('iframe').length !== 0) ? ($('iframe')) : undefined;
+  const player = iframe ? new Vimeo.Player(iframe) : undefined;
   var DESKTOP_WIDTH = 639;
-  
+   
   // Runtime variables
   var isMenuActive = false;
   var isCategoryMenuActive = false;
@@ -26,7 +29,6 @@ $(function() {
       }).fadeIn(250);
     }
 
-    // Fades in menu.
     $('.category-nav').fadeIn(250);
 
     // Enables 'clickout'
@@ -34,6 +36,9 @@ $(function() {
 
     // Changes down arrow to up arrow.
     $('.pattern-category-title img').attr('src', '/images/up.svg');
+
+    // Changes ARIA states and labels to indicate menu is open.
+    $('.pattern-category-title a').attr('aria-expanded', 'true')
 
     isCategoryMenuActive = true;
   }
@@ -43,6 +48,7 @@ $(function() {
     $('.category-nav-dismiss').hide();
 
     $('.pattern-category-title img').attr('src', '/images/down.svg');
+    $('.pattern-category-title a').attr('aria-expanded', 'false')
 
     isCategoryMenuActive = false;
   }
@@ -78,6 +84,9 @@ $(function() {
 
       // Changes menu icon back to burger.
       $('header .menu').removeClass('menu-opened');
+
+      $('header .menu').attr('aria-expanded', 'false');
+
     } else {
       // Opening menu.
       isMenuActive = true;
@@ -105,6 +114,8 @@ $(function() {
 
       // Changes menu icon to X.
       $('header .menu').addClass('menu-opened');
+
+      $('header .menu').attr('aria-expanded', 'true');
     }
   });
 
@@ -132,6 +143,9 @@ $(function() {
         // Make category menu and pages menu fixed to top of page.
         $('.pattern-category-title').addClass('fixed');
 
+        // Makes 'Skip to Content' button non-focuseable and disappear (as already in content)
+        $('.skip-to-content').attr('tabindex', '-1');
+
         $('.category-nav').addClass('fixed').css({
           'top': $('.pattern-category-title')[0].getBoundingClientRect().top + $('.pattern-category-title').outerHeight()
         });
@@ -155,12 +169,15 @@ $(function() {
       } else {
         // Make category menu and pages menu unfixed
         $('.pattern-category-title').removeClass('fixed');
+        $('.skip-to-content').attr('tabindex', '0');
 
         $('.patterns-grid').css({
           'padding-top': 0
         });
 
-        $('.category-nav').removeClass('fixed').css({ 'top': '0px' });
+        $('.category-nav').removeClass('fixed').css({
+          'top': '0px'
+        });
 
         if (scrollTop > $('header').outerHeight()) {
           if ($(window).width() > DESKTOP_WIDTH) {
@@ -225,17 +242,25 @@ $(function() {
     $('.carousel-indicator .dot').eq(currentImage).addClass('active');
 
     if (currentImage == 0) {
-      $('.carousel-control.previous').css({ 'opacity': 0.25 });
+      $('.carousel-control.previous').css({
+        'opacity': 0.25
+      });
     }
 
     if (currentImage >= 1) {
-      $('.carousel-control.previous').css({ 'opacity': 1 });
+      $('.carousel-control.previous').css({
+        'opacity': 1
+      });
     }
 
     if (currentImage == numImages - 1) {
-      $('.carousel-control.next').css({ 'opacity': 0.25 });
+      $('.carousel-control.next').css({
+        'opacity': 0.25
+      });
     } else {
-      $('.carousel-control.next').css({ 'opacity': 1 });
+      $('.carousel-control.next').css({
+        'opacity': 1
+      });
     }
   }
 
@@ -310,4 +335,87 @@ $(function() {
       'height': $('.wip-banner').outerHeight()
     });
   }
+
+  // Functions for controlling the embedded video with keyboard.
+
+  // Turn on captions by default
+if(player) {
+  player.enableTextTrack('en-GB').then(function(track) {
+    console.log(track)
+  }).catch(function(error) {
+    switch (error.name) {
+      case 'InvalidTrackLanguageError':
+          // no track was available with the specified language
+          break;
+
+      case 'InvalidTrackError':
+          // no track was available with the specified language and kind
+          break;
+
+      default:
+          // some other error occurred
+          break;
+    }
+  })
+}
+
+  $('.iframe-container').focus(videoKeyboardControls);
+
+  $('.iframe-container').focusout(removeVideoKeyboardControls);
+
+  function videoKeyboardControls() {
+    $(document).on('keydown', keyControl);
+  };
+
+  function removeVideoKeyboardControls() {
+    vimeoPause(); // Stop playback.
+    $(document).off('keydown', keyControl); // Turn off keyboard controls.
+  }
+
+  function keyControl(e) {
+    if (e.which === 32 || e.which === 13) {
+      player.getPaused()
+        .then(function(paused) {
+          if (paused) {
+            vimeoPlay();
+          } else {
+            vimeoPause();
+          }
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
+  }
+
+  function vimeoPlay() {
+    player.play().then(function() {
+    }).catch(function(error) {
+      console.log(error);
+    })
+  }
+
+  function vimeoPause() {
+    player.pause().then(function() {
+      // the video was paused
+    }).catch(function(error) {
+      console.log(error)
+      });
+  }
+
+  // Preventing URL change when Skip to Content links are used.
+    // Would have to update this for no-js pages (move back to regular url changes)
+
+  function skipToContent(event){
+    event.preventDefault();
+    $("#content").focus();
+  }
+
+  $('.skip-to-content').click((e) => {
+    skipToContent(e)
+  });
+
+  $('.back-to-top').click((e) => {
+    skipToContent(e)
+  });
 });

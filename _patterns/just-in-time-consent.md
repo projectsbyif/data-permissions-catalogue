@@ -7,6 +7,7 @@ category: Give consent
 
 images:
   - url: /images/just-in-time-consent.svg
+  - alt: A prompt asking to access the location of a device to tag a photograph.
 
 examples:
   - title: iOS permissions
