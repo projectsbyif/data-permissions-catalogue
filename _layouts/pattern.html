@@ -13,6 +13,7 @@ layout: default
   <a href="#" class="carousel-control next">Next</a>
   {% if page.images %}
     {% case page.images.size %}
+
       {% when 1 %}
       <div class="one-image {% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
         <!-- Adding specific class for certain images that don't fit in mobile versions -->
@@ -23,18 +24,8 @@ layout: default
                           shrink-height
                         {% endif %}" src="{{ page.images[0].url }}" alt="{{ alt_text }}" />
       </div>
+
       {% when 2 %}
-      {% assign count = 0 %}
-      {% for image in page.images %}
-        {% if count == 0 %}
-          <div class="two-image large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
-        {% else %}
-          <div class="two-image large-4 medium-4 small-12 cell">
-        {% endif %}
-            <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
-          </div>
-        {% assign count = count | plus: 1 %}
-      {% endfor %}
       {% when 3 %}
       <!-- When no script, multiple images and mobile screen size, display only 1 image. -->
       <noscript>
@@ -47,6 +38,13 @@ layout: default
             <!-- Hard-coded alt text as there is currently only one pattern with three images. Change this when new patterns added. -->
             <img id="content" tabindex="0" src="{{ image.url }}" alt="A person generates a code on their device for another person to scan."/>
           </div>
+          {% if forloop.first == true %}
+            <div class="two-image large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
+          {% else %}
+            <div class="two-image large-4 medium-4 small-12 cell">
+          {% endif %}
+              <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
+            </div>
         {% endfor %}
         </div>
       </noscript>
