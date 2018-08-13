@@ -9,7 +9,8 @@ category: Control access
 
 images:
   - url: /images/time-limiting.svg
-  - alt: A web window showing customizable sharing settings for accessing a service.
+
+alt: A web window showing customizable sharing settings for accessing a service.
 
 examples:
   - title: Google Docs

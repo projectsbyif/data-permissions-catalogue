@@ -7,7 +7,8 @@ category: Share data
 
 images:
  - url: /images/proximity-sharing.svg
- - alt: Two devices being held closer together, enabling them to share data over WiFi. 
+
+alt: Two devices being held closer together, enabling them to share data over WiFi. 
 
 advantages:
  - Data is shared directly between devices

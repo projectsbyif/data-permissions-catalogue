@@ -9,7 +9,8 @@ category: Give consent
 
 images:
   - url: /images/active-request.svg
-  - alt: A dialog box asks users to share location data.
+
+alt: A dialog box asks users to share location data.
 
 examples:
   - title: Prolific Academic

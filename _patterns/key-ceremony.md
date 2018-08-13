@@ -7,7 +7,8 @@ category: Social consent
 
 images:
   - url: /images/key-ceremony.svg
-  - alt: Two keys inserted into locks at the same time.
+
+alt: Two keys inserted into locks at the same time.
 
 further_reading:
   - title: Meet the seven people who hold the keys to worldwide internet security

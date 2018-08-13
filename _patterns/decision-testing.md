@@ -7,7 +7,8 @@ category: Automation
 
 images:
 - url: /images/decision-testing.svg
-- alt: Two mobile phones side by side showing different outcomes of an automated decision.
+
+alt: Two mobile phones side by side showing different outcomes of an automated decision.
 
 advantages:
  - Learning by doing how an automated decision gets made

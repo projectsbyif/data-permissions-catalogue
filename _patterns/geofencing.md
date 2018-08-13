@@ -9,7 +9,8 @@ category: Control access
 
 images:
   - url: /images/geofencing.svg
-  - alt: A mobile phone detects that the user is in Manchester and offers more information about the city.
+
+alt: A mobile phone detects that the user is in Manchester and offers more information about the city.
 
 examples:
   - title: iOS reminder app

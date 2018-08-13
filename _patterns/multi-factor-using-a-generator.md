@@ -5,7 +5,8 @@ title: Multi-factor using a generator
 
 images:
   - url: /images/multi-factor-with-generator.svg
-  - alt: A code is generated on a device and entered into a computer.
+
+alt: A code is generated on a device and entered into a computer.
 
 category: Authentication
 

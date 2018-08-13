@@ -7,7 +7,8 @@ category: Backup data
 
 images:
   - url: /images/recovery-codes.svg
-  - alt: A list of randomly generated alpha-numeric codes.
+
+alt: A list of randomly generated alpha-numeric codes.
 
 advantages:
   - Allows access to data when other factors are lost or unavailable

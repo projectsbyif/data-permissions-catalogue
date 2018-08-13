@@ -7,7 +7,8 @@ category: Authentication
 
 images:
   - url: /images/behavioural-biometrics.svg
-  - alt: A computer monitor with the path of the cursor outlined on screen.
+
+alt: A computer monitor with the path of the cursor outlined on screen.
 
 further_reading:
   - title: An Efficient User Verification System via Mouse Movements (PDF)

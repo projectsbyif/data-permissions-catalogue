@@ -7,7 +7,8 @@ category: Control access
 
 images:
 - url: /images/automation-detection.svg
-- alt: The words not a robot is written in wavy text, the word not is written underneath in regular text.
+
+alt: The words not a robot is written in wavy text, the word not is written underneath in regular text.
 
 advantages:
  - Reduces impact of automated access to systems, such as denial of service or spam
