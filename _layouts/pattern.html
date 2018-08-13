@@ -26,18 +26,7 @@ layout: default
       </div>
 
       {% when 2 %}
-      {% when 3 %}
-      <!-- When no script, multiple images and mobile screen size, display only 1 image. -->
-      <noscript>
-        <div class="no-script-image-div grid-x">
-          <div class="three-image small-12 cell phone">
-            <img id="content" tabindex="0" src="{{ page.images[1].url }}" alt="{{ alt_text }}"/>
-          </div>
         {% for image in page.images %}
-          <div class="three-image desktop large-4 medium-4 small-4 cell">
-            <!-- Hard-coded alt text as there is currently only one pattern with three images. Change this when new patterns added. -->
-            <img id="content" tabindex="0" src="{{ image.url }}" alt="A person generates a code on their device for another person to scan."/>
-          </div>
           {% if forloop.first == true %}
             <div class="two-image large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
           {% else %}
@@ -46,22 +35,22 @@ layout: default
               <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
             </div>
         {% endfor %}
-        </div>
-      </noscript>
+
+      {% when 3 %}
       {% for image in page.images %}
         {% if forloop.index == 2 %}
-        <!-- Set second image as skip-to-content anchor -->
-        <!-- Hide this when script is turned off -->
-        <div class="large-4 medium-4 small-12 cell three-image when-no-script">
-          <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
-        </div>
+          <!-- Set second image as skip-to-content anchor -->
+          <div class="large-4 medium-4 small-12 cell three-image">
+            <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
+          </div>
         {% else %}
-          <!-- Hide this when script is turned off -->
-          <div class="large-4 medium-4 small-12 cell three-image when-no-script">
+          <!-- When no script and on mobile, hide these images. -->
+          <div class="large-4 medium-4 small-12 cell three-image desktop">
             <img src="{{ image.url }}" alt="{{ alt_text }}" />
           </div>
         {% endif %}
       {% endfor %}
+
     {% endcase %}
     <div class="carousel-indicator"><div class="wrapper"></div></div>
   {% endif %}
