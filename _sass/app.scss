@@ -1150,7 +1150,7 @@ a:focus{
 // Content can be presented without loss of information or functionality,
 // and without requiring scrolling in two dimensions for:
 //  - Vertical scrolling content at a width equivalent to 320 CSS pixels
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 319px) {
   header {
     &.grid-container {
       padding-left: 10px;

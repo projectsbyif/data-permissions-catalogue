@@ -15,7 +15,7 @@ layout: default
     {% case page.images.size %}
       {% when 1 %}
       <div class="one-image {% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
-        <!-- Adding specific class for certain images that don't fit in Firefox/Edge mobile versions -->
+        <!-- Adding specific class for certain images that don't fit in mobile versions -->
         <img id="content" tabindex="0" class="{% if page.images[0].url == '/images/behavioural-patterns.svg'
                         or page.images[0].url == '/images/inactivity-checking.svg'
                         or page.images[0].url == '/images/marketplace.svg'
