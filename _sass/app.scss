@@ -733,7 +733,6 @@ h2#content {
   font-weight: bold;
   padding: 5px 10px;
 }
-// Not sure how to get around specificity issue with links? Have to use !important, it seems...
 
 .iframe-container:focus,
 a:focus{
@@ -769,6 +768,7 @@ a:focus{
 }
 
 /* MEDIA QUERIES */
+// 'Burger breakpoint' - 639px is breakpoint at which top menu turns back into list of links.
 @media screen and (min-width: 639px) {
   body {
     font-size: 22px;
@@ -1089,8 +1089,7 @@ a:focus{
 }
 // To correspond to the 638px media query above.
 @media screen and (max-width: 638px) {
-  // Because the top menu collapses into a single icon, it takes one click to skip it
-  // entirely. Having buttons positioned relatively/absolutely "off-screen" is
+  // Having .back-to-top and .skip-to-content buttons positioned relatively/absolutely "off-screen" is
   // fine on desktop, but causes problems with overflow mobile-sized screens.
   .back-to-top,
   .skip-to-content {
@@ -1109,6 +1108,30 @@ a:focus{
     margin-top: 5px;
   }
 }
+
+// These are IE10+ and Microsoft Edge specific styles.
+@media screen and (max-width: 638px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  header .menu {
+    z-index: 10;
+  }
+
+  header .title.ie {
+    height: auto;
+  }
+
+  .category-nav ul li {
+    margin-right: 10px;
+  }
+
+  .grid-container.home.ie {
+    padding-top: 0;
+
+    & .homepage-intro div {
+      padding-top: 50px;
+    }
+  }
+}
+
 // Phone (portrait)
 @media screen and (max-width: 415px) {
   // HOME PAGE
@@ -1146,10 +1169,6 @@ a:focus{
   }
 }
 
-// To meet WCAG 2.1 success criterion 1.4.10 (Reflow):
-// Content can be presented without loss of information or functionality,
-// and without requiring scrolling in two dimensions for:
-//  - Vertical scrolling content at a width equivalent to 320 CSS pixels
 @media screen and (max-width: 320px) {
   header {
     h1 {
@@ -1169,26 +1188,4 @@ a:focus{
     margin-top: 3.5rem;
   }
 
-}
-
-@media screen and (max-width: 638px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  header .menu {
-    z-index: 10;
-  }
-
-  header .title.ie {
-    height: auto;
-  }
-
-  .category-nav ul li {
-    margin-right: 10px;
-  }
-
-  .grid-container.home.ie {
-    padding-top: 0;
-
-    & .homepage-intro div {
-      padding-top: 50px;
-    }
-  }
 }
