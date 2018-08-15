@@ -56,7 +56,7 @@ layout: default
   {% endif %}
 </div>
 
-<div class="ie-content grid-x grid-padding-x">
+<div class="page-title {% if page.illustration_version == 1%} illustration_version_1 {% endif %} ie-content grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
     <h2 class="ie-title no-margin">{{ page.title }}</h2>
     <a aria-describedby="category-link-tip" href="/category/{{ page.category | slugify }}" class="pattern-page-category-link border-{{ page.category | slugify }}">{{ page.category }}</a>
