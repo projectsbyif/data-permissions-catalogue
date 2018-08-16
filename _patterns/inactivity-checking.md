@@ -9,7 +9,8 @@ category: Control access
 
 images:
   - url: /images/inactivity-checking.svg
-  - alt: A message on a mobile phone which reads Are you still there? Data published in 29 seconds.
+
+alt: A message on a mobile phone which reads Are you still there? Data published in 29 seconds.
 
 examples:
   - title: Google Inactive Account Manager

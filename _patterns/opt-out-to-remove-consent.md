@@ -9,7 +9,8 @@ category: Give consent
 
 images:
   - url: /images/opt-out-to-remove-consent.svg
-  - alt: Two devices display options to opt-out of location sharing and web browser tracking.
+
+alt: Two devices display options to opt-out of location sharing and web browser tracking.
 
 examples:
   - title: Do Not Track

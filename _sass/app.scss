@@ -733,7 +733,6 @@ h2#content {
   font-weight: bold;
   padding: 5px 10px;
 }
-// Not sure how to get around specificity issue with links? Have to use !important, it seems...
 
 .iframe-container:focus,
 a:focus{
@@ -769,6 +768,7 @@ a:focus{
 }
 
 /* MEDIA QUERIES */
+// 'Burger breakpoint' - 639px is breakpoint at which top menu turns back into list of links.
 @media screen and (min-width: 639px) {
   body {
     font-size: 22px;
@@ -1089,8 +1089,7 @@ a:focus{
 }
 // To correspond to the 638px media query above.
 @media screen and (max-width: 638px) {
-  // Because the top menu collapses into a single icon, it takes one click to skip it
-  // entirely. Having buttons positioned relatively/absolutely "off-screen" is
+  // Having .back-to-top and .skip-to-content buttons positioned relatively/absolutely "off-screen" is
   // fine on desktop, but causes problems with overflow mobile-sized screens.
   .back-to-top,
   .skip-to-content {
@@ -1109,6 +1108,30 @@ a:focus{
     margin-top: 5px;
   }
 }
+
+// These are IE10+ and Microsoft Edge specific styles.
+@media screen and (max-width: 638px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  header .menu {
+    z-index: 10;
+  }
+
+  header .title.ie {
+    height: auto;
+  }
+
+  .category-nav ul li {
+    margin-right: 10px;
+  }
+
+  .grid-container.home.ie {
+    padding-top: 0;
+
+    & .homepage-intro div {
+      padding-top: 50px;
+    }
+  }
+}
+
 // Phone (portrait)
 @media screen and (max-width: 415px) {
   // HOME PAGE
@@ -1146,130 +1169,23 @@ a:focus{
   }
 }
 
-// To meet WCAG 2.1 success criterion 1.4.10 (Reflow):
-// Content can be presented without loss of information or functionality,
-// and without requiring scrolling in two dimensions for:
-//  - Vertical scrolling content at a width equivalent to 320 CSS pixels
 @media screen and (max-width: 320px) {
   header {
-    &.grid-container {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
     h1 {
-      font-size: 18px;
-      left: 7px;
-    }
-
-    a {
-      display: inline-block;
-      margin: 0 auto;
+      font-size: 1.05rem;
     }
   }
-
-  main {
-    .homepage-intro {
-      padding-left: 10px;
-      padding-right: 10px;
-      padding-top: 60px;
-      margin-bottom: 0;
-
-      h2 {
-        font-size: 1.1em;
-        margin-bottom: 20px;
-      }
-    }
-
-    .cta {
-      padding: 13px 10px 10px;
-    }
-  }
-
-  .menu.fixed {
-    top: -10px;
-  }
-
-  .pattern-category-title {
-    padding-bottom: 0;
-    padding-top: 29px;
-    height: 59px;
-
-    &.fixed {
-      padding-top: 5px;
-      height: 32px;
-      justify-content: center;
-    }
-
-    img {
-      margin-top: 5px;
-    }
-
-    h2 {
-      font-size: 1rem;
-    }
-  }
-
-  .category-nav {
-    height: 158px;
-
-    ul {
-      margin-top: 2px;
-
-      li {
-        padding-bottom: 6px;
-        font-size: 11px;
-      }
-    }
-  }
-
-  .page-menu {
-    height: 100vh;
-  }
-
-  .full-width-banner {
-    &.pattern {
-      height: 100vh;
-    }
-  }
-
   .pattern-image {
-    height: 150px;
-
-    &.illustration_version_1 {
-      height: 155px;
-    }
+    margin-bottom: 0;
+    top: 1.5rem;
   }
 
-  .pattern-block {
-    .title {
-      font-size: 0.8em;
-    }
-
-    .image {
-      height: 200px;
-    }
-  }
-}
-
-@media screen and (max-width: 638px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  header .menu {
-    z-index: 10;
+  .page-title {
+    margin-top: 6.5rem;
   }
 
-  header .title.ie {
-    height: auto;
+  .page-title.illustration_version_1 {
+    margin-top: 3.5rem;
   }
 
-  .category-nav ul li {
-    margin-right: 10px;
-  }
-
-  .grid-container.home.ie {
-    padding-top: 0;
-
-    & .homepage-intro div {
-      padding-top: 50px;
-    }
-  }
 }

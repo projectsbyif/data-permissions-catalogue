@@ -9,7 +9,8 @@ category: See access
 
 images:
   - url: /images/activity-log.svg
-  - alt: A list of when data has been accessed and an option to revoke access.
+
+alt: A list of when data has been accessed and an option to revoke access.
 
 examples:
   - title: Frequent locations in iOS
