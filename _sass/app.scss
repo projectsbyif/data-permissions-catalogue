@@ -110,6 +110,19 @@ header {
       right: 20px;
     }
   }
+
+  &.menu-opened {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color 250ms ease-in-out;
+  }
+
+  &.menu-closed {
+    background-color: rgba(255, 255, 255, 0.0);
+    transition: background-color 250ms ease-in-out;
+  }
 }
 
 h1 {
