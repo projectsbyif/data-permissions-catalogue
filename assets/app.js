@@ -5,7 +5,7 @@ $(function() {
   const iframe = ($('iframe').length !== 0) ? ($('iframe')) : undefined;
   const player = iframe ? new Vimeo.Player(iframe) : undefined;
   var DESKTOP_WIDTH = 639;
-   
+
   // Runtime variables
   var isMenuActive = false;
   var isCategoryMenuActive = false;
@@ -76,11 +76,10 @@ $(function() {
       }
 
       // Fades out header background to transparent. Resets style.
-      $('header').animate({
-        'background-color': 'rgba(255, 255, 255, 0.0)'
-      }, 250, function() {
-        $('header').attr('style', '');
-      });
+      $('header').removeClass('menu-opened');
+      $('header').addClass('menu-closed');
+
+      $('header').attr('style', '');
 
       // Changes menu icon back to burger.
       $('header .menu').removeClass('menu-opened');
@@ -104,13 +103,8 @@ $(function() {
       }
 
       // Changes background colour of header to white and fixes position to top of screen.
-      $('header').attr('class', 'grid-container').animate({
-        'background-color': 'rgb(255, 255, 255)'
-      }, 250).css({
-        'position': 'fixed',
-        'top': 0,
-        'left': 0
-      });
+      $('header').removeClass('menu-closed');
+      $('header').addClass('menu-opened');
 
       // Changes menu icon to X.
       $('header .menu').addClass('menu-opened');
