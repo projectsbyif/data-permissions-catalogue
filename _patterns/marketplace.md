@@ -9,7 +9,8 @@ category: Other
 
 images:
   - url: /images/marketplace.svg
-  - alt: A receipt showing sale of personal data.
+
+alt: A receipt showing sale of personal data.
 
 examples:
   - title: Datacoup

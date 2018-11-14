@@ -9,7 +9,8 @@ category: Give consent
 
 images:
   - url: /images/implied-consent.svg
-  - alt: A website on a laptop screen with a banner which reads Welcome. This site uses cookies, read our policy here.
+
+alt: A website on a laptop screen with a banner which reads Welcome. This site uses cookies, read our policy here.
 
 examples:
   - title: EU 'Cookie Law'

@@ -5,7 +5,8 @@ title: Multi-factor using an object
 
 images:
   - url: /images/multi-factor-with-object.svg
-  - alt: A memory card is inserted into a computer and a checkmark is displayed on screen.
+
+alt: A memory card is inserted into a computer and a checkmark is displayed on screen.
 
 category: Authentication
 

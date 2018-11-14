@@ -7,7 +7,8 @@ category: Share data
 
 images:
   - url: /images/zero-knowledge-sharing.svg
-  - alt: A service confirms a person's age without revealing their date of birth to a second device.
+
+alt: A service confirms a person's age without revealing their date of birth to a second device.
 
 advantages:
  - Quicker to reach outcomes without having to process data

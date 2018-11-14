@@ -7,7 +7,8 @@ category: Authentication
 
 images:
   - url: /images/physical-biometrics.svg
-  - alt: A finger on a fingerprint scanner.
+
+alt: A finger on a fingerprint scanner.
 
 examples:
   - title: Touch ID

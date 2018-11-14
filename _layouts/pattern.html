@@ -4,6 +4,8 @@ layout: default
 
 {% assign other_patterns = site.patterns | where: "category": page.category %}
 
+{% assign alt_text = page.alt %}
+
 <div class="full-width-banner pattern color-{{ page.category | slugify }}"></div>
 
 <div class="grid-x grid-padding-x pattern-image {% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
@@ -11,65 +13,50 @@ layout: default
   <a href="#" class="carousel-control next">Next</a>
   {% if page.images %}
     {% case page.images.size %}
-      {% when 2 %}
+
+      {% when 1 %}
       <div class="one-image {% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
-        <!-- Adding specific class for certain images that don't fit in Firefox/Edge mobile versions -->
+        <!-- Adding specific class for certain images that don't fit in mobile versions -->
         <img id="content" tabindex="0" class="{% if page.images[0].url == '/images/behavioural-patterns.svg'
                         or page.images[0].url == '/images/inactivity-checking.svg'
                         or page.images[0].url == '/images/marketplace.svg'
                         or page.images[0].url == '/images/word-matching.svg' %}
                           shrink-height
-                        {% endif %}" src="{{ page.images[0].url }}" alt="{{ page.images[1].alt }}" />
+                        {% endif %}" src="{{ page.images[0].url }}" alt="{{ alt_text }}" />
       </div>
-      {% when 3 %}
-      {% assign count = 0 %}
-      {% for image in page.images %}
-        {% if count == 0 %}
-          <div class="two-image large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
-        {% else %}
-          <div class="two-image large-4 medium-4 small-12 cell">
-        {% endif %}
-            <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ image.alt }}" />
-          </div>
-        {% assign count = count | plus: 1 %}
-      {% endfor %}
-      {% when 4 %}
-      <!-- When no script, multiple images and mobile screen size, display only 1 image. -->
-      <noscript>
-        <div class="no-script-image-div grid-x">
-          <div class="three-image small-12 cell phone">
-            <img id="content" tabindex="0" src="{{ page.images[1].url }}" alt="{{ page.images[3].alt }}"/>
-          </div>
+
+      {% when 2 %}
         {% for image in page.images %}
-          <div class="three-image desktop large-4 medium-4 small-4 cell">
-            <!-- Hard-coded alt text as there is currently only one pattern with three images. Change this when new patterns added. -->
-            <img id="content" tabindex="0" src="{{ image.url }}" alt="A person generates a code on their device for another person to scan."/>
-          </div>
+          {% if forloop.first == true %}
+            <div class="two-image large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
+          {% else %}
+            <div class="two-image large-4 medium-4 small-12 cell">
+          {% endif %}
+              <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
+            </div>
         {% endfor %}
-        </div>
-      </noscript>
+
+      {% when 3 %}
       {% for image in page.images %}
-        {% if forloop.last == true %}
-        <!-- Do not print altText as separate image. -->
-        {% elsif forloop.index == 2 %}
-        <!-- Set second image as skip-to-content anchor -->
-        <!-- Hide this when script is turned off -->
-        <div class="large-4 medium-4 small-12 cell three-image when-no-script">
-          <img id="content" tabindex="0" src="{{ image.url }}" alt="A person generates a code on their device for another person to scan." />
-        </div>
+        {% if forloop.index == 2 %}
+          <!-- Set second image as skip-to-content anchor -->
+          <div class="large-4 medium-4 small-12 cell three-image">
+            <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
+          </div>
         {% else %}
-          <!-- Hide this when script is turned off -->
-          <div class="large-4 medium-4 small-12 cell three-image when-no-script">
-            <img src="{{ image.url }}" alt="A person generates a code on their device for another person to scan." />
+          <!-- When no script and on mobile, hide these images. -->
+          <div class="large-4 medium-4 small-12 cell three-image desktop">
+            <img src="{{ image.url }}" alt="{{ alt_text }}" />
           </div>
         {% endif %}
       {% endfor %}
+
     {% endcase %}
     <div class="carousel-indicator"><div class="wrapper"></div></div>
   {% endif %}
 </div>
 
-<div class="ie-content grid-x grid-padding-x">
+<div class="page-title {% if page.illustration_version == 1%} illustration_version_1 {% endif %} ie-content grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
     <h2 class="ie-title no-margin">{{ page.title }}</h2>
     <a aria-describedby="category-link-tip" href="/category/{{ page.category | slugify }}" class="pattern-page-category-link border-{{ page.category | slugify }}">{{ page.category }}</a>

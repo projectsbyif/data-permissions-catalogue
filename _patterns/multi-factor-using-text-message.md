@@ -7,7 +7,8 @@ category: Authentication
 
 images:
   - url: /images/multi-factor-with-text-message.svg
-  - alt: A code is shown in a text message on a mobile device and entered into a computer at the same time.
+
+alt: A code is shown in a text message on a mobile device and entered into a computer at the same time.
 
 examples:
 - title: Two Factor Auth List

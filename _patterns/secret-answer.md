@@ -9,7 +9,8 @@ category: Authentication
 
 images:
   - url: /images/secret-answer.svg
-  - alt: A form on a website asking for a password and answer to a secret question.
+
+alt: A form on a website asking for a password and answer to a secret question.
 
 examples:
   - description: Most authentication uses a form of secret answer

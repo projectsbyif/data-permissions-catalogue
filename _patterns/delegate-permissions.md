@@ -9,7 +9,8 @@ category: Social consent
 
 images:
   - url: /images/delegate-permissions.svg
-  - alt: A message reading Facebook does not have access to your car. To enable access, tap settings and turn on Car.
+
+alt: A message reading Facebook does not have access to your car. To enable access, tap settings and turn on Car.
 
 examples:
   - title: OAuth

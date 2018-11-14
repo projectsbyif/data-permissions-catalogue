@@ -9,7 +9,8 @@ category: Control access
 
 images:
   - url: /images/access-through-secondary-means.svg
-  - alt: An email has a link which logs you in to another service.
+
+alt: An email has a link which logs you in to another service.
 
 
 examples:

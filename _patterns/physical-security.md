@@ -7,7 +7,8 @@ category: Control access
 
 images:
   - url: /images/physical-security.svg
-  - alt: A graphic of a safe door hidden in a framed picture.
+
+alt: A graphic of a safe door hidden in a framed picture.
 
 examples:
   - title: Coinbase

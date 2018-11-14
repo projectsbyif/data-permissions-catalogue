@@ -25,3 +25,6 @@ If you have feedback about the catalogue, then email [hello@projectsbyif.com](ma
     frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
   </iframe>
 </div>
+
+<!-- Vimeo API Script for keyboard control of video on About page -->
+<script async src="https://player.vimeo.com/api/player.js"></script>
