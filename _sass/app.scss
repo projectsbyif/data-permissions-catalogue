@@ -24,18 +24,26 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-family: $h2-font-family;
+  font-size: $h2-font-size;
+  font-weight: $h2-font-weight;
+}
+
+h3 {
+  font-family: $h3-font-family;
+  font-size: $h3-font-size;
+}
+
 .homepage-intro h2,
 .pattern-category-title h2,
 h2.about-contribute-heading {
-  font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
   font-size: 28px;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
-h2.no-margin,
-h3 {
-  font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
+h2.no-margin {
   font-size: 19px;
   font-weight: 500;
 }
@@ -196,18 +204,6 @@ main h2.no-margin {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-// Colors
-$color-all: #EEE;
-$color-authentication: #FFF2B3;
-$color-automation: #FAC9A3;
-$color-backup-data: #F7ADB6;
-$color-control-access: #FAC8E9;
-$color-give-consent: #DFCCFF;
-$color-manage-consent: #BBEAFA;
-$color-other: #A9BAE1;
-$color-see-access: #C0F0D5;
-$color-share-data: #D8EDB0;
-$color-social-consent: #98D9CA;
 
 .border-all {
   border-bottom: $color-all 4px solid !important;
@@ -296,6 +292,7 @@ $color-social-consent: #98D9CA;
 .color-social-consent {
   background-color: $color-social-consent !important;
 }
+
 // PAGE STRUCTURE
 
 main {
@@ -389,6 +386,101 @@ main {
     &:first-of-type {
       margin-top: 125px;
     }
+  }
+}
+
+/* Home page */
+
+.homepage-intro {
+  background-color: $colour1;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 20px;
+  position: relative;
+  left: -20px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 40px;
+    font-size: 1.8em;
+    line-height: 1.2em;
+  }
+}
+
+.full-width-banner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+  background-color: #FFEB82;
+
+  &.pattern {
+    display: block;
+    height: 429px;
+  }
+}
+
+.full-width-banner.home {
+  // Run animation on full-width-banner on desktop.
+  animation-name: colourChange;
+  animation-duration: 72s;
+  animation-iteration-count: infinite;
+}
+@keyframes colourChange {
+  0% {
+    background-color: $colour1;
+  }
+
+  13% {
+    background-color: $colour2;
+  }
+
+  25% {
+    background-color: $colour3;
+  }
+
+  37% {
+    background-color: $colour4;
+  }
+
+  49% {
+    background-color: $colour5;
+  }
+
+  61% {
+    background-color: $colour6;
+  }
+
+  73% {
+    background-color: $colour7;
+  }
+
+  85% {
+    background-color: $colour8;
+  }
+
+  100% {
+    background-color: $colour1;
+  }
+}
+
+.footer-nav {
+  font-size: 0.8em;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin-right: 0.3em;
   }
 }
 
@@ -601,110 +693,7 @@ main {
     }
   }
 }
-// HOMEPAGE
 
-// Copied colour scheme from app.js
-$colour1: #FFEB82;
-$colour2: #FAAF73;
-$colour3: #F77787;
-$colour4: #FAAFD7;
-$colour5: #BE96FF;
-$colour6: #7D9BE1;
-$colour7: #96E1FA;
-$colour8: #A0F0C3;
-
-.homepage-intro {
-  background-color: $colour1;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  margin-bottom: 20px;
-  position: relative;
-  left: -20px;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  h2 {
-    margin-bottom: 40px;
-    font-size: 1.8em;
-    line-height: 1.2em;
-  }
-}
-
-.full-width-banner {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  z-index: -1;
-  background-color: #FFEB82;
-
-  &.pattern {
-    display: block;
-    height: 429px;
-  }
-}
-
-.full-width-banner.home {
-  // Run animation on full-width-banner on desktop.
-  animation-name: colourChange;
-  animation-duration: 72s;
-  animation-iteration-count: infinite;
-}
-@keyframes colourChange {
-  0% {
-    background-color: $colour1;
-  }
-
-  13% {
-    background-color: $colour2;
-  }
-
-  25% {
-    background-color: $colour3;
-  }
-
-  37% {
-    background-color: $colour4;
-  }
-
-  49% {
-    background-color: $colour5;
-  }
-
-  61% {
-    background-color: $colour6;
-  }
-
-  73% {
-    background-color: $colour7;
-  }
-
-  85% {
-    background-color: $colour8;
-  }
-
-  100% {
-    background-color: $colour1;
-  }
-}
-
-.footer-nav {
-  font-size: 0.8em;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-
-  li {
-    display: inline-block;
-    margin-right: 0.3em;
-  }
-}
 /* ACCESSIBILITY */
 // Skip to main content link
 
@@ -771,14 +760,6 @@ a:focus{
 [role="tooltip"] {
   display: none;
 }
-// Styling for Category link on pattern page.
-
-.pattern-page-category-link {
-  display: inline-block;
-  line-height: 1.4em;
-  max-height: 30px;
-  margin-bottom: 40px;
-}
 
 /* MEDIA QUERIES */
 // 'Burger breakpoint' - 639px is breakpoint at which top menu turns back into list of links.
@@ -788,8 +769,7 @@ a:focus{
   }
 
   h2.about-contribute-heading,
-  h2.no-margin,
-  h3 {
+  h2.no-margin {
     font-size: 36px;
     margin-bottom: 40px;
   }
@@ -874,7 +854,6 @@ a:focus{
   }
 
   footer {
-    margin-top: 20px;
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 1.2em !important;

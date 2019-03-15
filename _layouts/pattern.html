@@ -6,9 +6,7 @@ layout: default
 
 {% assign alt_text = page.alt %}
 
-<div class="full-width-banner pattern color-{{ page.category | slugify }}"></div>
-
-<div class="grid-x grid-padding-x pattern-image {% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
+<section class="image grid-x grid-padding-x pattern-image {% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
   <a href="#" class="carousel-control previous">Previous</a>
   <a href="#" class="carousel-control next">Next</a>
   {% if page.images %}
@@ -54,93 +52,109 @@ layout: default
     {% endcase %}
     <div class="carousel-indicator"><div class="wrapper"></div></div>
   {% endif %}
-</div>
+</section>
 
-<div class="page-title {% if page.illustration_version == 1%} illustration_version_1 {% endif %} ie-content grid-x grid-padding-x">
+<section class="page-title {% if page.illustration_version == 1%} illustration_version_1 {% endif %} ie-content grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
-    <h2 class="ie-title no-margin">{{ page.title }}</h2>
-    <a aria-describedby="category-link-tip" href="/category/{{ page.category | slugify }}" class="pattern-page-category-link border-{{ page.category | slugify }}">{{ page.category }}</a>
-    <div role="tooltip" id="category-link-tip">
-      Click on link to see all patterns in the {{ page.category }} category.
-    </div>
+    <a href="/category/{{ page.category | slugify }}">{{ page.category }}</a>
+    <h1>{{ page.title }}</h1>
 
     {{ content }}
 
   </div>
-</div>
+</section>
 
-<div class="ie-content grid-x grid-padding-x">
-
-    {% if page.advantages %}
-    <div class="large-4 large-offset-2 small-12 cell">
-      <h3 class="pattern-subheading ie-h3">Advantages</h3>
-
-      <ul class="ie-list">
-        {% for advantage in page.advantages %}
-        <li>
-          <p>{{ advantage }}</p>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-
-    {% if page.limitations %}
-    <div class="limitations-div large-4 small-12 cell">
-
-    <h3 class="pattern-subheading ie-h3">Limitations</h3>
+<section class="adv-lim ie-content grid-x grid-padding-x">
+  {% if page.advantages %}
+  <div class="large-4 large-offset-2 small-12 cell">
+    <h2 class="ie-h3">Advantages</h2>
 
     <ul class="ie-list">
-      {% for limitation in page.limitations %}
+      {% for advantage in page.advantages %}
       <li>
-        <p>{{ limitation }}</p>
+        {{ advantage }}
       </li>
       {% endfor %}
     </ul>
-    </div>
-    {% endif %}
-</div>
+  </div>
+  {% endif %}
 
-<div class="ie-content grid-x grid-padding-x">
+  {% if page.limitations %}
+  <div class="limitations-div large-4 small-12 cell">
+
+  <h2 class="ie-h3">Limitations</h2>
+
+  <ul class="ie-list">
+    {% for limitation in page.limitations %}
+    <li>
+      {{ limitation }}
+    </li>
+    {% endfor %}
+  </ul>
+  </div>
+  {% endif %}
+</section>
+
+<section class="examples ie-content grid-x grid-padding-x">
   <div class="large-8 large-offset-2 small-12 cell">
 
     {% if page.examples %}
-    <h3 class="pattern-subheading ie-heading-links">Examples</h3>
+    <h2 class="ie-heading-links">Examples</h2>
 
     <ul class="ie-list-no-bullets">
       {% for example in page.examples %}
       <li>
-        <p>{% if example.url %}<a href="{{ example.url }}">{% endif %}{% if example.title %}{{ example.title }}{% endif %}{% if example.url %}</a>{% endif %}{% if example.title and example.description %}: {% endif %}{% if example.description %}{{ example.description }}{% endif %}</p>
+        <img src="{{ example.src }}" alt="{{ example.alt_text }}">
+        <div>
+          <h3>{{ example.title }}</h3>
+          <p>{{ example.description }}</p>
+        </div>
       </li>
       {% endfor %}
     </ul>
     {% endif %}
+    </div>
+</section>
 
+<section class="further-reading ie-content grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
     {% if page.further_reading %}
-    <h3 class="pattern-subheading ie-heading-links">Further reading</h3>
+    <h2 class="pattern-subheading ie-heading-links">Further reading</h2>
 
     <ul class="ie-list-no-bullets further_reading">
       {% for item in page.further_reading %}
       <li>
-        <p><a href="{{ item.url }}">{{ item.title }}</a>{% if item.description %}: {{ item.description }}{% endif %}</p>
+        <p><a href="{{ item.url }}">{{ item.title }}</a> {{ item.description }}</p>
       </li>
       {% endfor %}
     </ul>
     {% endif %}
+  </div>
+</section>
 
-
-    {% if other_patterns.size > 1 %}
-    <h3 class="pattern-subheading ie-heading-links">Related patterns</h3>
-
+<section class="related-patterns ie-content grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
+    {% if page.further_reading %}
+    <h2 class="pattern-subheading ie-heading-links">Related patterns</h2>
     <ul class="ie-list-no-bullets">
-    {% for pattern in other_patterns %}
-    {% if pattern.title != page.title %}
+    {% for pattern in page.related_patterns %}
       <li>
-        <p><a href="/patterns/{{ pattern.title | slugify }}">{{ pattern.title }}</a></p>
+        <a href="{{ pattern.url }}">
+          <div>
+            <img src="{{ pattern.src }}" alt="{{ pattern.alt_text }}">
+          </div>
+          <p>{{ pattern.title }}</p>
+        </a>
       </li>
-    {% endif %}
     {% endfor %}
     </ul>
     {% endif %}
   </div>
-</div>
+</section>
+
+<section class="status ie-content grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
+    <p><span>Status:</span> To be reviewed in the next 3 months. <a href="#">View backlog</a></p>
+    <p><span>Last updated:</span> 28 March 2019 <a href="#">See all updates</a></p>
+  </div>
+</section>

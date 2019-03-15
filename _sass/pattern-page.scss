@@ -1,0 +1,137 @@
+.pattern {
+  h2 {
+    margin: 0 0 $desktop-spacing-sm 0;
+  }
+  section {
+    margin: 0 0 $desktop-spacing-xl 0;
+  }
+  .page-title {
+    a {
+      border: 0;
+      color: grey;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4em;
+      margin-bottom: $desktop-spacing-sm;
+      text-transform: uppercase;
+    }
+    h1 {
+      display: block;
+      font-size: 3rem;
+      margin-bottom: $desktop-spacing-sm;
+      position: static;
+      text-align: left;
+    }
+    p {
+      margin: 0;
+      width: 70%;
+    }
+  }
+  .adv-lim {
+    ul {
+      margin-bottom: 0;
+    }
+    li {
+      font-size: $pattern-page-li-font-size;
+    }
+  }
+  .examples {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: flex;
+      font-size: $pattern-page-li-font-size;
+      justify-content: space-between;
+
+      &:first-of-type {
+        margin: 0 0 $desktop-spacing-xl 0;
+      }
+
+
+      img {
+        max-height: 200px;
+      }
+
+      div {
+        width: 63%;
+      }
+    }
+  }
+  .further-reading {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      font-size: $pattern-page-li-font-size;
+    }
+  }
+  .related-patterns {
+    a {
+      border: 0;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      padding: 0 $desktop-spacing-med 0 0;
+
+      div {
+        background-color: lightgrey;
+      }
+    }
+    img {
+      height: 200px;
+    }
+    p {
+      font-size: 1.25
+      rem;
+      font-weight: 700;
+      margin: $desktop-spacing-xs 0 0 0;
+    }
+  }
+  .status {
+    margin: 0 0 $desktop-spacing-sm 0;
+    span {
+      color: gray;
+      font-weight: 700;
+    }
+    p {
+      color: darkgray;
+      font-weight: 700;
+      font-size: $pattern-page-p-font-size;
+      margin: 0 0 $desktop-spacing-med 0;
+    }
+
+    a {
+      border: 0;
+    }
+  }
+}
+
+.feedback {
+  background-color: lightgray;
+  height: 2.5rem;
+  width: 100vw;
+
+  p {
+    color: black;
+    font-weight: 700;
+    font-size: $pattern-page-p-font-size;
+    line-height: 2.5rem;
+    margin: 0;
+  }
+
+  .feedback-response {
+    color: black;
+    border-color: black;
+  }
+}
