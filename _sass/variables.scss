@@ -4,7 +4,7 @@ $color-authentication: #FFF2B3;
 $color-automation: #FAC9A3;
 $color-backup-data: #F7ADB6;
 $color-control-access: #FAC8E9;
-$color-give-consent: #DFCCFF;
+$color-consent: #DFCCFF;
 $color-manage-consent: #BBEAFA;
 $color-other: #A9BAE1;
 $color-see-access: #C0F0D5;
@@ -29,10 +29,12 @@ $desktop-spacing-lg: 2rem;
 $desktop-spacing-xl: 3rem;
 
 // Fonts
+$footer-font-family: 'Rubik', sans-serif;
 $h2-font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
 $h3-font-family: "Calibre-Semibold", "Helvetica Neue", "Arial", sans-serif;
 $h2-font-size: 1.6rem;
 $h3-font-size: 1.25rem;
 $h2-font-weight: 400;
+$footer-p-font-size: 1.25rem;
 $pattern-page-li-font-size: 1.25rem;
 $pattern-page-p-font-size: 1rem;

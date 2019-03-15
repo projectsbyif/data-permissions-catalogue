@@ -6,7 +6,7 @@ $color-authentication: #FFF2B3;
 $color-automation: #FAC9A3;
 $color-backup-data: #F7ADB6;
 $color-control-access: #FAC8E9;
-$color-give-consent: #DFCCFF;
+$color-consent: #DFCCFF;
 $color-manage-consent: #BBEAFA;
 $color-other: #A9BAE1;
 $color-see-access: #C0F0D5;
@@ -35,7 +35,7 @@ img,
 .image.color-share-data,
 .image.color-manage-consent,
 .image.color-backup-data,
-.image.color-give-consent,
+.image.color-consent,
 .image.color-social-consent,
 .image.color-all,
 .wrapper .pattern-category-menu h2,
@@ -147,8 +147,8 @@ header .title p {
   background-color: $color-control-access !important;
 }
 
-.color-ie-give-consent {
-  background-color: $color-give-consent !important;
+.color-ie-consent {
+  background-color: $color-consent !important;
 }
 
 .color-ie-manage-consent {

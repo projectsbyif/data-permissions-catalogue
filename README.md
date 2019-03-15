@@ -89,7 +89,7 @@ We've created several categories that patterns can belong to. Right now, these a
 * Authentication
 * Backup data
 * Control access
-* Give consent
+* Consent
 * Manage consent
 * Other
 * See access

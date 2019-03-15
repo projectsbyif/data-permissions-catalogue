@@ -1,0 +1,41 @@
+footer {
+  background: rgb(255, 110, 61);
+  color: black;
+  padding: 4rem 0;
+
+  div {
+    margin: 0 0 $desktop-spacing-med 0;
+  }
+
+  h2 {
+    font-family: $footer-font-family;
+    font-size: 4rem;
+  }
+
+  h3 {
+    padding: 0;
+  }
+
+  p {
+    font-size: $footer-p-font-size;
+    line-height: $footer-p-font-size;
+    margin: 0;
+  }
+
+  .statements p {
+    line-height: normal;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  // For specificity
+  div a.footer-link {
+    border-color: black;
+    color: black;
+    font-size: $footer-p-font-size;
+  }
+}

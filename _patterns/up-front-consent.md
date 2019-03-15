@@ -3,7 +3,7 @@ layout: pattern
 
 title: Up-front consent
 
-category: Give consent
+category: Consent
 
 images:
   - url: /images/up-front-consent.svg
