@@ -5,7 +5,6 @@
 <body>
   <div>
     {% include header.html %}
-    <!-- IE class added for extra specificity when targeting elements for IE-specific styling -->
     <main role="main" class="clear grid-container {{ page.layout }}{% if page.layout == 'home' %} ie{% endif %}">
       {{ content }}
     </main>
