@@ -50,4 +50,4 @@ related_patterns:
     title: Up-front consent
 ---
 
-This is when you ask users for a specific permission at the exact moment that you need it to complete a task. For example, if a user wants to tag a photo with their location, an app may ask for permission to access this information before it can add that tag.
+Ask users for a specific permission at the exact moment in time when it’s needed to complete a task. For example, if a user wants to tag a photo with their location, the user is asked for permission to access location data as they add the tag.
