@@ -24,26 +24,34 @@ section ul {
 
 /* Heading */
 
-.pattern-heading h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2.5rem;
-}
+.pattern-heading {
+  h1  {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+  }
 
-.pattern-heading ul {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  ul {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.pattern-heading ul li {
-  font-size: 1.25rem;
+  li {
+    font-size: 1.25rem;
 
-  &:first-of-type {
-    margin: 0 1rem 0 0;
+    &:first-of-type {
+      margin: 0 1rem 0 0;
+    }
+  }
+
+  .share,
+  .print {
+    color: black;
+    text-transform: lowercase;
   }
 }
 

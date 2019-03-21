@@ -1,8 +1,15 @@
-/* Header */
 body {
   color: black;
   font-family: 'Roboto', sans-serif;
 }
+
+main {
+  background-color: white;
+  margin-bottom: $footer-height !important;
+  z-index: 10;
+}
+
+/* Header */
 
 header h1 {
   padding-left: $desktop-spacing-sm;
@@ -42,4 +49,19 @@ header h1,
 
 h2#content {
   tabindex: 0;
+}
+
+// Back to top button
+
+.back-to-top {
+  position: absolute;
+  right: -500px;
+}
+
+.back-to-top:focus {
+  right: 0;
+  background-color: #000F7D;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
 }

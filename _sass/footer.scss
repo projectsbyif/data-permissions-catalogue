@@ -1,41 +1,45 @@
 footer {
-  background: rgb(255, 110, 61);
-  color: black;
-  padding: 4rem 0;
+  background-color: white;
+  bottom: 0;
+  height: $footer-height;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
 
-  div {
-    margin: 0 0 $desktop-spacing-med 0;
+  hr {
+    min-width: 100%;
+  }
+
+  div.cell {
+    padding: 2rem 0 0 0;
   }
 
   h2 {
-    font-family: $footer-font-family;
-    font-size: 4rem;
-  }
-
-  h3 {
-    padding: 0;
+    font-size: 1.2rem;
   }
 
   p {
-    font-size: $footer-p-font-size;
-    line-height: $footer-p-font-size;
-    margin: 0;
-  }
-
-  .statements p {
-    line-height: normal;
+    font-size: 1.6rem;
+    text-transform: lowercase;
+    width: 50%;
   }
 
   ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
   }
 
-  // For specificity
-  div a.footer-link {
-    border-color: black;
-    color: black;
-    font-size: $footer-p-font-size;
+  li {
+    display: inline-block;
+
+    &:first-of-type {
+      margin: 0 $desktop-spacing-lg 0 0;
+    }
+    a {
+      color: black;
+      font-size: 1.15rem;
+    }
   }
 }
