@@ -7,13 +7,14 @@ main.pattern-new {
 section {
   margin: $desktop-spacing-lg 0;
   position: relative;
+  z-index: 5;
 }
 
 section h3 {
   font-size: 1.2rem;
   position: sticky;
   text-align: right;
-  top: 0;
+  top: 2rem;
 }
 
 section ul {
@@ -25,6 +26,10 @@ section ul {
 /* Heading */
 
 .pattern-heading {
+  // position: sticky;
+  // top: 10rem;
+  // z-index: 10;
+
   h1  {
     font-family: 'Roboto', sans-serif;
     font-size: 2.5rem;
@@ -62,7 +67,7 @@ section ul {
 }
 
 .pattern-image-div {
-  background-color: #EFEFEF;
+  background-color: $color-pattern-image;
 
   img {
     display: block;
@@ -120,9 +125,29 @@ section ul {
 .related-patterns {
   ul {
     display: flex;
+    justify-content: space-between;
   }
-  a img {
+  li {
+    display: flex;
+
+    &:first-of-type {
+      margin: 0 $desktop-spacing-lg 0 0;
+    }
+
+    div {
+      background-color: $color-pattern-image;
+      margin: 0 $desktop-spacing-lg 0 0;
+    }
+  }
+
+
+  img {
     height: 200px;
+  }
+
+  a {
+    color: black;
+    font-size: 1.3rem;
   }
 }
 
@@ -138,6 +163,7 @@ section ul {
   }
 
   button {
+    cursor: pointer;
     height: 100%;
     text-decoration: underline;
   }

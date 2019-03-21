@@ -88,10 +88,10 @@ layout: default
     <ul>
       {% for pattern in page.related_patterns %}
         <li>
+          <div>
+            <img src="{{ pattern.src }}" alt="{{ pattern.alt_text }}">
+          </div>
           <a href="{{ pattern.url }}">
-            <div>
-              <img src="{{ pattern.src }}" alt="{{ pattern.alt_text }}">
-            </div>
             <p>{{ pattern.title }}</p>
           </a>
         </li>

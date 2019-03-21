@@ -9,19 +9,7 @@ main {
   z-index: 10;
 }
 
-/* Header */
 
-header h1 {
-  padding-left: $desktop-spacing-sm;
-}
-
-header h1,
-.title,
-.see-all-patterns-link {
-  color: black;
-  font-size: 1.5rem;
-  text-transform: lowercase;
-}
 
 /* Accessibility */
 // Skip to main content link
