@@ -157,15 +157,22 @@ section ul {
   display: flex;
 
   p,
-  button {
+  input {
     font-size: 1.3rem;
     margin: 0 $desktop-spacing-lg 0 0;
   }
 
-  button {
+  input {
+    background: 0;
+    border: 0;
     cursor: pointer;
     height: 100%;
     text-decoration: underline;
+  }
+
+  .feedback-text,
+  button {
+    display: none;
   }
 }
 

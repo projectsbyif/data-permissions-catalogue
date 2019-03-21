@@ -104,10 +104,12 @@ layout: default
   <div class="large-8 large-offset-4 small-12 cell">
     <div class="feedback-form">
       <p>Did you use this pattern?</p>
-      <form method="post">
-        <button type="button" name="yes">Yes</button>
-        <button type="button" name="no">No</button>
-        <button type="button" name="give-feedback">Give Feedback</button>
+      <form method="post" data-netlify="true">
+        <input type="submit" value="yes" name="usage"></input>
+        <input type="submit" value="no" name="usage"></input>
+        <a type="button" name="give-feedback">Give Feedback</a>
+        <input class="feedback-text" type="text" name="" value="">
+        <button type="button" name="submit-feedback">Submit</button>
       </form>
     </div>
     <hr>
