@@ -153,16 +153,57 @@ section ul {
 
 /* Feedback and Status */
 
-.feedback-form {
+.feedback {
   display: flex;
 
-  p,
-  input {
+  p {
+    flex: 0 0 auto;
     font-size: 1.3rem;
     margin: 0 $desktop-spacing-lg 0 0;
   }
 
-  input {
+  .success-message {
+    display: none;
+  }
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+
+  input,
+  a {
+    color: black;
+    font-size: 1.3rem;
+    margin: 0 $desktop-spacing-lg 0 0;
+  }
+
+  a,
+  button {
+    text-decoration: underline;
+  }
+
+  .usage-feedback {
+    flex: 0 0 auto;
+  }
+
+  .detailed-feedback {
+    display: none;
+    width: 100%;
+
+    input {
+      border: 1px solid black;
+      height: 10rem;
+      margin: 1rem 0;
+      width: 100%;
+    }
+
+    button {
+      font-size: 1.2rem;
+    }
+  }
+
+  .usage-feedback input {
     background: 0;
     border: 0;
     cursor: pointer;
@@ -170,10 +211,11 @@ section ul {
     text-decoration: underline;
   }
 
-  .feedback-text,
-  button {
-    display: none;
+  .detailed-feedback input {
+
   }
+
+
 }
 
 .status {

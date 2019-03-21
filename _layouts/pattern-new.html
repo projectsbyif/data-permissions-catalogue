@@ -102,15 +102,20 @@ layout: default
 
 <section class="feedback-and-status grid-x grid-padding-x">
   <div class="large-8 large-offset-4 small-12 cell">
-    <div class="feedback-form">
+    <div class="feedback">
       <p>Did you use this pattern?</p>
-      <form method="post" data-netlify="true">
-        <input type="submit" value="yes" name="usage"></input>
-        <input type="submit" value="no" name="usage"></input>
-        <a type="button" name="give-feedback">Give Feedback</a>
-        <input class="feedback-text" type="text" name="" value="">
-        <button type="button" name="submit-feedback">Submit</button>
-      </form>
+      <div class="feedback-form">
+        <form action="/" class="usage-feedback" name="usage" method="post" data-netlify="true">
+          <input type="submit" value="Yes" name="usage" />
+          <input type="submit" value="No" name="usage" />
+        </form>
+        <a id="giveDetailedFeedback" href="#">Give Feedback</a>
+        <form action="/" class="detailed-feedback" method="post" data-netlify="true">
+          <input type="textbox" name="detailed-feedback" value="" />
+          <button type="submit" name="button">Submit</button>
+        </form>
+      </div>
+      <p class="success-message">Thank you!</p>
     </div>
     <hr>
     <div class="status">
