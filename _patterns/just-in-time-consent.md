@@ -1,5 +1,5 @@
 ---
-layout: pattern
+layout: pattern-new
 
 title: Just-in-time consent
 
@@ -24,11 +24,11 @@ limitations:
  - Asking permission in the middle of the user doing an important task may mean they don’t have the time to consider the implications of this consent
 
 examples:
-  - src: /images/just-in-time-consent-ios-ex.png
+  - src: /images/just-in-time-consent-ios-ex.svg
     alt_text: Notification on a mobile phone asking if user would like to share their location in a chat.
     title: iOS permissions
     description: Apps will ask permission to use hardware or content the first time an app requires it.
-  - src: /images/just-in-time-consent-html5-ex.png
+  - src: /images/just-in-time-consent-html5-ex.svg
     alt_text: Pop-up notification in a browser requesting access to a user's location information.
     title: HTML5 permissions
     description: Browsers will ask for permission to give a website access to a webcam, microphone or location when a website requests it.

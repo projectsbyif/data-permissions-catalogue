@@ -1,0 +1,143 @@
+/* General */
+
+main.pattern-new {
+  margin-top: 10rem;
+}
+
+section {
+  margin: $desktop-spacing-lg 0;
+  position: relative;
+}
+
+section h3 {
+  font-size: 1.2rem;
+  position: sticky;
+  text-align: right;
+  top: 0;
+}
+
+section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading */
+
+.pattern-heading h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+}
+
+.pattern-heading ul {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pattern-heading ul li {
+  font-size: 1.25rem;
+
+  &:first-of-type {
+    margin: 0 1rem 0 0;
+  }
+}
+
+/* Image */
+
+.pattern-image {
+  margin: 0;
+}
+
+.pattern-image-div {
+  background-color: #EFEFEF;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+/* Description */
+
+.description {
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Advantages & Limitations */
+
+.advantages,
+.limitations {
+  li {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+
+    &:first-of-type {
+      margin: 0 0 1rem 0;
+    }
+  }
+}
+
+/* Examples */
+
+.examples {
+  li {
+    display: flex;
+    font-size: $pattern-page-li-font-size;
+    justify-content: space-between;
+
+    &:first-of-type {
+      margin: 0 0 $desktop-spacing-lg 0;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+    }
+
+    div {
+      width: 70%;
+    }
+  }
+}
+
+/* Related Patterns */
+
+.related-patterns {
+  ul {
+    display: flex;
+  }
+  a img {
+    height: 200px;
+  }
+}
+
+/* Feedback and Status */
+
+.feedback-form {
+  display: flex;
+
+  p,
+  button {
+    font-size: 1.3rem;
+    margin: 0 $desktop-spacing-lg 0 0;
+  }
+
+  button {
+    height: 100%;
+    text-decoration: underline;
+  }
+}
+
+.status {
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}

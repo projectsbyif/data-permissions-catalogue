@@ -1,0 +1,119 @@
+---
+layout: default
+---
+
+<section class="pattern-heading grid-x grid-padding-x">
+  <div class="large-6 large-offset-4 small-12 cell">
+    <h1>{{ page.title }}</h1>
+  </div>
+  <div class="large-2 small-12 cell">
+    <ul>
+      <li>share</li>
+      <li>print</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pattern-image grid-x grid-padding-x">
+  <div class="large-8 large-offset-4 small-12 cell">
+    <div class="pattern-image-div">
+      <img id="content" tabindex="0" class=""src="{{ page.images[0].url }}" alt="{{ alt_text }}" />
+    </div>
+  </div>
+</section>
+
+<section class="description grid-x grid-padding-x">
+  <div class="large-2 large-offset-2 small-12 cell">
+    <h3>Description</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    {{ content }}
+  </div>
+</section>
+
+<section class="advantages grid-x grid-padding-x">
+  <div class="large-2 large-offset-2 small-12 cell">
+    <h3>Advantages</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    <ul>
+    {% for advantage in page.advantages %}
+      <li>
+        {{ advantage }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="limitations grid-x grid-padding-x">
+  <div class="large-2 large-offset-2 small-12 cell">
+    <h3>Limitations</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    <ul>
+    {% for limitation in page.limitations %}
+      <li>
+        {{ limitation }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="examples grid-x grid-padding-x">
+  <div class="large-2 large-offset-2 small-12 cell">
+    <h3>Examples</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    <ul>
+      {% for example in page.examples %}
+      <li>
+        <img src="{{ example.src }}" alt="{{ example.alt_text }}">
+        <div>
+          <h4>{{ example.title }}</h4>
+          <p>{{ example.description }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="related-patterns grid-x grid-padding-x">
+  <div class="large-2 large-offset-2 small-12 cell">
+    <h3>Related Patterns</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    <ul>
+      {% for pattern in page.related_patterns %}
+        <li>
+          <a href="{{ pattern.url }}">
+            <div>
+              <img src="{{ pattern.src }}" alt="{{ pattern.alt_text }}">
+            </div>
+            <p>{{ pattern.title }}</p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="feedback-and-status grid-x grid-padding-x">
+  <div class="large-8 large-offset-4 small-12 cell">
+    <div class="feedback-form">
+      <p>Did you use this pattern?</p>
+      <form method="post">
+        <button type="button" name="yes">Yes</button>
+        <button type="button" name="no">No</button>
+        <button type="button" name="give-feedback">Give Feedback</button>
+      </form>
+    </div>
+    <hr>
+    <div class="status">
+      <p><span>Last updated:</span> 28 March 2019 <a href="#">See all updates</a></p>
+      <p><span>Status:</span> To be reviewed in the next 3 months. <a href="#">View backlog</a></p>
+    </div>
+  </div>
+</section>
