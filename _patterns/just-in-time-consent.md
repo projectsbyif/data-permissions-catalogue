@@ -50,4 +50,6 @@ related_patterns:
     title: Up-front consent
 ---
 
-Ask users for a specific permission at the exact moment in time when it’s needed to complete a task. For example, if a user wants to tag a photo with their location, the user is asked for permission to access location data as they add the tag.
+Ask users for a specific permission at the exact moment in time when it’s needed to complete a task.
+
+For example, if a user wants to tag a photo with their location, the user is asked for permission to access location data as they add the tag.

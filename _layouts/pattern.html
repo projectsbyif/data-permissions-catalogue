@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="pattern-heading grid-x grid-padding-x">
-  <div class="large-6 large-offset-3 small-12 cell">
+  <div class="large-5 large-offset-3 small-12 cell">
     <h1>{{ page.title }}</h1>
   </div>
   <div class="large-2 small-12 cell">
@@ -15,7 +15,7 @@ layout: default
 </section>
 
 <section class="pattern-image grid-x grid-padding-x">
-  <div class="large-8 large-offset-3 small-12 cell">
+  <div class="large-7 large-offset-3 small-12 cell">
     <div class="pattern-image-div">
       <img id="content" tabindex="0" class=""src="{{ page.images[0].url }}" alt="{{ alt_text }}" />
     </div>
@@ -23,10 +23,10 @@ layout: default
 </section>
 
 <section class="description grid-x grid-padding-x">
-  <div class="large-2 large-offset-1 small-12 cell">
+  <div class="large-1 large-offset-2 small-12 cell">
     <h3>Description</h3>
   </div>
-  <div class="large-8 small-12 cell">
+  <div class="large-7 small-12 cell">
     {{ content }}
   </div>
 </section>
@@ -35,7 +35,7 @@ layout: default
   <div class="large-2 large-offset-1 small-12 cell">
     <h3>Advantages</h3>
   </div>
-  <div class="large-8 small-12 cell">
+  <div class="large-6 small-12 cell">
     <ul>
     {% for advantage in page.advantages %}
       <li>
@@ -50,7 +50,7 @@ layout: default
   <div class="large-2 large-offset-1 small-12 cell">
     <h3>Limitations</h3>
   </div>
-  <div class="large-8 small-12 cell">
+  <div class="large-5 small-12 cell">
     <ul>
     {% for limitation in page.limitations %}
       <li>

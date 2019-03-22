@@ -79,7 +79,12 @@ section ul {
 
 .description {
   p {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
+    line-height: $desktop-pattern-page-line-height;
+
+    &:last-of-type {
+      margin: $desktop-paragraph-spacing 0 0 0;
+    }
   }
 }
 
@@ -89,7 +94,8 @@ section ul {
 .limitations {
   li {
     font-size: 1.3rem;
-    margin: 1rem 0;
+    line-height: $desktop-pattern-page-line-height;
+    margin: $desktop-paragraph-spacing 0;
 
     &:first-of-type {
       margin: 0 0 1rem 0;
