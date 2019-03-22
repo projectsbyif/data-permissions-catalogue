@@ -1,5 +1,5 @@
 ---
-layout: pattern-new
+layout: pattern
 
 title: Just-in-time consent
 

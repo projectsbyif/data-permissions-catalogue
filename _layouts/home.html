@@ -3,53 +3,6 @@ layout: default
 ---
 {% assign patterns = site.patterns %}
 
+<section>
 
-<!-- Added class home so colour change animation only happens on main page. -->
-<div class="clear full-width-banner home"></div>
-
-<div class="homepage-intro">
-    <div>
-      <h2>This catalogue can help you design services that involve data sharing.</h2>
-      <p>It compiles patterns that you can use when designing various interactions that involve data. We explain and assess each one, and provide examples and suggestions for further reading.</p>
-      <noscript>
-        <a href="/contribute" class="first no-script-menu cta">How can I contribute?</a>
-        <a href="https://trustanddesign.projectsbyif.com/" class="no-script-menu cta">Where can I learn more?</a>
-      </noscript>
-    </div>
-</div>
-
-<div class="pattern-category-title-anchor"></div>
-
-<div class="grid-x grid-padding-x pattern-category-title">
-  <div class="wrapper">
-    <div class="small-12 cell grid-x">
-      <a id="content" aria-expanded="false" aria-describedby="category-menu-tip" class="pattern-category-menu clear" href="#">
-        <h2>Browse by Category<span class="category-counter">({{ patterns.size }})</span></h2>
-        <img aria-hidden="true" src="/images/down.svg" />
-      </a>
-       <div role="tooltip" id="category-menu-tip">
-        Click to toggle Pattern Category Menu open and closed.
-      </div>
-    </div>
-  </div>
-</div>
-
-{% include category-nav.html %}
-
-<div class="patterns-grid grid-x grid-padding-x">
-  {% for pattern in patterns %}
-  <div class="small-12 medium-6 large-4 cell">
-    <a href="/patterns/{{ pattern.title | slugify }}" class="pattern-block">
-      <div class="image{% if pattern.illustration_version == 1 %} illustration_version_1{% endif %} color-{{ pattern.category | slugify }}">
-        {% if pattern.cover_image %}
-        <img aria-hidden="true" src="{{ pattern.cover_image[0].url }}" />
-        {% else if pattern.images[0].url %}
-        <img aria-hidden="true" src="{{ pattern.images[0].url }}" />
-        {% endif %}
-      </div>
-      <!-- Added this class for IE8 -->
-      <p class="title color-ie-{{ pattern.category | slugify }}">{{ pattern.title }}</p>
-    </a>
-  </div>
-  {% endfor %}
-</div>
+</section>

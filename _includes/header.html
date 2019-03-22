@@ -2,11 +2,13 @@
   <a class="skip-to-content" href="#content">Skip to content</a>
   <a class="skip-to-content-noscript" href="#content-noscript">Skip to content</a>
   <div class="grid-x grid-padding-x">
-    <div class="clear small-12 large-4 cell">
+    <div class="clear small-12 large-3 cell">
       <h1 id="ie-title"><a href="/" class="ie title">{{ site.title }}</a></h1>
     </div>
-    <div class="small-12 large-8 cell">
+    {% if page.layout != 'home' %}
+    <div class="small-12 large-9 cell">
       <a class="see-all-patterns-link" href="#">See all patterns</a>
     </div>
+    {% endif %}
   </div>
 </header>

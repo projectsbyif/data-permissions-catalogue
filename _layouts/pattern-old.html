@@ -1,0 +1,160 @@
+---
+layout: default
+---
+
+{% assign other_patterns = site.patterns | where: "category": page.category %}
+
+{% assign alt_text = page.alt %}
+
+<section class="image grid-x grid-padding-x pattern-image {% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
+  <a href="#" class="carousel-control previous">Previous</a>
+  <a href="#" class="carousel-control next">Next</a>
+  {% if page.images %}
+    {% case page.images.size %}
+
+      {% when 1 %}
+      <div class="one-image {% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
+        <!-- Adding specific class for certain images that don't fit in mobile versions -->
+        <img id="content" tabindex="0" class="{% if page.images[0].url == '/images/behavioural-patterns.svg'
+                        or page.images[0].url == '/images/inactivity-checking.svg'
+                        or page.images[0].url == '/images/marketplace.svg'
+                        or page.images[0].url == '/images/word-matching.svg' %}
+                          shrink-height
+                        {% endif %}" src="{{ page.images[0].url }}" alt="{{ alt_text }}" />
+      </div>
+
+      {% when 2 %}
+        {% for image in page.images %}
+          {% if forloop.first == true %}
+            <div class="two-image large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
+          {% else %}
+            <div class="two-image large-4 medium-4 small-12 cell">
+          {% endif %}
+              <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
+            </div>
+        {% endfor %}
+
+      {% when 3 %}
+      {% for image in page.images %}
+        {% if forloop.index == 2 %}
+          <!-- Set second image as skip-to-content anchor -->
+          <div class="large-4 medium-4 small-12 cell three-image">
+            <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
+          </div>
+        {% else %}
+          <!-- When no script and on mobile, hide these images. -->
+          <div class="large-4 medium-4 small-12 cell three-image desktop">
+            <img src="{{ image.url }}" alt="{{ alt_text }}" />
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    {% endcase %}
+    <div class="carousel-indicator"><div class="wrapper"></div></div>
+  {% endif %}
+</section>
+
+<section class="page-title {% if page.illustration_version == 1%} illustration_version_1 {% endif %} ie-content grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
+    <a href="/category/{{ page.category | slugify }}">{{ page.category }}</a>
+    <h1>{{ page.title }}</h1>
+
+    {{ content }}
+
+  </div>
+</section>
+
+<section class="adv-lim ie-content grid-x grid-padding-x">
+  {% if page.advantages %}
+  <div class="large-4 large-offset-2 small-12 cell">
+    <h2 class="ie-h3">Advantages</h2>
+
+    <ul class="ie-list">
+      {% for advantage in page.advantages %}
+      <li>
+        {{ advantage }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if page.limitations %}
+  <div class="limitations-div large-4 small-12 cell">
+
+  <h2 class="ie-h3">Limitations</h2>
+
+  <ul class="ie-list">
+    {% for limitation in page.limitations %}
+    <li>
+      {{ limitation }}
+    </li>
+    {% endfor %}
+  </ul>
+  </div>
+  {% endif %}
+</section>
+
+<section class="examples ie-content grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
+
+    {% if page.examples %}
+    <h2 class="ie-heading-links">Examples</h2>
+
+    <ul class="ie-list-no-bullets">
+      {% for example in page.examples %}
+      <li>
+        <img src="{{ example.src }}" alt="{{ example.alt_text }}">
+        <div>
+          <h3>{{ example.title }}</h3>
+          <p>{{ example.description }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    </div>
+</section>
+
+<section class="further-reading ie-content grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
+    {% if page.further_reading %}
+    <h2 class="pattern-subheading ie-heading-links">Further reading</h2>
+
+    <ul class="ie-list-no-bullets further_reading">
+      {% for item in page.further_reading %}
+      <li>
+        <p><a href="{{ item.url }}">{{ item.title }}</a> {{ item.description }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+
+<section class="related-patterns ie-content grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
+    {% if page.further_reading %}
+    <h2 class="pattern-subheading ie-heading-links">Related patterns</h2>
+    <ul class="ie-list-no-bullets">
+    {% for pattern in page.related_patterns %}
+      <li>
+        <a href="{{ pattern.url }}">
+          <div>
+            <img src="{{ pattern.src }}" alt="{{ pattern.alt_text }}">
+          </div>
+          <p>{{ pattern.title }}</p>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+
+<section class="status ie-content grid-x grid-padding-x">
+  <div class="large-8 large-offset-2 small-12 cell">
+    <p><span>Status:</span> To be reviewed in the next 3 months. <a href="#">View backlog</a></p>
+    <p><span>Last updated:</span> 28 March 2019 <a href="#">See all updates</a></p>
+  </div>
+</section>

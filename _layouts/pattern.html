@@ -2,159 +2,129 @@
 layout: default
 ---
 
-{% assign other_patterns = site.patterns | where: "category": page.category %}
-
-{% assign alt_text = page.alt %}
-
-<section class="image grid-x grid-padding-x pattern-image {% if page.illustration_version == 1 %} illustration_version_1{% endif %}">
-  <a href="#" class="carousel-control previous">Previous</a>
-  <a href="#" class="carousel-control next">Next</a>
-  {% if page.images %}
-    {% case page.images.size %}
-
-      {% when 1 %}
-      <div class="one-image {% if page.illustration_version == 1%}large-12 medium-12{% else %}large-4 large-offset-4 medium-4 medium-offset-4{% endif %} small-12 cell">
-        <!-- Adding specific class for certain images that don't fit in mobile versions -->
-        <img id="content" tabindex="0" class="{% if page.images[0].url == '/images/behavioural-patterns.svg'
-                        or page.images[0].url == '/images/inactivity-checking.svg'
-                        or page.images[0].url == '/images/marketplace.svg'
-                        or page.images[0].url == '/images/word-matching.svg' %}
-                          shrink-height
-                        {% endif %}" src="{{ page.images[0].url }}" alt="{{ alt_text }}" />
-      </div>
-
-      {% when 2 %}
-        {% for image in page.images %}
-          {% if forloop.first == true %}
-            <div class="two-image large-4 large-offset-2 medium-4 medium-offset-2 small-12 cell">
-          {% else %}
-            <div class="two-image large-4 medium-4 small-12 cell">
-          {% endif %}
-              <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
-            </div>
-        {% endfor %}
-
-      {% when 3 %}
-      {% for image in page.images %}
-        {% if forloop.index == 2 %}
-          <!-- Set second image as skip-to-content anchor -->
-          <div class="large-4 medium-4 small-12 cell three-image">
-            <img id="content" tabindex="0" src="{{ image.url }}" alt="{{ alt_text }}" />
-          </div>
-        {% else %}
-          <!-- When no script and on mobile, hide these images. -->
-          <div class="large-4 medium-4 small-12 cell three-image desktop">
-            <img src="{{ image.url }}" alt="{{ alt_text }}" />
-          </div>
-        {% endif %}
-      {% endfor %}
-
-    {% endcase %}
-    <div class="carousel-indicator"><div class="wrapper"></div></div>
-  {% endif %}
-</section>
-
-<section class="page-title {% if page.illustration_version == 1%} illustration_version_1 {% endif %} ie-content grid-x grid-padding-x">
-  <div class="large-8 large-offset-2 small-12 cell">
-    <a href="/category/{{ page.category | slugify }}">{{ page.category }}</a>
+<section class="pattern-heading grid-x grid-padding-x">
+  <div class="large-6 large-offset-3 small-12 cell">
     <h1>{{ page.title }}</h1>
-
-    {{ content }}
-
+  </div>
+  <div class="large-2 small-12 cell">
+    <ul>
+      <li><a class="share" href="#">Share</a></li>
+      <li><a class="print" href="#">Print</a></li>
+    </ul>
   </div>
 </section>
 
-<section class="adv-lim ie-content grid-x grid-padding-x">
-  {% if page.advantages %}
-  <div class="large-4 large-offset-2 small-12 cell">
-    <h2 class="ie-h3">Advantages</h2>
+<section class="pattern-image grid-x grid-padding-x">
+  <div class="large-8 large-offset-3 small-12 cell">
+    <div class="pattern-image-div">
+      <img id="content" tabindex="0" class=""src="{{ page.images[0].url }}" alt="{{ alt_text }}" />
+    </div>
+  </div>
+</section>
 
-    <ul class="ie-list">
-      {% for advantage in page.advantages %}
+<section class="description grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h3>Description</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    {{ content }}
+  </div>
+</section>
+
+<section class="advantages grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h3>Advantages</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    <ul>
+    {% for advantage in page.advantages %}
       <li>
         {{ advantage }}
       </li>
-      {% endfor %}
+    {% endfor %}
     </ul>
   </div>
-  {% endif %}
-
-  {% if page.limitations %}
-  <div class="limitations-div large-4 small-12 cell">
-
-  <h2 class="ie-h3">Limitations</h2>
-
-  <ul class="ie-list">
-    {% for limitation in page.limitations %}
-    <li>
-      {{ limitation }}
-    </li>
-    {% endfor %}
-  </ul>
-  </div>
-  {% endif %}
 </section>
 
-<section class="examples ie-content grid-x grid-padding-x">
-  <div class="large-8 large-offset-2 small-12 cell">
+<section class="limitations grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h3>Limitations</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    <ul>
+    {% for limitation in page.limitations %}
+      <li>
+        {{ limitation }}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
 
-    {% if page.examples %}
-    <h2 class="ie-heading-links">Examples</h2>
-
-    <ul class="ie-list-no-bullets">
+<section class="examples grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h3>Examples</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    <ul>
       {% for example in page.examples %}
       <li>
         <img src="{{ example.src }}" alt="{{ example.alt_text }}">
         <div>
-          <h3>{{ example.title }}</h3>
+          <h4>{{ example.title }}</h4>
           <p>{{ example.description }}</p>
         </div>
       </li>
       {% endfor %}
     </ul>
-    {% endif %}
-    </div>
-</section>
-
-<section class="further-reading ie-content grid-x grid-padding-x">
-  <div class="large-8 large-offset-2 small-12 cell">
-    {% if page.further_reading %}
-    <h2 class="pattern-subheading ie-heading-links">Further reading</h2>
-
-    <ul class="ie-list-no-bullets further_reading">
-      {% for item in page.further_reading %}
-      <li>
-        <p><a href="{{ item.url }}">{{ item.title }}</a> {{ item.description }}</p>
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
   </div>
 </section>
 
-<section class="related-patterns ie-content grid-x grid-padding-x">
-  <div class="large-8 large-offset-2 small-12 cell">
-    {% if page.further_reading %}
-    <h2 class="pattern-subheading ie-heading-links">Related patterns</h2>
-    <ul class="ie-list-no-bullets">
-    {% for pattern in page.related_patterns %}
-      <li>
-        <a href="{{ pattern.url }}">
+<section class="related-patterns grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h3>Related Patterns</h3>
+  </div>
+  <div class="large-8 small-12 cell">
+    <ul>
+      {% for pattern in page.related_patterns %}
+        <li>
           <div>
             <img src="{{ pattern.src }}" alt="{{ pattern.alt_text }}">
           </div>
-          <p>{{ pattern.title }}</p>
-        </a>
-      </li>
-    {% endfor %}
+          <a href="{{ pattern.url }}">
+            <p>{{ pattern.title }}</p>
+          </a>
+        </li>
+      {% endfor %}
     </ul>
-    {% endif %}
   </div>
 </section>
 
-<section class="status ie-content grid-x grid-padding-x">
-  <div class="large-8 large-offset-2 small-12 cell">
-    <p><span>Status:</span> To be reviewed in the next 3 months. <a href="#">View backlog</a></p>
-    <p><span>Last updated:</span> 28 March 2019 <a href="#">See all updates</a></p>
+<section class="feedback-and-status grid-x grid-padding-x">
+  <div class="large-8 large-offset-3 small-12 cell">
+    <div class="feedback">
+      <p>Did you use this pattern?</p>
+      <div class="feedback-form">
+        <form action="/" class="usage-feedback" name="usage" method="post" data-netlify="true">
+          <input type="submit" value="Yes" name="usage" />
+          <input type="hidden" value="Yes" name="usage" />
+        </form>
+        <form action="/" class="usage-feedback" name="usage" method="post" data-netlify="true">
+          <input type="submit" value="No" name="usage" />
+          <input type="hidden" value="No" name="usage" />
+        </form>
+        <a id="giveDetailedFeedback" href="#">Give Feedback</a>
+        <form action="/" class="detailed-feedback" name="detailed-feedback" method="post" data-netlify="true">
+          <input type="textbox" name="detailed-feedback" value="" />
+          <button type="submit" name="button">Submit</button>
+        </form>
+      </div>
+      <p class="success-message">Thank you!</p>
+    </div>
+    <hr>
+    <div class="status">
+      <p><span>Last updated:</span> 28 March 2019 <a href="#">See all updates</a></p>
+      <p><span>Status:</span> To be reviewed in the next 3 months. <a href="#">View backlog</a></p>
+    </div>
   </div>
 </section>
