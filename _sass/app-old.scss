@@ -1,0 +1,1145 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-moz-selection {
+  background: #212121;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #212121;
+  color: #fff;
+  text-shadow: none;
+}
+
+body {
+  font-family: "Calibre-Regular", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 19px;
+  color: #000F7D;
+  background: #FFF;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: $h2-font-family;
+  font-size: $h2-font-size;
+  font-weight: $h2-font-weight;
+}
+
+h3 {
+  font-family: $h3-font-family;
+  font-size: $h3-font-size;
+}
+
+.homepage-intro h2,
+.pattern-category-title h2,
+h2.about-contribute-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+h2.no-margin {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.4em;
+  margin-bottom: 30px;
+}
+
+ul {
+  margin-bottom: 30px;
+
+  li {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+$color-focus: #FFD464;
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  color: #000F7D;
+  border-bottom: #000F7D 1px solid;
+}
+
+header {
+  font-family: "Calibre-Semibold", "Helvetica Neue", Helvetica, sans-serif;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 20px 0;
+  z-index: 9999;
+  color: #212121;
+
+  .logo,
+  .menu {
+    background-repeat: no-repeat;
+    height: 42px;
+    width: 42px;
+    display: block;
+    text-indent: -9999px;
+    border-bottom: 0;
+  }
+
+  .logo {
+    float: left;
+    background-image: url("/images/if-logo.svg");
+    background-size: 60%;
+    // To center logo in focus rectangle.
+    background-position: center center;
+    margin-top: 5px;
+  }
+
+  .menu {
+    float: right;
+    background-image: url("/images/menu.svg");
+    background-size: 50% 50%;
+    background-position: center right;
+
+    &.menu-opened {
+      background-image: url("/images/close.svg");
+      background-size: 45% 45%;
+    }
+
+    &.fixed {
+      display: none;
+      position: fixed;
+      right: 20px;
+    }
+  }
+
+  &.menu-opened {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color 250ms ease-in-out;
+  }
+
+  &.menu-closed {
+    background-color: rgba(255, 255, 255, 0.0);
+    transition: background-color 250ms ease-in-out;
+  }
+}
+
+h1 {
+  height: 42px;
+  display: inline-block;
+  line-height: 50px;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  // Adjustments to position to make up for centering logo in focus rectangle.
+  position: relative;
+  left: 10px;
+  top: 5px;
+
+  .title {
+    float: left;
+    display: block;
+    width: auto;
+    height: 100%;
+    border-bottom: 0;
+  }
+}
+
+iframe {
+  border: #EEE 2px solid;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.iframe-container {
+  padding-top: 56.25%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+main h2.no-margin {
+  margin-bottom: -5px;
+}
+
+.cta {
+  border: #000F7D 2px solid !important;
+  padding: 20px 15px 15px;
+  font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.border-all {
+  border-bottom: $color-all 4px solid !important;
+}
+
+.border-authentication {
+  border-bottom: $color-authentication 4px solid !important;
+}
+
+.border-automation {
+  border-bottom: $color-automation 4px solid !important;
+}
+
+.border-backup-data {
+  border-bottom: $color-backup-data 4px solid !important;
+}
+
+.border-control-access {
+  border-bottom: $color-control-access 4px solid !important;
+}
+
+.border-consent {
+  border-bottom: $color-consent 4px solid !important;
+}
+
+.border-manage-consent {
+  border-bottom: $color-manage-consent 4px solid !important;
+}
+
+.border-other {
+  border-bottom: $color-other 4px solid !important;
+}
+
+.border-see-access {
+  border-bottom: $color-see-access 4px solid !important;
+}
+
+.border-share-data {
+  border-bottom: $color-share-data 4px solid !important;
+}
+
+.border-social-consent {
+  border-bottom: $color-social-consent 4px solid !important;
+}
+
+.color-all {
+  background-color: $color-all !important;
+}
+
+.color-authentication {
+  background-color: $color-authentication !important;
+}
+
+.color-automation {
+  background-color: $color-automation !important;
+}
+
+.color-backup-data {
+  background-color: $color-backup-data !important;
+}
+
+.color-control-access {
+  background-color: $color-control-access !important;
+}
+
+.color-consent {
+  background-color: $color-consent !important;
+}
+
+.color-manage-consent {
+  background-color: $color-manage-consent !important;
+}
+
+.color-other {
+  background-color: $color-other !important;
+}
+
+.color-see-access {
+  background-color: $color-see-access !important;
+}
+
+.color-share-data {
+  background-color: $color-share-data !important;
+}
+
+.color-social-consent {
+  background-color: $color-social-consent !important;
+}
+
+// PAGE STRUCTURE
+
+main {
+  min-height: calc(100vh - 81px);
+  padding-top: 40px;
+
+  &.home {
+    padding-top: 0;
+  }
+
+  &.page {
+    padding-top: 90px;
+  }
+}
+
+.grid-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+// MENUS
+
+.category-nav {
+  display: none;
+  z-index: 9998;
+  width: 100vw;
+  background: #FFF;
+  border-top: #EEE 1px solid;
+  border-bottom: #EEE 1px solid;
+  margin-bottom: 20px;
+  position: relative;
+  left: -20px;
+
+  &.fixed {
+    border-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    // Added margin and removed padding so as not to cut off
+    // the bottom of the focused item.
+    padding: 0 20px;
+    margin: 20px 0 0;
+    overflow: auto;
+
+    li {
+      width: 50%;
+      float: left;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.category-nav-dismiss {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: none;
+}
+
+.page-menu {
+  width: 100vw;
+  height: calc(100vh - 57px);
+  background: #FFF;
+  margin: 0;
+  position: fixed;
+  top: 57px;
+  left: 0;
+  z-index: 9999;
+  display: none;
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    border-bottom: 0;
+  }
+
+  li {
+    text-align: center;
+    font-size: 2em;
+    font-family: "Calibre-Semibold", "Helvetica Neue", "Helvetica", sans-serif;
+    margin-bottom: 20px;
+
+    &:first-of-type {
+      margin-top: 125px;
+    }
+  }
+}
+
+/* Home page */
+
+.homepage-intro {
+  background-color: $colour1;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 20px;
+  position: relative;
+  left: -20px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 40px;
+    font-size: 1.8em;
+    line-height: 1.2em;
+  }
+}
+
+.full-width-banner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -1;
+  background-color: #FFEB82;
+
+  &.pattern {
+    display: block;
+    height: 429px;
+  }
+}
+
+.full-width-banner.home {
+  // Run animation on full-width-banner on desktop.
+  animation-name: colourChange;
+  animation-duration: 72s;
+  animation-iteration-count: infinite;
+}
+@keyframes colourChange {
+  0% {
+    background-color: $colour1;
+  }
+
+  13% {
+    background-color: $colour2;
+  }
+
+  25% {
+    background-color: $colour3;
+  }
+
+  37% {
+    background-color: $colour4;
+  }
+
+  49% {
+    background-color: $colour5;
+  }
+
+  61% {
+    background-color: $colour6;
+  }
+
+  73% {
+    background-color: $colour7;
+  }
+
+  85% {
+    background-color: $colour8;
+  }
+
+  100% {
+    background-color: $colour1;
+  }
+}
+
+
+
+// CATEGORY PAGES: TITLE
+
+.pattern-category-title {
+  background: #FFF;
+  position: relative;
+  left: -20px;
+  width: 100vw;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0;
+  padding: 20px 20px 10px;
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .cell {
+    padding: 0;
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: #EEE 1px solid;
+  }
+
+  h3 {
+    float: left;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    float: left;
+    margin-bottom: 0;
+  }
+
+  img {
+    float: left;
+    height: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  a {
+    border-bottom: 0;
+  }
+
+  .category-counter {
+    font-size: 0.75em;
+    font-family: "Calibre-Regular", "Helvetica Neue", Helvetica, sans-serif;
+    margin-left: 10px;
+  }
+}
+// CATEGORY PAGES: PATTERN BLOCK
+
+.pattern-block {
+  display: block;
+  margin-bottom: 40px;
+
+  .image {
+    height: 250px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.illustration_version_1 {
+      padding: 40px;
+
+      img {
+        max-height: 180px;
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 5px;
+    font-family: "Calibre-Regular", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 1.1em;
+  }
+
+  .description {
+    p {
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.patterns-grid .pattern-block {
+  border-bottom: none;
+}
+
+// PATTERN PAGE: IMAGES
+
+.pattern-image {
+  margin-bottom: 50px;
+  position: relative;
+  left: -0.625rem;
+  width: 100vw;
+  height: 100vw;
+
+  &.illustration_version_1 {
+    position: inherit;
+    width: initial;
+    height: 372px;
+    padding: 20px;
+    // Adapted height properties for compatbility with Edge and Firefox
+    .cell {
+      display: block;
+      padding: 0;
+      height: inherit;
+
+      img {
+        height: 100%;
+        // To fix certain images on Firefox/Edge (e.g. behavioural-patterns image)
+        &.shrink-height {
+          @media screen and (max-width: 638px) {
+            height: 95%;
+          }
+        }
+      }
+    }
+  }
+
+  // Adapted height properties for compatbility with Edge and Firefox
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+
+    img {
+      width: 100%;
+      height: inherit;
+    }
+  }
+}
+// PATTERN PAGE: CAROUSEL
+
+.carousel-control {
+  display: block;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  border-bottom: 0 !important;
+  position: absolute;
+  top: calc(50% - (32px / 2));
+  display: none;
+  border-bottom: 0;
+
+  &.previous {
+    background-image: url("/images/previous.svg");
+    left: 0.625rem;
+    opacity: 0.25;
+  }
+
+  &.next {
+    background-image: url("/images/next.svg");
+    right: 0.625rem;
+  }
+}
+
+.carousel-indicator {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 2.625rem;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    height: 8px;
+    display: flex;
+    opacity: 0;
+  }
+
+  .wrapper {
+    overflow: auto;
+  }
+
+  .dot {
+    border-bottom: 0;
+    display: block;
+    float: left;
+    background: #FFF;
+    text-indent: -9999px;
+    border-radius: 8px;
+    width: 8px;
+    height: 8px;
+    opacity: 0.25;
+    margin-right: 4px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &.active {
+      opacity: 1.0;
+    }
+  }
+}
+
+/* ACCESSIBILITY */
+// Skip to main content link
+
+.skip-to-content, .skip-to-content-noscript {
+  position: absolute;
+  top: -200px;
+  left: 35px;
+  line-height: 25px;
+}
+
+.skip-to-content:focus, .skip-to-content-noscript:focus {
+  top: 0;
+  background-color: #000F7D;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  left: 0;
+  text-decoration: underline;
+}
+
+.skip-to-content-noscript {
+  display: none;
+}
+
+h2#content {
+  tabindex: 0;
+}
+// Back to top button
+
+.back-to-top {
+  position: absolute;
+  right: -500px;
+}
+
+.back-to-top:focus {
+  right: 0;
+  background-color: #000F7D;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.iframe-container:focus,
+a:focus{
+  outline: #000F7D 2px solid !important;
+  outline-offset: 3px;
+}
+/* CONTEXTUAL LABELS */
+// Expanding focusable link for Pattern Category menu so it's more obvious what it is for.
+
+.pattern-category-title a:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+.pattern-category-title a {
+  display: inline-block;
+  width: auto;
+}
+
+[role="tooltip"] {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+// 'Burger breakpoint' - 639px is breakpoint at which top menu turns back into list of links.
+@media screen and (min-width: 639px) {
+  body {
+    font-size: 22px;
+  }
+
+  h2.about-contribute-heading,
+  h2.no-margin {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .pattern-subheading {
+    font-size: 22px;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+
+  ul {
+    margin-bottom: 40px;
+  }
+
+  header {
+    position: initial;
+    overflow: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 18px !important;
+    margin-bottom: 40px !important;
+
+    &.desktop-fixed {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 18px;
+      pointer-events: none;
+
+      .logo,
+      .menu,
+      .title {
+        display: none;
+      }
+
+      .page-menu {
+        pointer-events: all;
+        margin-top: 4px;
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .page-menu {
+      display: block;
+      width: initial;
+      height: initial;
+      float: right;
+      position: initial;
+      margin-top: 12px;
+      background-color: rgba(0,0,0,0);
+
+      &.fixed {
+        position: fixed;
+        top: 16px;
+        z-index: 9999;
+      }
+
+      li {
+        float: left;
+        margin-right: 15px;
+
+        p {
+          margin-bottom: 0;
+          font-size: 22px;
+          font-family: "Calibre-Regular", "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  main {
+    min-height: calc(100vh - 195px);
+    padding-top: 0;
+
+    &.page {
+      padding-top: 50px;
+    }
+  }
+  // PATTERN PAGE: IMAGES
+  .pattern-image {
+    // Adjusted for Firefox/Edge compatbility
+    height: 373px;
+    position: initial;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: -40px;
+
+    &.illustration_version_1 {
+      .cell {
+        // Changed this for a larger photo.
+        padding: 0px 40px 40px 40px;
+
+        img {
+          max-height: 413px;
+        }
+      }
+    }
+  }
+  // HOMEPAGE
+  .homepage-intro {
+    width: 100%;
+    height: 360px;
+    position: inherit;
+    left: 0;
+    background-color: rgba(0,0,0,0) !important;
+    padding: 0 !important;
+    margin-top: -40px;
+    justify-content: left;
+
+    div {
+      width: 650px;
+      padding-left: 52px;
+      margin-top: -40px;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .pattern-block {
+    .image {
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .pattern-category-title {
+    width: 100%;
+    position: initial;
+    padding: 20px 0 10px;
+    pointer-events: all;
+
+    img {
+      margin-top: 10px;
+      margin-left: 16px;
+    }
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    &.fixed {
+      border-bottom: #EEE 1px solid;
+
+      .wrapper {
+        max-width: 92rem;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      a {
+        display: inline-block;
+        float: left;
+      }
+    }
+  }
+
+  .category-nav {
+    margin-top: -20px !important;
+    border-top: 0;
+    border-bottom: 0;
+
+    &.fixed {
+      border-bottom: #EEE 1px solid;
+
+      ul {
+        margin: 20px auto 0;
+      }
+    }
+
+    ul {
+      max-width: 92rem;
+
+      li {
+        float: left;
+        width: initial;
+        margin-right: 18px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .full-width-banner {
+    display: block;
+    height: 438px;
+
+    &.pattern {
+      height: 452px;
+    }
+  }
+
+  .patterns-grid {
+    .cell {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &:nth-child(2n) {
+        padding-left: 10px;
+        padding-right: 15px;
+      }
+
+      &:nth-child(2n-1) {
+        padding-left: 15px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .category-nav-dismiss {
+    pointer-events: none;
+  }
+}
+@media screen and (min-width: 92rem) {
+  .homepage-intro {
+    div {
+      width: 520px;
+      padding-left: 0;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .patterns-grid {
+    .cell {
+      padding-left: calc(0.9375rem / 2) !important;
+      padding-right: calc(0.9375rem / 2) !important;
+
+      &:nth-child(2n) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &:nth-child(2n-1) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &:nth-child(3n) {
+        padding-left: 0.9375rem !important;
+        padding-right: 0.9375rem !important;
+      }
+
+      &:nth-child(3n-1) {}
+
+      &:nth-child(3n-2) {
+        padding-left: 0.9375rem !important;
+        padding-right: 0.9375rem !important;
+      }
+    }
+  }
+}
+
+// Mobile media queries
+// Phone (landscape)
+@media screen and (min-width: 416px) and (max-width: 825px) {
+  // Pattern Page
+  div.pattern-image {
+    height: 369px;
+
+    &.illustration_version_1 {
+      height: 369px;
+    }
+  }
+
+  .page-menu li:first-of-type {
+    margin-top: 50px;
+  }
+
+  .back-to-top {
+    opacity: 0;
+    right: 10px;
+    font-size: 0.8em;
+    bottom: 87px;
+  }
+
+  .back-to-top:focus {
+    opacity: 1;
+  }
+}
+// To correspond to the 638px media query above.
+@media screen and (max-width: 638px) {
+  // Having .back-to-top and .skip-to-content buttons positioned relatively/absolutely "off-screen" is
+  // fine on desktop, but causes problems with overflow mobile-sized screens.
+  .back-to-top,
+  .skip-to-content {
+    display: none;
+  }
+
+  .homepage-intro {
+    // Run animation on homepage-intro on small screens (less than smallest
+    // media query)
+    animation-name: colourChange;
+    animation-duration: 72s;
+    animation-iteration-count: infinite;
+  }
+
+  .menu {
+    margin-top: 5px;
+  }
+}
+
+// These are IE10+ and Microsoft Edge specific styles.
+@media screen and (max-width: 638px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  header .menu {
+    z-index: 10;
+  }
+
+  header .title.ie {
+    height: auto;
+  }
+
+  .category-nav ul li {
+    margin-right: 10px;
+  }
+
+  .grid-container.home.ie {
+    padding-top: 0;
+
+    & .homepage-intro div {
+      padding-top: 50px;
+    }
+  }
+}
+
+// Phone (portrait)
+@media screen and (max-width: 415px) {
+  // HOME PAGE
+  header {
+    h1 {
+      font-size: 1.15rem;
+      text-align: center;
+    }
+  }
+
+  .pattern-category-title {
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .menu.fixed {
+    margin-top: 0;
+  }
+
+  // PATTERN PAGE
+  .pattern-image {
+    width: 102vw;
+  }
+
+  // CATEGORY PAGE
+  .grid-container.category {
+    .pattern-category-title {
+      height: 69px;
+    }
+
+    .pattern-category-title img {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header {
+    h1 {
+      font-size: 1.05rem;
+    }
+  }
+  .pattern-image {
+    margin-bottom: 0;
+    top: 1.5rem;
+  }
+
+  .page-title {
+    margin-top: 6.5rem;
+  }
+
+  .page-title.illustration_version_1 {
+    margin-top: 3.5rem;
+  }
+
+}

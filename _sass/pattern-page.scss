@@ -1,137 +1,224 @@
-.pattern {
-  h2 {
-    margin: 0 0 $desktop-spacing-sm 0;
-  }
+/* General */
+
+main.pattern {
+  margin-top: 10rem;
+
   section {
-    margin: 0 0 $desktop-spacing-xl 0;
-  }
-  .page-title {
-    a {
-      border: 0;
-      color: grey;
-      display: inline-block;
-      font-size: 1rem;
-      font-weight: 700;
-      line-height: 1.4em;
-      margin-bottom: $desktop-spacing-sm;
-      text-transform: uppercase;
-    }
-    h1 {
-      display: block;
-      font-size: 3rem;
-      margin-bottom: $desktop-spacing-sm;
-      position: static;
-      text-align: left;
-    }
-    p {
-      margin: 0;
-      width: 70%;
-    }
-  }
-  .adv-lim {
-    ul {
-      margin-bottom: 0;
-    }
-    li {
-      font-size: $pattern-page-li-font-size;
-    }
-  }
-  .examples {
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      display: flex;
-      font-size: $pattern-page-li-font-size;
-      justify-content: space-between;
+    margin: $desktop-spacing-lg 0;
+    z-index: 5;
 
-      &:first-of-type {
-        margin: 0 0 $desktop-spacing-xl 0;
-      }
-
-
-      img {
-        max-height: 200px;
-      }
-
-      div {
-        width: 63%;
-      }
-    }
-  }
-  .further-reading {
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      font-size: $pattern-page-li-font-size;
-    }
-  }
-  .related-patterns {
-    a {
-      border: 0;
-    }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      display: inline-block;
-      padding: 0 $desktop-spacing-med 0 0;
-
-      div {
-        background-color: lightgrey;
-      }
-    }
-    img {
-      height: 200px;
-    }
-    p {
-      font-size: 1.25
-      rem;
-      font-weight: 700;
-      margin: $desktop-spacing-xs 0 0 0;
-    }
-  }
-  .status {
-    margin: 0 0 $desktop-spacing-sm 0;
-    span {
-      color: gray;
-      font-weight: 700;
-    }
-    p {
-      color: darkgray;
-      font-weight: 700;
-      font-size: $pattern-page-p-font-size;
-      margin: 0 0 $desktop-spacing-med 0;
-    }
-
-    a {
-      border: 0;
+    h3 {
+      font-size: 1.2rem;
+      position: sticky;
+      text-align: right;
+      top: 2rem;
     }
   }
 }
 
-.feedback {
-  background-color: lightgray;
-  height: 2.5rem;
-  width: 100vw;
+/* Heading */
 
-  p {
-    color: black;
-    font-weight: 700;
-    font-size: $pattern-page-p-font-size;
-    line-height: 2.5rem;
-    margin: 0;
+.pattern-heading {
+  position: sticky;
+  top: 10rem;
+  z-index: 10;
+
+  h1  {
+    font-size: 2.5rem;
   }
 
-  .feedback-response {
+  ul {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    font-size: 1.25rem;
+
+    &:first-of-type {
+      margin: 0 1rem 0 0;
+    }
+  }
+
+  .share,
+  .print {
     color: black;
-    border-color: black;
+    text-transform: lowercase;
+  }
+}
+
+/* Image */
+
+.pattern-image {
+  margin: 0;
+}
+
+.pattern-image-div {
+  background-color: $color-pattern-image;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+/* Description */
+
+.description {
+  p {
+    font-size: 1.65rem;
+    line-height: $desktop-pattern-page-line-height;
+
+    &:last-of-type {
+      margin: $desktop-paragraph-spacing 0 0 0;
+    }
+  }
+}
+
+/* Advantages & Limitations */
+
+.advantages,
+.limitations {
+  li {
+    font-size: 1.3rem;
+    line-height: $desktop-pattern-page-line-height;
+    margin: $desktop-paragraph-spacing 0;
+
+    &:first-of-type {
+      margin: 0 0 1rem 0;
+    }
+  }
+}
+
+/* Examples */
+
+.examples {
+  li {
+    display: flex;
+    font-size: $pattern-page-li-font-size;
+    justify-content: space-between;
+
+    &:first-of-type {
+      margin: 0 0 $desktop-spacing-lg 0;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+    }
+
+    div {
+      width: 70%;
+    }
+  }
+}
+
+/* Related Patterns */
+
+.related-patterns {
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    display: flex;
+
+    &:first-of-type {
+      margin: 0 $desktop-spacing-lg 0 0;
+    }
+
+    div {
+      background-color: $color-pattern-image;
+      margin: 0 $desktop-spacing-lg 0 0;
+    }
+  }
+
+
+  img {
+    height: 200px;
+  }
+
+  a {
+    color: black;
+    font-size: 1.3rem;
+  }
+}
+
+/* Feedback and Status */
+
+.feedback {
+  display: flex;
+
+  p {
+    flex: 0 0 auto;
+    font-size: 1.3rem;
+    margin: 0 $desktop-spacing-lg 0 0;
+  }
+
+  .success-message {
+    display: none;
+  }
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+
+  input,
+  a {
+    color: black;
+    font-size: 1.3rem;
+    margin: 0 $desktop-spacing-lg 0 0;
+  }
+
+  a,
+  button {
+    text-decoration: underline;
+  }
+
+  .usage-feedback {
+    flex: 0 0 auto;
+  }
+
+  .detailed-feedback {
+    display: none;
+    width: 100%;
+
+    input {
+      border: 1px solid black;
+      height: 10rem;
+      margin: 1rem 0;
+      width: 100%;
+    }
+
+    button {
+      font-size: 1.2rem;
+    }
+  }
+
+  .usage-feedback input {
+    background: 0;
+    border: 0;
+    cursor: pointer;
+    height: 100%;
+    text-decoration: underline;
+  }
+
+  .detailed-feedback input {
+
+  }
+
+
+}
+
+.status {
+  a {
+    color: black;
+    text-decoration: underline;
   }
 }
