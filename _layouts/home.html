@@ -2,7 +2,43 @@
 layout: default
 ---
 {% assign patterns = site.patterns %}
+{% assign categories = site.category %}
 
-<section>
+<section class="hompage-intro">
+  <div class="grid-x grid-padding-x">
+    <div class="large-7 large-offset-1 small-12 cell">
+      <h1>This catalogue can help you design services that involve data sharing</h1>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x homepage-action-items">
+    <div class="large-6 large-offset-3 small-12 cell">
+      <h2>It compiles patterns that you can use when designing various interactions that involve data.</h2>
+      <ul>
+        <li>
+          <p>Get in touch</p>
+          <a href="#">hello@projectsbyif.com</a>
+        </li>
+        <li>
+          <p>Contribute</p>
+          <a href="#">Join the discussion on GitHub</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+<!-- TODO: Use details element for nav (?) -->
+<section class="category-nav">
+  <div class="grid-x grid-padding-x pattern-category-title">
+    <div class="wrapper">
+      <div class="small-12 cell grid-x">
+        <a id="content" aria-expanded="false" class="clear" href="#">
+          <h2>Browse by Category<span class="category-counter"> ({{ patterns.size }})</span></h2>
+          <!-- <img aria-hidden="true" src="/images/down.svg" /> -->
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {% include category-nav.html %}
 </section>

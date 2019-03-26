@@ -1,0 +1,53 @@
+/* Intro */
+
+.hompage-intro {
+  h1 {
+    margin: 3rem 0 5rem 0;
+  }
+
+  h2 {
+    margin: 0 0 5rem 0;
+  }
+}
+
+.homepage-action-items {
+  margin: 0 0 4rem 0;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p,
+  a {
+    font-size: 1.25rem;
+  }
+}
+
+/* Category Nav */
+
+.category-nav {
+  h2 {
+    font-size: 1rem;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 0 1rem;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}

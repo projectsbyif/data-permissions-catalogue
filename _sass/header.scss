@@ -1,10 +1,16 @@
 header {
   background: linear-gradient(-180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 10;
 
+  img {
+    height: 30px;
+  }
+
   h1 {
+    display: inline-block;
     padding-left: $desktop-spacing-sm;
   }
 
@@ -12,7 +18,9 @@ header {
   .title,
   .see-all-patterns-link {
     color: black;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 30px;
     text-transform: lowercase;
+    vertical-align: middle;
   }
 }
