@@ -42,3 +42,37 @@ layout: default
 
   {% include category-nav.html %}
 </section>
+
+<hr>
+
+{% for category in categories %}
+{% if category.title != "All" %}
+  {% assign patterns = site.patterns | where:"category":  category.title %}
+{% endif %}
+
+<section class="category-list {{ category.title }}">
+  <div class="grid-x grid-padding-x">
+    <div class="small-12 large-6 cell">
+      <h3>{{ category.title }} ({{ patterns.size }})</h3>
+    </div>
+    <div class="small-12 large-6 cell">
+      <a href="#">Show all</a>
+    </div>
+  </div>
+
+  <ul>
+    {% for pattern in patterns %}
+    <li onclick="window.location.assign('/patterns/{{ pattern.title | slugify }}')">
+      <div class="pattern-image">
+          <img src="{{ pattern.images[0].url }}" alt="{{ pattern.alt }}">
+      </div>
+      <div class="pattern-title">
+        <a href="/patterns/{{ pattern.title | slugify }}">
+          {{ pattern.title }}
+        </a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
