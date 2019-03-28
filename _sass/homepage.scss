@@ -33,12 +33,21 @@
 /* Category Nav */
 
 .category-nav {
-  h2 {
-    font-size: 1rem;
+  details {
+    cursor: pointer;
+  }
+
+  summary {
+    font-size: 1.25rem;
+  }
+
+  ul {
+    margin: 1rem 0;
   }
 
   li {
     display: inline-block;
+    font-size: 1.25rem;
     padding: 0 1rem;
 
     &:first-of-type {
@@ -52,12 +61,10 @@
 }
 
 /* Category List */
-hr {
-  min-width: 100%;
-}
 
 .category-list {
-  margin: 6rem 0;
+  margin: 3rem 0;
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -66,15 +73,9 @@ hr {
 
   li {
     cursor: pointer;
-    display: flex;
-    margin: 2rem 0;
-    max-height: 250px;
-    width: 49%;
-
-    .pattern-image,
-    .pattern-title {
-      width: 50%;
-    }
+    margin: 3rem 0.5rem;
+    max-height: 175px;
+    flex: 1 0 22%;
 
     .pattern-image {
       background-color: $color-pattern-image;

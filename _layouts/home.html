@@ -27,23 +27,9 @@ layout: default
   </div>
 </section>
 
-<!-- TODO: Use details element for nav (?) -->
 <section class="category-nav">
-  <div class="grid-x grid-padding-x pattern-category-title">
-    <div class="wrapper">
-      <div class="small-12 cell grid-x">
-        <a id="content" aria-expanded="false" class="clear" href="#">
-          <h2>Browse by Category<span class="category-counter"> ({{ patterns.size }})</span></h2>
-          <!-- <img aria-hidden="true" src="/images/down.svg" /> -->
-        </a>
-      </div>
-    </div>
-  </div>
-
   {% include category-nav.html %}
 </section>
-
-<hr>
 
 {% for category in categories %}
 {% if category.title != "All" %}

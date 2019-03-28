@@ -1,31 +1,15 @@
+{% assign patterns = site.patterns %}
 {% assign categories = site.category %}
 
-<nav aria-label="Pattern Category Menu" role="navigation">
-  <!--[if IE 8 ]>
-    <div class="ie-category-nav">
-  <![endif]-->
+<details>
+  <summary>Browse by Category ({{ patterns.size }})</summary>
   <ul>
     {% for category in categories %}
-    {% if category.title != "Other" %}
-    {% if forloop.first == true %}
     <li>
-      <a id="content-noscript" href="/category/{{ category.title | slugify }}" class="border-{{ category.title  | slugify }} {% if page.layout == "home" and category.title == "All" %}active{% endif %}{% if page.title == category.title %}active{% endif %}">{% if category.title == "All" %}All patterns{% else if %}{{ category.title }}{% endif %}</a>
+      <a href="/category/{{ category.title | slugify }}">
+        {{ category.title }}
+      </a>
     </li>
-    {% else %}
-    <li>
-      <a href="/category/{{ category.title | slugify }}" class="border-{{ category.title  | slugify }} {% if page.layout == "home" and category.title == "All" %}active{% endif %}{% if page.title == category.title %}active{% endif %}">{% if category.title == "All" %}All patterns{% else if %}{{ category.title }}{% endif %}</a>
-    </li>
-    {% endif %}
-    {% endif %}
     {% endfor %}
-    <li>
-      <a href="/category/other" class="border-other">Other</a>
-    </li>
   </ul>
-  <!--[if IE 8 ]>
-  </div>
-  <![endif]-->
-</nav>
-
-<!-- Allows you to click out of the menu in mobile -->
-<div class="category-nav-dismiss"></div>
+</details>
