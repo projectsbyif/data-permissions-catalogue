@@ -1,11 +1,10 @@
 /* General */
 
 main.pattern {
-  margin-top: 10rem;
+  margin-top: -10rem;
 
   section {
     margin: $desktop-spacing-lg 0;
-    z-index: 5;
 
     h3 {
       font-size: 1.2rem;
@@ -20,7 +19,7 @@ main.pattern {
 
 .pattern-heading {
   position: sticky;
-  top: 10rem;
+  top: 6rem;
   z-index: 10;
 
   h1  {
