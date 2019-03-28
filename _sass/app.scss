@@ -3,6 +3,13 @@ body {
   font-family: 'neue-haas-unica', sans-serif;
 }
 
+// .container class provides full-width background-color for non-footer content at every screen size.
+.container {
+  background-color: white;
+  padding: 0 $desktop-internal-padding;
+  width: 100%;
+}
+
 h1,
 h2,
 h3 {
@@ -15,7 +22,7 @@ h3 {
 
 main {
   background-color: white;
-  margin-bottom: $footer-height !important;
+  margin-bottom: $desktop-footer-height !important;
   z-index: 10;
 }
 

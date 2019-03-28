@@ -169,7 +169,6 @@ main.pattern {
 }
 
 .feedback {
-
   display: flex;
 
   p {
@@ -224,19 +223,6 @@ main.pattern {
     border: 0;
     cursor: pointer;
     height: 100%;
-    text-decoration: underline;
-  }
-
-  .detailed-feedback input {
-
-  }
-
-
-}
-
-.status {
-  a {
-    color: $color-font;
     text-decoration: underline;
   }
 }

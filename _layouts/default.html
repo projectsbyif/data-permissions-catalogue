@@ -3,13 +3,14 @@
 {% include head.html %}
 
 <body>
-  <div>
+  <div class="container">
     {% include header.html %}
-    <main role="main" class="clear grid-container {{ page.layout }}{% if page.layout == 'home' %} ie{% endif %}">
+    <main role="main" class="clear grid-container {{ page.layout }}">
       {{ content }}
     </main>
-    {% include footer.html %}
   </div>
+  {% include footer.html %}
+
   <script src="/assets/new-app.js"></script>
 </body>
 
