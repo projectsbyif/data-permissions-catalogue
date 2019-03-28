@@ -92,8 +92,10 @@ hr {
     }
 
     a {
-      color: black;
+      color: $color-font;
       font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 27px;
     }
   }
 }

@@ -1,8 +1,10 @@
 footer {
-  background-color: white;
+  background-color: #29283D;
+  color: white;
   bottom: 0;
   height: $footer-height;
   left: 0;
+  padding: 2rem 0 5rem 0;
   position: fixed;
   width: 100%;
   z-index: -1;
@@ -21,8 +23,6 @@ footer {
 
   p {
     font-size: 1.6rem;
-    text-transform: lowercase;
-    width: 50%;
   }
 
   ul {
@@ -32,13 +32,11 @@ footer {
   }
 
   li {
-    display: inline-block;
-
     &:first-of-type {
       margin: 0 $desktop-spacing-lg 0 0;
     }
     a {
-      color: black;
+      color: white;
       font-size: 1.15rem;
     }
   }

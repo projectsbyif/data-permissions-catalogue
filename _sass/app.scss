@@ -1,5 +1,5 @@
 body {
-  color: black;
+  color: $color-font;
   font-family: 'neue-haas-unica', sans-serif;
 }
 
@@ -7,6 +7,10 @@ h1,
 h2,
 h3 {
   font-family: 'neue-haas-unica', sans-serif;
+}
+
+h3 {
+  font-weight: 600;
 }
 
 main {
@@ -52,14 +56,5 @@ h2#content {
 // Back to top button
 
 .back-to-top {
-  position: absolute;
-  right: -500px;
-}
-
-.back-to-top:focus {
-  right: 0;
-  background-color: #000F7D;
   color: white;
-  font-weight: bold;
-  padding: 5px 10px;
 }

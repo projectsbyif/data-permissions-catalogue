@@ -8,7 +8,9 @@ layout: default
   </div>
   <div class="large-2 small-12 cell">
     <ul>
-      <li><a class="share" href="#">Share</a></li>
+      <li class="share-li">
+        <a class="share">Tweet</a>
+      </li>
       <li><a class="print" href="#">Print</a></li>
     </ul>
   </div>
@@ -23,10 +25,10 @@ layout: default
 </section>
 
 <section class="description grid-x grid-padding-x">
-  <div class="large-1 large-offset-2 small-12 cell">
+  <div class="large-2 large-offset-1 small-12 cell">
     <h3>Description</h3>
   </div>
-  <div class="large-7 small-12 cell">
+  <div class="large-6 small-12 cell">
     {{ content }}
   </div>
 </section>
@@ -35,7 +37,7 @@ layout: default
   <div class="large-2 large-offset-1 small-12 cell">
     <h3>Advantages</h3>
   </div>
-  <div class="large-6 small-12 cell">
+  <div class="large-5 small-12 cell">
     <ul>
     {% for advantage in page.advantages %}
       <li>
@@ -65,13 +67,13 @@ layout: default
   <div class="large-2 large-offset-1 small-12 cell">
     <h3>Examples</h3>
   </div>
-  <div class="large-8 small-12 cell">
+  <div class="large-5 small-12 cell">
     <ul>
       {% for example in page.examples %}
       <li>
-        <img src="{{ example.src }}" alt="{{ example.alt_text }}">
+        <!-- TODO: remove div -->
         <div>
-          <h4>{{ example.title }}</h4>
+          <p>{{ example.title }}</p>
           <p>{{ example.description }}</p>
         </div>
       </li>
@@ -84,7 +86,7 @@ layout: default
   <div class="large-2 large-offset-1 small-12 cell">
     <h3>Related Patterns</h3>
   </div>
-  <div class="large-8 small-12 cell">
+  <div class="large-7 small-12 cell">
     <ul>
       {% for pattern in page.related_patterns %}
         <li>
@@ -101,7 +103,7 @@ layout: default
 </section>
 
 <section class="feedback-and-status grid-x grid-padding-x">
-  <div class="large-8 large-offset-3 small-12 cell">
+  <div class="large-7 large-offset-3 small-12 cell">
     <div class="feedback">
       <p>Did you use this pattern?</p>
       <div class="feedback-form">
@@ -120,11 +122,6 @@ layout: default
         </form>
       </div>
       <p class="success-message">Thank you!</p>
-    </div>
-    <hr>
-    <div class="status">
-      <p><span>Last updated:</span> 28 March 2019 <a href="#">See all updates</a></p>
-      <p><span>Status:</span> To be reviewed in the next 3 months. <a href="#">View backlog</a></p>
     </div>
   </div>
 </section>
