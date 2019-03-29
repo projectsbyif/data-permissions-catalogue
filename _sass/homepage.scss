@@ -75,16 +75,12 @@
     cursor: pointer;
     margin: 3rem 0.5rem;
     max-height: 175px;
-    flex: 1 0 22%;
+    flex: 1 1 22%;
 
     .pattern-image {
       background-color: $color-pattern-image;
       padding: 1rem;
       height: 100%;
-    }
-
-    .pattern-title {
-      margin: 0 0 0 1rem;
     }
 
     img {
@@ -99,4 +95,8 @@
       line-height: 27px;
     }
   }
+}
+
+.show-all-button {
+  display: none;
 }

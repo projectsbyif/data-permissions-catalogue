@@ -36,13 +36,13 @@ layout: default
   {% assign patterns = site.patterns | where:"category":  category.title %}
 {% endif %}
 
-<section class="category-list {{ category.title }}">
+<section class="category-list {{ category.title | slugify }}">
   <div class="grid-x grid-padding-x">
     <div class="small-12 large-6 cell">
       <h3>{{ category.title }} ({{ patterns.size }})</h3>
     </div>
     <div class="small-12 large-6 cell">
-      <a href="#">Show all</a>
+      <a class="show-all-button" href="#">Show all</a>
     </div>
   </div>
 
