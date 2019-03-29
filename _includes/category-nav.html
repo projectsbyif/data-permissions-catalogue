@@ -6,7 +6,7 @@
   <ul>
     {% for category in categories %}
     <li>
-      <a href="/category/{{ category.title | slugify }}">
+      <a class="{% if category.title == 'All' %}active{% endif%} {{ category.title | slugify}}" href="#">
         {{ category.title }}
       </a>
     </li>

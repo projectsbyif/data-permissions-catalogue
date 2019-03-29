@@ -33,9 +33,7 @@ layout: default
 
 {% for category in categories %}
 {% if category.title != "All" %}
-  {% assign patterns = site.patterns | where:"category":  category.title %}
-{% endif %}
-
+{% assign patterns = site.patterns | where:"category":  category.title %}
 <section class="category-list {{ category.title | slugify }}">
   <div class="grid-x grid-padding-x">
     <div class="small-12 large-6 cell">
@@ -61,4 +59,5 @@ layout: default
     {% endfor %}
   </ul>
 </section>
+{% endif %}
 {% endfor %}
