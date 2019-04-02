@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Opt-in to Consent
 
-category: Consent
+category: Permission and consent
 
 images:
   - url: /images/opt-in-to-give-consent.svg

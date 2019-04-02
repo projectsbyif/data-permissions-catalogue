@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Implied consent
 
-category: Consent
+category: Permission and consent 
 
 images:
   - url: /images/implied-consent.svg

@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Delegate permissions
 
-category: Social consent
+category: Permission and consent
 
 images:
   - url: /images/delegate-permissions.svg

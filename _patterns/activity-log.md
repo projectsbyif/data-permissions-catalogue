@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Activity log
 
-category: See access
+category: Control access
 
 images:
   - url: /images/activity-log.svg

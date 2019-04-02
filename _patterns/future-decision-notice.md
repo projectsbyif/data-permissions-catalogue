@@ -3,7 +3,7 @@ layout: pattern
 
 title: Future decision notice
 
-category: Automation
+category: Explainability
 
 images:
 - url: /images/future-decision-notice.svg

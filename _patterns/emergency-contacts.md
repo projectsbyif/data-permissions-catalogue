@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Emergency contacts
 
-category: Backup data
+category: Control access
 
 images:
   - url: /images/emergency-contacts.svg

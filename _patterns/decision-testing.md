@@ -3,7 +3,7 @@ layout: pattern
 
 title: Decision testing
 
-category: Automation
+category: Explainability
 
 images:
 - url: /images/decision-testing.svg

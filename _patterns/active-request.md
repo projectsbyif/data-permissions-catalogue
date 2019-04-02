@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Active request
 
-category: Consent
+category: Permission and consent
 
 images:
   - url: /images/active-request.svg

@@ -3,7 +3,7 @@ layout: pattern
 
 title: Post-access notification
 
-category: See access
+category: Control access
 
 images:
   - url: /images/post-access-notification.svg

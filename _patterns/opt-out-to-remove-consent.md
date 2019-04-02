@@ -5,7 +5,7 @@ illustration_version: 1
 
 title: Opt-out to remove consent
 
-category: Consent
+category: Permission and consent
 
 images:
   - url: /images/opt-out-to-remove-consent.svg

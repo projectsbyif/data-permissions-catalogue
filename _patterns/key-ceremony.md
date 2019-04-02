@@ -3,7 +3,7 @@ layout: pattern
 
 title: Key ceremony
 
-category: Social consent
+category: Permission and consent
 
 images:
   - url: /images/key-ceremony.svg

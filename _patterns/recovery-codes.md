@@ -3,7 +3,7 @@ layout: pattern
 
 title: Recovery codes
 
-category: Backup data
+category: Control access
 
 images:
   - url: /images/recovery-codes.svg

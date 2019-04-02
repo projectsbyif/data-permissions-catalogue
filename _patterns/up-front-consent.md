@@ -3,12 +3,12 @@ layout: pattern
 
 title: Up-front consent
 
-category: Consent
+category: Permission and consent
 
 images:
   - url: /images/up-front-consent.svg
 
-alt: A list of data a service has permission to access. 
+alt: A list of data a service has permission to access.
 
 examples:
   - title: Google Play Store
