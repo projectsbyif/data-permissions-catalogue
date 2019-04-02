@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+{{ $pages := .Pages }}
+
+<section class="hompage-intro">
+  <div class="grid-x grid-padding-x">
+    <div class="large-7 large-offset-1 small-12 cell">
+      <h1>This catalogue can help you design services that involve data sharing</h1>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x homepage-action-items">
+    <div class="large-6 large-offset-3 small-12 cell">
+      <h2>It compiles patterns that you can use when designing various interactions that involve data.</h2>
+      <ul>
+        <li>
+          <p>Get in touch</p>
+          <a href="#">hello@projectsbyif.com</a>
+        </li>
+        <li>
+          <p>Contribute</p>
+          <a href="#">Join the discussion on GitHub</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="category-nav">
+  <!-- {% include category-nav.html %} -->
+</section>
+
+{{ $categories := .Site.GetPage "/categories" }}
+{{ range $categories.Params.list }}
+{{ $categoryName := . }}
+
+{{ $patterns := where $pages ".Params.category" "=" $categoryName }}
+
+<!-- Add class to section when toggled -->
+<section class="category-list {{ urlize $categoryName }}">
+  <div class="category-heading grid-x grid-padding-x">
+    <div class="small-12 large-6 cell">
+      <h3>{{ $categoryName }} ({{ len $patterns }})</h3>
+    </div>
+    <div class="show-all-button-container small-12 large-6 cell">
+      <a class="show-all-button" href="#">Show all</a>
+    </div>
+  </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 small-12 cell">
+      <ul>
+        {{ range $patterns }}
+        <!-- li display:none <=4 class=preview(display)  -->
+        <li onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')">
+          <div class="pattern-image">
+              <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
+          </div>
+          <div class="pattern-title">
+            <a href="/patterns/{{ urlize .Params.title }}">
+              {{ .Params.title }}
+            </a>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+
+</section>
+{{ end }}
+{{ end }}
