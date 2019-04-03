@@ -60,119 +60,7 @@ h2#content {
   color: white;
 }
 
-/* Intro */
-
-.hompage-intro h1 {
-  margin: 3rem 0 5rem 0;
-}
-
-.hompage-intro h2 {
-  margin: 0 0 5rem 0;
-}
-
-.homepage-action-items {
-  margin: 0 0 4rem 0;
-}
-
-.homepage-action-items ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-.homepage-action-items p {
-  margin: 0;
-}
-
-.homepage-action-items p, .homepage-action-items a {
-  font-size: 1.25rem;
-}
-
-/* Category Nav */
-
-.category-nav {
-  margin: 0 0 3rem 0;
-}
-
-.category-nav details {
-  cursor: pointer;
-}
-
-.category-nav summary {
-  font-size: 1.25rem;
-}
-
-.category-nav ul {
-  margin: 1rem 0;
-}
-
-.category-nav li {
-  display: inline-block;
-  font-size: 1.25rem;
-  padding: 0 1rem;
-}
-
-.category-nav li:first-of-type {
-  padding-left: 0;
-}
-
-.category-nav li:last-of-type {
-  padding-right: 0;
-}
-
-.category-nav a.active {
-  text-decoration: underline;
-}
-
-/* Category List */
-
-.category-heading {
-  cursor: pointer;
-}
-
-.show-all-button-container {
-  text-align: end;
-}
-
-.show-all-button {
-  display: none;
-}
-
-/* TODO - fix padding on category list. Switch to grid? */
-
-.category-list {
-  padding: 0 0 4rem 0;
-}
-
-.category-list ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1rem 0 2rem 0;
-}
-
-.category-list li {
-  cursor: pointer;
-  margin: 0 0.5rem 4rem 0.5rem;
-  max-height: 225px;
-  flex: 0 1 23%;
-}
-
-.category-list li .pattern-image {
-  background-color: #EFEFEF;
-  padding: 1rem;
-  height: 100%;
-}
-
-.category-list li img {
-  height: 100%;
-  width: 100%;
-}
-
-.category-list li a {
-  color: #29283D;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 27px;
-}
+/* Header */
 
 header {
   background: linear-gradient(-180deg, white 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 0) 100%);
@@ -202,6 +90,8 @@ header h1, header .title, header .see-all-patterns-link {
   text-transform: lowercase;
   vertical-align: middle;
 }
+
+/* Footer */
 
 footer {
   background-color: #29283D;
