@@ -20,9 +20,9 @@ h3 {
   font-weight: 600;
 }
 
-main {
+main.grid-container {
   background-color: white;
-  margin-bottom: $desktop-footer-height !important;
+  margin-bottom: $desktop-footer-height;
   z-index: 10;
 }
 

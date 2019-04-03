@@ -9,6 +9,9 @@
       {{ content }}
     </main>
   </div>
+  {% if page.layout == 'pattern' %}
+    {% include feedback.html %}
+  {% endif %}
   {% include footer.html %}
 
   <script src="/assets/app.js"></script>

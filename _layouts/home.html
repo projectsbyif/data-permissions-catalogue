@@ -34,30 +34,36 @@ layout: default
 {% for category in categories %}
 {% if category.title != "All" %}
 {% assign patterns = site.patterns | where:"category":  category.title %}
+<!-- Add class to section when toggled -->
 <section class="category-list {{ category.title | slugify }}">
-  <div class="grid-x grid-padding-x">
+  <div class="category-heading grid-x grid-padding-x">
     <div class="small-12 large-6 cell">
       <h3>{{ category.title }} ({{ patterns.size }})</h3>
     </div>
-    <div class="small-12 large-6 cell">
+    <div class="show-all-button-container small-12 large-6 cell">
       <a class="show-all-button" href="#">Show all</a>
     </div>
   </div>
+  <div class="grid-x grid-padding-x">
+    <div class="large-12 small-12 cell">
+      <ul>
+        {% for pattern in patterns %}
+        <!-- li display:none <=4 class=preview(display)  -->
+        <li onclick="window.location.assign('/patterns/{{ pattern.title | slugify }}')">
+          <div class="pattern-image">
+              <img src="{{ pattern.images[0].url }}" alt="{{ pattern.alt }}">
+          </div>
+          <div class="pattern-title">
+            <a href="/patterns/{{ pattern.title | slugify }}">
+              {{ pattern.title }}
+            </a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 
-  <ul>
-    {% for pattern in patterns %}
-    <li onclick="window.location.assign('/patterns/{{ pattern.title | slugify }}')">
-      <div class="pattern-image">
-          <img src="{{ pattern.images[0].url }}" alt="{{ pattern.alt }}">
-      </div>
-      <div class="pattern-title">
-        <a href="/patterns/{{ pattern.title | slugify }}">
-          {{ pattern.title }}
-        </a>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
 </section>
 {% endif %}
 {% endfor %}

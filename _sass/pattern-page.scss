@@ -2,9 +2,14 @@
 
 main.pattern {
   margin-top: -10rem;
+  margin-bottom: 0;
 
   section {
     margin: $desktop-spacing-xl 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
 
     &.pattern-image {
       margin: 4rem 0 0 0;
@@ -165,6 +170,7 @@ main.pattern {
 
 .feedback-and-status {
   background-color: $color-pattern-image;
+  margin-bottom: 20rem;
   padding: 1rem 0;
 }
 
