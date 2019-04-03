@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Key ceremony
 
 category: Permission and consent

@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Up-front consent
 
 category: Permission and consent

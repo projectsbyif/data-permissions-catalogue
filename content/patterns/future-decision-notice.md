@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Future decision notice
 
 category: Explainability

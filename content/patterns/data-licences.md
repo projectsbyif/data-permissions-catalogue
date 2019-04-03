@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Data licences
 
 category: Permission and consent

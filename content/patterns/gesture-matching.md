@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Gesture matching
 
 category: Authentication

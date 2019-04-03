@@ -1,3 +1,102 @@
 {{ define "main" }}
-  
+
+<section class="pattern-heading grid-x grid-padding-x">
+<div class="large-5 large-offset-3 small-12 cell">
+  <h1>{{ .Title }}</h1>
+</div>
+<div class="large-2 small-12 cell">
+  <ul>
+    <li class="share-li">
+      <a class="share">Tweet</a>
+    </li>
+    <li><a class="print" href="#">Print</a></li>
+  </ul>
+</div>
+</section>
+
+<section class="pattern-image grid-x grid-padding-x">
+<div class="large-7 large-offset-3 small-12 cell">
+  <div class="pattern-image-div">
+    <img id="content" tabindex="0" class="" src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}" />
+  </div>
+</div>
+</section>
+
+<section class="description grid-x grid-padding-x">
+<div class="large-2 large-offset-1 small-12 cell">
+  <h3>Description</h3>
+</div>
+<div class="large-6 small-12 cell">
+{{ .Content }}
+</div>
+</section>
+
+<section class="advantages grid-x grid-padding-x">
+<div class="large-2 large-offset-1 small-12 cell">
+  <h3>Advantages</h3>
+</div>
+<div class="large-5 small-12 cell">
+  <ul>
+    {{ range .Params.advantages }}
+    <li>
+      {{ . }}
+    </li>
+    {{ end }}
+  </ul>
+</div>
+</section>
+
+<section class="limitations grid-x grid-padding-x">
+<div class="large-2 large-offset-1 small-12 cell">
+  <h3>Limitations</h3>
+</div>
+<div class="large-5 small-12 cell">
+  <ul>
+    {{ range .Params.limitations }}
+    <li>
+      {{ . }}
+    </li>
+    {{ end }}
+  </ul>
+</div>
+</section>
+
+<section class="examples grid-x grid-padding-x">
+<div class="large-2 large-offset-1 small-12 cell">
+  <h3>Examples</h3>
+</div>
+<div class="large-5 small-12 cell">
+  <ul>
+    {{ range .Params.examples }}
+    <li>
+      <div>
+        <p>{{ .title }}</p>
+        <p>{{ .description }}</p>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+</section>
+
+<section class="related-patterns grid-x grid-padding-x">
+<div class="large-2 large-offset-1 small-12 cell">
+  <h3>Related Patterns</h3>
+</div>
+<div class="large-7 small-12 cell">
+  <ul>
+      {{ range .Params.related_patterns }}
+      <li>
+        <div>
+          <img src="{{ .src | relURL }}" alt="{{ .alt_text }}">
+        </div>
+        <a href="{{ .url | relURL }}">
+          <p>{{ .title }}</p>
+        </a>
+      </li>
+      {{ end }}
+  </ul>
+</div>
+</section>
+
 {{ end }}

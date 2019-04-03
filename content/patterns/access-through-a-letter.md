@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Access through a letter
 
 category: Control access

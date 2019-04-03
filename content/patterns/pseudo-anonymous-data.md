@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Pseudo-anonymous data
 
 category: Control access

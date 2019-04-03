@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Decision testing
 
 category: Explainability

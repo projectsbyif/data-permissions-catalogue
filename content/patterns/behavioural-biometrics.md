@@ -1,5 +1,5 @@
 ---
-type: pattern
+
 
 title: Behavioural biometrics
 

@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Post-access notification
 
 category: Control access

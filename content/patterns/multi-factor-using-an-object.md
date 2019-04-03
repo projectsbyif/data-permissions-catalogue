@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Multi-factor using an object
 
 images:

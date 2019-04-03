@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Proximity sharing
 
 category: Control access

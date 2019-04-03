@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Verifiable proof
 
 category: Control access
@@ -10,7 +8,7 @@ images:
   - url: /images/verifiable-proof-2.svg
   - url: /images/verifiable-proof-3.svg
 
-alt: A person generates a code on their device for another person to scan. 
+alt: A person generates a code on their device for another person to scan.
 
 cover_image:
   - url: /images/verifiable-proof-2.svg

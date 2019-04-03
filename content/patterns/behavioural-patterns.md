@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 illustration_version: 1
 
 title: Behavioural patterns

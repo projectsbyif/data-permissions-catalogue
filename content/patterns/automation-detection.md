@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Automation detection
 
 category: Control access

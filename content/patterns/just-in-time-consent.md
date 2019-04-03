@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Just-in-time consent
 
 category: Permission and consent
@@ -42,11 +40,11 @@ further_reading:
 related_patterns:
   - src: /images/key-ceremony.svg
     alt_text: Two keys inserted into locks at the same time.
-    url: https://catalogue.projectsbyif.com/patterns/key-ceremony
+    url: /patterns/key-ceremony
     title: Key ceremony
   - src:  /images/up-front-consent.svg
     alt_text: A list of data a service has permission to access.
-    url: https://catalogue.projectsbyif.com/patterns/up-front-consent
+    url: /patterns/up-front-consent
     title: Up-front consent
 ---
 

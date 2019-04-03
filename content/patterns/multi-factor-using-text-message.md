@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Multi-factor using text message
 
 category: Authentication

@@ -1,11 +1,9 @@
 ---
-type: pattern
-
 illustration_version: 1
 
 title: Implied consent
 
-category: Permission and consent 
+category: Permission and consent
 
 images:
   - url: /images/implied-consent.svg

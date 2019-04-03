@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Physical biometrics
 
 category: Authentication

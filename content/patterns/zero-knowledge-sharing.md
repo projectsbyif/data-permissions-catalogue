@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Zero-knowledge sharing
 
 category: Control access

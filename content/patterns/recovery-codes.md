@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Recovery codes
 
 category: Control access

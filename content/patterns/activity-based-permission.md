@@ -1,6 +1,4 @@
 ---
-type: pattern
-
 title: Activity-based permission
 
 category: Control access
