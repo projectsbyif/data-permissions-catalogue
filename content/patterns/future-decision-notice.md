@@ -1,7 +1,7 @@
 ---
 title: Future decision notice
 
-category: Explainability
+category: Accountability
 
 images:
 - url: /images/future-decision-notice.svg

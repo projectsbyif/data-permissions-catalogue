@@ -2,21 +2,20 @@
   <a class="skip-to-content" href="#content">Skip to content</a>
   <a class="skip-to-content-noscript" href="#content-noscript">Skip to content</a>
   <div class="grid-x grid-padding-x">
-    <div class="small-12 large-1 cell">
-      <!-- TODO: Swap navy logo for black logo -->
-      <img src="/images/if-logo.svg" alt="Projects By IF">
-    </div>
-    <div class="small-12 large-2 cell">
+    <div class="small-12 large-4 cell">
       <h1>
         <a href="/" class="title">
           {{ .Site.Title }}
         </a>
       </h1>
     </div>
-    {{ if eq .Type "patterns" }}
-    <div class="small-12 large-9 cell">
+    <div class="small-12 large-4 cell">
+      {{ if eq .Type "patterns" }}
       <a class="see-all-patterns-link" href="#">See all patterns</a>
+      {{ end }}
     </div>
-    {{ end }}
+    <div class="small-12 large-1 large-offset-3">
+      <p class="made-by">Made by IF</p>
+    </div>
   </div>
 </header>

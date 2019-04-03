@@ -1,32 +1,34 @@
 body {
-  color: #29283D;
-  font-family: 'neue-haas-unica', sans-serif;
+  color: #2C2C2C;
+  font-family: 'halyard-display', sans-serif;
 }
 
-.container {
-  background-color: white;
-  padding: 0 2.5rem;
-  width: 100%;
-}
-
-.container main {
+main {
   background-color: white;
   margin-bottom: 20rem;
   z-index: 10;
 }
 
 h1, h2, h3 {
-  font-family: 'neue-haas-unica', sans-serif;
+  font-family: 'halyard-display', sans-serif;
 }
 
-h3 {
-  font-weight: 600;
+h1 {
+  font-size: 4.5rem;
+  line-height: 4.4rem;
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+hr {
+  border-bottom: 2px solid black;
+  margin: 0;
+  max-width: unset;
+  width: 100%;
 }
 
 /* Accessibility */
@@ -83,12 +85,19 @@ header h1 {
   display: inline-block;
 }
 
-header h1, header .title, header .see-all-patterns-link {
+header h1,
+header .title,
+header .see-all-patterns-link,
+header .made-by {
   color: black;
   font-size: 1.1rem;
   line-height: 30px;
   text-transform: lowercase;
   vertical-align: middle;
+}
+
+header .title {
+  color: #EC392A;
 }
 
 /* Footer */

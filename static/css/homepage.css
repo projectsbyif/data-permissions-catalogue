@@ -4,25 +4,10 @@
   margin: 3rem 0 5rem 0;
 }
 
-.hompage-intro h2 {
+.hompage-intro p {
   margin: 0 0 5rem 0;
-}
-
-.homepage-action-items {
-  margin: 0 0 4rem 0;
-}
-
-.homepage-action-items ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-.homepage-action-items p {
-  margin: 0;
-}
-
-.homepage-action-items p, .homepage-action-items a {
-  font-size: 1.25rem;
+  font-size: 2rem;
+  line-height: 2.15rem;
 }
 
 /* Category Nav */
@@ -64,21 +49,34 @@
 /* Category List */
 
 .category-heading {
+  align-items: center;
   cursor: pointer;
 }
 
-.show-all-button-container {
+.category-heading h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.category-heading h2 span {
+  font-size: 1rem;
+  vertical-align: super;
+}
+
+.see-more-button-container {
   text-align: end;
 }
 
-.show-all-button {
+.see-more-button {
   display: none;
+  line-height: 3.5rem;
+  text-transform: uppercase;
 }
 
 /* TODO - fix padding on category list. Switch to grid? */
 
-.category-list {
-  padding: 0 0 4rem 0;
+.category-list h3 {
+
 }
 
 .category-list ul {

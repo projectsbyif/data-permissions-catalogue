@@ -1,7 +1,7 @@
 ---
 title: Decision testing
 
-category: Explainability
+category: Accountability
 
 images:
 - url: /images/decision-testing.svg

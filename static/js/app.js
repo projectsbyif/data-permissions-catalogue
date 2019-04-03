@@ -26,7 +26,7 @@ $('details ul').click(function(e) {
 /* Pattern list by category on homepage */
 
 // TODO: Hide show all button when less than 4 patterns.
-$('.show-all-button').show()
+$('.see-more-button').show()
 
 // Hide extra patterns on page load
 $('.category-list ul').each(function(index, category) {

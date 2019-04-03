@@ -2,12 +2,10 @@
 <html lang="en" dir="ltr">
   {{ partial "head.html" . }}
   <body>
-    <div class="container">
-      {{ partial "header.html" . }}
-      <main class="{{ .Type }}">
-        {{ block "main" . }}{{ end }}
-      </main>
-    </div>
+    {{ partial "header.html" . }}
+    <main class="{{ .Type }}">
+      {{ block "main" . }}{{ end }}
+    </main>
     {{ if eq .Type "patterns" }}
     {{ partial "pattern-page-feedback.html" . }}
     {{ end }}

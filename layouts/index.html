@@ -2,54 +2,43 @@
 
 {{ $pages := .Pages }}
 
-<section class="hompage-intro">
+<section class="hompage-intro grid-container">
   <div class="grid-x grid-padding-x">
-    <div class="large-7 large-offset-1 small-12 cell">
+    <div class="large-7 small-12 cell">
       <h1>Patterns for practical and ethical uses of data</h1>
     </div>
   </div>
-  <div class="grid-x grid-padding-x homepage-action-items">
-    <div class="large-6 large-offset-3 small-12 cell">
-      <h2>Teams around the world use these to design services and fuel conversations.</h2>
-      <ul>
-        <li>
-          <p>Get in touch</p>
-          <a href="#">hello@projectsbyif.com</a>
-        </li>
-        <li>
-          <p>Contribute</p>
-          <a href="#">Join the discussion on GitHub</a>
-        </li>
-      </ul>
+  <div class="grid-x grid-padding-x">
+    <div class="large-6 large-offset-5 small-12 cell">
+      <p>Teams around the world use these to design services and fuel conversations.</p>
     </div>
   </div>
 </section>
 
-<section class="category-nav">
-  {{ partial "category-nav.html" . }}
-</section>
+
 
 {{ $categories := .Site.GetPage "/categories" }}
-{{ range $categories.Params.list }}
-{{ $categoryName := . }}
+{{ range $categories.Params.list_of_categories }}
 
-{{ $patterns := where $pages ".Params.category" "=" $categoryName }}
+{{ $patterns := where $pages ".Params.category" "=" .name }}
 
 <!-- Add class to section when toggled -->
-<section class="category-list {{ urlize $categoryName }}">
+<hr>
+<section class="grid-container category-list {{ urlize .name }}">
   <div class="category-heading grid-x grid-padding-x">
-    <div class="small-12 large-6 cell">
-      <h3>{{ $categoryName }} ({{ len $patterns }})</h3>
+    <div class="small-12 large-9 cell">
+      <h2>{{ .name }} <span>{{ len $patterns }}</span></h2>
+      <p>{{ .description }}</p>
     </div>
-    <div class="show-all-button-container small-12 large-6 cell">
-      <a class="show-all-button" href="#">Show all</a>
+    <div class="see-more-button-container small-12 large-3 cell">
+      <a class="see-more-button" href="#">See more</a>
     </div>
   </div>
   <div class="grid-x grid-padding-x">
     <div class="large-12 small-12 cell">
       <ul>
         {{ range $patterns }}
-        <!-- li display:none <=4 class=preview(display)  -->
+        <!-- li display:none <=4 class=preview(display) -->
         <li onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')">
           <div class="pattern-image">
               <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
@@ -66,5 +55,6 @@
   </div>
 
 </section>
+
 {{ end }}
 {{ end }}
