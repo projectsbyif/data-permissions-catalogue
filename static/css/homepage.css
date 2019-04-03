@@ -10,43 +10,12 @@
   line-height: 2.15rem;
 }
 
-/* Category Nav */
-
-.category-nav {
-  margin: 0 0 3rem 0;
-}
-
-.category-nav details {
-  cursor: pointer;
-}
-
-.category-nav summary {
-  font-size: 1.25rem;
-}
-
-.category-nav ul {
-  margin: 1rem 0;
-}
-
-.category-nav li {
-  display: inline-block;
-  font-size: 1.25rem;
-  padding: 0 1rem;
-}
-
-.category-nav li:first-of-type {
-  padding-left: 0;
-}
-
-.category-nav li:last-of-type {
-  padding-right: 0;
-}
-
-.category-nav a.active {
-  text-decoration: underline;
-}
-
 /* Category List */
+
+.category-list {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 
 .category-heading {
   align-items: center;
@@ -75,10 +44,6 @@
 
 /* TODO - fix padding on category list. Switch to grid? */
 
-.category-list h3 {
-
-}
-
 .category-list ul {
   display: flex;
   flex-wrap: wrap;
@@ -87,26 +52,29 @@
 
 .category-list li {
   cursor: pointer;
-  margin: 0 0.5rem 4rem 0.5rem;
-  max-height: 225px;
+  margin: 0.5rem 0.5rem;
+  height: auto;
   flex: 0 1 23%;
 }
 
 .category-list li:hover {
-    box-shadow: 0px 3px 10px 0px #EFEFEF;
+    box-shadow: 0px 0px 10px 10px #EFEFEF;
 }
 
 .category-list .pattern-image {
-  background-color: #EFEFEF;
+  border: 1px solid black;
+  border-bottom: 0;
+  height: 225px;
   padding: 1rem;
-  height: 100%;
 }
 
 .category-list .pattern-title {
-  margin: 0.5rem 0 0 0;
+  border: 1px solid black;
+  height: 75px;
+  padding: 0.5rem 0.5rem;
 }
 
-.category-list li img {
+.category-list .pattern-image img {
   height: 100%;
   width: 100%;
 }
@@ -116,4 +84,14 @@
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 27px;
+}
+
+/* Category List Colours */
+
+.category-list.authentication .pattern-image {
+  background-color: #72C7FF;
+}
+
+.category-list.permission-and-consent .pattern-image {
+  background-color: #FFAA72;
 }
