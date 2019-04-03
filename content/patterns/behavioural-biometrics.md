@@ -1,6 +1,4 @@
 ---
-
-
 title: Behavioural biometrics
 
 category: Authentication

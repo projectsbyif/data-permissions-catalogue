@@ -1,20 +1,31 @@
 /* General */
-main.pattern {
+main.patterns {
   margin-top: -10rem;
-  margin-bottom: 0; }
-  main.pattern section {
-    margin: 3rem 0; }
-    main.pattern section:last-of-type {
-      margin-bottom: 0; }
-    main.pattern section.pattern-image {
-      margin: 4rem 0 0 0; }
-    main.pattern section h3 {
-      font-size: 1.2rem;
-      position: sticky;
-      top: 11rem; }
-    main.pattern section p,
-    main.pattern section li {
-      font-weight: 500; }
+  margin-bottom: 0;
+}
+
+main.patterns section {
+  margin: 3rem 0;
+}
+
+main.patterns section:last-of-type {
+  margin-bottom: 0;
+}
+
+main.patterns section.pattern-image {
+  margin: 4rem 0 0 0;
+}
+
+main.patterns section h3 {
+  font-size: 1.2rem;
+  position: sticky;
+  top: 11rem;
+}
+
+main.patterns section p,
+main.patterns section li {
+  font-weight: 500;
+}
 
 /* Heading */
 .pattern-heading {

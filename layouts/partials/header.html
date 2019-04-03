@@ -1,0 +1,22 @@
+<header role="banner" class="grid-container {{ .Type }}">
+  <a class="skip-to-content" href="#content">Skip to content</a>
+  <a class="skip-to-content-noscript" href="#content-noscript">Skip to content</a>
+  <div class="grid-x grid-padding-x">
+    <div class="small-12 large-1 cell">
+      <!-- TODO: Swap navy logo for black logo -->
+      <img src="/images/if-logo.svg" alt="Projects By IF">
+    </div>
+    <div class="small-12 large-2 cell">
+      <h1>
+        <a href="/" class="title">
+          {{ .Site.Title }}
+        </a>
+      </h1>
+    </div>
+    {{ if eq .Type "patterns" }}
+    <div class="small-12 large-9 cell">
+      <a class="see-all-patterns-link" href="#">See all patterns</a>
+    </div>
+    {{ end }}
+  </div>
+</header>
