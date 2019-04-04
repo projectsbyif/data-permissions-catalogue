@@ -6,7 +6,7 @@ main.patterns {
 }
 
 main.patterns section {
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 
 main.patterns header {
@@ -158,11 +158,11 @@ main.patterns section li {
 }
 
 .advantages li:first-of-type, .limitations li:first-of-type {
-  margin: 0 0 1rem 0;
+  margin-top: 0;
 }
 
 .advantages li:last-of-type, .limitations li:last-of-type {
-  margin: 1rem 0 0 0;
+  margin-bottom: 0;
 }
 
 /* Examples */
@@ -170,11 +170,8 @@ main.patterns section li {
 .examples li {
   display: flex;
   font-size: 1.25rem;
+  margin: 0 0 1.4rem 0;
   justify-content: space-between;
-}
-
-.examples li:first-of-type {
-  margin: 0 0 2rem 0;
 }
 
 .examples li p {
