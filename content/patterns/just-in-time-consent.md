@@ -6,6 +6,10 @@ category: Permission and consent
 images:
   - url: /images/just-in-time-consent.svg
 
+archived: false
+
+future_pattern: false
+
 alt: A prompt asking to access the location of a device to tag a photograph.
 
 advantages:
@@ -22,30 +26,33 @@ limitations:
  - Asking permission in the middle of the user doing an important task may mean they don’t have the time to consider the implications of this consent
 
 examples:
-  - src: /images/just-in-time-consent-ios-ex.svg
-    alt_text: Notification on a mobile phone asking if user would like to share their location in a chat.
-    title: iOS permissions
-    description: Apps will ask permission to use hardware or content the first time an app requires it.
-  - src: /images/just-in-time-consent-html5-ex.svg
-    alt_text: Pop-up notification in a browser requesting access to a user's location information.
-    title: HTML5 permissions
-    description: Browsers will ask for permission to give a website access to a webcam, microphone or location when a website requests it.
+ - src: /images/just-in-time-consent-ios-ex.svg
+   alt_text: Notification on a mobile phone asking if user would like to share their location in a chat.
+   title: iOS permissions
+   description: Apps will ask permission to use hardware or content the first time an app requires it.
+ - src: /images/just-in-time-consent-html5-ex.svg
+   alt_text: Pop-up notification in a browser requesting access to a user's location information.
+   title: HTML5 permissions
+   description: Browsers will ask for permission to give a website access to a webcam, microphone or location when a website requests it.
 
 
 further_reading:
-  - title: Tech Crunch
-    url: https://techcrunch.com/2014/04/04/the-right-way-to-ask-users-for-ios-permissions/
-    description: The right way to ask users for iOS permissions
+ - title: Tech Crunch
+   url: https://techcrunch.com/2014/04/04/the-right-way-to-ask-users-for-ios-permissions/
+   description: The right way to ask users for iOS permissions
 
 related_patterns:
-  - src: /images/key-ceremony.svg
-    alt_text: Two keys inserted into locks at the same time.
-    url: /patterns/key-ceremony
-    title: Key ceremony
-  - src:  /images/up-front-consent.svg
-    alt_text: A list of data a service has permission to access.
-    url: /patterns/up-front-consent
-    title: Up-front consent
+ - src: /images/key-ceremony.svg
+   alt_text: Two keys inserted into locks at the same time.
+   url: /patterns/key-ceremony
+   title: Key ceremony
+ - src:  /images/up-front-consent.svg
+   alt_text: A list of data a service has permission to access.
+   url: /patterns/up-front-consent
+   title: Up-front consent
+
+date: 2019-04-04T14:58:05+01:00
+lastmod: 2019-04-04
 ---
 
 Ask users for a specific permission at the exact moment in time when it’s needed to complete a task.

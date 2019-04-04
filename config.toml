@@ -4,3 +4,4 @@ title = "Data Patterns Catalogue"
 [params]
   twitterText = "This pattern from the Data Patterns catalogue can help design services that involve data sharing."
   twitterHandle = "projectsbyif"
+enableGitInfo = true

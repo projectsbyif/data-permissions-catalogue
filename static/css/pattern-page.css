@@ -75,6 +75,16 @@ main.patterns section li {
   font-size: 3.5rem;
 }
 
+.pattern-heading .new-pattern {
+  border: 1px solid #979797;
+  font-weight: 500;
+  margin: 0 0 -8px 2rem;
+  padding: 0 0 3px 0;
+  text-align: center;
+  text-transform: lowercase;
+  width: 3.5rem;
+}
+
 .pattern-heading-share {
   height: 100%;
   list-style: none;

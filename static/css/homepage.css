@@ -96,8 +96,11 @@
   padding: 1rem;
 }
 
+/* TODO - figure out what happens if there's more than one label on at once. */
+
 .pattern-card-title .archived,
-.pattern-card-title .future-pattern {
+.pattern-card-title .future-pattern,
+.pattern-card-title .new-pattern {
   display: inline-block;
   font-size: 1rem;
   font-weight: 500;
@@ -116,6 +119,11 @@
 .pattern-card-title .future-pattern {
   border: 1px solid #979797;
   width: 175px;
+}
+
+.pattern-card-title .new-pattern {
+  border: 1px solid #979797;
+  width: 60px;
 }
 
 .category-list .pattern-card-title {

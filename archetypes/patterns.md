@@ -20,4 +20,5 @@ related_patterns:
     url: ""
     title: ""
 date: {{ .Date }}
+lastmod: {{ now.Format "2006-01-02" }}
 ---
