@@ -54,7 +54,7 @@
 }
 
 .category-heading.active {
-  
+
 }
 
 .category-heading h2 {
@@ -94,31 +94,32 @@
   border-bottom: 0;
   height: 300px;
   padding: 1rem;
-  position: relative;
 }
 
-.pattern-card-image .archived,
-.pattern-card-image .future-pattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 1.15rem;
-  text-transform: uppercase;
-  width: 100%;
+.pattern-card-title .archived,
+.pattern-card-title .future-pattern {
+  display: inline-block;
+  font-size: 1rem;
   font-weight: 500;
-  padding: 0.25rem 0 0.25rem 1rem;
+  margin-left: 0.75rem;
+  padding: 0.1rem 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.pattern-card-image .archived {
+.pattern-card-title .archived {
+  background-color:#637578;
   color: white;
-  background-color:  rgba(88, 88, 88, 0.8);
+  width: 150px;
 }
 
-.pattern-card-image .future-pattern {
-  background-color: rgba(255, 255, 255, 0.8);
+.pattern-card-title .future-pattern {
+  border: 1px solid #979797;
+  width: 175px;
 }
 
 .category-list .pattern-card-title {
+  background-color: white;
   border: 1px solid black;
   height: 75px;
   padding: 0.5rem 0.5rem;
@@ -138,8 +139,16 @@
 
 /* Category List Colours */
 
+.category-list.authentication:hover {
+  background-color: #72C7FF16;
+}
+
 .category-list.authentication .pattern-card-image {
   background-color: #72C7FF;
+}
+
+.category-list.permission-and-consent:hover {
+  background-color: #FFAA7232;
 }
 
 .category-list.permission-and-consent .pattern-card-image {

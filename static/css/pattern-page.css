@@ -48,20 +48,21 @@ main.patterns section li {
   display: inline-block;
   font-weight: 500;
   margin: 0 1rem 0 0;
-  padding: 0.1rem 0;
+  padding: 0.1rem 0rem;
   text-transform: uppercase;
-  width: 130px;
   text-align: center;
 }
 
 .archived span {
   background-color:#637578;
   color: white;
+  width: 175px
 }
 
 .future-pattern span {
   border: 1px solid #979797;
   color: black;
+  width: 200px;
 }
 
 .pattern-heading {
