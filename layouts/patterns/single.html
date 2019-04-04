@@ -32,7 +32,7 @@
 
   <section class="pattern-image grid-x grid-padding-x">
   <div class="large-12 small-12 cell">
-    <div class="pattern-image-div">
+    <div class="pattern-image-div {{ urlize .Params.category }}">
       <img id="content" tabindex="0" class="" src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}" />
     </div>
   </div>
@@ -91,8 +91,10 @@
       {{ range .Params.examples }}
       <li>
         <div>
+          {{ if isset . "title" }}
           <p class="examples-title"><a href="{{ .url }}">{{ .title }}</a></p>
-          <p>{{ .description }}</p>
+          {{ end }}
+          <p>{{ humanize .description }}</p>
         </div>
       </li>
       {{ end }}

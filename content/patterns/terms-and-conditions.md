@@ -13,8 +13,7 @@ images:
 alt: A dialog box showing a terms and conditions agreement above Agree and Disagree buttons.
 
 examples:
-  - title: Terms and Conditions agreements
-    description: Most software during installation and digital services during registration
+  - description: Most software during installation and digital services during registration
 
 further_reading:
   - title: Making privacy policies not suck by Aza Raskin

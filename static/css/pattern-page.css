@@ -122,6 +122,14 @@ main.patterns section li {
   height: 500px;
 }
 
+.pattern-image-div.permission-and-consent {
+  background-color: #FFAA72;
+}
+
+.pattern-image-div.authentication {
+  background-color: #72C7FF;
+}
+
 .pattern-image-div img {
   display: block;
   margin: 0 auto;
