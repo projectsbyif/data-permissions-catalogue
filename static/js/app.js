@@ -29,7 +29,7 @@ $('details ul').click(function(e) {
 $('.see-more-button').show()
 
 // Hide extra patterns on page load
-$('.category-list ul').each(function(index, category) {
+$('.category-list .pattern-card-list').each(function(index, category) {
   let patternsList = $(category).children()
   togglePatternsListView(patternsList)
 })
@@ -40,17 +40,19 @@ $('.category-heading').click(function(e){
 
   const patternsList = Array.from(
     $(this).parents('.category-list')
-    .find('li')
+    .find('.pattern-card-list .cell')
   )
+
+  console.log(patternsList)
   togglePatternsListView(patternsList)
 })
 
 
 function togglePatternsListView(patternsList, currentShowAllButton) {
-  if (patternsList.length <= 4) {
+  if (patternsList.length <= 3) {
     return;
   }
-  for (let i = 4; i < patternsList.length; i++) {
+  for (let i = 3; i < patternsList.length; i++) {
     $(patternsList[i]).toggle()
   }
 

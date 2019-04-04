@@ -34,24 +34,21 @@
       <a class="see-more-button" href="#">See more</a>
     </div>
   </div>
-  <div class="grid-x grid-padding-x">
-    <div class="large-12 small-12 cell">
-      <ul>
-        {{ range $patterns }}
-        <!-- li display:none <=4 class=preview(display) -->
-        <li onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')">
-          <div class="pattern-image">
-              <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
-          </div>
-          <div class="pattern-title">
-            <a href="/patterns/{{ urlize .Params.title }}">
-              {{ .Params.title }}
-            </a>
-          </div>
-        </li>
-        {{ end }}
-      </ul>
+  <div class="grid-x grid-padding-x pattern-card-list">
+    {{ range $patterns }}
+    <div class="large-4 small-12 cell">
+      <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="pattern-card">
+        <div class="pattern-card-image">
+          <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
+        </div>
+        <div class="pattern-card-title">
+          <a href="/patterns/{{ urlize .Params.title }}">
+          {{ .Params.title }}
+        </a>
+        </div>
+      </div>
     </div>
+    {{ end }}
   </div>
 
 </section>
