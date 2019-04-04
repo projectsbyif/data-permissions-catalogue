@@ -1,32 +1,24 @@
-/* Pattern category nav on homepage */
+/* Change view on homepage */
 
-$('details ul').click(function(e) {
-  e.preventDefault()
-  const targetLink = e.target
-  console.log(targetLink)
+// Default - By category
 
-  if (!$(targetLink).is("a")) {
-    return;
+// Most recent first
+
+// Alphabetically
+
+// Expand all categories
+
+/* Pattern category lists on homepage */
+
+// Show see more button on load if more than 3 patterns in category
+$('.category-list').each(function(index, category) {
+  let patternsList = Array.from($(category).find('.pattern-card'))
+  let seeMoreButton = $(category).find('.see-more-button');
+
+  if (patternsList.length > 3) {
+    $(seeMoreButton).show()
   }
-
-  const categoryToShow = targetLink.classList[0];
-
-  if (categoryToShow == "all") {
-    console.log('all')
-    $('.category-list').show()
-  } else {
-    $('.category-list').hide()
-    $(`.category-list.${categoryToShow}`).show()
-  }
-
-  $('details ul a.active').removeClass('active')
-  $(targetLink).addClass('active')
 })
-
-/* Pattern list by category on homepage */
-
-// TODO: Hide show all button when less than 4 patterns.
-$('.see-more-button').show()
 
 // Hide extra patterns on page load
 $('.category-list .pattern-card-list').each(function(index, category) {
@@ -35,28 +27,39 @@ $('.category-list .pattern-card-list').each(function(index, category) {
 })
 
 // Show/hide extra patterns on button click
+// TODO: only attach click event to category headings with more than 3 patterns
 $('.category-heading').click(function(e){
   e.preventDefault()
+  const categoryHeading = this;
 
   const patternsList = Array.from(
     $(this).parents('.category-list')
     .find('.pattern-card-list .cell')
   )
 
-  console.log(patternsList)
   togglePatternsListView(patternsList)
+  toggleHeadingActiveState(categoryHeading)
 })
 
 
-function togglePatternsListView(patternsList, currentShowAllButton) {
+function togglePatternsListView(patternsList) {
   if (patternsList.length <= 3) {
     return;
   }
   for (let i = 3; i < patternsList.length; i++) {
     $(patternsList[i]).toggle()
   }
+}
 
-  // TODO - toggle button text btw 'Show all' and 'Hide all'
+function toggleHeadingActiveState(categoryHeading) {
+  // Add active state to header
+  console.log(categoryHeading)
+  $(categoryHeading).toggleClass('active');
+
+  // Change text in seeMoreButton
+  const seeMoreButton = $(categoryHeading).parents('.category-list').find('.see-more-button');
+
+  seeMoreButton.html().toLowerCase() == 'see more' ? seeMoreButton.html('See less') : seeMoreButton.html('See more')
 }
 
 /* Pattern page feedback form */

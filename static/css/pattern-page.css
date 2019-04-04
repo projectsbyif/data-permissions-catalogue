@@ -162,7 +162,8 @@ main.patterns section li {
   line-height: 1.2;
 }
 
-.examples-title {
+.examples-title a {
+  color: #29283D;
   text-decoration: underline;
 }
 

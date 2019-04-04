@@ -87,7 +87,7 @@
       {{ range .Params.examples }}
       <li>
         <div>
-          <p class="examples-title">{{ .title }}</p>
+          <p class="examples-title"><a href="{{ .url }}">{{ .title }}</a></p>
           <p>{{ .description }}</p>
         </div>
       </li>

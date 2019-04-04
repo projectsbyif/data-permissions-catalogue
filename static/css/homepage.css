@@ -46,9 +46,15 @@
   padding-bottom: 2.5rem;
 }
 
+/* Category heading */
+
 .category-heading {
   align-items: center;
   cursor: pointer;
+}
+
+.category-heading.active {
+  
 }
 
 .category-heading h2 {
@@ -71,9 +77,7 @@
   text-transform: uppercase;
 }
 
-
-
-/* TODO - fix padding on category list. Switch to grid? */
+/* Patterns list and cards */
 
 .category-list .pattern-card {
   cursor: pointer;
@@ -126,7 +130,7 @@
 }
 
 .category-list .pattern-card-title a {
-  color: #29283D;
+  color: #242249;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 27px;
