@@ -1,5 +1,9 @@
 /* Intro */
 
+/* header {
+  background-color: rgb(84, 216, 255);
+} */
+
 .hompage-intro h1 {
   margin: 3rem 0 5rem 0;
 }
@@ -18,13 +22,13 @@
 
 .category-nav li a {
   display: inline-block;
-  color: #757575;
+  color: #898993;
   font-size: 1.15rem;
   padding: 1rem 2rem;
 }
 
 .category-nav .active a {
-  color: black;
+  color: #242249;
 }
 
 .category-nav li a {

@@ -1,12 +1,12 @@
 /* General */
 
 main.patterns {
-  margin-top: -10rem;
   margin-bottom: 0;
   margin-bottom: 20rem;
 }
 
-main.patterns section {
+main.patterns section,
+main.patterns header {
   margin: 3rem 0;
 }
 
@@ -31,12 +31,6 @@ main.patterns section li {
 }
 
 /* Heading */
-
-.pattern-heading {
-  position: sticky;
-  top: 5.5rem;
-  z-index: 10;
-}
 
 .pattern-heading h1 {
   font-size: 3.5rem;

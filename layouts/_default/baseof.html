@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   {{ partial "head.html" . }}
   <body>
-    {{ partial "header.html" . }}
+    {{ partial "page-nav.html" . }}
     <main class="{{ .Type }}">
       {{ block "main" . }}{{ end }}
     </main>

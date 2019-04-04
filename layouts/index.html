@@ -2,20 +2,22 @@
 
 {{ $pages := .Pages }}
 
-<section class="hompage-intro grid-container">
+<header class="hompage-intro grid-container">
   <div class="grid-x grid-padding-x">
     <div class="large-7 small-12 cell">
       <h1>Patterns for practical and ethical uses of data</h1>
     </div>
   </div>
   <div class="grid-x grid-padding-x">
-    <div class="large-6 large-offset-5 small-12 cell">
+    <div class="large-6 small-12 cell">
       <p>Teams around the world use these to design services and fuel conversations.</p>
     </div>
   </div>
-</section>
+</header>
 
-<nav class="grid-container">
+<hr>
+
+<div class="grid-container">
   <ul class="category-nav">
     <li class="active">
       <a class="view-by-category" href="#">Categories</a>
@@ -30,7 +32,7 @@
       <a class="expand-all" href="#">Expand All</a>
     </li>
   </ul>
-</nav>
+</div>
 
 
 {{ $categories := .Site.GetPage "/categories" }}

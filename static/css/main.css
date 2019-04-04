@@ -1,5 +1,5 @@
 body {
-  color: #2C2C2C;
+  color: #242249;
   font-family: 'halyard-display', sans-serif;
 }
 
@@ -16,6 +16,7 @@ h1, h2, h3 {
 h1 {
   font-size: 4.5rem;
   line-height: 4.4rem;
+  font-weight: 500;
 }
 
 ul {
@@ -25,7 +26,7 @@ ul {
 }
 
 hr {
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid rgba(137, 137, 147, 0.25);
   margin: 0;
   max-width: unset;
   width: 100%;
@@ -62,48 +63,68 @@ h2#content {
   color: white;
 }
 
-/* Header */
+/* nav */
 
-header {
-  background: linear-gradient(-180deg, white 0%, rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 0) 100%);
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-header.patterns {
-  background: linear-gradient(-180deg, white 0%, rgba(255, 255, 255, 0.8) 90%, rgba(255, 255, 255, 0) 100%);
-  height: 170px;
-}
-
-header img {
+nav img {
   height: 30px;
 }
 
-header h1 {
+nav h1 {
   display: inline-block;
+  margin: 0;
 }
 
-header h1,
-header .title,
-header .see-all-patterns-link,
-header .made-by {
-  color: black;
+nav h1,
+nav .title,
+nav .made-by,
+nav .how-to {
+  color: #242249;
   font-size: 1.1rem;
   line-height: 30px;
-  text-transform: lowercase;
-  vertical-align: middle;
 }
 
-header .title {
+nav h1,
+nav .title,
+nav .how-to {
+  text-transform: lowercase;
+}
+
+nav .made-by,
+nav .how-to {
+  display: inline-block;
+  margin: 0;
+  padding-left: 2rem;
+}
+
+nav .how-to p {
+  margin: 0;
+}
+
+nav .title {
   color: #EC392A;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+}
+
+.page-nav .push {
+  margin-left: auto;
 }
 
 /* Footer */
 
 footer {
-  background-color: #29283D;
+  background-color: #242249;
   color: white;
   bottom: 0;
   height: 20rem;
