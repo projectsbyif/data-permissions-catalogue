@@ -10,6 +10,31 @@
   line-height: 2.15rem;
 }
 
+/* Category Nav */
+
+.category-nav {
+  display: flex;
+}
+
+.category-nav li a {
+  display: inline-block;
+  color: #757575;
+  font-size: 1.15rem;
+  padding: 1rem 2rem;
+}
+
+.category-nav .active a {
+  color: black;
+}
+
+.category-nav li a {
+  text-transform: uppercase;
+}
+
+.category-nav .push {
+  margin-left: auto;
+}
+
 /* Category List */
 
 .category-list {
@@ -41,6 +66,8 @@
   line-height: 3.5rem;
   text-transform: uppercase;
 }
+
+
 
 /* TODO - fix padding on category list. Switch to grid? */
 

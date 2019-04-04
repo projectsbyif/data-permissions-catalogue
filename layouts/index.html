@@ -15,6 +15,22 @@
   </div>
 </section>
 
+<nav class="grid-container">
+  <ul class="category-nav">
+    <li class="active">
+      <a class="view-by-category" href="#">Categories</a>
+    </li>
+    <li>
+      <a class="view-most-recent" href="#">Most Recent</a>
+    </li>
+    <li>
+      <a class="view-alphabetically" href="#">Alphabetical</a>
+    </li>
+    <li class="push">
+      <a class="expand-all" href="#">Expand All</a>
+    </li>
+  </ul>
+</nav>
 
 
 {{ $categories := .Site.GetPage "/categories" }}
