@@ -3,6 +3,10 @@ title: Data licences
 
 category: Permission and consent
 
+archived: false
+
+future_pattern: true
+
 images:
   - url: /images/data-licences.svg
 

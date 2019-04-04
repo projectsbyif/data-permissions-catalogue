@@ -57,6 +57,11 @@
     <div class="large-4 small-12 cell">
       <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="pattern-card">
         <div class="pattern-card-image">
+          {{ if eq .Params.archived true }}
+          <p class="archived">Archived 🗄️</p>
+          {{ else if eq .Params.future_pattern true }}
+          <p class="future-pattern">Future 🔮</p>
+          {{ end }}
           <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
         </div>
         <div class="pattern-card-title">

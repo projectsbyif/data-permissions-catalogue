@@ -5,17 +5,16 @@ main.patterns {
   margin-bottom: 20rem;
 }
 
-main.patterns section,
+main.patterns section {
+  margin: 2rem 0;
+}
+
 main.patterns header {
-  margin: 3rem 0;
+  margin: 3rem 0 0 0;
 }
 
 main.patterns section:last-of-type {
   margin-bottom: 0;
-}
-
-main.patterns section.pattern-image {
-  margin: 4rem 0 0 0;
 }
 
 main.patterns h2 {
@@ -32,21 +31,59 @@ main.patterns section li {
 
 /* Heading */
 
-.pattern-heading h1 {
+.pattern-status {
+  margin: 0 0 1rem 0;
+}
+
+.pattern-status .archived,
+.pattern-status .future-pattern {
+  display: inline-block;
+  color: #898993;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.archived span,
+.future-pattern span {
+  display: inline-block;
+  font-weight: 500;
+  margin: 0 1rem 0 0;
+  padding: 0.1rem 0;
+  text-transform: uppercase;
+  width: 130px;
+  text-align: center;
+}
+
+.archived span {
+  background-color:#637578;
+  color: white;
+}
+
+.future-pattern span {
+  border: 1px solid #979797;
+  color: black;
+}
+
+.pattern-heading {
+  display: flex;
+  align-items: center;
+}
+
+.pattern-heading-title {
+  display: inline-block;
   font-size: 3.5rem;
 }
 
-.pattern-heading ul {
-  align-items: center;
-  display: flex;
+.pattern-heading-share {
   height: 100%;
-  justify-content: flex-end;
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-left: auto;
 }
 
 .pattern-heading li {
+  display: inline-block;
   font-size: 1.25rem;
 }
 
@@ -85,10 +122,6 @@ main.patterns section li {
 .description p {
   font-size: 2rem;
   line-height: 1.2;
-}
-
-.description p:last-of-type {
-  margin: 1.4rem 0 0 0;
 }
 
 /* Advantages & Limitations */

@@ -3,7 +3,9 @@ illustration_version: 1
 
 title: Terms and conditions
 
-category: Other
+category: Permission and consent
+
+archived: true
 
 images:
   - url: /images/terms-and-conditions.svg
@@ -11,7 +13,8 @@ images:
 alt: A dialog box showing a terms and conditions agreement above Agree and Disagree buttons.
 
 examples:
-  - description: Most software during installation and digital services during registration
+  - title: Terms and Conditions agreements
+    description: Most software during installation and digital services during registration
 
 further_reading:
   - title: Making privacy policies not suck by Aza Raskin
