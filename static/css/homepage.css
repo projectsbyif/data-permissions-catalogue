@@ -27,7 +27,7 @@
   padding: 1rem 2rem;
 }
 
-.category-nav .active a {
+.category-nav a.active {
   color: #242249;
 }
 
@@ -39,21 +39,31 @@
   margin-left: auto;
 }
 
-/* Category List */
+/* Homepage sections */
 
-.category-list {
+.category-view .category-list,
+.most-recent-view,
+.alphabetical-view {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.most-recent-view,
+.alphabetical-view {
+  display: none;
 }
 
 /* Category heading */
 
 .category-heading {
   align-items: center;
+}
+
+.category-view .category-heading {
   cursor: pointer;
 }
 
-.category-heading.active {
+.category-view .category-heading.active {
 
 }
 
@@ -79,17 +89,18 @@
 
 /* Patterns list and cards */
 
-.category-list .pattern-card {
+.pattern-card {
   cursor: pointer;
   height: auto;
   margin-bottom: 0.9rem;
 }
 
-.category-list .pattern-card:hover {
-    box-shadow: 0px 0px 10px 10px #EFEFEF;
+.pattern-card:hover {
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
 }
 
-.category-list .pattern-card-image {
+.pattern-card-image {
   border: 1px solid black;
   border-bottom: 0;
   height: 300px;
@@ -126,19 +137,19 @@
   width: 60px;
 }
 
-.category-list .pattern-card-title {
+.pattern-card-title {
   background-color: white;
   border: 1px solid black;
   height: 75px;
   padding: 0.5rem 0.5rem;
 }
 
-.category-list .pattern-card-image img {
+.pattern-card-image img {
   height: 100%;
   width: 100%;
 }
 
-.category-list .pattern-card-title a {
+.pattern-card-title a {
   color: #242249;
   font-size: 1.5rem;
   font-weight: 500;
@@ -151,7 +162,7 @@
   background-color: #72C7FF16;
 }
 
-.category-list.authentication .pattern-card-image {
+.pattern-card.authentication .pattern-card-image {
   background-color: #72C7FF;
 }
 
@@ -159,6 +170,6 @@
   background-color: #FFAA7232;
 }
 
-.category-list.permission-and-consent .pattern-card-image {
+.pattern-card.permission-and-consent .pattern-card-image {
   background-color: #FFAA72;
 }
