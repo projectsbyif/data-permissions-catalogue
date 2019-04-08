@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Terms and conditions
 
-category: Permission and consent
+category: Giving and removing consent
 
 archived: true
 

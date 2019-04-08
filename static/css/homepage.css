@@ -158,18 +158,18 @@
 
 /* Category List Colours */
 
-.category-list.authentication:hover {
+.category-list.sharing-data:hover {
   background-color: #72C7FF16;
 }
 
-.pattern-card.authentication .pattern-card-image {
+.pattern-card.sharing-data .pattern-card-image {
   background-color: #72C7FF;
 }
 
-.category-list.permission-and-consent:hover {
+.category-list.logging-in:hover {
   background-color: #FFAA7232;
 }
 
-.pattern-card.permission-and-consent .pattern-card-image {
+.pattern-card.logging-in .pattern-card-image {
   background-color: #FFAA72;
 }

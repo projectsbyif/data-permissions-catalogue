@@ -3,7 +3,9 @@ illustration_version: 1
 
 title: Marketplace
 
-category: Other
+archived: true
+
+category: Sharing data
 
 images:
   - url: /images/marketplace.svg

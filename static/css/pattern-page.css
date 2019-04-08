@@ -122,11 +122,11 @@ main.patterns section li {
   height: 500px;
 }
 
-.pattern-image-div.permission-and-consent {
+.pattern-image-div.logging-in {
   background-color: #FFAA72;
 }
 
-.pattern-image-div.authentication {
+.pattern-image-div.sharing-data {
   background-color: #72C7FF;
 }
 

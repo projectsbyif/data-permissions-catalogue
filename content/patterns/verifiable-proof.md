@@ -1,7 +1,7 @@
 ---
 title: Verifiable proof
 
-category: Control access
+category: Verifying someone's identity
 
 images:
   - url: /images/verifiable-proof-1.svg
@@ -14,11 +14,16 @@ cover_image:
   - url: /images/verifiable-proof-2.svg
 
 advantages:
- - Doesn’t rely on external infrastructure that could be malicious
+ - Prevents impersonation attacks
+ - Doesn’t rely on public key infrastructure
+ - Reassures the user that their calls or messages with the recipient are private
+
 
 limitations:
  - Some people won’t understand what is being checked
- - The underlying maths can later be found to be insecure
+ - Both devices have to be physically present to perform the verification of the identity.
+ - The underlying mathematical process can later be found to be insecure
+
 
 examples:
  - title: WhatsApp verify security code
@@ -32,4 +37,4 @@ open-source:
 
 ---
 
-Sharing data in a form that is hard to forge. It can be checked using mathematical formulas, for example to verify that messages are end-to-end encrypted.
+The user can check that data is being shared securely, in a way that is hard to forge or edit. For example, a user can scan another user’s QR code to verify that no one is intercepting their messages or calls.

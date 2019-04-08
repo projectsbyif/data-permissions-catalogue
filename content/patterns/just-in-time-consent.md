@@ -1,7 +1,7 @@
 ---
 title: Just-in-time consent
 
-category: Permission and consent
+category: Giving and removing consent
 
 images:
   - url: /images/just-in-time-consent.svg
@@ -13,17 +13,19 @@ future_pattern: false
 alt: A prompt asking to access the location of a device to tag a photograph.
 
 advantages:
- - Asking for permission in context makes it easier to understand why access is needed
- - One decision at a time helps people make a considered choice
- - It gives the user the power to decide how to share their information
- - It’s relatively frictionless and doesn’t interrupt what the user is trying to do
- - It reminds the user what the services does and doesn’t usually have access to
+ - Context makes it easier to understand why a service needs access
+ - One decision at a time helps people make considered choices
+ - Gives users the power to decide how to share their information
+ - Relatively low friction, so doesn’t interrupt what the user is trying to do
+ - Reminds users what data the service does and doesn’t usually have access to
+
 
 limitations:
  - Overusing this pattern could overwhelm users and become ineffective
- - A low-friction interaction may not be appropriate if the service needs access to sensitive information
- - It can be unclear if access is still permitted after the activity has finished and if it’s possible to check or change this
+ - Low-friction interaction may not be appropriate for sensitive information
+ - Can be unclear to the user that access is not permitted after the activity has finished
  - Asking permission in the middle of the user doing an important task may mean they don’t have the time to consider the implications of this consent
+
 
 examples:
  - src: /images/just-in-time-consent-ios-ex.svg
@@ -55,6 +57,4 @@ date: 2019-04-04T14:58:05+01:00
 lastmod: 2019-04-04
 ---
 
-Ask users for a specific permission at the exact moment in time when it’s needed to complete a task.
-
-For example, if a user wants to tag a photo with their location, the user is asked for permission to access location data as they add the tag.
+Asking for a specific permission at the exact moment it’s needed to complete a task the user is performing. For example, if a user wants to tag a photo with their location, the user is asked for permission to access location data as they add the tag.

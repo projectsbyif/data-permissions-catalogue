@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Delegate permissions
 
-category: Permission and consent
+category: Giving and removing consent
 
 images:
   - url: /images/delegate-permissions.svg

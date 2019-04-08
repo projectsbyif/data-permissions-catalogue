@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Geofencing
 
-category: Control access
+category: Sharing data
 
 images:
   - url: /images/geofencing.svg

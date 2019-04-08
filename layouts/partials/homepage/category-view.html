@@ -12,7 +12,7 @@
   <div class="grid-container category-list {{ urlize .name }}">
     <div class="category-heading grid-x grid-padding-x">
       <div class="small-12 large-9 cell">
-        <h2>{{ .display_name }} <span>{{ len $patterns }}</span></h2>
+        <h2>{{ .name }} <span>{{ len $patterns }}</span></h2>
       </div>
       <div class="see-more-button-container small-12 large-3 cell">
         <a class="see-more-button" href="#">See more</a>
@@ -23,7 +23,10 @@
       <div class="large-4 small-12 cell">
         <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="pattern-card {{ urlize .Params.category }}{{ if le $index 2 }} preview{{ end }}">
           <div class="pattern-card-image">
+            <!-- TODO: Is isset best way to check this? -->
+            {{ if isset .Params "images" }}
             <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
+            {{ end }}
           </div>
           <div class="pattern-card-title">
             <a href="/patterns/{{ urlize .Params.title }}">{{ .Params.title }}</a>
@@ -32,7 +35,8 @@
             <p class="archived">Archived 🗄️</p>
             {{ else if eq .Params.future_pattern true }}
             <p class="future-pattern">Future pattern 🔮</p>
-            {{ else if ge $dateAdded (now.AddDate 0 -1 0) }}
+            {{ end }}
+            {{ if ge $dateAdded (now.AddDate 0 -1 0) }}
             <p class="new-pattern">New</p>
             {{ end }}
           </div>

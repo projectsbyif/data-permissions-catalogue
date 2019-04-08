@@ -3,10 +3,18 @@ illustration_version: 1
 
 title: One-time access
 
-category: Control access
+category: Sharing data
 
 images:
   - url: /images/one-time-access.svg
+
+advantages:
+ - Removes th e burden from the user having to remember the information
+ - Limitations placed on the code make it feel less risky to share data for a specific purpose
+ - The person who receives data access directly therefore they have an accurate view of the data
+
+limitations:
+ - Users with dyslexia might find it difficult to share the code if it’s not easy to copy and paste, or send
 
 alt: A dialog box shows a single-use code and a button which reads Use now.
 
@@ -18,4 +26,4 @@ examples:
     description: message sharing using a link that can only be opened once
 ---
 
-A person shares data with a third party through a means that only works once. This could be using a unique code or a unique link that someone can share using a method of their choice.
+Sharing access to data with a code. For example, a user shares a unique code with a car rental company that can only be used once, so the company can check their driving licence details.

@@ -6,7 +6,8 @@
       {{ if eq .Params.archived true }}
       <p class="archived">
         <span>Archived 🗄️</span>
-        This is a placeholder for archived pattern description.</p>
+        {{ .Params.archive_reason }}
+      </p>
       {{ else if eq .Params.future_pattern true }}
       <p class="future-pattern"><span>Future pattern 🔮</span>
         This is a placeholder for future pattern description.
@@ -33,7 +34,9 @@
   <section class="pattern-image grid-x grid-padding-x">
   <div class="large-12 small-12 cell">
     <div class="pattern-image-div {{ urlize .Params.category }}">
+      {{ if isset .Params "images" }}
       <img id="content" tabindex="0" class="" src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}" />
+      {{ end }}
     </div>
   </div>
   </section>
