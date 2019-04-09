@@ -1,7 +1,7 @@
 ---
 title: Recovery codes
 
-category: Logging in
+category: Signing in
 
 images:
   - url: /images/recovery-codes.svg

@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Authentication by secret answer
 
-category: Logging in
+category: Signing in
 
 advantages:
  - The user can choose information that’s easy for them to remember

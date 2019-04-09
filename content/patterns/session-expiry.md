@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Inactivity checking
 
-category: Logging in
+category: Signing in
 
 images:
   - url: /images/inactivity-checking.svg

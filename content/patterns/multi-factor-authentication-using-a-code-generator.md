@@ -1,7 +1,7 @@
 ---
 title: Multi-factor authentication using a code generator
 
-category: Logging in
+category: Signing in
 
 images:
   - url: /images/multi-factor-with-generator.svg

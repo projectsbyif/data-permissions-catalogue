@@ -1,7 +1,7 @@
 ---
 title: Multi-factor authentication using an object
 
-category: Logging in
+category: Signing in
 
 images:
   - url: /images/multi-factor-with-object.svg

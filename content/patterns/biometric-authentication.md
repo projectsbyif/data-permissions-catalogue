@@ -1,7 +1,7 @@
 ---
 title: Biometric authentication
 
-category: Logging in
+category: Signing in
 
 images:
   - url: /images/physical-biometrics.svg
