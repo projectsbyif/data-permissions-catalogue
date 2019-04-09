@@ -8,7 +8,6 @@
 
 {{ $patterns := where $pages ".Params.category" "=" .name }}
 
-<!-- Add class to section when toggled -->
   <div class="grid-container category-list {{ urlize .name }}">
     <div class="category-heading grid-x grid-padding-x">
       <div class="small-12 large-9 cell">
@@ -22,7 +21,7 @@
     </div>
     <div class="see-more-button-container">
       <hr>
-      <a class="see-more-button" href="#">Expand category</a>
+      <a class="see-more-button" href="#">Expand category ▼</a>
     </div>
   </div>
 {{ end }}

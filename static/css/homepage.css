@@ -154,14 +154,6 @@ header.page {
   color: #F6776C;
 }
 
-.see-more-button::after {
-  content: ' ▼'
-}
-
-.see-more-button.active::after {
-  content: ' ▲'
-}
-
 /* Patterns list and cards */
 
 .pattern-card {

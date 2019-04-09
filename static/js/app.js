@@ -1,5 +1,8 @@
 /* Change view on homepage */
 
+const expandCategory = 'Expand category ▼'
+const collapseCategory = 'Collapse category ▲'
+
 $('.category-nav a').click(function(e) {
   e.preventDefault()
 
@@ -26,7 +29,7 @@ $('.category-nav a').click(function(e) {
     case 'expand-all':
       $('.category-view').show()
       $('.view-by-category').addClass('active')
-      toggleExpandAllButton()
+      toggleExpandAllCategories(this)
     default:
       $('.category-list').show();
       $('view-by-category').addClass('active')
@@ -35,20 +38,18 @@ $('.category-nav a').click(function(e) {
   }
 })
 
-function toggleExpandAllButton() {
+// TODO - find a better way to do this, ideally with CSS classes.
+// Would need to think about accessibility, can't do it with CSS content as
+// it isn't accessible to a screen reader.
+function toggleExpandAllCategories(expandAllButton) {
   $('.category-list').each(function(index, category){
     $(category).removeClass('preview')
   })
-
-  // Change text on individual see more buttons
-  // TODO - get rid of toggle and do this all through CSS
   $('.see-more-button').each(function(index, button) {
-    let isCategoryExpanded = $(button).html().toLowerCase() == 'expand category'
+    isCategoryCollapsed = $(button).html() == expandCategory
 
-    if (isCategoryExpanded) {
-      $(button).html('Collapse category')
-      // TODO - all content changes should be done here not split accross JS and CSS
-      $(button).addClass('active')
+    if (isCategoryCollapsed) {
+      $(button).html(collapseCategory)
     }
   })
 }
@@ -67,29 +68,21 @@ $('.category-list').each(function(index, category) {
   }
 })
 
-
-
 // Show/hide extra patterns on button click
 $('.category-view .see-more-button').click(function(e){
   e.preventDefault()
-  const seeMoreButton = this;
-  const category = $(this).parents('.category-list').toggleClass('preview')
-
-  toggleSeeMoreButton(this)
+  const seeMoreButton = $(this);
+  seeMoreButton.parents('.category-list').toggleClass('preview')
+  toggleSeeMoreButton(seeMoreButton)
 })
-// TODO - get rid of toggle and do this all through CSS
+
 function toggleSeeMoreButton(seeMoreButton) {
-  let isCategoryExpanded = $(seeMoreButton).html().toLowerCase() == 'expand category'
+  isCategoryExpanded = $(seeMoreButton).html() == expandCategory
 
   if (isCategoryExpanded) {
-    $(seeMoreButton).html('Collapse category')
-    // This class changes the arrow
-    // TODO - all content changes should be done here not split accross JS and CSS
-    $(seeMoreButton).addClass('active')
+    $(seeMoreButton).html(collapseCategory)
   } else {
-    $(seeMoreButton).html('Expand category')
-    $(seeMoreButton).removeClass('active')
-    $('.expand-all').removeClass('active')
+    $(seeMoreButton).html(expandCategory)
   }
 }
 
