@@ -18,7 +18,7 @@
     <div class="grid-x grid-padding-x pattern-card-list">
       {{ range $index, $pattern := $patterns }}
       <div class="large-4 small-12 cell">
-        <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="pattern-card {{ urlize .Params.category }}{{ if le $index 2 }} preview{{ end }}">
+        <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="pattern-card {{ urlize .Params.category }}{{ if gt $index 2 }} toggle-view{{ end }}">
           <div class="pattern-card-image">
             <!-- TODO: Is isset best way to check this? -->
             {{ if isset .Params "images" }}

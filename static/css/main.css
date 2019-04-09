@@ -1,7 +1,7 @@
 body {
   color: #242249;
   background-color: white;
-  font-family: 'AcuminPro', sans-serif;
+  font-family: 'acumin-pro', sans-serif;
 }
 
 body.page {
@@ -19,7 +19,8 @@ main.page {
 }
 
 h1, h2, h3 {
-  font-family: 'AcuminPro-Semibold', sans-serif;
+  font-family: 'acumin-pro', sans-serif;
+  font-weight: 600;
 }
 
 h1 {

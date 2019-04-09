@@ -10,6 +10,8 @@ header.page {
 
 .hompage-intro p {
   color: #62617C;
+  font-family: 'acumin-pro', sans-serif;
+  font-weight: 500;
   margin: 0 0 5rem 0;
   font-size: 1.5rem;
   line-height: 1.6rem;
@@ -27,8 +29,8 @@ header.page {
 
 .category-nav li a {
   display: inline-block;
-  color: #242249;
-  font-family: 'AcuminPro-Semibold', sans-serif;
+  color: #898993;
+  font-family: 'acumin-pro', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   margin: 0 0.5rem;
@@ -38,7 +40,9 @@ header.page {
   border-top-right-radius: 5px;
 }
 
-.category-nav a.active {
+.category-nav .view-by-category.active,
+.category-nav .view-most-recent.active,
+.category-nav .view-alphabetically.active {
   background-color: white;
   border-top: 1px solid #DDDDE3;
   border-right: 1px solid #DDDDE3;
@@ -46,14 +50,23 @@ header.page {
   color: #242249;
 }
 
-.category-nav a:hover {
+.category-nav .view-by-category:hover,
+.category-nav .view-most-recent:hover,
+.category-nav .view-alphabetically:hover {
   background-color: rgba(255, 255, 255, 0.5);
   border-top: 1px solid #DDDDE3;
   border-right: 1px solid #DDDDE3;
   border-left: 1px solid #DDDDE3;
+  color: #242249;
 }
 
-.category-nav li a {
+.category-nav .expand-all:hover {
+  color: #242249;
+}
+
+.category-nav .view-by-category,
+.category-nav .view-most-recent,
+.category-nav .view-alphabetically {
   text-transform: uppercase;
 }
 
@@ -81,8 +94,11 @@ header.page {
   display: none;
 }
 
-.category-list {
-  position: relative;
+/* View by category */
+
+/* Preview category dynamically added through JS */
+.category-list.preview .pattern-card.toggle-view {
+  display: none;
 }
 
 /* Category heading */
@@ -119,7 +135,7 @@ header.page {
   border: 1px solid #DDDDE3;
   border-radius: 5px;
   color: #F6776C;
-  font-family: 'AcuminPro-Semibold', sans-serif;
+  font-family: 'acumin-pro', sans-serif;
   font-weight: 600;
   display: none;
   padding: 0.5rem;
@@ -207,7 +223,7 @@ header.page {
 
 .pattern-card-title a {
   color: #242249;
-  font-family: 'AcuminPro-Semibold', sans-serif;
+  font-family: 'acumin-pro', sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 27px;
