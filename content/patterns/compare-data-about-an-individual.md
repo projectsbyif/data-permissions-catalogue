@@ -1,6 +1,6 @@
 ---
 title: Compare data about an individual
-category: Explaining automated decisions
+category: Understanding automated decisions
 archived: false
 future_pattern: true
 

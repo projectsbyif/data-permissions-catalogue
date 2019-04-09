@@ -1,6 +1,6 @@
 ---
 title: Security codes
-category: Security checks
+category: Doing security checks
 archived: false
 archive_reason:
 future_pattern: false

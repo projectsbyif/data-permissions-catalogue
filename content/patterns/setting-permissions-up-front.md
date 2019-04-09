@@ -19,6 +19,9 @@ examples:
     description: before installing an app, a dialogue lays out the types of data and the phone features the app can access
   - title: Adding mobile device management (MDM) in MacOS
     description: When adding a Mobile Device Management (MDM) Profile in macOS the permissions necessary for performing remote management are presented up-front. Setting permissions up-front makes sense in this case as it’s not possible to seek consent when trying to remotely wipe a laptop which is lost or stolen.
+
+date: 2019-04-08T16:43:44+01:00
+lastmod: 2019-04-08
 ---
 
 Users are asked to set their permissions before they access or install a service. For example, when installing a messaging app the user might be asked to give access to their media files, their contacts or wifi connection information.

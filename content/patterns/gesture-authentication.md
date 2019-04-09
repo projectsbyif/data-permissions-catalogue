@@ -1,7 +1,7 @@
 ---
 title: Gesture authentication
 
-category: Signing in
+category: Signing in to a service
 
 images:
   - url: /images/gesture-matching.svg

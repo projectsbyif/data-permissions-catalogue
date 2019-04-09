@@ -1,7 +1,7 @@
 ---
 title: Detecting automation
 
-category: Signing in
+category: Signing in to a service
 
 images:
 - url: /images/automation-detection.svg

@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Access through another service
 
-category: Signing in
+category: Signing in to a service
 
 images:
   - url: /images/access-through-secondary-means.svg

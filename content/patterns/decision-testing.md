@@ -1,7 +1,7 @@
 ---
 title: Decision testing
 
-category: Explaining automated decisions
+category: Understanding automated decisions
 
 images:
 - url: /images/decision-testing.svg

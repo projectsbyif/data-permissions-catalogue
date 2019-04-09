@@ -20,8 +20,5 @@ examples:
    description: current European Union legislation requires users to opt-in to cookies being stored on devices.
  - title: UK organ donations register
    url: https://www.organdonation.nhs.uk/
-
-date: 2019-04-08T16:43:44+01:00
-lastmod: 2019-04-08
 ---
 For data to be accessed the user has to give explicit permission. The choice to give consent must be clear and given freely. If a user declines a request for access, this doesn't prevent them from using the service.

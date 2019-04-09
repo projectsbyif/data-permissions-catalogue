@@ -1,6 +1,6 @@
 ---
 title: Counterfactual explanations
-category: Explaining automated decisions
+category: Understanding automated decisions
 archived: false
 future_pattern: true
 

@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Unusual activity check
 
-category: Security checks
+category: Doing security checks
 
 images:
   - url: /images/behavioural-patterns.svg

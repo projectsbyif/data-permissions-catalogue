@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Authentication by secret answer
 
-category: Signing in
+category: Signing in to a service
 
 advantages:
  - The user can choose information that’s easy for them to remember

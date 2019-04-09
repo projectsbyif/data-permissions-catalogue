@@ -1,7 +1,7 @@
 ---
 title: Multi-factor authentication using text message
 
-category: Signing in
+category: Signing in to a service
 
 images:
   - url: /images/multi-factor-with-text-message.svg

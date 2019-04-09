@@ -1,7 +1,7 @@
 ---
 title: Reveal input data
 
-category: Explaining automated decisions
+category: Understanding automated decisions
 
 archived: false
 

@@ -1,7 +1,7 @@
 ---
 title: Upcoming automated decision notice
 
-category: Explaining automated decisions
+category: Understanding automated decisions
 
 images:
 - url: /images/future-decision-notice.svg
