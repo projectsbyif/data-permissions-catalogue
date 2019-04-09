@@ -14,9 +14,6 @@
       <div class="small-12 large-9 cell">
         <h2>{{ .name }} <span>{{ len $patterns }}</span></h2>
       </div>
-      <div class="see-more-button-container small-12 large-3 cell">
-        <a class="see-more-button" href="#">See more</a>
-      </div>
     </div>
     <div class="grid-x grid-padding-x pattern-card-list">
       {{ range $index, $pattern := $patterns }}
@@ -44,8 +41,10 @@
       </div>
       {{ end }}
     </div>
-
+    <div class="see-more-button-container">
+      <hr>
+      <a class="see-more-button" href="#">Expand category</a>
+    </div>
   </div>
-  <hr>
 {{ end }}
 </section>

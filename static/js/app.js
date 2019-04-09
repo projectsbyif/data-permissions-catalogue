@@ -54,7 +54,7 @@ $('.category-list').each(function(index, category) {
   let seeMoreButton = $(category).find('.see-more-button');
 
   if (patternsList.length > 3) {
-    $(seeMoreButton).show()
+    $(seeMoreButton).css('display', 'inline-block')
   }
 })
 
@@ -66,15 +66,15 @@ $('.category-list .pattern-card-list').each(function(index, category) {
 
 // Show/hide extra patterns on button click
 // TODO: only attach click event to category headings with more than 3 patterns
-$('.category-view .category-heading').click(function(e){
+$('.category-view .see-more-button').click(function(e){
   e.preventDefault()
-  const categoryHeading = this;
+  const seeMoreButton = this;
 
   const patternsList = $(this).parents('.category-list')
     .find('.pattern-card')
 
   togglePatternsListView(patternsList)
-  toggleHeadingActiveState(categoryHeading)
+  toggleHeadingActiveState(this)
 })
 
 function togglePatternsListView(patternsList) {
@@ -87,19 +87,15 @@ function togglePatternsListView(patternsList) {
   })
 }
 
-function toggleHeadingActiveState(categoryHeading) {
-  // Add active state to header
-  $(categoryHeading).toggleClass('active');
-
-  // Change text in seeMoreButton
-  const seeMoreButton = $(categoryHeading).parents('.category-list').find('.see-more-button');
-
-  let isCategoryExpanded = seeMoreButton.html().toLowerCase() == 'see more'
+function toggleHeadingActiveState(seeMoreButton) {
+  let isCategoryExpanded = $(seeMoreButton).html().toLowerCase() == 'expand category'
 
   if (isCategoryExpanded) {
-    seeMoreButton.html('See less')
+    $(seeMoreButton).html('Collapse category')
+    $(seeMoreButton).addClass('active')
   } else {
-    seeMoreButton.html('See more')
+    $(seeMoreButton).html('Expand category')
+    $(seeMoreButton).removeClass('active')
     $('.expand-all').removeClass('active')
   }
 }

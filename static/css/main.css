@@ -1,6 +1,11 @@
 body {
   color: #242249;
-  font-family: 'halyard-display', sans-serif;
+  background-color: white;
+  font-family: 'AcuminPro', sans-serif;
+}
+
+body.page {
+  background-color: #F7F7F7;
 }
 
 main {
@@ -9,14 +14,18 @@ main {
   z-index: 10;
 }
 
+main.page {
+  background-color: #F7F7F7;
+}
+
 h1, h2, h3 {
-  font-family: 'halyard-display', sans-serif;
+  font-family: 'AcuminPro-Semibold', sans-serif;
 }
 
 h1 {
-  font-size: 4.5rem;
-  line-height: 4.4rem;
-  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  font-weight: 600;
 }
 
 ul {
@@ -66,11 +75,15 @@ h2#content {
 /* nav */
 
 nav {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0);
   padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  /* position: sticky; */
+  /* top: 0; */
+  /* z-index: 10; */
+}
+
+nav.page {
+  background-color: #F7F7F7;
 }
 
 nav img {
