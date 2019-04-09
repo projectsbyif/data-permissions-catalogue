@@ -82,11 +82,14 @@ header.page {
   background-color: white;
 }
 
-.category-view .category-list,
 .most-recent-view,
 .alphabetical-view {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.category-list:first-of-type {
+  padding-top: 2.5rem;
 }
 
 .most-recent-view,
@@ -176,37 +179,28 @@ header.page {
 .pattern-card-image {
   border-bottom: 0;
   height: 300px;
-  padding: 1rem;
+  padding: 0.5rem;
+  position: relative;
 }
 
 /* TODO - figure out what happens if there's more than one label on at once. */
 
-.pattern-card-title .archived,
-.pattern-card-title .future-pattern,
-.pattern-card-title .new-pattern {
-  display: inline-block;
+.pattern-card-image .tags {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+
+.pattern-card-image .archived,
+.pattern-card-image .future-pattern,
+.pattern-card-image .new-pattern {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 2px;
   font-size: 1rem;
   font-weight: 500;
-  margin-left: 0.75rem;
-  padding: 0.1rem 0;
+  padding: 0.1rem 0.5rem;
   text-align: center;
   text-transform: uppercase;
-}
-
-.pattern-card-title .archived {
-  background-color:#637578;
-  color: white;
-  width: 150px;
-}
-
-.pattern-card-title .future-pattern {
-  border: 1px solid #979797;
-  width: 175px;
-}
-
-.pattern-card-title .new-pattern {
-  border: 1px solid #979797;
-  width: 60px;
 }
 
 .pattern-card-title {
@@ -231,18 +225,18 @@ header.page {
 
 /* Category List Colours */
 
-.pattern-card.sharing-data:hover {
+.pattern-card.giving-and-removing-consent:hover {
   box-shadow: 0px 0px 10px 10px rgb(114,199,255, 0.2);
 }
 
-.pattern-card.sharing-data .pattern-card-image {
+.pattern-card.giving-and-removing-consent .pattern-card-image{
   background-color: #72C7FF;
 }
 
-.pattern-card.logging-in:hover {
+.pattern-card.sharing-data:hover{
   box-shadow: 0px 0px 10px 10px rgb(255,170,114, 0.2);
 }
 
-.pattern-card.logging-in .pattern-card-image {
+.pattern-card.sharing-data .pattern-card-image {
   background-color: #FFAA72;
 }

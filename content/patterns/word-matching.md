@@ -7,7 +7,7 @@ archived: true
 
 archive_reason: We’ve decided to archive this pattern because we can’t find an example of it being used in a service.
 
-category: Verifying someone's identity
+category: Security checks
 
 images:
   - url: /images/word-matching.svg

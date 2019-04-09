@@ -1,6 +1,6 @@
 ---
 title: Video verification
-category: Verifying someone's identity
+category: Security checks
 archived: false
 future_pattern: false
 

@@ -1,6 +1,6 @@
 ---
 title: Security codes
-category: Verifying someone's identity
+category: Security checks
 archived: false
 archive_reason:
 future_pattern: false

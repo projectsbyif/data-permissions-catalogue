@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Unusual activity check
 
-category: Verifying someone's identity
+category: Security checks
 
 images:
   - url: /images/behavioural-patterns.svg
