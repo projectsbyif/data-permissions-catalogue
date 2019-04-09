@@ -4,6 +4,7 @@ illustration_version: 1
 title: Word matching
 
 archived: true
+weight: 10
 
 archive_reason: We’ve decided to archive this pattern because we can’t find an example of it being used in a service.
 

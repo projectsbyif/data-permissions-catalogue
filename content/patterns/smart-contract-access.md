@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Smart contract access
-
+weight: 1
 category: Control access
 
 images:

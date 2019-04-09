@@ -2,7 +2,7 @@
 title: Recovery codes
 
 category: Signing in to a service
-
+weight: 1
 images:
   - url: /images/recovery-codes.svg
 

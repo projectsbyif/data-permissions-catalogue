@@ -3,7 +3,7 @@ title: Compare decisions
 category: Understanding automated decisions
 archived: false
 future_pattern: true
-
+weight: 1
 advantages:
  - Users can see if a result is unusual and flag if something doesn’t seem right
  - Users can check and decide whether they think the result is fair

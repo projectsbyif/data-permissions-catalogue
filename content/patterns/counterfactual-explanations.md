@@ -3,7 +3,7 @@ title: Counterfactual explanations
 category: Understanding automated decisions
 archived: false
 future_pattern: true
-
+weight: 1
 advantages:
  - User can quickly understand which factors need to change  to reach the result they want
  - They can see the boundaries of how automated systems make decisions

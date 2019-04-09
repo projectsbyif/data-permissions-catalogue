@@ -6,6 +6,7 @@ title: Terms and conditions
 category: Giving and removing consent
 
 archived: true
+weight: 10
 
 images:
   - url: /images/terms-and-conditions.svg

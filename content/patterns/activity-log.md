@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Activity log
-
+weight: 1
 category: Control access
 
 images:

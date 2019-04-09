@@ -2,7 +2,7 @@
 title: Data licences
 
 category: Permission and consent
-
+weight: 1
 archived: false
 
 future_pattern: true

@@ -2,7 +2,7 @@
 title: Reveal input data
 
 category: Understanding automated decisions
-
+weight: 1
 archived: false
 
 future_pattern: false

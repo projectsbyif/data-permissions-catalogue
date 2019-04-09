@@ -2,7 +2,7 @@
 title: Biometric authentication
 
 category: Signing in to a service
-
+weight: 1
 images:
   - url: /images/physical-biometrics.svg
 

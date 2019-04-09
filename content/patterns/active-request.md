@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Active request
-
+weight: 1
 category: Permission and consent
 
 images:

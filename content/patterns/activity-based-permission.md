@@ -2,7 +2,7 @@
 title: Activity-based permission
 
 category: Control access
-
+weight: 1
 images:
 - url: /images/activity-based-permission.svg
 

@@ -3,7 +3,7 @@ title: Video verification
 category: Doing security checks
 archived: false
 future_pattern: false
-
+weight: 1
 advantages:
  - It’s a low friction, fast and efficient way for users to verify their identity
  - It’s a more effective way of checking users identity because it’s harder to steal or covertly capture the right type video needed to verify a match

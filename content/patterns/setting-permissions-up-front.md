@@ -2,7 +2,7 @@
 title: Setting permissions up-front
 
 category: Giving and removing consent
-
+weight: 1
 images:
   - url: /images/up-front-consent.svg
 

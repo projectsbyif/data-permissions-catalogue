@@ -2,7 +2,7 @@
 title: De-identifying personal data
 
 category: Sharing data
-
+weight: 1
 images:
   - url: /images/pseudo-anonymous-data.svg
 

@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Implied consent
-
+weight: 10
 archived: true
 
 category: Giving and removing consent

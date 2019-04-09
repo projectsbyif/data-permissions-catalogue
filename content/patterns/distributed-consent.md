@@ -2,7 +2,7 @@
 title: Distributed consent
 
 category: Sharing data
-
+weight: 1
 images:
   - url: /images/key-ceremony.svg
 

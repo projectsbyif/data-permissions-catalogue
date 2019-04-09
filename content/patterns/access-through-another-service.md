@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Access through another service
-
+weight: 1
 category: Signing in to a service
 
 images:

@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Geofencing
-
+weight: 1
 category: Sharing data
 
 images:

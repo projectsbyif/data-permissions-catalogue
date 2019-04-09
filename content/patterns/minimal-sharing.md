@@ -2,7 +2,7 @@
 title: Minimal sharing
 
 category: Sharing data
-
+weight: 1
 images:
   - url: /images/zero-knowledge-sharing.svg
 

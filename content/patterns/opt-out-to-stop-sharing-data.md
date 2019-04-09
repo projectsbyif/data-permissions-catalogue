@@ -4,7 +4,7 @@ illustration_version: 1
 title: Opt-out to stop sharing data
 
 category: Giving and removing consent
-
+weight: 1
 images:
   - url: /images/opt-out-to-remove-consent.svg
 

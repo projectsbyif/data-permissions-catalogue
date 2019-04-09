@@ -2,7 +2,7 @@
 title: Multi-factor authentication using an object
 
 category: Signing in to a service
-
+weight: 1
 images:
   - url: /images/multi-factor-with-object.svg
 

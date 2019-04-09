@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Inactivity checking
-
+weight: 1
 category: Signing in to a service
 
 images:

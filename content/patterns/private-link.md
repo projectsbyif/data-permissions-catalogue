@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Private link
-
+weight: 1
 category: Sharing data
 
 advantages:

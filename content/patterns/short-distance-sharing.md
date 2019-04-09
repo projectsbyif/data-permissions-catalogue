@@ -2,7 +2,7 @@
 title: Short-distance sharing
 
 category: Sharing data
-
+weight: 1
 images:
  - url: /images/proximity-sharing.svg
 

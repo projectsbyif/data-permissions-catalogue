@@ -3,7 +3,7 @@ title: Compare data about an individual
 category: Understanding automated decisions
 archived: false
 future_pattern: true
-
+weight: 1
 
 advantages:
  - It could help users spot when automated decisions are based on less accurate predictions

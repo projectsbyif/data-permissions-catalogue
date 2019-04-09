@@ -2,7 +2,7 @@
 title: Behavioural authentication
 
 category: Doing security checks
-
+weight: 1
 images:
   - url: /images/behavioural-biometrics.svg
 

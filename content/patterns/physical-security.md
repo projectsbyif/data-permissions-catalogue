@@ -2,7 +2,7 @@
 title: Physical security
 
 category: Control access
-
+weight: 1
 images:
   - url: /images/physical-security.svg
 

@@ -2,7 +2,7 @@
 title: Just-in-time consent
 
 category: Giving and removing consent
-
+weight: 1
 images:
   - url: /images/just-in-time-consent.svg
 

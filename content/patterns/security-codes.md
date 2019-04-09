@@ -5,7 +5,7 @@ archived: false
 archive_reason:
 future_pattern: false
 future_pattern_reason:
-
+weight: 1
 advantages:
  - Users are able to verify the security of the conversations they have by checking the security codes are unchanged
  - Individuals don’t have equal risk profiles, checking security codes is an added burden but not necessarily one everyone would be concerned over.

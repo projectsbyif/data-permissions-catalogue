@@ -5,7 +5,7 @@ archived: false
 future_pattern: false
 images:
   - url: /images/opt-in-to-give-consent.svg
-
+weight: 1
 alt: An organ donor card in front a form for joining the Organ Donor's Register.
 advantages:
  - The user understands why the data is needed and what’s going to be used for, as long as the explanation is included in the request

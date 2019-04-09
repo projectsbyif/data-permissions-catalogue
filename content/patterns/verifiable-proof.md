@@ -2,7 +2,7 @@
 title: Verifiable proof
 
 category: Doing security checks
-
+weight: 1
 images:
   - url: /images/verifiable-proof-1.svg
   - url: /images/verifiable-proof-2.svg

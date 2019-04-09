@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Delegate permissions
-
+weight: 1
 category: Giving and removing consent
 
 images:

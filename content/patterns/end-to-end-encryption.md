@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: End-to-end encryption
-
+weight: 1
 category: Control access
 
 images:

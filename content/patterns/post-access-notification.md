@@ -2,7 +2,7 @@
 title: Post-access notification
 
 category: Control access
-
+weight: 1
 images:
   - url: /images/post-access-notification.svg
 
