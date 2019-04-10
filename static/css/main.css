@@ -24,8 +24,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
+  font-size: 3rem;
+  line-height: 3rem;
   font-weight: 600;
 }
 
@@ -178,4 +178,13 @@ footer li:first-of-type {
 footer li a {
   color: white;
   font-size: 1.15rem;
+}
+
+/* Media Queries */
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
 }

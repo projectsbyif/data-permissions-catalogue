@@ -5,22 +5,29 @@ header.page {
 }
 
 .hompage-intro h1 {
-  margin: 3rem 0 5rem 0;
+  margin: 3rem 0 3rem 0;
 }
 
 .hompage-intro p {
   color: #62617C;
   font-family: 'acumin-pro', sans-serif;
   font-weight: 500;
-  margin: 0 0 5rem 0;
-  font-size: 1.5rem;
-  line-height: 1.6rem;
+  margin: 0 0 3rem 0;
+  font-size: 1.25rem;
+  line-height: 1.3rem;
 }
 
 /* Category Nav */
 
 .grid-container.nav {
   border-bottom: 1px solid #DDDDE3;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.grid-container.nav::-webkit-scrollbar {
+  display: none;
 }
 
 .category-nav {
@@ -28,16 +35,26 @@ header.page {
 }
 
 .category-nav li a {
-  display: inline-block;
-  color: #898993;
-  font-family: 'acumin-pro', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0.5rem;
-  padding: 1rem 1rem;
   border: 1px solid transparent;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  color: #898993;
+  display: inline-block;
+  font-family: 'acumin-pro', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0.25rem;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  width: 140px;
+}
+
+.category-nav .expand-all {
+  display: none;
+}
+
+.category-nav .expand-all:hover {
+  color: #242249;
 }
 
 .category-nav .view-by-category.active,
@@ -60,18 +77,10 @@ header.page {
   color: #242249;
 }
 
-.category-nav .expand-all:hover {
-  color: #242249;
-}
-
 .category-nav .view-by-category,
 .category-nav .view-most-recent,
 .category-nav .view-alphabetically {
   text-transform: uppercase;
-}
-
-.category-nav .push {
-  margin-left: auto;
 }
 
 /* Homepage sections */
@@ -111,7 +120,7 @@ header.page {
 }
 
 .category-heading h2 {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   font-weight: 600;
 }
 
@@ -197,7 +206,7 @@ header.page {
 
 .pattern-card-title {
   background-color: white;
-  border: 1px solid #DDDDE3;
+  border-top: 1px solid #DDDDE3;
   height: 75px;
   padding: 0.5rem 0.5rem;
 }
@@ -210,7 +219,7 @@ header.page {
 .pattern-card-title a {
   color: #242249;
   font-family: 'acumin-pro', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   line-height: 27px;
 }
@@ -231,4 +240,51 @@ header.page {
 
 .pattern-card.sharing-data .pattern-card-image {
   background-color: #FFAA72;
+}
+
+/* Media queries */
+
+@media (min-width: 1000px) {
+  /* Header */
+  .hompage-intro h1 {
+    margin: 3rem 0 5rem 0;
+  }
+
+  .hompage-intro p {
+    margin: 0 0 5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    width: auto;
+  }
+
+  /* Nav */
+  .grid-container.nav { {
+    overflow-x: hidden;
+  }
+
+  .category-nav li a {
+    margin: 0 0.5rem;
+    padding: 1rem 1rem;
+    width: auto;
+  }
+
+  .category-nav .expand-all {
+    display: inline-block;
+  }
+
+  .category-nav .push {
+    margin-left: auto;
+  }
+
+  /* Heading */
+
+  .category-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  /* Pattern card */
+
+  .pattern-card-title a {
+    font-size: 1.4rem;
+  }
 }
