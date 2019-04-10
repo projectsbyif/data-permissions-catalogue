@@ -108,9 +108,10 @@ header.page {
 
 /* View by category */
 
-/* Preview category dynamically added through JS */
-.category-list.preview .pattern-card.toggle-view {
-  display: none;
+.hidden-pattern-cards {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 
 /* Category heading */

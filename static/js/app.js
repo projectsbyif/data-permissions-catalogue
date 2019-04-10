@@ -42,15 +42,14 @@ $('.category-nav a').click(function(e) {
 // Would need to think about accessibility, can't do it with CSS content as
 // it isn't accessible to a screen reader.
 function toggleExpandAllCategories(expandAllButton) {
-  $('.category-list').each(function(index, category){
-    $(category).removeClass('preview')
-  })
   $('.see-more-button').each(function(index, button) {
     isCategoryCollapsed = $(button).html() == expandCategory
 
     if (isCategoryCollapsed) {
       $(button).html(collapseCategory)
     }
+
+    expandCollapseCategories(button, true)
   })
 }
 
@@ -58,8 +57,6 @@ function toggleExpandAllCategories(expandAllButton) {
 
 // Show see more button on load if more than 3 patterns in category
 $('.category-list').each(function(index, category) {
-  // Hide extra patterns on page load through CSS
-  $(this).addClass('preview')
   const patternsList = Array.from($(category).find('.pattern-card'))
   const seeMoreButton = $(category).find('.see-more-button');
 
@@ -72,9 +69,23 @@ $('.category-list').each(function(index, category) {
 $('.category-view .see-more-button').click(function(e){
   e.preventDefault()
   const seeMoreButton = $(this);
-  seeMoreButton.parents('.category-list').toggleClass('preview')
+
+  expandCollapseCategories(this, false);
+
   toggleSeeMoreButton(seeMoreButton)
 })
+
+function expandCollapseCategories (seeMoreButton, isExpandAll) {
+  const hiddenPatternCards = seeMoreButton.parentElement.previousElementSibling;
+  const hiddenPatternCardsStyle = window.getComputedStyle(hiddenPatternCards)
+  let hiddenPatternCardsHeight = hiddenPatternCardsStyle.getPropertyValue('max-height');
+
+  if (hiddenPatternCardsHeight !== "0px" && !isExpandAll){
+    hiddenPatternCards.style.maxHeight = 0;
+  } else {
+    hiddenPatternCards.style.maxHeight = hiddenPatternCards.scrollHeight + "px";
+  }
+}
 
 function toggleSeeMoreButton(seeMoreButton) {
   isCategoryExpanded = $(seeMoreButton).html() == expandCategory

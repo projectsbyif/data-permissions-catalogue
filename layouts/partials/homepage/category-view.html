@@ -9,20 +9,34 @@
 {{ $patterns := where $pages ".Params.category" "=" .name }}
 
   <div class="grid-container category-list {{ urlize .name }}">
-    <div class="category-heading grid-x grid-padding-x">
-      <div class="small-12 large-9 cell">
-        <h2>{{ .name }} <span>{{ len $patterns }}</span></h2>
+    <div class="preview-box">
+      <div class="category-heading grid-x grid-padding-x">
+        <div class="small-12 large-9 cell">
+          <h2>{{ .name }} <span>{{ len $patterns }}</span></h2>
+        </div>
+      </div>
+      <div class="grid-x grid-padding-x pattern-card-list">
+        {{ range $index, $pattern := $patterns }}
+        {{ if le $index 2 }}
+        {{ partial "homepage/pattern-card.html" (dict "context" . "index" $index "pattern" $pattern )}}
+        {{ end }}
+        {{ end }}
       </div>
     </div>
-    <div class="grid-x grid-padding-x pattern-card-list">
-      {{ range $index, $pattern := $patterns }}
-      {{ partial "homepage/pattern-card.html" (dict "context" . "index" $index "pattern" $pattern )}}
-      {{ end }}
+    <div class="hidden-pattern-cards">
+      <div class="grid-x grid-padding-x pattern-card-list">
+        {{ range $index, $pattern := $patterns }}
+        {{ if gt $index 2 }}
+        {{ partial "homepage/pattern-card.html" (dict "context" . "index" $index "pattern" $pattern )}}
+        {{ end }}
+        {{ end }}
+      </div>
     </div>
     <div class="see-more-button-container">
       <hr>
       <a class="see-more-button" href="#">Expand category ▼</a>
     </div>
   </div>
+
 {{ end }}
 </section>
