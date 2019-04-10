@@ -2,6 +2,8 @@ body {
   color: #242249;
   background-color: white;
   font-family: 'acumin-pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body.page {

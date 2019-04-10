@@ -2,13 +2,16 @@
 <section class="homepage-section alphabetical-view">
   <div class="grid-container">
     <div class="category-heading grid-x grid-padding-x">
-      <div class="small-12 large-9 cell">
-        <h2>List of Patterns</h2>
-      </div>
-    </div>
-    <div class="grid-x grid-padding-x pattern-card-list">
       {{ range $patterns.ByTitle }}
+      {{ $firstLetter := substr .Params.title 0 1 }}
+      {{ $currentLetter := $.Scratch.Get "currentLetter" }}
+      {{ if ne $firstLetter $currentLetter }}
+      <div class="small-12 large-12 cell">
+        <h2>{{ $firstLetter }}</h2>
+      </div>
+      {{ end }}
       {{ partial "homepage/pattern-card.html" (dict "pattern" . )}}
+      {{ $.Scratch.Set "currentLetter" $firstLetter }}
       {{ end }}
     </div>
   </div>
