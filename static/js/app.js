@@ -31,16 +31,13 @@ $('.category-nav a').click(function(e) {
       $('.view-by-category').addClass('active')
       toggleExpandAllCategories(this)
     default:
-      $('.category-list').show();
+      $('.category-section').show();
       $('view-by-category').addClass('active')
       $('.expand-all').show()
       break;
   }
 })
 
-// TODO - find a better way to do this, ideally with CSS classes.
-// Would need to think about accessibility, can't do it with CSS content as
-// it isn't accessible to a screen reader.
 function toggleExpandAllCategories(expandAllButton) {
   $('.see-more-button').each(function(index, button) {
     isCategoryCollapsed = $(button).html() == expandCategory
@@ -49,42 +46,51 @@ function toggleExpandAllCategories(expandAllButton) {
       $(button).html(collapseCategory)
     }
 
-    expandCollapseCategories(button, true)
+    toggleCategoryView(button)
   })
 }
 
 /* Pattern category lists on homepage */
 
 // Show see more button on load if more than 3 patterns in category
-$('.category-list').each(function(index, category) {
+$('.category-section').each(function(index, category) {
   const patternsList = Array.from($(category).find('.pattern-card'))
   const seeMoreButton = $(category).find('.see-more-button');
-
   if (patternsList.length > 3) {
+    $(category).addClass('preview')
     $(seeMoreButton).css('display', 'inline-block')
   }
 })
 
 // Show/hide extra patterns on button click
 $('.category-view .see-more-button').click(function(e){
-  e.preventDefault()
   const seeMoreButton = $(this);
-
-  expandCollapseCategories(this, false);
-
+  toggleCategoryView(seeMoreButton);
   toggleSeeMoreButton(seeMoreButton)
 })
 
-function expandCollapseCategories (seeMoreButton, isExpandAll) {
-  const hiddenPatternCards = seeMoreButton.parentElement.previousElementSibling;
-  const hiddenPatternCardsStyle = window.getComputedStyle(hiddenPatternCards)
-  let hiddenPatternCardsHeight = hiddenPatternCardsStyle.getPropertyValue('max-height');
+function toggleCategoryView(button) {
+  const parentCategory = button.parents('.category-section');
+  const patternCards = Array.from(parentCategory.find('.pattern-card-container'));
 
-  if (hiddenPatternCardsHeight !== "0px" && !isExpandAll){
-    hiddenPatternCards.style.maxHeight = 0;
-  } else {
-    hiddenPatternCards.style.maxHeight = hiddenPatternCards.scrollHeight + "px";
-  }
+  const hiddenPatternCards = patternCards.filter(function(card) {
+    const currentDisplay = $(card).css('display');
+    if (currentDisplay == "none") {
+      return card;
+    }
+  });
+
+  $(hiddenPatternCards).each(function(index, card) {
+    $(card).css('opacity', '0')
+  })
+
+  $(parentCategory).toggleClass('preview')
+
+  $(hiddenPatternCards).each(function(index, card) {
+    window.setTimeout(function(){
+      $(card).css('opacity', '1');
+    }, 0)
+  })
 }
 
 function toggleSeeMoreButton(seeMoreButton) {
