@@ -21,10 +21,13 @@ limitations:
  - Unless there’s secondary authentication after the code is scanned, anyone could access information
  - The user needs a  level of digital literacy to be able to scan a code with their device
  - Not all phones come with this capability
+ - Some barcode scanner apps might require huge amounts of unnecessary permissions
 
 examples:
   - title: QR codes on energy bills
     url: https://www.gov.uk/government/news/qr-codes-on-energy-bills-put-consumers-in-control
+  - title: Share access to a Wi-Fi network with a QR code without revealing the password
+
 ---
 
 Sending a physical letter to users with a printed code that they can scan to access information. For example, an energy provider might include a code on their paper bills, which customers can scan to find out more information.

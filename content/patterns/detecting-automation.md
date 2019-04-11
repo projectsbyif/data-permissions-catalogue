@@ -15,7 +15,7 @@ advantages:
 limitations:
  - Computers are able to complete some challenges due to progress in machine learning or the feasibility of building click-farms
  - People using assistive technologies may be prevented from completing challenges
- - Large amounts of data are collected in order to build the engine for detecting  automated access
+ - Large amounts of data are collected in order to build the engine for detecting automated access
 
 
 examples:
@@ -23,4 +23,4 @@ examples:
     url: https://www.google.com/recaptcha/intro/
 ---
 
-Setting challenges that are quick for users to complete but hard for computers, to prevent automated access. For example, when filling in a survey a user has to complete a challenge before submitting their answers, like reading distorted text or identifying objects in a photo.
+Setting challenges that are quick for users to complete but hard to automate. This prevents automated access. For example, when filling in a survey a user has to complete a challenge before submitting their answers, like reading distorted text or identifying objects in a photo.

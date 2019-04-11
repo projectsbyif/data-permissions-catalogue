@@ -13,10 +13,9 @@ advantages:
  - Can be used as a second factor to a password to provide stronger authentication
 
 limitations:
- - Apps might not work for people that have disabled biometric authentication on their device
- - Can raise accessibility issues for some users
- - Users may not understand how sensitive biometric data is used and if it’s shared
+ - Users may not understand how biometric data is used and if it’s shared
  - It might not be clear to users where the biometric data is stored and how it’s protected
+ - Apps might not work for people that have disabled biometric authentication on their device
 
 
 examples:
@@ -31,4 +30,4 @@ examples:
     description: uses voice recognition when a person is accessing telephone banking
 ---
 
-A person’s unique physical features like their fingerprint, iris, face or voice is used to authorise access to data. For example, a person can use their fingerprint to authorise payments with Apple Pay.
+A person’s unique physical features like their fingerprint, iris, face or voice is used to authorise access. For example, a person can use their fingerprint to authorise payments with Apple Pay.

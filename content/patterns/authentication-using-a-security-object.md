@@ -1,5 +1,5 @@
 ---
-title: Multi-factor authentication using an object
+title: Authentication using a security object
 
 category: Signing in to a service
 weight: 1
@@ -21,5 +21,7 @@ examples:
     url: https://developers.yubico.com/FIDO2/
   - title: Yubikey
 ---
+
+Multi-factor authentication adds an extra layer of security to allow access to data. Passwords can be guessed or stolen, so requiring extra information increases the confidence that access to data should be allowed.
 
 In this type of multi-factor authentication, a user must present a physical security object before data access is permitted. For example, a user may be required to insert a USB security key into their laptop before they’re able to login.

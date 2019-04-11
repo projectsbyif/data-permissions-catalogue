@@ -1,5 +1,5 @@
 ---
-title: Activity-based permission
+title: Access based on context
 
 category: Control access
 weight: 1
@@ -13,17 +13,12 @@ advantages:
 
 limitations:
  - Matching sensor data to actual activity can be error prone
- - Can’t prove identity through activity
 
 examples:
   - title: Do Not Disturb Apple iOS
     url: https://support.apple.com/en-gb/HT208090
   - title: Smart Lock Android
     url: https://support.google.com/nexus/answer/6093922?hl=en-GB
-
-open-source:
-  - title: User activity
-    url: https://github.com/KrauseFx/user.activity
 
 ---
 
