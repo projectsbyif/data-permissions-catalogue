@@ -168,24 +168,19 @@ header.page {
 
 .pattern-card {
   cursor: pointer;
-  height: auto;
-  margin-bottom: 0.9rem;
   border: 1px solid #DDDDE3;
   border-radius: 5px;
-}
-
-.pattern-card:hover {
-  transform: scale(1.01);
+  height: 440px;
+  margin-bottom: 0.9rem;
+  /* width: calc(440px * 0.94); */
 }
 
 .pattern-card-image {
   border-bottom: 0;
-  height: 300px;
+  height: 340px;
   padding: 0.5rem;
   position: relative;
 }
-
-/* TODO - figure out what happens if there's more than one label on at once. */
 
 .pattern-card-image .tags {
   position: absolute;
@@ -208,7 +203,8 @@ header.page {
 .pattern-card-title {
   background-color: white;
   border-top: 1px solid #DDDDE3;
-  height: 75px;
+  box-sizing: border-box;
+  height: 98px;
   padding: 0.5rem 0.5rem;
 }
 

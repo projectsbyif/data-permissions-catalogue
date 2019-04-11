@@ -1,5 +1,5 @@
-<div class="large-4 small-12 cell">
-  <div onclick="window.location.assign('/patterns/{{ urlize .pattern.Params.title }}')" class="pattern-card {{ urlize .pattern.Params.category }}{{ if gt .index 2 }} toggle-view{{ end }}">
+<div class="large-4 medium-6 small-12 cell">
+  <div onclick="window.location.assign('/patterns/{{ urlize .pattern.Params.title }}')" class="pattern-card {{ urlize .pattern.Params.category }}">
     <div class="pattern-card-image">
       <div class="tags">
         {{ $dateAdded := .pattern.Params.Date }}

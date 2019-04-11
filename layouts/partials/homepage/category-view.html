@@ -7,7 +7,6 @@
 {{ range $categories.Params.list_of_categories }}
 
 {{ $patterns := where $pages ".Params.category" "=" .name }}
-
   <div class="grid-container category-list {{ urlize .name }}">
     <div class="preview-box">
       <div class="category-heading grid-x grid-padding-x">
@@ -37,6 +36,5 @@
       <a class="see-more-button" href="#">Expand category ▼</a>
     </div>
   </div>
-
 {{ end }}
 </section>

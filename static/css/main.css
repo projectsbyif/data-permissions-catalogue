@@ -185,6 +185,11 @@ footer li a {
 /* Media Queries */
 
 @media (min-width: 1000px) {
+  .grid-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
   h1 {
     font-size: 3.5rem;
     line-height: 3.5rem;
