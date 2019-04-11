@@ -12,7 +12,7 @@ body.page {
 
 main {
   background-color: white;
-  margin-bottom: 20rem;
+  margin-bottom: 22rem;
   z-index: 10;
 }
 
@@ -143,7 +143,7 @@ footer {
   background-color: #242249;
   color: white;
   bottom: 0;
-  height: 20rem;
+  height: 22rem;
   left: 0;
   padding: 2rem 0 5rem 0;
   position: fixed;
@@ -160,11 +160,47 @@ footer div.cell {
 }
 
 footer h2 {
+  color: #F6776C;
   font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+footer h3 {
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+  margin-bottom: 2rem;
 }
 
 footer p {
   font-size: 1.6rem;
+}
+
+footer .license {
+  color: rgb(189, 189, 200);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+footer .license span {
+  font-weight: 700;
+}
+
+footer .data-usage-statement {
+  color: rgb(189, 189, 200);
+}
+
+footer .get-in-touch p,
+footer .contribute p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+footer .get-in-touch a,
+footer .contribute a {
+  color: white;
 }
 
 footer ul {
@@ -173,13 +209,9 @@ footer ul {
   padding: 0;
 }
 
-footer li:first-of-type {
-  margin: 0 2rem 0 0;
-}
-
 footer li a {
   color: white;
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 
 /* Media Queries */
@@ -189,9 +221,13 @@ footer li a {
     padding-left: 3rem;
     padding-right: 3rem;
   }
-  
+
   h1 {
     font-size: 3.5rem;
     line-height: 3.5rem;
   }
+
+  /* Footer */
+
+
 }

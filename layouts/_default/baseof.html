@@ -6,7 +6,7 @@
     <main class="{{ .Type }}">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ partial "footer.html" }}
+    {{ partial "footer.html" . }}
 
     <script type="text/javascript" src="{{ "/js/jquery-3.3.1.min.js" | relURL }}"></script>
     <script type="text/javascript" src="{{ "/js/app.js" | relURL }}"></script>
