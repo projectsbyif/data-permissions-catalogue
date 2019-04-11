@@ -4,7 +4,7 @@ illustration_version: 1
 title: Implied consent
 weight: 10
 archived: true
-
+archive_reason: We discourage the use of this pattern in services, as in our view it does not help the user give informed consent.
 category: Giving and removing consent
 
 images:
