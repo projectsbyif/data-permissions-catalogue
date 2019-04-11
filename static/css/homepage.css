@@ -50,7 +50,11 @@ header.page {
 }
 
 .category-nav .expand-all {
+  border-radius: 3px;
+  border: 1px solid #DDDDE3;
   display: none;
+  margin-top: 5px;
+  padding: 0.5rem;
 }
 
 .category-nav .expand-all:hover {

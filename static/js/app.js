@@ -1,7 +1,12 @@
 /* Change view on homepage */
 
-const expandCategory = 'Expand category ▼'
-const collapseCategory = 'Collapse category ▲'
+let categoriesExpanded = 0
+// Number of expandable categories on the page.
+const numberOfCategories = $('.see-more-button').length;
+const expandAllText = 'Expand all categories ▼'
+const collapseAllText = 'Collapse all categories ▲'
+const expandCategoryText = 'Expand category ▼'
+const collapseCategoryText = 'Collapse category ▲'
 
 $('.category-nav a').click(function(e) {
   e.preventDefault()
@@ -29,26 +34,33 @@ $('.category-nav a').click(function(e) {
     case 'expand-all':
       $('.category-view').show()
       $('.view-by-category').addClass('active')
-      toggleExpandAllCategories()
+      toggleExpandAllCategories(this)
+      break
     default:
       $('.category-section').show();
       $('view-by-category').addClass('active')
       $('.expand-all').show()
-      break;
+      break
   }
 })
 
-function toggleExpandAllCategories() {
-  $('.see-more-button').each(function(index, button) {
-    console.log(button)
-    isCategoryCollapsed = $(button).html() == expandCategory
-
-    if (isCategoryCollapsed) {
-      $(button).html(collapseCategory)
+function toggleExpandAllCategories(button) {
+  const isExpandAll = $(button).html() == expandAllText
+  if (isExpandAll) {
+    $('.category-section').each(function(index, category) {
+      expandCategory(category)
+      $(category).find('.see-more-button').html(collapseCategoryText)
+    })
+    $(button).html(collapseAllText)
+    return
+  }
+  $('.category-section').each(function(index, category) {
+    if (!$(category).hasClass('preview')) {
+      collapseCategory(category)
+      $(category).find('.see-more-button').html(expandCategoryText)
     }
-
-    toggleCategoryView(button, true)
   })
+  $(button).html(expandAllText)
 }
 
 /* Pattern category lists on homepage */
@@ -66,14 +78,21 @@ $('.category-section').each(function(index, category) {
 // Show/hide extra patterns on button click
 $('.category-view .see-more-button').click(function(e){
   const seeMoreButton = $(this);
-  toggleCategoryView(seeMoreButton, false);
-  toggleSeeMoreButton(seeMoreButton)
+  const parentCategory = $(seeMoreButton).parents('.category-section');
+
+  if ($(parentCategory).hasClass('preview')) {
+    expandCategory(parentCategory)
+    $(seeMoreButton).html(collapseCategoryText)
+  } else {
+    collapseCategory(parentCategory)
+    $(seeMoreButton).html(expandCategoryText)
+  }
 })
 
-function toggleCategoryView(button, isExpandAll) {
-  const parentCategory = $(button).parents('.category-section');
-  const patternCards = Array.from(parentCategory.find('.pattern-card-container'));
+function expandCategory(category) {
+  const patternCards = Array.from($(category).find('.pattern-card-container'));
 
+  // Get list of hidden cards.
   const hiddenPatternCards = patternCards.filter(function(card) {
     const currentDisplay = $(card).css('display');
     if (currentDisplay == "none") {
@@ -81,31 +100,32 @@ function toggleCategoryView(button, isExpandAll) {
     }
   });
 
+  // Change hidden card opacity to 0
   $(hiddenPatternCards).each(function(index, card) {
     $(card).css('opacity', '0')
   })
 
-  if (isExpandAll) {
-    $(parentCategory).removeClass('preview')
-  } else {
-    $(parentCategory).toggleClass('preview')
-  }
+  // Set hidden card display to 'block'
+  $(category).removeClass('preview')
 
+  // Trigger opacity transition animation
   $(hiddenPatternCards).each(function(index, card) {
     window.setTimeout(function(){
       $(card).css('opacity', '1');
-    }, 0)
+    }, 100)
   })
+
+  categoriesExpanded++
+
+  if (categoriesExpanded === numberOfCategories) {
+    $('.expand-all').html(collapseAllText)
+  }
 }
 
-function toggleSeeMoreButton(seeMoreButton) {
-  isCategoryExpanded = $(seeMoreButton).html() == expandCategory
-
-  if (isCategoryExpanded) {
-    $(seeMoreButton).html(collapseCategory)
-  } else {
-    $(seeMoreButton).html(expandCategory)
-  }
+function collapseCategory(category) {
+  $(category).addClass('preview')
+  categoriesExpanded--
+  $('.expand-all').html(expandAllText)
 }
 
 /* Pattern page feedback form */
