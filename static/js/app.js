@@ -29,7 +29,7 @@ $('.category-nav a').click(function(e) {
     case 'expand-all':
       $('.category-view').show()
       $('.view-by-category').addClass('active')
-      toggleExpandAllCategories(this)
+      toggleExpandAllCategories()
     default:
       $('.category-section').show();
       $('view-by-category').addClass('active')
@@ -38,15 +38,16 @@ $('.category-nav a').click(function(e) {
   }
 })
 
-function toggleExpandAllCategories(expandAllButton) {
+function toggleExpandAllCategories() {
   $('.see-more-button').each(function(index, button) {
+    console.log(button)
     isCategoryCollapsed = $(button).html() == expandCategory
 
     if (isCategoryCollapsed) {
       $(button).html(collapseCategory)
     }
 
-    toggleCategoryView(button)
+    toggleCategoryView(button, true)
   })
 }
 
@@ -65,12 +66,12 @@ $('.category-section').each(function(index, category) {
 // Show/hide extra patterns on button click
 $('.category-view .see-more-button').click(function(e){
   const seeMoreButton = $(this);
-  toggleCategoryView(seeMoreButton);
+  toggleCategoryView(seeMoreButton, false);
   toggleSeeMoreButton(seeMoreButton)
 })
 
-function toggleCategoryView(button) {
-  const parentCategory = button.parents('.category-section');
+function toggleCategoryView(button, isExpandAll) {
+  const parentCategory = $(button).parents('.category-section');
   const patternCards = Array.from(parentCategory.find('.pattern-card-container'));
 
   const hiddenPatternCards = patternCards.filter(function(card) {
@@ -84,7 +85,11 @@ function toggleCategoryView(button) {
     $(card).css('opacity', '0')
   })
 
-  $(parentCategory).toggleClass('preview')
+  if (isExpandAll) {
+    $(parentCategory).removeClass('preview')
+  } else {
+    $(parentCategory).toggleClass('preview')
+  }
 
   $(hiddenPatternCards).each(function(index, card) {
     window.setTimeout(function(){
