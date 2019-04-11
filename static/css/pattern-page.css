@@ -105,9 +105,12 @@ main.patterns section li {
 
 .pattern-heading .share,
 .pattern-heading .print {
+  border-radius: 3px;
+  border: 1px solid #DDDDE3;
   color: #29283D;
+  font-size: 1rem;
   font-weight: 400;
-  text-transform: lowercase;
+  padding: 0.1rem 0.5rem;
 }
 
 .pattern-heading .share:hover,
@@ -119,7 +122,6 @@ main.patterns section li {
 
 .pattern-image-div {
   background-color: #EFEFEF;
-  border: 2px solid black;
   height: 400px;
 }
 
@@ -145,7 +147,6 @@ main.patterns section li {
 }
 
 /* Advantages & Limitations */
-
 .advantages li,
 .limitations li {
   font-size: 1.1rem;
@@ -156,6 +157,7 @@ main.patterns section li {
 .advantages li::before,
 .limitations li::before {
   content: "— ";
+  margin-left: -23px;
 }
 
 .advantages li:first-of-type, .limitations li:first-of-type {
@@ -291,7 +293,7 @@ main.patterns section li {
   /* Heading */
 
   .pattern-heading {
-    align-items: center;
+    align-items: end;
     flex-wrap: nowrap;
   }
 
