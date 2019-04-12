@@ -36,27 +36,33 @@ main.patterns section li {
 }
 
 .pattern-status .archived,
-.pattern-status .future-pattern {
-  display: inline-block;
+.pattern-status .future-pattern,
+.pattern-status .new-pattern {
+  border: 1px solid #DDDDE3;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #DDDDE3;
   color: #898993;
+  display: inline-block;
   font-size: 1.1rem;
+  line-height: 1.3;
   margin: 0;
+  padding: 0.5rem;
+  max-width: 60%;
 }
 
 .archived span,
-.future-pattern span {
+.future-pattern span,
+.pattern-status .new-pattern {
   display: inline-block;
-  font-weight: 500;
+  font-weight: 700;
   margin: 0 1rem 0 0;
-  padding: 0.1rem 0rem;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .archived span {
-  background-color:#637578;
-  color: white;
-  width: 175px
+  /* background-color:#637578; */
+  /* color: white; */
+  /* width: 175px */
 }
 
 .future-pattern span {
@@ -76,15 +82,6 @@ main.patterns section li {
   display: inline-block;
   font-size: 2.9rem;
   margin-bottom: 1rem;
-}
-
-.pattern-heading .new-pattern {
-  border: 1px solid #979797;
-  font-weight: 500;
-  margin-bottom: 0;
-  padding: 0 7px 2px 7px;
-  text-align: center;
-  text-transform: lowercase;
 }
 
 .pattern-heading-share {
@@ -169,7 +166,8 @@ main.patterns section li {
 .advantages li::before,
 .limitations li::before {
   content: "— ";
-  margin-left: -23px;
+  margin-left: -50px;
+  margin-right: 27px;
 }
 
 .advantages li:first-of-type, .limitations li:first-of-type {

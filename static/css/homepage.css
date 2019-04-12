@@ -4,6 +4,10 @@ header.page {
   background-color: #F7F7F7;
 }
 
+.homepage-intro {
+  text-align: center;
+}
+
 .homepage-intro h1 {
   margin: 3rem 0 3rem 0;
 }

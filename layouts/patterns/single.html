@@ -5,6 +5,10 @@
     <div class="large-offset-1 large-10 small-12 cell">
       <header>
         <div class="pattern-status">
+          {{ $dateAdded := .Params.Date }}
+          {{ if ge $dateAdded (now.AddDate 0 -1 0) }}
+          <p class="new-pattern">Just added ✨</p>
+          {{ end }}
           {{ if eq .Params.archived true }}
           <p class="archived">
             <span>Archived 🗄️</span>
@@ -18,10 +22,6 @@
         </div>
         <div class="pattern-heading">
           <h1 class="pattern-heading-title">{{ .Title }}</h1>
-          {{ $dateAdded := .Params.Date }}
-          {{ if ge $dateAdded (now.AddDate 0 -1 0) }}
-          <p class="new-pattern">Just added ✨</p>
-          {{ end }}
           <ul class="pattern-heading-share">
             <li><a class="print" href="#">Print  🖨 </a></li>
             <li class="share-li">
