@@ -29,7 +29,6 @@
                  href="https://twitter.com/intent/tweet?text={{ .Site.Params.twitterText }}&url={{ .Permalink }}&via={{ .Site.Params.twitterHandle }}"
               >Tweet 🐦</a>
             </li>
-
           </ul>
         </div>
       </header>
@@ -99,6 +98,11 @@
       {{ range .Params.examples }}
       <li>
         <div>
+          {{ if isset . "img_src" }}
+          <div class="examples-image">
+            <!-- <img src="{{ .img_src | relURL }}" alt="{{ .alt_text | relURL }}"> -->
+          </div>
+          {{ end }}
           {{ if isset . "title" }}
           <p class="examples-title">
             <a href="{{ .url }}">{{ .title }}</a>
@@ -115,26 +119,31 @@
   {{ end }}
 
 
-  {{ if isset .Params "related_patterns" }}
   <section class="related-patterns grid-x grid-padding-x">
   <div class="large-2 large-offset-1 small-12 cell">
     <h2>Related Patterns</h2>
   </div>
   <div class="large-7 small-12 cell">
     <ul>
-        {{ range .Params.related_patterns }}
-        <li>
-          <div>
-            <a href="{{ .url | relURL }}">
-              <img src="{{ .src | relURL }}" alt="{{ .alt_text }}">
-            </a>
-          </div>
-        </li>
-        {{ end }}
+      {{ $currentCategory := .Params.category }}
+      {{ $currentTitle := .Params.title }}
+      {{ $pagesInCategory := shuffle (where .Site.RegularPages ".Params.category" $currentCategory) }}
+      {{ range $index, $page := $pagesInCategory }}
+      {{ if and (lt $index 2) (ne .Params.title $currentTitle) }}
+      {{ if isset .Params "images" }}
+      <li>
+        <!-- TODO: replace this with pattern card partial -->
+        <div class="related-patterns-image {{ urlize .Params.category }}">
+            <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
+        </div>
+        <a href="/patterns/{{ urlize .Params.title }}">{{ .Params.title }}</a>
+      </li>
+      {{ end }}
+      {{ end }}
+      {{ end }}
     </ul>
   </div>
   </section>
-  {{ end }}
 </div>
 
 {{ partial "pattern-page-feedback.html" }}

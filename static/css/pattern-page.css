@@ -59,18 +59,6 @@ main.patterns section li {
   text-transform: uppercase;
 }
 
-.archived span {
-  /* background-color:#637578; */
-  /* color: white; */
-  /* width: 175px */
-}
-
-.future-pattern span {
-  border: 1px solid #979797;
-  color: black;
-  width: 200px;
-}
-
 .pattern-heading {
   display: flex;
   flex-wrap: wrap;
@@ -120,26 +108,6 @@ main.patterns section li {
 .pattern-image-div {
   background-color: #EFEFEF;
   height: 400px;
-}
-
-.pattern-image-div.signing-in-to-a-service {
-  background-color: rgb(150,225,170);
-}
-
-.pattern-image-div.giving-and-removing-consent {
-  background-color: rgb(135,215,235);
-}
-
-.pattern-image-div.sharing-data {
-  background-color: rgb(255,215,95);
-}
-
-.pattern-image-div.understanding-automated-decisions {
-  background-color: rgb(255,145,105);
-}
-
-.pattern-image-div.doing-security-checks {
-  background-color: rgb(250,160,170);
 }
 
 .pattern-image-div img {
@@ -195,6 +163,13 @@ main.patterns section li {
   line-height: 1.2;
 }
 
+.examples-image {
+  background-color: rgb(216, 216, 216);
+  border: 1px solid rgb(151, 151, 151);
+  margin: 0 0 1rem 0;
+  min-height: 18.75rem;
+}
+
 .examples-title a {
   color: #29283D;
   text-decoration: underline;
@@ -206,19 +181,27 @@ main.patterns section li {
   display: flex;
 }
 
-.related-patterns li div {
-  background-color: #EFEFEF;
-  width: 90%;
-  margin: 0 auto;
+.related-patterns li {
+  border: 1px solid #DDDDE3;
+  border-radius: 3px;
+  width: 250px;
 }
 
-.related-patterns img {
+.related-patterns-image {
+  margin: 0 auto;
+  padding: 0.5rem;
   height: 200px;
 }
 
-.related-patterns a {
-  color: #29283D;
-  font-size: 1.3rem;
+.related-patterns img {
+  height: 100%;
+}
+
+.related-patterns li a {
+  color: #242249;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.5rem;
 }
 
 .related-patterns a p {
@@ -293,9 +276,36 @@ main.patterns section li {
   text-decoration: underline;
 }
 
+/* Colours */
+
+.pattern-image-div.signing-in-to-a-service,
+.related-patterns-image.signing-in-to-a-service {
+  background-color: rgb(150,225,170);
+}
+
+.pattern-image-div.giving-and-removing-consent,
+.related-patterns-image.giving-and-removing-consent {
+  background-color: rgb(135,215,235);
+}
+
+.pattern-image-div.sharing-data,
+.related-patterns-image.sharing-data {
+  background-color: rgb(255,215,95);
+}
+
+.pattern-image-div.understanding-automated-decisions,
+.related-patterns-image.understanding-automated-decisions {
+  background-color: rgb(255,145,105);
+}
+
+.pattern-image-div.doing-security-checks,
+.related-patterns-image.doing-security-checks {
+  background-color: rgb(250,160,170);
+}
+
 /* Media queries */
 
-@media (min-width: 1000px) {
+@media (min-width: 64em) {
   main.patterns section {
     margin: 3rem 0;
   }
@@ -353,9 +363,8 @@ main.patterns section li {
     margin: 0 2rem 0 0;
   }
 
-  .related-patterns li div {
-    margin: 0 2rem 0 0;
-    width: auto;
+  .related-patterns li a {
+    display: inline-block;
   }
 
   /* Feedback */

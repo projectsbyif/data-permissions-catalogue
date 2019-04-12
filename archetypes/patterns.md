@@ -27,6 +27,7 @@ examples:
  - title:
    url:
    description:
+   img_src:
 
 date: {{ .Date }}
 

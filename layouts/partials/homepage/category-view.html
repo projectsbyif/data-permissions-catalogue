@@ -14,8 +14,8 @@
         </div>
       </div>
       <div class="grid-x grid-padding-x pattern-card-list">
-        {{ range $index, $pattern := $patterns }}
-        {{ partial "homepage/pattern-card.html" (dict "context" . "index" $index "pattern" $pattern )}}
+        {{ range $patterns }}
+        {{ partial "homepage/pattern-card.html" . }}
         {{ end }}
       </div>
     <div class="see-more-button-container">
