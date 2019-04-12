@@ -125,12 +125,24 @@ main.patterns section li {
   height: 400px;
 }
 
-.pattern-image-div.sharing-data {
-  background-color: #FFAA72;
+.pattern-image-div.signing-in-to-a-service {
+  background-color: rgb(150,225,170);
 }
 
 .pattern-image-div.giving-and-removing-consent {
-  background-color: #72C7FF;
+  background-color: rgb(135,215,235);
+}
+
+.pattern-image-div.sharing-data {
+  background-color: rgb(255,215,95);
+}
+
+.pattern-image-div.understanding-automated-decisions {
+  background-color: rgb(255,145,105);
+}
+
+.pattern-image-div.doing-security-checks {
+  background-color: rgb(250,160,170);
 }
 
 .pattern-image-div img {
