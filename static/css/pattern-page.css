@@ -164,10 +164,16 @@ main.patterns section li {
 }
 
 .examples-image {
-  background-color: rgb(216, 216, 216);
   border: 1px solid rgb(151, 151, 151);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 0 1rem 0;
   min-height: 18.75rem;
+}
+
+.examples-image img {
+  height:100%;
 }
 
 .examples-title a {
@@ -184,13 +190,39 @@ main.patterns section li {
 .related-patterns li {
   border: 1px solid #DDDDE3;
   border-radius: 3px;
+  cursor: pointer;
   width: 250px;
 }
 
 .related-patterns-image {
+  align-content: center;
+  display: flex;
+  height: 200px;
+  justify-content: center;
   margin: 0 auto;
   padding: 0.5rem;
-  height: 200px;
+  position: relative;
+}
+
+.related-patterns-image .tags {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.related-patterns-image .archived,
+.related-patterns-image .future-pattern,
+.related-patterns-image .new-pattern {
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  padding: 0.1rem 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .related-patterns img {

@@ -100,7 +100,7 @@
         <div>
           {{ if isset . "img_src" }}
           <div class="examples-image">
-            <!-- <img src="{{ .img_src | relURL }}" alt="{{ .alt_text | relURL }}"> -->
+            <img src="{{ .img_src | relURL }}" alt="{{ .alt_text | relURL }}">
           </div>
           {{ end }}
           {{ if isset . "title" }}
@@ -127,18 +127,21 @@
     <ul>
       {{ $currentCategory := .Params.category }}
       {{ $currentTitle := .Params.title }}
-      {{ $pagesInCategory := shuffle (where .Site.RegularPages ".Params.category" $currentCategory) }}
-      {{ range $index, $page := $pagesInCategory }}
-      {{ if and (lt $index 2) (ne .Params.title $currentTitle) }}
-      {{ if isset .Params "images" }}
+      <!-- Get different patterns in same category and shuffle -->
+      {{ $patternsInCategory := where .Site.RegularPages ".Params.category" $currentCategory }}
+      {{ $patternsInCategory := where $patternsInCategory ".Params.title" "!=" $currentTitle }}
+      {{ $patternsInCategory := shuffle $patternsInCategory }}
+      {{ range $index, $pattern := $patternsInCategory }}
+      {{ if lt $index 2 }}
       <li>
-        <!-- TODO: replace this with pattern card partial -->
-        <div class="related-patterns-image {{ urlize .Params.category }}">
+        <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="related-patterns-image {{ urlize .Params.category }}">
+            {{ partial "pattern-card-tags.html" . }}
+            {{ if isset .Params "images" }}
             <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
+            {{ end }}
         </div>
         <a href="/patterns/{{ urlize .Params.title }}">{{ .Params.title }}</a>
       </li>
-      {{ end }}
       {{ end }}
       {{ end }}
     </ul>

@@ -1,17 +1,7 @@
 <div class="large-4 medium-6 small-12 cell pattern-card-container">
   <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="pattern-card {{ urlize .Params.category }}">
     <div class="pattern-card-image">
-      <div class="tags">
-        {{ $dateAdded := .Params.Date }}
-        {{ if ge $dateAdded (now.AddDate 0 -1 0) }}
-        <p class="new-pattern">Just added ✨</p>
-        {{ end }}
-        {{ if eq .Params.archived true }}
-        <p class="archived">Archived 🗄️</p>
-        {{ else if eq .Params.future_pattern true }}
-        <p class="future-pattern">Future pattern 🔮</p>
-        {{ end }}
-      </div>
+      {{ partial "pattern-card-tags.html" . }}
       {{ if isset .Params "images" }}
       <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
       {{ end }}
