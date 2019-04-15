@@ -1,7 +1,7 @@
 ---
 title: Anonymising users using codes
 
-category:
+category: Sharing data
 
 weight: 1
 

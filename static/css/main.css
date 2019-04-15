@@ -108,21 +108,20 @@ nav h1 {
 
 nav h1,
 nav .title,
-nav .made-by,
-nav .how-to {
+nav .made-by {
   color: #242249;
   font-size: 1.1rem;
   line-height: 30px;
+  letter-spacing: -1px;
+  font-weight: 700;
 }
 
 nav h1,
-nav .title,
-nav .how-to {
+nav .title {
   text-transform: lowercase;
 }
 
-nav .made-by,
-nav .how-to {
+nav .made-by {
   display: inline-block;
   margin: 0;
   padding-left: 2rem;
@@ -246,8 +245,8 @@ footer li a {
 /* Desktop */
 @media (min-width: 64em) {
   .grid-container {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   h1 {
