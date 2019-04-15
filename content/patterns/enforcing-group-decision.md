@@ -1,7 +1,7 @@
 ---
 title: Enforcing group decision
 
-category:
+category: Sharing Data
 
 weight: 1
 
