@@ -2,6 +2,7 @@
 
 {{ $pages := .Pages }}
 
+<div class="background-image">
 <header class="homepage-intro grid-container">
   <div class="grid-x grid-padding-x">
     <div class="large-6 large-offset-3 small-12 cell">
@@ -26,6 +27,7 @@
       <a class="expand-all" href="#">Expand all categories ▼</a>
     </li>
   </ul>
+</div>
 </div>
 
 {{ partial "homepage/category-view.html" . }}

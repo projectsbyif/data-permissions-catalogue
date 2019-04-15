@@ -80,13 +80,13 @@ h2#content {
 nav {
   background-color: rgba(255, 255, 255, 0);
   padding: 1rem 0;
-  /* position: sticky; */
-  /* top: 0; */
-  /* z-index: 10; */
 }
 
 nav.page {
-  background-color: #F7F7F7;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  width:100%;
 }
 
 nav img {
@@ -216,7 +216,7 @@ footer li a {
 
 /* Media Queries */
 
-@media (min-width: 1000px) {
+@media (min-width: 64em) {
   .grid-container {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -225,6 +225,13 @@ footer li a {
   h1 {
     font-size: 3.4rem;
     line-height: 3.5rem;
+  }
+
+  nav.page {
+    max-width: 92em;
+    right: 0;
+    left: 0;
+    margin: auto;
   }
 
   /* Footer */

@@ -1,5 +1,13 @@
 /* Intro */
 
+.background-image {
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+
+}
+
 header.page {
   background-color: #F7F7F7;
 }
@@ -299,10 +307,14 @@ header.page {
 
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 64em) {
   /* Header */
-  .hompage-intro h1 {
-    margin: 3rem 0 5rem 0;
+  .background-image {
+    background-position-y: -10rem;
+  }
+
+  .homepage-intro h1 {
+    margin: 7rem 0 5rem 0;
   }
 
   .hompage-intro p {
@@ -325,6 +337,7 @@ header.page {
 
   .category-nav .expand-all {
     display: inline-block;
+    background-color: white;
   }
 
   .category-nav .push {
