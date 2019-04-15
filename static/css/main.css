@@ -44,6 +44,14 @@ hr {
   width: 100%;
 }
 
+.mobile-only {
+  display: unset;
+}
+
+.desktop-only {
+  display: none;
+}
+
 /* Accessibility */
 
 .skip-to-content, .skip-to-content-noscript {
@@ -234,7 +242,11 @@ footer li a {
     margin: auto;
   }
 
-  /* Footer */
+  .mobile-only {
+    display: none;
+  }
 
-
+  .desktop-only {
+    display: unset;
+  }
 }
