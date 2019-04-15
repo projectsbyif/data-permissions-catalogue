@@ -280,23 +280,23 @@ header.page {
 }
 
 .pattern-card.signing-in-to-a-service:hover {
-  box-shadow: 0px 0px 30px 12px rgb(150,225,170, 0.25);
+  box-shadow: 0px 0px 30px 12px rgba(150,225,170, 0.25);
 }
 
 .pattern-card.giving-and-removing-consent:hover {
-  box-shadow: 0px 0px 30px 12px rgb(135,215,235, 0.25)
+  box-shadow: 0px 0px 30px 12px rgba(135,215,235, 0.25)
 }
 
 .pattern-card.sharing-data:hover {
-  box-shadow: 0px 0px 30px 12px rgb(255,215,95, 0.25);
+  box-shadow: 0px 0px 30px 12px rgba(255,215,95, 0.25);
 }
 
 .pattern-card.understanding-automated-decisions:hover {
-  box-shadow: 0px 0px 30px 12px rgb(255,145,105, 0.25);
+  box-shadow: 0px 0px 30px 12px rgba(255,145,105, 0.25);
 }
 
 .pattern-card.doing-security-checks:hover {
-  box-shadow: 0px 0px 10px 10px rgb(250,160,170, 0.2);
+  box-shadow: 0px 0px 10px 10px rgba(250,160,170, 0.2);
 }
 
 .pattern-card.signing-in-to-a-service .pattern-card-image{

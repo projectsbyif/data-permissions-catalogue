@@ -14,6 +14,12 @@ $('.category-nav a').click(function(e) {
   $('.homepage-section').hide()
 
   $('.category-nav a').removeClass('active')
+
+  var $activeCat = $(this)
+  var $catNav = $('.category-nav')
+  var $container = $('.grid-container.nav')
+  slideCategoryNav($activeCat, $catNav, $container)
+
   $(this).addClass('active')
 
   const targetLink = this.classList[0]
@@ -43,6 +49,27 @@ $('.category-nav a').click(function(e) {
       break
   }
 })
+
+function slideCategoryNav($activeCat, $catNav, $container) {
+  var animDuration = 500
+
+  var halfPoint = $container.width() / 2
+  var currentHalfPoint = $activeCat.offset().left + ($activeCat.width() / 2)
+
+  var categoriesWidth = $catNav[0].scrollWidth
+  var containerWidth = $container.width()
+  var leftIndent = ($catNav[0].scrollWidth - $container.width()) * -1
+
+  if (currentHalfPoint > halfPoint) {
+    // The middle of the category button is on the right
+    // side of the screen, moving to the left
+    $catNav.animate({ marginLeft: leftIndent }, animDuration)
+  } else {
+    // The middle of the category button is on the left
+    // side of the screen, moving to the right
+    $catNav.animate({ marginLeft: 0 }, animDuration)
+  }
+}
 
 function toggleExpandAllCategories(button) {
   const isExpandAll = $(button).html() == expandAllText

@@ -1,10 +1,5 @@
 /* General */
 
-main.patterns {
-  margin-bottom: 0;
-  margin-bottom: 22rem;
-}
-
 main.patterns section {
   margin: 2rem 0;
 }
@@ -134,8 +129,6 @@ main.patterns section li {
 .advantages li::before,
 .limitations li::before {
   content: "— ";
-  margin-left: -50px;
-  margin-right: 27px;
 }
 
 .advantages li:first-of-type, .limitations li:first-of-type {
@@ -182,6 +175,10 @@ main.patterns section li {
 }
 
 /* Related Patterns */
+
+.related-patterns .pattern-card {
+  height: 280px;
+}
 
 .related-patterns ul {
   display: flex;
@@ -233,7 +230,9 @@ main.patterns section li {
   color: #242249;
   font-size: 1.1rem;
   font-weight: 600;
-  padding: 0.5rem;
+  line-height: 1.4;
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
 }
 
 .related-patterns a p {
@@ -380,6 +379,13 @@ main.patterns section li {
   .advantages li,
   .limitations li {
     font-size: 1.3rem;
+    position: relative;
+  }
+
+  .advantages li::before,
+  .limitations li::before {
+    margin-left: -30px;
+    margin-right: 7px;
   }
 
   /* Examples */

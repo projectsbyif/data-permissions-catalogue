@@ -23,7 +23,7 @@
         <div class="pattern-heading">
           <h1 class="pattern-heading-title">{{ .Title }}</h1>
           <ul class="pattern-heading-share">
-            <li><a class="print" href="#">Print  🖨 </a></li>
+            <li class="desktop-only"><a class="print" href="#">Print  🖨 </a></li>
             <li class="share-li">
               <a class="share twitter-share-button"
                  href="https://twitter.com/intent/tweet?text={{ .Site.Params.twitterText }}&url={{ .Permalink }}&via={{ .Site.Params.twitterHandle }}"
@@ -124,7 +124,7 @@
     <h2>Related Patterns</h2>
   </div>
   <div class="large-7 small-12 cell">
-    <ul>
+    <ul class="grid-x pattern-card-container">
       {{ $currentCategory := .Params.category }}
       {{ $currentTitle := .Params.title }}
       <!-- Get different patterns in same category and shuffle -->
@@ -133,7 +133,7 @@
       {{ $patternsInCategory := shuffle $patternsInCategory }}
       {{ range $index, $pattern := $patternsInCategory }}
       {{ if lt $index 2 }}
-      <li>
+      <li class="large-5 small-12 cell pattern-card">
         <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="related-patterns-image {{ urlize .Params.category }}">
             {{ partial "pattern-card-tags.html" . }}
             {{ if isset .Params "images" }}
