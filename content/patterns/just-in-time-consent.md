@@ -44,4 +44,4 @@ date: 2019-04-04T14:58:05+01:00
 lastmod: 2019-04-04
 ---
 
-Asking for a specific permission at the exact moment it’s needed to complete a task the user is performing. For example, if a user wants to tag a photo with their location, the user is asked for permission to access location data as they add the tag.
+Asking for a specific permission at the exact moment it’s needed to complete a task. For example, if a user wants to tag a photo with their location, the user is asked for permission to access location data as they add the tag.
