@@ -49,7 +49,7 @@ hr {
 }
 
 .desktop-only {
-  display: none;
+  display: none !important;
 }
 
 /* Accessibility */
@@ -280,7 +280,7 @@ footer li a {
   }
 
   .mobile-only {
-    display: none;
+    display: none !important;
   }
 
   .desktop-only {
