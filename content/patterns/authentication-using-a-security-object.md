@@ -4,7 +4,7 @@ title: Authentication using a security object
 category: Signing in to a service
 weight: 1
 images:
-  - url: /images/multi-factor-with-object.svg
+  - url: /images/authentication-using-a-security-object.svg
 
 alt: A memory card is inserted into a computer and a checkmark is displayed on screen.
 

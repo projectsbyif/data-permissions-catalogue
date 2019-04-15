@@ -4,7 +4,7 @@ title: Biometric authentication
 category: Signing in to a service
 weight: 1
 images:
-  - url: /images/physical-biometrics.svg
+  - url: /images/biometric-authentication.svg
 
 alt: A finger on a fingerprint scanner.
 

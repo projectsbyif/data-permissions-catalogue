@@ -4,7 +4,7 @@ title: Gesture authentication
 category: Signing in to a service
 weight: 1
 images:
-  - url: /images/gesture-matching.svg
+  - url: /images/gesture-authentication.svg
 
 advantages:
  - For some users gestures are easier to remember than numbers

@@ -14,8 +14,8 @@ future_pattern: false
 future_pattern_reason:
 
 images:
- - url:
-alt:
+ - url: /images/anonymising-users-using-codes.svg
+alt: Anonymising users using codes
 
 advantages:
  - Data can be processed without revealing who it relates to

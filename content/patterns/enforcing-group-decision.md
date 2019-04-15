@@ -14,8 +14,8 @@ future_pattern: false
 future_pattern_reason:
 
 images:
- - url:
-alt:
+ - url: /images/enforcing-group-decision.svg
+alt: Enforcing group decision
 
 advantages:
  - It can be designed in a way for the whole group to be present in either physical location, or online

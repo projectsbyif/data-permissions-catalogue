@@ -4,7 +4,7 @@ title: Detecting automation
 category: Signing in to a service
 weight: 1
 images:
-- url: /images/automation-detection.svg
+- url: /images/detecting-automation.svg
 
 alt: The words not a robot is written in wavy text, the word not is written underneath in regular text.
 

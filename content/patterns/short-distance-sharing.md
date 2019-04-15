@@ -4,7 +4,7 @@ title: Short-distance sharing
 category: Sharing data
 weight: 1
 images:
- - url: /images/proximity-sharing.svg
+ - url: /images/short-distance-sharing.svg
 
 alt: Two devices being held closer together, enabling them to share data over WiFi.
 

@@ -4,9 +4,9 @@ title: Minimal sharing
 category: Sharing data
 weight: 1
 images:
-  - url: /images/zero-knowledge-sharing.svg
+  - url: /images/minimal-sharing.svg
 
-alt: A service confirms a person's age without revealing their date of birth to a second device.
+alt: A service confirms a person’s age without revealing their date of birth to a second device.
 
 advantages:
  - Removes the burden on individuals to continually prove the same things

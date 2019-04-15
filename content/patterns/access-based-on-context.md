@@ -4,7 +4,7 @@ title: Access based on context
 category: Control access
 weight: 1
 images:
-- url: /images/activity-based-permission.svg
+- url: /images/access-based-on-context.svg
 
 alt: A mobile phone is tilted, putting it in to sleep mode.
 
