@@ -1,3 +1,6 @@
+[context.production.environment]
+HUGO_ENV = "production"
+
 [context.branch-deploy]
   command = "hugo"
   publish = "public"
