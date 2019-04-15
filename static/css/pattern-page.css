@@ -176,6 +176,10 @@ main.patterns section li {
 
 /* Related Patterns */
 
+.related-patterns .pattern-card {
+  height: 280px;
+}
+
 .related-patterns ul {
   display: flex;
 }
@@ -226,7 +230,9 @@ main.patterns section li {
   color: #242249;
   font-size: 1.1rem;
   font-weight: 600;
-  padding: 0.5rem;
+  line-height: 1.4;
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
 }
 
 .related-patterns a p {
