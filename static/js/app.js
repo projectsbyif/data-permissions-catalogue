@@ -12,6 +12,10 @@ const $container = $('.grid-container.nav')
 const $menu = $('.global-category-nav')
 const $menuToggle = $('.toggle-menu')
 const $expandToggle = $('.expand-toggle')
+const $topNav = $('.grid-container.page, .grid-container.patterns')
+const $topNavHeight = $topNav.height()
+const $bgImage = $('.background-image')
+const $bgImageHeight = $bgImage.height()
 
 $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
   e.preventDefault()
@@ -184,6 +188,22 @@ function expandToggledCategory(expandToggle) {
   var categoryEl = $('#'+category)
   expandCategory(categoryEl)
   toggleMenu($menu)
+}
+
+/* Top sticky nav */
+$(window).scroll(function() {
+  animateStickyNavOpacity()
+})
+
+function animateStickyNavOpacity() {
+  // console.log($bgImage.offset().top)
+  var scrollTop = $(window).scrollTop()
+  var visibleImg = Math.max(0, $bgImageHeight - scrollTop)
+  var pct = visibleImg / $topNavHeight
+  if (pct > 1) pct = 1
+  var pctOpacity = 1 - pct
+
+  $topNav.css({ backgroundColor: 'rgba(255, 255, 255, '+pctOpacity+')' })
 }
 
 /* Pattern page feedback form */
