@@ -5,7 +5,7 @@ title: Marketplace
 weight: 10
 archived: true
 
-category: Sharing data
+category: Giving access to data
 
 images:
   - url: /images/marketplace.svg

@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Private link
 weight: 1
-category: Sharing data
+category: Giving access to data
 
 advantages:
  - The user has control over the permissions of the document

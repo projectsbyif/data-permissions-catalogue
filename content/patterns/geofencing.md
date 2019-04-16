@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: Geofencing
 weight: 1
-category: Sharing data
+category: Getting access to data
 
 images:
   - url: /images/geofencing.svg

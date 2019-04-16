@@ -1,7 +1,7 @@
 ---
-title: Anonymising users using codes
+title: Masking personal data
 
-category: Sharing data
+category: Getting access to data
 
 weight: 1
 

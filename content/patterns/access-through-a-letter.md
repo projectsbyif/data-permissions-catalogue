@@ -1,7 +1,7 @@
 ---
 title: Access through a letter
 
-category: Sharing data
+category: Getting access to data
 
 weight: 1
 

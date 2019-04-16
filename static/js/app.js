@@ -3,8 +3,8 @@
 let categoriesExpanded = 0
 // Number of expandable categories on the page.
 const numberOfCategories = $('.see-more-button').length;
-const expandAllText = 'Expand all categories ▼'
-const collapseAllText = 'Collapse all categories ▲'
+const expandAllText = 'Expand all categories'
+const collapseAllText = 'Collapse all categories '
 const expandCategoryText = 'Expand category'
 const collapseCategoryText = 'Collapse category'
 const $catNav = $('.category-nav')
@@ -42,11 +42,6 @@ $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
       $('.alphabetical-view').show();
       $('.expand-all').hide()
       break;
-    case 'expand-all':
-      $('.category-view').show()
-      $('.view-by-category').addClass('active')
-      toggleExpandAllCategories(this)
-      break
     default:
       $('.category-section').show();
       $('view-by-category').addClass('active')
@@ -56,13 +51,40 @@ $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
   $('html, body').animate({ scrollTop: 0 }, 500)
 })
 
+$('.expand-all').click(function(e) {
+  $('.category-view').show()
+  $('.view-by-category').addClass('active')
+  toggleExpandAllCategories(this)
+})
+
+function slideCategoryNav($activeCat, $catNav, $container) {
+  var animDuration = 500
+
+  var halfPoint = $container.width() / 2
+  var currentHalfPoint = $activeCat.offset().left + ($activeCat.width() / 2)
+
+  var categoriesWidth = $catNav[0].scrollWidth
+  var containerWidth = $container.width()
+  var leftIndent = ($catNav[0].scrollWidth - $container.width()) * -1
+
+  if (currentHalfPoint > halfPoint) {
+    // The middle of the category button is on the right
+    // side of the screen, moving to the left
+    $catNav.animate({ marginLeft: leftIndent }, animDuration)
+  } else {
+    // The middle of the category button is on the left
+    // side of the screen, moving to the right
+    $catNav.animate({ marginLeft: 0 }, animDuration)
+  }
+}
+
 function toggleExpandAllCategories(button) {
   const isExpandAll = $(button).html() == expandAllText
   if (isExpandAll) {
     $('.category-section').each(function(index, category) {
       expandCategory(category)
     })
-    $(button).html(collapseAllText)
+    $(button).html(collapseAllText).addClass('add-arrow')
     return
   }
   $('.category-section').each(function(index, category) {
@@ -70,7 +92,7 @@ function toggleExpandAllCategories(button) {
       collapseCategory(category)
     }
   })
-  $(button).html(expandAllText)
+  $(button).html(expandAllText).removeClass('add-arrow')
 }
 
 /* Pattern category lists on homepage */
@@ -79,10 +101,7 @@ function toggleExpandAllCategories(button) {
 $('.category-section').each(function(index, category) {
   const patternsList = Array.from($(category).find('.pattern-card'))
   const seeMoreButton = $(category).find('.see-more-button');
-  if (patternsList.length > 3) {
-    $(category).addClass('preview')
-    $(seeMoreButton).css('display', 'inline-block')
-  }
+  $(category).addClass('preview')
 })
 
 // Show/hide extra patterns on button click
