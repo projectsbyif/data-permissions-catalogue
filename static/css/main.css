@@ -296,7 +296,7 @@ footer li a {
   }
 
   .desktop-only {
-    display: unset;
+    display: unset !important;
   }
 }
 

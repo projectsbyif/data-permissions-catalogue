@@ -11,6 +11,7 @@ const $catNav = $('.category-nav')
 const $container = $('.grid-container.nav')
 const $menu = $('.global-category-nav')
 const $menuToggle = $('.toggle-menu')
+const $expandToggle = $('.expand-toggle')
 
 $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
   e.preventDefault()
@@ -48,6 +49,7 @@ $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
       $('.expand-all').show()
       break
   }
+  $('html, body').animate({ scrollTop: 0 }, 200)
 })
 
 function toggleExpandAllCategories(button) {
@@ -154,8 +156,14 @@ function collapseCategory(category) {
 /* Menu */
 
 $(document).ready(function() {
-  $menuToggle.click(function() {
+  $menuToggle.click(function(e) {
+    e.preventDefault();
     toggleMenu($menu)
+  })
+
+  $expandToggle.click(function(e) {
+    $('.category-view').show();
+    expandToggledCategory(this)
   })
 })
 
@@ -169,6 +177,13 @@ function toggleMenu($menu) {
       right: '0%'
     }, 500)
   }
+}
+
+function expandToggledCategory(expandToggle) {
+  var category = $(expandToggle).attr('class').split(' ')[1]
+  var categoryEl = $('#'+category)
+  expandCategory(categoryEl)
+  toggleMenu($menu)
 }
 
 /* Pattern page feedback form */
