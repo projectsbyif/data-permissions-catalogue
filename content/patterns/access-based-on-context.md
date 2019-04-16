@@ -1,7 +1,7 @@
 ---
 title: Access based on context
 
-category: Control access
+category: Sharing Data
 weight: 1
 images:
 - url: /images/access-based-on-context.svg

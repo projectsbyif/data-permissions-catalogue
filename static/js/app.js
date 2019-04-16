@@ -5,8 +5,8 @@ let categoriesExpanded = 0
 const numberOfCategories = $('.see-more-button').length;
 const expandAllText = 'Expand all categories ▼'
 const collapseAllText = 'Collapse all categories ▲'
-const expandCategoryText = 'Expand category ▼'
-const collapseCategoryText = 'Collapse category ▲'
+const expandCategoryText = 'Expand category'
+const collapseCategoryText = 'Collapse category'
 const $catNav = $('.category-nav')
 const $container = $('.grid-container.nav')
 
@@ -102,6 +102,21 @@ $('.category-section').each(function(index, category) {
 })
 
 // Show/hide extra patterns on button click
+$('.category-view .category-heading').click(function(e) {
+  const parentCategory = $(this).parents('.category-section');
+  const seeMoreButton = $(parentCategory).find('.see-more-button');
+
+  if ($(parentCategory).hasClass('preview')) {
+    expandCategory(parentCategory)
+    $(seeMoreButton).html(collapseCategoryText)
+    $(seeMoreButton).addClass('view-arrow')
+  } else {
+    collapseCategory(parentCategory)
+    $(seeMoreButton).html(expandCategoryText)
+    $(seeMoreButton).removeClass('view-arrow')
+  }
+})
+
 $('.category-view .see-more-button').click(function(e){
   const seeMoreButton = $(this);
   const parentCategory = $(seeMoreButton).parents('.category-section');
@@ -109,9 +124,11 @@ $('.category-view .see-more-button').click(function(e){
   if ($(parentCategory).hasClass('preview')) {
     expandCategory(parentCategory)
     $(seeMoreButton).html(collapseCategoryText)
+    $(seeMoreButton).addClass('view-arrow')
   } else {
     collapseCategory(parentCategory)
     $(seeMoreButton).html(expandCategoryText)
+    $(seeMoreButton).removeClass('view-arrow')
   }
 })
 
