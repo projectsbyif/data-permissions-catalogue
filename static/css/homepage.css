@@ -49,6 +49,7 @@ header.page {
   overflow-x: scroll;
   overflow-y: hidden;
   scrollbar-width: none;
+  display: none;
 }
 
 .grid-container.nav::-webkit-scrollbar {
@@ -197,6 +198,7 @@ header.page {
   font-weight: 700;
   margin-top: 2rem;
   letter-spacing: -0.062rem;
+  margin-top: 2em;
 }
 
 .category-heading h2 span {
@@ -395,7 +397,7 @@ header.page {
 @media (min-width: 64em) {
   /* Header */
   .background-image {
-    background-position-y: -10rem;
+    background-position-y: center;
   }
 
   .homepage-intro h1 {
@@ -419,6 +421,7 @@ header.page {
   /* Nav */
   .grid-container.nav {
     overflow-x: hidden;
+    display: block;
   }
 
   .category-nav li a {

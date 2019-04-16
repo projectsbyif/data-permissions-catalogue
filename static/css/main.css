@@ -94,11 +94,12 @@ nav {
   padding: 1rem 0;
 }
 
-nav.page {
+nav.page, nav.patterns {
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   width:100%;
+  z-index: 500;
 }
 
 nav img {
@@ -131,6 +132,17 @@ nav .made-by {
   padding-left: 2rem;
 }
 
+nav .made-by-alt {
+  color: #242249;
+  font-size: 1.1rem;
+  line-height: 30px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 1rem;
+  left: 0.625rem;
+}
+
 nav .how-to p {
   margin: 0;
 }
@@ -147,6 +159,21 @@ nav .made-by:hover {
 
 .page-nav .push {
   margin-left: auto;
+}
+
+.global-category-nav {
+  background: white;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0.625rem;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 450;
+}
+
+.global-category-nav-list {
+  margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -261,8 +288,9 @@ footer li a {
     line-height: 3.5rem;
   }
 
-  nav.page {
+  nav.page, nav.patterns {
     max-width: 92em;
+    position: absolute;
     right: 0;
     left: 0;
     margin: auto;
@@ -297,7 +325,7 @@ footer li a {
   }
 
   .desktop-only {
-    display: unset;
+    display: unset !important;
   }
 
   .expand-all.desktop-only {

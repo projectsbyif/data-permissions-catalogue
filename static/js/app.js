@@ -7,20 +7,25 @@ const expandAllText = 'Expand all categories'
 const collapseAllText = 'Collapse all categories '
 const expandCategoryText = 'Expand category'
 const collapseCategoryText = 'Collapse category'
+const $catNav = $('.category-nav')
+const $container = $('.grid-container.nav')
+const $menu = $('.global-category-nav')
+const $menuToggle = $('.toggle-menu')
+const $expandToggle = $('.expand-toggle')
+const $topNav = $('.grid-container.page, .grid-container.patterns')
+const $topNavHeight = $topNav.height()
+const $bgImage = $('.background-image')
+const $bgImageHeight = $bgImage.height()
 
-$('.category-nav a').click(function(e) {
+$('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
   e.preventDefault()
 
   $('.homepage-section').hide()
 
-  $('.category-nav a').removeClass('active')
-
-  var $activeCat = $(this)
-  var $catNav = $('.category-nav')
-  var $container = $('.grid-container.nav')
-  slideCategoryNav($activeCat, $catNav, $container)
+  $('.category-nav a, .global-category-nav .toggle-view').removeClass('active')
 
   $(this).addClass('active')
+  toggleMenu($menu)
 
   const targetLink = this.classList[0]
 
@@ -43,6 +48,7 @@ $('.category-nav a').click(function(e) {
       $('.expand-all').show()
       break
   }
+  $('html, body').animate({ scrollTop: 0 }, 500)
 })
 
 $('.expand-all').click(function(e) {
@@ -77,7 +83,6 @@ function toggleExpandAllCategories(button) {
   if (isExpandAll) {
     $('.category-section').each(function(index, category) {
       expandCategory(category)
-      $(category).find('.see-more-button').html(collapseCategoryText).addClass('view-arrow')
     })
     $(button).html(collapseAllText).addClass('add-arrow')
     return
@@ -85,7 +90,6 @@ function toggleExpandAllCategories(button) {
   $('.category-section').each(function(index, category) {
     if (!$(category).hasClass('preview')) {
       collapseCategory(category)
-      $(category).find('.see-more-button').html(expandCategoryText).removeClass('view-arrow')
     }
   })
   $(button).html(expandAllText).removeClass('add-arrow')
@@ -103,16 +107,11 @@ $('.category-section').each(function(index, category) {
 // Show/hide extra patterns on button click
 $('.category-view .category-heading').click(function(e) {
   const parentCategory = $(this).parents('.category-section');
-  const seeMoreButton = $(parentCategory).find('.see-more-button');
 
   if ($(parentCategory).hasClass('preview')) {
     expandCategory(parentCategory)
-    $(seeMoreButton).html(collapseCategoryText)
-    $(seeMoreButton).addClass('view-arrow')
   } else {
     collapseCategory(parentCategory)
-    $(seeMoreButton).html(expandCategoryText)
-    $(seeMoreButton).removeClass('view-arrow')
   }
 })
 
@@ -122,17 +121,15 @@ $('.category-view .see-more-button').click(function(e){
 
   if ($(parentCategory).hasClass('preview')) {
     expandCategory(parentCategory)
-    $(seeMoreButton).html(collapseCategoryText)
-    $(seeMoreButton).addClass('view-arrow')
   } else {
     collapseCategory(parentCategory)
-    $(seeMoreButton).html(expandCategoryText)
-    $(seeMoreButton).removeClass('view-arrow')
   }
 })
 
 function expandCategory(category) {
   const patternCards = Array.from($(category).find('.pattern-card-container'));
+  const parentCategory = $(category).parent();
+  const seeMoreButton = $(parentCategory).find('.see-more-button');
 
   // Get list of hidden cards.
   const hiddenPatternCards = patternCards.filter(function(card) {
@@ -162,12 +159,70 @@ function expandCategory(category) {
   if (categoriesExpanded === numberOfCategories) {
     $('.expand-all').html(collapseAllText)
   }
+
+  // And then update the button
+  $(category).find('.see-more-button').html(collapseCategoryText)
+  $(seeMoreButton).addClass('view-arrow')
 }
 
 function collapseCategory(category) {
+  const parentCategory = $(category).parent();
+  const seeMoreButton = $(parentCategory).find('.see-more-button');
   $(category).addClass('preview')
   categoriesExpanded--
   $('.expand-all').html(expandAllText)
+  // Update button
+  $(category).find('.see-more-button').html(expandCategoryText)
+  $(seeMoreButton).removeClass('view-arrow')
+}
+
+/* Menu */
+
+$(document).ready(function() {
+  $menuToggle.click(function(e) {
+    e.preventDefault();
+    toggleMenu($menu)
+  })
+
+  $expandToggle.click(function(e) {
+    $('.category-view').show();
+    expandToggledCategory(this)
+  })
+})
+
+function toggleMenu($menu) {
+  if ($menu.position().left === 0) {
+    $menu.animate({
+      right: '-100%'
+    }, 500)
+  } else {
+    $menu.animate({
+      right: '0%'
+    }, 500)
+  }
+}
+
+function expandToggledCategory(expandToggle) {
+  var category = $(expandToggle).data('category')
+  var categoryEl = $('#'+category)
+  expandCategory(categoryEl)
+  toggleMenu($menu)
+}
+
+/* Top sticky nav */
+$(window).scroll(function() {
+  animateStickyNavOpacity()
+})
+
+function animateStickyNavOpacity() {
+  // console.log($bgImage.offset().top)
+  var scrollTop = $(window).scrollTop()
+  var visibleImg = Math.max(0, $bgImageHeight - scrollTop)
+  var percentageVisible = visibleImg / $topNavHeight
+  if (percentageVisible > 1) percentageVisible = 1
+  var percentageOpacity = 1 - percentageVisible
+
+  $topNav.css({ backgroundColor: 'rgba(255, 255, 255, '+percentageOpacity+')' })
 }
 
 /* Pattern page feedback form */
