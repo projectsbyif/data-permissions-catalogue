@@ -52,6 +52,10 @@ hr {
   display: none;
 }
 
+.expand-all.desktop-only {
+  display: none !important;
+}
+
 /* Accessibility */
 
 .skip-to-content, .skip-to-content-noscript {
@@ -109,10 +113,10 @@ nav h1 {
 nav h1,
 nav .title,
 nav .made-by {
-  color: #242249;
+  color: white;
   font-size: 1.1rem;
   line-height: 30px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   font-weight: 700;
 }
 
@@ -131,7 +135,8 @@ nav .how-to p {
   margin: 0;
 }
 
-nav .title {
+nav .title,
+nav .made-by:hover {
   color: #EC392A;
 }
 
@@ -167,8 +172,10 @@ footer div.cell {
 }
 
 footer h2 {
-  color: #F6776C;
-  font-size: 1.2rem;
+  color: #EC392A;
+  font-size: 1.1rem;
+  line-height: 30px;
+  letter-spacing: -0.5px;
   font-weight: 700;
   text-transform: lowercase;
 }
@@ -262,20 +269,27 @@ footer li a {
   }
 
   main {
-    margin-bottom: 24em;
+    margin-bottom: 25em;
   }
 
   footer {
     padding: 2rem 0 5rem 0;
-    height: 24em;
+    height: 25em;
   }
 
-  footer h3 {
-    margin-bottom: 2rem;
+  footer.desktop-only .cell {
+    padding-top: 3rem;
   }
 
   footer h4 {
     margin-top: 0;
+  }
+
+  footer .get-in-touch h4,
+  footer .get-in-touch a,
+  footer .contribute h4,
+  footer .contribute a {
+    font-size: 1.1rem;
   }
 
   .mobile-only {
@@ -285,15 +299,18 @@ footer li a {
   .desktop-only {
     display: unset;
   }
-}
+
+  .expand-all.desktop-only {
+    display: unset !important;
+  }
 
 /* Larger desktop adjustment */
 @media (min-width: 78.5em) {
   main {
-    margin-bottom: 22em;
+    margin-bottom: 25em;
   }
 
   footer {
-    height: 22em;
+    height: 25em;
   }
 }

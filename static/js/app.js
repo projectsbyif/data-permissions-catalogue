@@ -3,8 +3,8 @@
 let categoriesExpanded = 0
 // Number of expandable categories on the page.
 const numberOfCategories = $('.see-more-button').length;
-const expandAllText = 'Expand all categories ▼'
-const collapseAllText = 'Collapse all categories ▲'
+const expandAllText = 'Expand all categories'
+const collapseAllText = 'Collapse all categories '
 const expandCategoryText = 'Expand category'
 const collapseCategoryText = 'Collapse category'
 
@@ -37,17 +37,18 @@ $('.category-nav a').click(function(e) {
       $('.alphabetical-view').show();
       $('.expand-all').hide()
       break;
-    case 'expand-all':
-      $('.category-view').show()
-      $('.view-by-category').addClass('active')
-      toggleExpandAllCategories(this)
-      break
     default:
       $('.category-section').show();
       $('view-by-category').addClass('active')
       $('.expand-all').show()
       break
   }
+})
+
+$('.expand-all').click(function(e) {
+  $('.category-view').show()
+  $('.view-by-category').addClass('active')
+  toggleExpandAllCategories(this)
 })
 
 function slideCategoryNav($activeCat, $catNav, $container) {
@@ -76,18 +77,18 @@ function toggleExpandAllCategories(button) {
   if (isExpandAll) {
     $('.category-section').each(function(index, category) {
       expandCategory(category)
-      $(category).find('.see-more-button').html(collapseCategoryText)
+      $(category).find('.see-more-button').html(collapseCategoryText).addClass('view-arrow')
     })
-    $(button).html(collapseAllText)
+    $(button).html(collapseAllText).addClass('add-arrow')
     return
   }
   $('.category-section').each(function(index, category) {
     if (!$(category).hasClass('preview')) {
       collapseCategory(category)
-      $(category).find('.see-more-button').html(expandCategoryText)
+      $(category).find('.see-more-button').html(expandCategoryText).removeClass('view-arrow')
     }
   })
-  $(button).html(expandAllText)
+  $(button).html(expandAllText).removeClass('add-arrow')
 }
 
 /* Pattern category lists on homepage */
@@ -96,10 +97,7 @@ function toggleExpandAllCategories(button) {
 $('.category-section').each(function(index, category) {
   const patternsList = Array.from($(category).find('.pattern-card'))
   const seeMoreButton = $(category).find('.see-more-button');
-  if (patternsList.length > 3) {
-    $(category).addClass('preview')
-    $(seeMoreButton).css('display', 'inline-block')
-  }
+  $(category).addClass('preview')
 })
 
 // Show/hide extra patterns on button click

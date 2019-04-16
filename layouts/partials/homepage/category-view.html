@@ -2,6 +2,9 @@
 
 
 <section class="homepage-section category-view">
+  <div class="grid-container expand-all-container">
+    <a class="expand-all desktop-only" href="#">Expand all categories</a>
+  </div>
 
 {{ $categories := .Site.GetPage "/categories" }}
 {{ range $categories.Params.list_of_categories }}

@@ -23,7 +23,7 @@
         <div class="pattern-heading">
           <h1 class="pattern-heading-title">{{ .Title }}</h1>
           <ul class="pattern-heading-share">
-            <li class="desktop-only"><a class="print" href="#">Print  🖨 </a></li>
+            <li class="desktop-only"><a onclick="window.print()" class="print" href="#">Print  🖨 </a></li>
             <li class="share-li">
               <a class="share twitter-share-button"
                  href="https://twitter.com/intent/tweet?text={{ .Site.Params.twitterText }}&url={{ .Permalink }}&via={{ .Site.Params.twitterHandle }}"
