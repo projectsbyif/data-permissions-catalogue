@@ -184,7 +184,7 @@ function toggleMenu($menu) {
 }
 
 function expandToggledCategory(expandToggle) {
-  var category = $(expandToggle).attr('class').split(' ')[1]
+  var category = $(expandToggle).data('category')
   var categoryEl = $('#'+category)
   expandCategory(categoryEl)
   toggleMenu($menu)
@@ -199,11 +199,11 @@ function animateStickyNavOpacity() {
   // console.log($bgImage.offset().top)
   var scrollTop = $(window).scrollTop()
   var visibleImg = Math.max(0, $bgImageHeight - scrollTop)
-  var pct = visibleImg / $topNavHeight
-  if (pct > 1) pct = 1
-  var pctOpacity = 1 - pct
+  var percentageVisible = visibleImg / $topNavHeight
+  if (percentageVisible > 1) percentageVisible = 1
+  var percentageOpacity = 1 - percentageVisible
 
-  $topNav.css({ backgroundColor: 'rgba(255, 255, 255, '+pctOpacity+')' })
+  $topNav.css({ backgroundColor: 'rgba(255, 255, 255, '+percentageOpacity+')' })
 }
 
 /* Pattern page feedback form */
