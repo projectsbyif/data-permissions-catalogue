@@ -237,8 +237,9 @@ $(".usage-feedback").submit(function(e) {
 
   let $form = $(this);
   $.post($form.attr("action"), $form.serialize()).then(function() {
-    $('.feedback-form').toggle();
-    $('.success-message').toggle();
+    $('.question').hide();
+    $('.feedback-form').hide();
+    $('.success-message').show();
   });
 });
 

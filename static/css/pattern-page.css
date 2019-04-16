@@ -258,6 +258,7 @@ main.patterns section li {
   flex: 0 0 auto;
   font-size: 1.3rem;
   margin: 0 2rem 0 0;
+  font-weight: 600;
 }
 
 .feedback .success-message {
@@ -267,16 +268,14 @@ main.patterns section li {
 .feedback-form {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .feedback-form input, .feedback-form a {
   color: #29283D;
   font-size: 1.3rem;
+  font-weight: 600;
   margin: 0 2rem 0 0;
-}
-
-.feedback-form a, .feedback-form button {
-  text-decoration: underline;
 }
 
 .feedback-form .usage-feedback {
@@ -286,6 +285,7 @@ main.patterns section li {
 .feedback-form .detailed-feedback {
   display: none;
   width: 100%;
+
 }
 
 .feedback-form .detailed-feedback input {
@@ -304,7 +304,9 @@ main.patterns section li {
   border: 0;
   cursor: pointer;
   height: 100%;
-  text-decoration: underline;
+  border: 2px solid #DDDDE3;
+  border-radius: 3px;
+  padding: 0.5rem 2rem;
 }
 
 /* Colours */
@@ -342,6 +344,10 @@ main.patterns section li {
 /* Media queries */
 
 @media (min-width: 64em) {
+  main.patterns header {
+    margin-top: 6rem;
+  }
+
   main.patterns section {
     margin: 3rem 0;
   }
@@ -351,6 +357,10 @@ main.patterns section li {
   .pattern-heading {
     align-items: end;
     flex-wrap: nowrap;
+  }
+
+  .pattern-heading h1 {
+    width: 80%;
   }
 
   .pattern-heading-title {
