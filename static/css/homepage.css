@@ -147,6 +147,7 @@ header.page {
   font-size: 1.9rem;
   font-weight: 700;
   letter-spacing: -0.062rem;
+  margin-top: 2em;
 }
 
 .category-heading h2 span {
@@ -335,7 +336,7 @@ header.page {
 @media (min-width: 64em) {
   /* Header */
   .background-image {
-    background-position-y: -10rem;
+    background-position-y: center;
   }
 
   .homepage-intro h1 {
