@@ -18,7 +18,7 @@
 
 <nav class="page-menu global-category-nav mobile-only" role="navigation">
   <h3><a href="#" class="view-by-category toggle-view">Categories</a></h3>
-  <ul>
+  <ul class="global-category-nav-list">
     {{ $categories := .Site.GetPage "/categories" }}
     {{ range $categories.Params.list_of_categories }}
     <li>
@@ -28,4 +28,5 @@
   </ul>
   <h3><a href="#" class="view-most-recent toggle-view">Most recent</a></h3>
   <h3><a href="#" class="view-alphabetically toggle-view">Alphabetical</a></h3>
+  <p class="made-by-alt">made by IF</p>
 </nav>

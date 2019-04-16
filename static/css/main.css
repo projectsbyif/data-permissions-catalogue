@@ -128,6 +128,17 @@ nav .made-by {
   padding-left: 2rem;
 }
 
+nav .made-by-alt {
+  color: #242249;
+  font-size: 1.1rem;
+  line-height: 30px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 1rem;
+  left: 0.625rem;
+}
+
 nav .how-to p {
   margin: 0;
 }
@@ -154,6 +165,10 @@ nav .title {
   top: 0;
   right: -100%;
   z-index: 450;
+}
+
+.global-category-nav-list {
+  margin-bottom: 1rem;
 }
 
 /* Footer */

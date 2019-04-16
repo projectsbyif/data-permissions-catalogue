@@ -49,7 +49,7 @@ $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
       $('.expand-all').show()
       break
   }
-  $('html, body').animate({ scrollTop: 0 }, 200)
+  $('html, body').animate({ scrollTop: 0 }, 500)
 })
 
 function toggleExpandAllCategories(button) {
