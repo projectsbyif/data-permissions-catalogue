@@ -352,6 +352,12 @@ main.patterns section li {
     margin: 3rem 0;
   }
 
+  main.patterns h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.062rem;
+    font-weight: 700;
+  }
+
   /* Heading */
 
   .pattern-heading {

@@ -18,7 +18,7 @@ const $bgImage = $('.background-image')
 const $bgImageHeight = $bgImage.height()
 
 $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
-  e.preventDefault()
+  e.preventDefault();
 
   $('.homepage-section').hide()
 
@@ -52,6 +52,7 @@ $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
 })
 
 $('.expand-all').click(function(e) {
+  e.preventDefault()
   $('.category-view').show()
   $('.view-by-category').addClass('active')
   toggleExpandAllCategories(this)

@@ -177,6 +177,10 @@ header.page {
   transition: opacity 0.5s linear;
 }
 
+.category-section.preview .pattern-card {
+  margin-bottom: 0;
+}
+
 .category-section .pattern-card-container:first-child {
   display: inline-block;
   opacity: 1;
@@ -263,7 +267,7 @@ header.page {
 .pattern-card {
   cursor: pointer;
   border-radius: 4px;
-  margin-bottom: 0.9rem;
+  margin-bottom: 30px;
 }
 
 .pattern-card-image {
@@ -279,6 +283,7 @@ header.page {
   position: absolute;
   bottom: 0;
   display: flex;
+  padding-left: 0.2rem;
 }
 
 .pattern-card-image .archived,
@@ -286,10 +291,13 @@ header.page {
 .pattern-card-image .new-pattern {
   background-color: rgba(255, 255, 255, 0.92);
   border-radius: 2px;
-  font-size: 1rem;
-  font-weight: 500;
-  margin-right: 0.25rem;
-  padding: 0.1rem 0.5rem;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  color: #686778;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.1rem 0.21rem 0.1rem 0.5rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -328,7 +336,10 @@ header.page {
 }
 
 .pattern-card:hover .pattern-card-title {
-  border: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+
 }
 
 .pattern-card.giving-and-removing-consent:hover {
@@ -470,6 +481,7 @@ header.page {
   .category-section .pattern-card-container:nth-child(3) {
     display: inline-block;
     opacity: 1;
+    margin-bottom: 0;
   }
 
   /* Pattern card */

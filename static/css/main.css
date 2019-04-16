@@ -117,7 +117,7 @@ nav .made-by {
   color: white;
   font-size: 1.1rem;
   line-height: 30px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.2px;
   font-weight: 700;
 }
 
@@ -202,7 +202,7 @@ footer h2 {
   color: #EC392A;
   font-size: 1.1rem;
   line-height: 30px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.2px;
   font-weight: 700;
   text-transform: lowercase;
 }
@@ -234,8 +234,13 @@ footer.mobile-only .license {
   margin-top: 1rem;
 }
 
-footer .license span {
+footer .license a {
   font-weight: 700;
+  color: rgb(189, 189, 200);
+}
+
+footer .license a:hover {
+  color: white;
 }
 
 footer.mobile-only .data-usage-statement {
@@ -252,6 +257,11 @@ footer .contribute a {
   color: white;
 }
 
+footer .get-in-touch a:hover,
+footer .contribute a:hover {
+  color: #EC392A;
+}
+
 footer ul {
   list-style: none;
   margin: 0;
@@ -259,8 +269,12 @@ footer ul {
 }
 
 footer li a {
-  color: white;
+  color: rgb(189, 189, 200);
   font-size: 1rem;
+}
+
+footer li a:hover {
+  color: white;
 }
 
 /* Media Queries */
@@ -300,24 +314,58 @@ footer li a {
     margin-bottom: 25em;
   }
 
+  /* Footer */
+
   footer {
     padding: 2rem 0 5rem 0;
     height: 25em;
   }
 
-  footer.desktop-only .cell {
-    padding-top: 3rem;
-  }
-
   footer h4 {
     margin-top: 0;
+    line-height: 1.7rem;
+  }
+
+  footer .contact.cell {
+    padding-top: 2.27rem;
+  }
+
+  footer .get-in-touch {
+    height: calc(1.7rem * 2);
+  }
+
+  footer .get-in-touch a,
+  footer .contribute a {
+    display: inline-block;
+    margin: -2px;
+  }
+
+  footer .contribute {
+    padding-top: 1.7rem;
+  }
+
+  footer .logo.cell {
+    padding-top: 0.9rem;
   }
 
   footer .get-in-touch h4,
-  footer .get-in-touch a,
+  footer .get-in-touch p,
   footer .contribute h4,
-  footer .contribute a {
+  footer .contribute p {
     font-size: 1.1rem;
+  }
+
+  footer .get-in-touch h4,
+  footer .contribute h4 {
+    margin-top: -1px;
+  }
+
+  footer .links li:first-of-type {
+    margin-top: 4px;
+  }
+
+  footer .license {
+    font-size: 0.9rem;
   }
 
   .mobile-only {

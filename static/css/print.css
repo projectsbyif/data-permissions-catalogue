@@ -1,0 +1,11 @@
+.patterns .page-nav,
+.patterns .print,
+.patterns .twitter-share-button,
+.patterns .feedback-and-status,
+.patterns footer {
+  display: none;
+}
+
+a[href]:after {
+  content: none !important;
+}

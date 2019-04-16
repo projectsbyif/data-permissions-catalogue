@@ -1,4 +1,5 @@
 <div class="large-4 medium-6 small-12 cell pattern-card-container">
+  <!-- <a href="/patterns/{{ urlize .Params.title }}"></a> -->
   <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="pattern-card {{ urlize .Params.category }}">
     <div class="pattern-card-image">
       {{ partial "pattern-card-tags.html" . }}
