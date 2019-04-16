@@ -55,7 +55,6 @@ function toggleExpandAllCategories(button) {
   if (isExpandAll) {
     $('.category-section').each(function(index, category) {
       expandCategory(category)
-      $(category).find('.see-more-button').html(collapseCategoryText)
     })
     $(button).html(collapseAllText)
     return
@@ -63,7 +62,6 @@ function toggleExpandAllCategories(button) {
   $('.category-section').each(function(index, category) {
     if (!$(category).hasClass('preview')) {
       collapseCategory(category)
-      $(category).find('.see-more-button').html(expandCategoryText)
     }
   })
   $(button).html(expandAllText)
@@ -84,16 +82,11 @@ $('.category-section').each(function(index, category) {
 // Show/hide extra patterns on button click
 $('.category-view .category-heading').click(function(e) {
   const parentCategory = $(this).parents('.category-section');
-  const seeMoreButton = $(parentCategory).find('.see-more-button');
 
   if ($(parentCategory).hasClass('preview')) {
     expandCategory(parentCategory)
-    $(seeMoreButton).html(collapseCategoryText)
-    $(seeMoreButton).addClass('view-arrow')
   } else {
     collapseCategory(parentCategory)
-    $(seeMoreButton).html(expandCategoryText)
-    $(seeMoreButton).removeClass('view-arrow')
   }
 })
 
@@ -103,17 +96,15 @@ $('.category-view .see-more-button').click(function(e){
 
   if ($(parentCategory).hasClass('preview')) {
     expandCategory(parentCategory)
-    $(seeMoreButton).html(collapseCategoryText)
-    $(seeMoreButton).addClass('view-arrow')
   } else {
     collapseCategory(parentCategory)
-    $(seeMoreButton).html(expandCategoryText)
-    $(seeMoreButton).removeClass('view-arrow')
   }
 })
 
 function expandCategory(category) {
   const patternCards = Array.from($(category).find('.pattern-card-container'));
+  const parentCategory = $(category).parent();
+  const seeMoreButton = $(parentCategory).find('.see-more-button');
 
   // Get list of hidden cards.
   const hiddenPatternCards = patternCards.filter(function(card) {
@@ -143,12 +134,21 @@ function expandCategory(category) {
   if (categoriesExpanded === numberOfCategories) {
     $('.expand-all').html(collapseAllText)
   }
+
+  // And then update the button
+  $(category).find('.see-more-button').html(collapseCategoryText)
+  $(seeMoreButton).addClass('view-arrow')
 }
 
 function collapseCategory(category) {
+  const parentCategory = $(category).parent();
+  const seeMoreButton = $(parentCategory).find('.see-more-button');
   $(category).addClass('preview')
   categoriesExpanded--
   $('.expand-all').html(expandAllText)
+  // Update button
+  $(category).find('.see-more-button').html(expandCategoryText)
+  $(seeMoreButton).removeClass('view-arrow')
 }
 
 /* Menu */
