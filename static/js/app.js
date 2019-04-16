@@ -7,6 +7,8 @@ const expandAllText = 'Expand all categories ▼'
 const collapseAllText = 'Collapse all categories ▲'
 const expandCategoryText = 'Expand category ▼'
 const collapseCategoryText = 'Collapse category ▲'
+const $catNav = $('.category-nav')
+const $container = $('.grid-container.nav')
 
 $('.category-nav a').click(function(e) {
   e.preventDefault()
@@ -15,10 +17,7 @@ $('.category-nav a').click(function(e) {
 
   $('.category-nav a').removeClass('active')
 
-  var $activeCat = $(this)
-  var $catNav = $('.category-nav')
-  var $container = $('.grid-container.nav')
-  slideCategoryNav($activeCat, $catNav, $container)
+  slideCategoryNav($(this), $catNav, $container)
 
   $(this).addClass('active')
 
@@ -51,14 +50,14 @@ $('.category-nav a').click(function(e) {
 })
 
 function slideCategoryNav($activeCat, $catNav, $container) {
-  var animDuration = 500
+  const animDuration = 500
 
-  var halfPoint = $container.width() / 2
-  var currentHalfPoint = $activeCat.offset().left + ($activeCat.width() / 2)
+  const halfPoint = $container.width() / 2
+  const currentHalfPoint = $activeCat.offset().left + ($activeCat.width() / 2)
 
-  var categoriesWidth = $catNav[0].scrollWidth
-  var containerWidth = $container.width()
-  var leftIndent = ($catNav[0].scrollWidth - $container.width()) * -1
+  const categoriesWidth = $catNav[0].scrollWidth
+  const containerWidth = $container.width()
+  const leftIndent = ($catNav[0].scrollWidth - $container.width()) * -1
 
   if (currentHalfPoint > halfPoint) {
     // The middle of the category button is on the right
