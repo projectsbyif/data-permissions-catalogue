@@ -287,8 +287,12 @@ header.page {
   box-shadow: 0px 0px 30px 12px rgba(135,215,235, 0.25)
 }
 
-.pattern-card.sharing-data:hover {
-  box-shadow: 0px 0px 30px 12px rgba(255,215,95, 0.25);
+.pattern-card.getting-access-to-data:hover {
+  box-shadow: 0px 0px 30px 12px rgb(186,222,125, 0.25);
+}
+
+.pattern-card.giving-access-to-data:hover {
+  box-shadow: 0px 0px 30px 12px rgb(255,215,95, 0.25);
 }
 
 .pattern-card.understanding-automated-decisions:hover {
@@ -307,7 +311,11 @@ header.page {
   background-color: rgb(135,215,235);
 }
 
-.pattern-card.sharing-data .pattern-card-image {
+.pattern-card.getting-access-to-data .pattern-card-image {
+  background-color: rgb(186,222,125);
+}
+
+.pattern-card.giving-access-to-data .pattern-card-image {
   background-color: rgb(255,215,95);
 }
 

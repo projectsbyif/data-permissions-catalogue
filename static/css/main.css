@@ -49,7 +49,7 @@ hr {
 }
 
 .desktop-only {
-  display: none !important;
+  display: none;
 }
 
 /* Accessibility */

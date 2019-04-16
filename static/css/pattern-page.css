@@ -319,8 +319,13 @@ main.patterns section li {
   background-color: rgb(135,215,235);
 }
 
-.pattern-image-div.sharing-data,
-.related-patterns-image.sharing-data {
+.pattern-image-div.getting-access-to-data,
+.related-patterns-image.getting-access-to-data {
+  background-color: rgb(186,222,125);
+}
+
+.pattern-image-div.giving-access-to-data,
+.related-patterns-image.giving-access-to-data {
   background-color: rgb(255,215,95);
 }
 

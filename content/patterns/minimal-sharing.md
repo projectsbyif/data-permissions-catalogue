@@ -1,7 +1,7 @@
 ---
 title: Minimal sharing
 
-category: Sharing data
+category: Giving access to data
 weight: 1
 images:
   - url: /images/minimal-sharing.svg
