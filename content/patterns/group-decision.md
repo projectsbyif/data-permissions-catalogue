@@ -1,5 +1,5 @@
 ---
-title: Enforcing group decision
+title: Group decision
 
 category: Sharing Data
 
