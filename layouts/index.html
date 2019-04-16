@@ -3,31 +3,31 @@
 {{ $pages := .Pages }}
 
 <div class="background-image">
-<header class="homepage-intro grid-container">
-  <div class="grid-x grid-padding-x">
-    <div class="large-6 large-offset-3 small-12 cell">
-      <h1>Build services that put people in control of data</h1>
-      <p>Teams around the world use these patterns to inform conversations and make services that work for people</p>
+  <header class="homepage-intro grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="large-6 large-offset-3 small-12 cell">
+        <h1>Build services that put people in control of data</h1>
+        <p>Teams around the world use these patterns to inform conversations and make services that work for people</p>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="grid-container nav">
-  <ul class="category-nav">
-    <li>
-      <a class="active view-by-category" href="#">Categories</a>
-    </li>
-    <li>
-      <a class="view-most-recent" href="#">Most Recent</a>
-    </li>
-    <li>
-      <a class="view-alphabetically" href="#">Alphabetical</a>
-    </li>
-    <li class="push desktop-only">
-      <a class="expand-all" href="#">Expand all categories ▼</a>
-    </li>
-  </ul>
-</div>
+  <div class="grid-container nav desktop-only">
+    <ul class="category-nav">
+      <li>
+        <a class="active view-by-category" href="#">Categories</a>
+      </li>
+      <li>
+        <a class="view-most-recent" href="#">Most Recent</a>
+      </li>
+      <li>
+        <a class="view-alphabetically" href="#">Alphabetical</a>
+      </li>
+      <li class="push desktop-only">
+        <a class="expand-all" href="#">Expand all categories ▼</a>
+      </li>
+    </ul>
+  </div>
 </div>
 
 {{ partial "homepage/category-view.html" . }}

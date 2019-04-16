@@ -90,11 +90,12 @@ nav {
   padding: 1rem 0;
 }
 
-nav.page {
+nav.page, nav.patterns {
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   width:100%;
+  z-index: 500;
 }
 
 nav img {
@@ -142,6 +143,17 @@ nav .title {
 
 .page-nav .push {
   margin-left: auto;
+}
+
+.global-category-nav {
+  background: white;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0.625rem;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 450;
 }
 
 /* Footer */
@@ -254,8 +266,9 @@ footer li a {
     line-height: 3.5rem;
   }
 
-  nav.page {
+  nav.page, nav.patterns {
     max-width: 92em;
+    position: absolute;
     right: 0;
     left: 0;
     margin: auto;

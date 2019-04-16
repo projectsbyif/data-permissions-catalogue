@@ -9,17 +9,18 @@ const expandCategoryText = 'Expand category'
 const collapseCategoryText = 'Collapse category'
 const $catNav = $('.category-nav')
 const $container = $('.grid-container.nav')
+const $menu = $('.global-category-nav')
+const $menuToggle = $('.toggle-menu')
 
-$('.category-nav a').click(function(e) {
+$('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
   e.preventDefault()
 
   $('.homepage-section').hide()
 
-  $('.category-nav a').removeClass('active')
-
-  slideCategoryNav($(this), $catNav, $container)
+  $('.category-nav a, .global-category-nav .toggle-view').removeClass('active')
 
   $(this).addClass('active')
+  toggleMenu($menu)
 
   const targetLink = this.classList[0]
 
@@ -48,27 +49,6 @@ $('.category-nav a').click(function(e) {
       break
   }
 })
-
-function slideCategoryNav($activeCat, $catNav, $container) {
-  const animDuration = 500
-
-  const halfPoint = $container.width() / 2
-  const currentHalfPoint = $activeCat.offset().left + ($activeCat.width() / 2)
-
-  const categoriesWidth = $catNav[0].scrollWidth
-  const containerWidth = $container.width()
-  const leftIndent = ($catNav[0].scrollWidth - $container.width()) * -1
-
-  if (currentHalfPoint > halfPoint) {
-    // The middle of the category button is on the right
-    // side of the screen, moving to the left
-    $catNav.animate({ marginLeft: leftIndent }, animDuration)
-  } else {
-    // The middle of the category button is on the left
-    // side of the screen, moving to the right
-    $catNav.animate({ marginLeft: 0 }, animDuration)
-  }
-}
 
 function toggleExpandAllCategories(button) {
   const isExpandAll = $(button).html() == expandAllText
@@ -169,6 +149,26 @@ function collapseCategory(category) {
   $(category).addClass('preview')
   categoriesExpanded--
   $('.expand-all').html(expandAllText)
+}
+
+/* Menu */
+
+$(document).ready(function() {
+  $menuToggle.click(function() {
+    toggleMenu($menu)
+  })
+})
+
+function toggleMenu($menu) {
+  if ($menu.position().left === 0) {
+    $menu.animate({
+      right: '-100%'
+    }, 500)
+  } else {
+    $menu.animate({
+      right: '0%'
+    }, 500)
+  }
 }
 
 /* Pattern page feedback form */
