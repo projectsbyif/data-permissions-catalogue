@@ -58,27 +58,6 @@ hr {
 
 /* Accessibility */
 
-.skip-to-content, .skip-to-content-noscript {
-  position: absolute;
-  top: -200px;
-  left: 35px;
-  line-height: 25px;
-}
-
-.skip-to-content:focus, .skip-to-content-noscript:focus {
-  top: 0;
-  background-color: #000F7D;
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  left: 0;
-  text-decoration: underline;
-}
-
-.skip-to-content-noscript {
-  display: none;
-}
-
 h2#content {
   tabindex: 0;
 }
