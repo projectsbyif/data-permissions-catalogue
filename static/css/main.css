@@ -44,6 +44,10 @@ hr {
   width: 100%;
 }
 
+hr.hover {
+  border-bottom: 1px solid #F6776C;
+}
+
 .mobile-only {
   display: unset;
 }

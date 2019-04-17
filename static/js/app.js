@@ -177,6 +177,21 @@ function collapseCategory(category) {
   $(seeMoreButton).removeClass('view-arrow')
 }
 
+/* Fancy hover effects */
+
+
+$(document).ready(function() {
+  $('.see-more-button').hover(function() {
+    console.log('hi')
+    var category = $(this).data('category')
+    $('hr[data-category="'+category+'"]').addClass('hover')
+  }, function() {
+    var category = $(this).data('category')
+    $('hr[data-category="'+category+'"]').removeClass('hover')
+  })
+})
+
+
 /* Menu */
 
 $(document).ready(function() {
