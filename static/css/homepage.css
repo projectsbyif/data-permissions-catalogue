@@ -239,7 +239,7 @@ header.page {
 }
 
 .see-more-button.view-arrow::after {
-  content: "▲ ";
+  content: "↑ ";
   font-size: 0.97em;
   margin-left: 5px;
 }
@@ -251,7 +251,7 @@ header.page {
   border-top: 1px solid #F6776C;
   border-right: 1px solid #F6776C;
   border-left: 1px solid #F6776C;
-  color: #F6776C;
+  color: #F6776C !important;
 }
 
 .category-section .see-more-button:hover ~ hr {

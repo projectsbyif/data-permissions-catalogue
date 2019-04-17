@@ -103,7 +103,7 @@
           {{ end }}
           {{ if isset . "title" }}
           <p class="examples-title">
-            <a class="{{ urlize $category }}" href="{{ .url }}">{{ .title }}</a>
+            <a class="{{ urlize $category }}" href="{{ .url }}">{{ .title }} →</a>
           </p>
           {{ end }}
           <p>{{ humanize .description }}</p>
