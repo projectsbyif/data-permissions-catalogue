@@ -177,6 +177,21 @@ function collapseCategory(category) {
   $(seeMoreButton).removeClass('view-arrow')
 }
 
+/* Fancy hover effects */
+
+
+$(document).ready(function() {
+  $('.see-more-button').hover(function() {
+    console.log('hi')
+    var category = $(this).data('category')
+    $('hr[data-category="'+category+'"]').addClass('hover')
+  }, function() {
+    var category = $(this).data('category')
+    $('hr[data-category="'+category+'"]').removeClass('hover')
+  })
+})
+
+
 /* Menu */
 
 $(document).ready(function() {
@@ -193,10 +208,12 @@ $(document).ready(function() {
 
 function toggleMenu($menu) {
   if ($menu.position().left === 0) {
+    $menuToggle.css({ color: 'white' })
     $menu.animate({
       right: '-100%'
     }, 500)
   } else {
+    $menuToggle.css({ color: 'black' })
     $menu.animate({
       right: '0%'
     }, 500)

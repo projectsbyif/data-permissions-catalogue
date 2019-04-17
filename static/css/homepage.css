@@ -33,9 +33,9 @@ header.page {
   color: white;
   font-family: 'acumin-pro', sans-serif;
   font-weight: 500;
-  margin: 0 0 3rem 0;
-  font-size: 1.25rem;
-  line-height: 1.3rem;
+  margin: 0 0 3em 0;
+  font-size: 1.1em;
+  line-height: 1.3;
   text-shadow: 1px 1px 14px rgba(0, 0,0, 0.3);
 }
 
@@ -71,10 +71,10 @@ header.page {
   color: #898993;
   display: inline-block;
   font-family: 'acumin-pro', sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 600;
-  margin: 0 0.25rem;
-  padding: 1rem 0.5rem;
+  margin: 0 0.25em;
+  padding: 1em 0.5em;
   text-align: center;
   width: 140px;
 }
@@ -124,7 +124,7 @@ header.page {
   border: 1px solid #DDDDE3;
   border-top: 0;
   color: #898993;
-  padding: 0.5rem;
+  padding: 0.5em;
   font-family: 'acumin-pro', sans-serif;
   font-weight: 600;
 }
@@ -198,11 +198,11 @@ header.page {
 }
 
 .category-heading h2 {
-  font-size: 1.9rem;
+  font-size: 1.9em;
   font-weight: 700;
   margin-top: 2rem;
   letter-spacing: -0.062rem;
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .category-heading h2 span {
@@ -216,7 +216,7 @@ header.page {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1.9rem 0 0 0;
+  margin: 1.9em 0 0 0;
 }
 
 .see-more-button {
@@ -229,18 +229,18 @@ header.page {
   color: #898993;
   font-family: 'acumin-pro', sans-serif;
   font-weight: 600;
-  padding: 0.3rem 0.9rem 0.5rem 0.81rem;
+  padding: 0.3em 0.9em 0.5em 0.81em;
 }
 
 .see-more-button::before{
   content: "+ ";
-  font-size: 1.2rem;
+  font-size: 1.2em;
   margin-right: 2px;
 }
 
 .see-more-button.view-arrow::after {
   content: "▲ ";
-  font-size: 0.97rem;
+  font-size: 0.97em;
   margin-left: 5px;
 }
 .see-more-button.view-arrow::before {
@@ -275,7 +275,7 @@ header.page {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   height: 340px;
-  padding: 0.5rem;
+  padding: 0.5em;
   position: relative;
 }
 
@@ -283,7 +283,7 @@ header.page {
   position: absolute;
   bottom: 0;
   display: flex;
-  padding-left: 0.2rem;
+  padding-left: 0.2em;
 }
 
 .pattern-card-image .archived,
@@ -293,11 +293,11 @@ header.page {
   border-radius: 2px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
   color: #686778;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   font-weight: 600;
   letter-spacing: -0.1px;
-  margin: 0 0.5rem 0.5rem 0;
-  padding: 0.1rem 0.21rem 0.1rem 0.5rem;
+  margin: 0 0.5em 0.5em 0;
+  padding: 0.1em 0.21em 0.1em 0.5em;
   text-align: center;
   text-transform: uppercase;
 }
@@ -309,7 +309,7 @@ header.page {
   border-right: 1px solid #DDDDE3;
   box-sizing: border-box;
   height: 90px;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5em 0.5em;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
@@ -323,10 +323,10 @@ header.page {
   color: #242249;
   display: inline-block;
   font-family: 'acumin-pro', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   font-weight: 600;
   line-height: 27px;
-  letter-spacing: -0.0225rem;
+  letter-spacing: -0.0225em;
   width: 90%;
 }
 
@@ -418,7 +418,8 @@ header.page {
 
   .homepage-intro p {
     margin: 0 0 5rem 0;
-    line-height: 1.6rem;
+    font-size: 1.25em;
+    line-height: 1.3;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -436,8 +437,8 @@ header.page {
   }
 
   .category-nav li a {
-    margin: 0 0.5rem;
-    padding: 1rem 1rem;
+    margin: 0 0.5em;
+    padding: 1em 1em;
     width: 160px;
   }
 
@@ -452,7 +453,7 @@ header.page {
   .expand-all {
     display: inline-block;
     background-color: white;
-    padding: 0.4rem 1rem 0.5rem 1rem;
+    padding: 0.4em 1em 0.5em 1em;
   }
 
   .category-nav .push {
@@ -462,7 +463,7 @@ header.page {
   /* Heading */
 
   .category-heading h2 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     margin: 3.5rem 0 1.2rem 0;
   }
 
@@ -486,10 +487,10 @@ header.page {
 
   /* Pattern card */
   .pattern-card-title {
-    padding: 0.9rem 1rem 0.75rem 1rem;
+    padding: 0.9em 1em 0.75em 1em;
   }
 
   .pattern-card-title a {
-    font-size: 1.4rem;
+    font-size: 1.4em;
   }
 }

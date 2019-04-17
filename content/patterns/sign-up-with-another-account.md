@@ -14,8 +14,8 @@ future_pattern: false
 future_pattern_reason:
 
 images:
- - url:
-alt:
+ - url: /images/sign-up-with-another-account
+alt: Sign-up with another account
 
 advantages:
  - Users can access a service without needing to remember another password

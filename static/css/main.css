@@ -4,6 +4,7 @@ body {
   font-family: 'acumin-pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 85%;
 }
 
 body.page {
@@ -26,8 +27,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 2.5em;
+  line-height: 1;
   font-weight: 600;
 }
 
@@ -44,6 +45,10 @@ hr {
   width: 100%;
 }
 
+hr.hover {
+  border-bottom: 1px solid #F6776C;
+}
+
 .mobile-only {
   display: unset;
 }
@@ -54,6 +59,11 @@ hr {
 
 .expand-all.desktop-only {
   display: none !important;
+}
+
+.toggle-menu {
+  color: white;
+  transition: color 0.5s ease-in;
 }
 
 /* Accessibility */
@@ -91,7 +101,7 @@ h2#content {
 
 nav {
   background-color: rgba(255, 255, 255, 0);
-  padding: 1rem 0;
+  padding: 1em 0;
 }
 
 nav.page, nav.patterns {
@@ -115,7 +125,7 @@ nav h1,
 nav .title,
 nav .made-by {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.05em;
   line-height: 30px;
   letter-spacing: -0.2px;
   font-weight: 700;
@@ -129,18 +139,18 @@ nav .title {
 nav .made-by {
   display: inline-block;
   margin: 0;
-  padding-left: 2rem;
+  padding-left: 2em;
 }
 
 nav .made-by-alt {
   color: #242249;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   line-height: 30px;
   letter-spacing: -1px;
   font-weight: 700;
   position: absolute;
-  bottom: 1rem;
-  left: 0.625rem;
+  bottom: 1em;
+  left: 0.625em;
 }
 
 nav .how-to p {
@@ -165,7 +175,7 @@ nav .made-by:hover {
   background: white;
   width: 100%;
   height: 100%;
-  padding: 5rem 0.625rem;
+  padding: 5em 0.625em;
   position: fixed;
   top: 0;
   right: -100%;
@@ -184,7 +194,7 @@ footer {
   bottom: 0;
   left: 0;
   height: 38em;
-  padding: 2rem 0 4rem 0;
+  padding: 2em 0 4em 0;
   position: fixed;
   width: 100%;
   z-index: -1;
@@ -195,12 +205,12 @@ footer hr {
 }
 
 footer div.cell {
-  padding: 2rem 0 0 0;
+  padding: 2em 0 0 0;
 }
 
 footer h2 {
   color: #EC392A;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   line-height: 30px;
   letter-spacing: -0.2px;
   font-weight: 700;
@@ -208,30 +218,30 @@ footer h2 {
 }
 
 footer h3 {
-  font-size: 1.6rem;
-  line-height: 1.7rem;
+  font-size: 1.6em;
+  line-height: 1.2;
 }
 
 footer h4 {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 600;
   margin-bottom: 0;
-  margin-top: 1rem;
+  margin-top: 1em;
 }
 
 footer p {
-  font-size: 1.6rem;
+  font-size: 1.6em;
 }
 
 footer .license {
   color: rgb(189, 189, 200);
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: 500;
   margin-bottom: 0;
 }
 
 footer.mobile-only .license {
-  margin-top: 1rem;
+  margin-top: 1em;
 }
 
 footer .license a {
@@ -244,7 +254,7 @@ footer .license a:hover {
 }
 
 footer.mobile-only .data-usage-statement {
-  margin-top: 0rem;
+  margin-top: 0em;
   display: block;
 }
 
@@ -270,7 +280,7 @@ footer ul {
 
 footer li a {
   color: rgb(189, 189, 200);
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 footer li a:hover {
@@ -292,14 +302,18 @@ footer li a:hover {
 
 /* Desktop */
 @media (min-width: 64em) {
+  body {
+    font-size: 100%;
+  }
+
   .grid-container {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 6em;
+    padding-right: 6em;
   }
 
   h1 {
-    font-size: 3.4rem;
-    line-height: 3.5rem;
+    font-size: 3.4em;
+    line-height: 1.025;
   }
 
   nav.page, nav.patterns {
@@ -317,21 +331,21 @@ footer li a:hover {
   /* Footer */
 
   footer {
-    padding: 2rem 0 5rem 0;
+    padding: 2em 0 5em 0;
     height: 25em;
   }
 
   footer h4 {
     margin-top: 0;
-    line-height: 1.7rem;
+    line-height: 1.3;
   }
 
   footer .contact.cell {
-    padding-top: 2.27rem;
+    padding-top: 2.27em;
   }
 
   footer .get-in-touch {
-    height: calc(1.7rem * 2);
+    height: calc(1.7em * 2);
   }
 
   footer .get-in-touch a,
@@ -341,18 +355,18 @@ footer li a:hover {
   }
 
   footer .contribute {
-    padding-top: 1.7rem;
+    padding-top: 1.7em;
   }
 
   footer .logo.cell {
-    padding-top: 0.9rem;
+    padding-top: 0.9em;
   }
 
   footer .get-in-touch h4,
   footer .get-in-touch p,
   footer .contribute h4,
   footer .contribute p {
-    font-size: 1.1rem;
+    font-size: 1.1em;
   }
 
   footer .get-in-touch h4,
@@ -365,7 +379,7 @@ footer li a:hover {
   }
 
   footer .license {
-    font-size: 0.9rem;
+    font-size: 0.9em;
   }
 
   .mobile-only {

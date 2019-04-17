@@ -2,6 +2,6 @@ baseURL = "http://example.org/"
 languageCode = "en-uk"
 title = "Patterns Catalogue"
 [params]
-  twitterText = "This pattern from the Data Patterns catalogue can help design services that involve data sharing."
+  twitterText = " from the data patterns catalogue curated by @projectsbyif #patternsbyif"
   twitterHandle = "projectsbyif"
 enableGitInfo = true
