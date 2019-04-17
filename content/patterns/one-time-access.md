@@ -9,7 +9,7 @@ images:
   - url: /images/one-time-access.svg
 
 advantages:
- - Removes th e burden from the user having to remember the information
+ - Removes the burden from the user having to remember the information
  - Limitations placed on the code make it feel less risky to share data for a specific purpose
  - The person who receives data access directly therefore they have an accurate view of the data
 
@@ -21,9 +21,7 @@ alt: A dialog box shows a single-use code and a button which reads Use now.
 examples:
   - title: UK Share Driving Licence service
     url: https://dvladigital.blog.gov.uk/2016/01/12/share-driving-licence-goes-live/
-  - title: Secret
-    url: https://getsecret.now.sh/
-    description: message sharing using a link that can only be opened once
+
 ---
 
-Sharing access to data with a code. For example, a user shares a unique code with a car rental company that can only be used once, so the company can check their driving licence details.
+Sharing access to data with a one-time code. For example, a user shares a unique code with a car rental company that can only be used once, so the company can check their driving licence details.

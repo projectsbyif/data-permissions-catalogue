@@ -1,10 +1,11 @@
 ---
-title: Upcoming automated decision notice
+title: Upcoming decision notice
+
 
 category: Understanding automated decisions
 weight: 1
 images:
-- url: /images/future-decision-notice.svg
+- url: /images/upcoming-decision-notice.svg
 
 alt: A prompt on a mobile device reading Pending - You're about save £7.23 and underneath a button reading Stop.
 

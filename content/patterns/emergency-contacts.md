@@ -21,7 +21,10 @@ limitations:
 examples:
   - title: LastPass
     url: https://helpdesk.lastpass.com/emergency-access/
-    description: emergency access feature lets a trusted person request access to a password store
+    description: Emergency contacts feature, which can also be used as an alternative account recovery scheme
+  - title: Googe trusted contacts
+    url: https://contacts.google.com/trustedcontacts/
+    description: Allows trusted contacts to find the user in an emergency
   - title: Facebook Trusted Friends
     url: https://facebook.com
     description: Can restore user’s access to their account

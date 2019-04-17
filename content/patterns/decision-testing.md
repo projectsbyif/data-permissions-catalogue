@@ -9,13 +9,11 @@ images:
 alt: Two mobile phones side by side showing different outcomes of an automated decision.
 
 advantages:
- - Builds understanding about how decisions are made
+ - A low friction way to build understanding about how decisions are made that doesn’t require lots of knowledge from the user
  - Helps the user to test the output using different inputs before they commit
 
 limitations:
- - Reveals outcomes rather than why a decision was made
- - Doesn’t guarantee understanding
- - Doesn’t give users’ power to influence the outcome
+ - Users might create their own theories for why outcomes change unless combined with other explanation methods
 
 examples:
   - title: Flock -  drone insurance
