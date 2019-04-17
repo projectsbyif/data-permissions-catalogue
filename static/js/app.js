@@ -208,10 +208,12 @@ $(document).ready(function() {
 
 function toggleMenu($menu) {
   if ($menu.position().left === 0) {
+    $menuToggle.css({ color: 'white' })
     $menu.animate({
       right: '-100%'
     }, 500)
   } else {
+    $menuToggle.css({ color: 'black' })
     $menu.animate({
       right: '0%'
     }, 500)

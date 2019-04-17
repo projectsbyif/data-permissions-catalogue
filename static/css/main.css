@@ -60,6 +60,11 @@ hr.hover {
   display: none !important;
 }
 
+.toggle-menu {
+  color: white;
+  transition: color 0.5s ease-in;
+}
+
 /* Accessibility */
 
 .skip-to-content, .skip-to-content-noscript {
