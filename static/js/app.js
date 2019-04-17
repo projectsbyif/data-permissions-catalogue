@@ -12,7 +12,7 @@ const $container = $('.grid-container.nav')
 const $menu = $('.global-category-nav')
 const $menuToggle = $('.toggle-menu')
 const $expandToggle = $('.expand-toggle')
-const $topNav = $('.grid-container.page, .grid-container.patterns')
+const $topNav = $('.nav-bg')
 const $topNavHeight = $topNav.height()
 const $bgImage = $('.background-image')
 const $bgImageHeight = $bgImage.height()
@@ -57,27 +57,6 @@ $('.expand-all').click(function(e) {
   $('.view-by-category').addClass('active')
   toggleExpandAllCategories(this)
 })
-
-function slideCategoryNav($activeCat, $catNav, $container) {
-  var animDuration = 500
-
-  var halfPoint = $container.width() / 2
-  var currentHalfPoint = $activeCat.offset().left + ($activeCat.width() / 2)
-
-  var categoriesWidth = $catNav[0].scrollWidth
-  var containerWidth = $container.width()
-  var leftIndent = ($catNav[0].scrollWidth - $container.width()) * -1
-
-  if (currentHalfPoint > halfPoint) {
-    // The middle of the category button is on the right
-    // side of the screen, moving to the left
-    $catNav.animate({ marginLeft: leftIndent }, animDuration)
-  } else {
-    // The middle of the category button is on the left
-    // side of the screen, moving to the right
-    $catNav.animate({ marginLeft: 0 }, animDuration)
-  }
-}
 
 function toggleExpandAllCategories(button) {
   const isExpandAll = $(button).html() == expandAllText
@@ -182,7 +161,6 @@ function collapseCategory(category) {
 
 $(document).ready(function() {
   $('.see-more-button').hover(function() {
-    console.log('hi')
     var category = $(this).data('category')
     $('hr[data-category="'+category+'"]').addClass('hover')
   }, function() {
@@ -208,12 +186,10 @@ $(document).ready(function() {
 
 function toggleMenu($menu) {
   if ($menu.position().left === 0) {
-    $menuToggle.css({ color: 'white' })
     $menu.animate({
       right: '-100%'
     }, 500)
   } else {
-    $menuToggle.css({ color: 'black' })
     $menu.animate({
       right: '0%'
     }, 500)
@@ -240,7 +216,9 @@ function animateStickyNavOpacity() {
   if (percentageVisible > 1) percentageVisible = 1
   var percentageOpacity = 1 - percentageVisible
 
-  $topNav.css({ backgroundColor: 'rgba(255, 255, 255, '+percentageOpacity+')' })
+  if ($menu.position().left !== 0) {
+    $topNav.css({ backgroundColor: 'rgba(255, 255, 255, '+percentageOpacity+')' })
+  }
 }
 
 /* Pattern page feedback form */

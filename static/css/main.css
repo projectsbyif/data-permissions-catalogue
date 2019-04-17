@@ -61,9 +61,23 @@ hr.hover {
   display: none !important;
 }
 
-.toggle-menu {
-  color: white;
-  transition: color 0.5s ease-in;
+.toggle-menu, .toggle-menu:hover {
+  font-weight: 700;
+  color: rgb(189, 189, 200);
+}
+
+.nav-bg {
+  width: 100%;
+  position: fixed;
+  height: 4.2em;
+  background: transparent;
+  z-index: 300;
+}
+
+.menu-item {
+  border-bottom: 1px solid rgb(189, 189, 200);
+  padding: 1em 4px;
+  margin: 0 3em;
 }
 
 /* Accessibility */
@@ -105,7 +119,6 @@ nav {
 }
 
 nav.page, nav.patterns {
-  background-color: transparent;
   position: fixed;
   top: 0;
   width:100%;
@@ -147,7 +160,7 @@ nav .made-by {
 }
 
 nav .made-by-alt {
-  color: #242249;
+  color: rgb(189, 189, 200);
   font-size: 1.1em;
   line-height: 30px;
   letter-spacing: -1px;
@@ -176,7 +189,7 @@ nav .made-by:hover {
 }
 
 .global-category-nav {
-  background: white;
+  background-color: #040635;
   width: 100%;
   height: 100%;
   padding: 5em 0.625em;
@@ -186,8 +199,28 @@ nav .made-by:hover {
   z-index: 450;
 }
 
+.global-category-nav a {
+  color: white;
+}
+
 .global-category-nav-list {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+}
+
+.global-category-nav-list li {
+  display: block
+}
+
+.global-category-nav-list a {
+  display: block;
+  padding: 0.75em 0.5em;
+  font-size: 1.3em;
+}
+
+.global-category-nav-list a:hover,
+.global-category-nav-list a:focus,
+.global-category-nav-list a:active {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Footer */
