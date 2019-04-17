@@ -4,7 +4,7 @@ let categoriesExpanded = 0
 // Number of expandable categories on the page.
 const numberOfCategories = $('.see-more-button').length;
 const expandAllText = 'Expand all categories'
-const collapseAllText = 'Collapse all categories '
+const collapseAllText = 'Collapse all categories'
 const expandCategoryText = 'Expand category'
 const collapseCategoryText = 'Collapse category'
 const $catNav = $('.category-nav')
@@ -77,7 +77,6 @@ function toggleExpandAllCategories(button) {
 
 /* Pattern category lists on homepage */
 
-// Show see more button on load if more than 3 patterns in category
 $('.category-section').each(function(index, category) {
   const patternsList = Array.from($(category).find('.pattern-card'))
   const seeMoreButton = $(category).find('.see-more-button');
@@ -108,8 +107,7 @@ $('.category-view .see-more-button').click(function(e){
 
 function expandCategory(category) {
   const patternCards = Array.from($(category).find('.pattern-card-container'));
-  const parentCategory = $(category).parent();
-  const seeMoreButton = $(parentCategory).find('.see-more-button');
+  const seeMoreButton = $(category).find('.see-more-button');
 
   // Get list of hidden cards.
   const hiddenPatternCards = patternCards.filter(function(card) {
@@ -137,27 +135,25 @@ function expandCategory(category) {
   categoriesExpanded++
 
   if (categoriesExpanded === numberOfCategories) {
-    $('.expand-all').html(collapseAllText)
+    $('.expand-all').html(collapseAllText).addClass('add-arrow')
   }
 
   // And then update the button
-  $(category).find('.see-more-button').html(collapseCategoryText)
-  $(seeMoreButton).addClass('view-arrow')
+  $(seeMoreButton).html(collapseCategoryText).addClass('view-arrow')
 }
 
 function collapseCategory(category) {
-  const parentCategory = $(category).parent();
-  const seeMoreButton = $(parentCategory).find('.see-more-button');
+  const seeMoreButton = $(category).find('.see-more-button');
   $(category).addClass('preview')
   categoriesExpanded--
-  $('.expand-all').html(expandAllText)
+
+  $('.expand-all').html(expandAllText).removeClass('add-arrow')
   // Update button
   $(category).find('.see-more-button').html(expandCategoryText)
   $(seeMoreButton).removeClass('view-arrow')
 }
 
 /* Fancy hover effects */
-
 
 $(document).ready(function() {
   $('.see-more-button').hover(function() {
@@ -168,7 +164,6 @@ $(document).ready(function() {
     $('hr[data-category="'+category+'"]').removeClass('hover')
   })
 })
-
 
 /* Menu */
 
