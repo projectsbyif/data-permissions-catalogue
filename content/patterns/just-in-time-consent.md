@@ -29,10 +29,11 @@ limitations:
 examples:
  - alt_text: Notification on a mobile phone asking if user would like to share their location in a chat.
    title: iOS permissions
-   description: Apps will ask permission to use hardware or content the first time an app requires it.
+   description: Apps will ask permission to use hardware or content the first time an app requires it
  - alt_text: Pop-up notification in a browser requesting access to a user's location information.
    title: HTML5 permissions
    description: Browsers will ask for permission to give a website access to a webcam, microphone or location when a website requests it.
+   img_src: /images/just-in-time-consent.svg
 
 
 further_reading:

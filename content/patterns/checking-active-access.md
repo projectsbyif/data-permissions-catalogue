@@ -1,7 +1,7 @@
 ---
 illustration_version: 1
 
-title: Inactivity checking
+title: Checking active access
 weight: 1
 category: Signing in to a service
 

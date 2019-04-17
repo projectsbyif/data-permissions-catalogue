@@ -302,6 +302,10 @@ header.page {
   text-transform: uppercase;
 }
 
+.pattern-card-image .archived {
+  padding-right: 0.5rem;
+}
+
 .pattern-card-title {
   background-color: white;
   border-bottom: 1px solid #DDDDE3;
@@ -351,11 +355,11 @@ header.page {
 }
 
 .pattern-card.getting-access-to-data:hover {
-  box-shadow: 0px 0px 30px 12px rgb(186,222,125, 0.25);
+  box-shadow: 0px 0px 30px 12px rgba(186,222,125, 0.25);
 }
 
 .pattern-card.giving-access-to-data:hover {
-  box-shadow: 0px 0px 30px 12px rgb(255,215,95, 0.25);
+  box-shadow: 0px 0px 30px 12px rgba(255,215,95, 0.25);
 }
 
 .pattern-card.understanding-automated-decisions:hover {

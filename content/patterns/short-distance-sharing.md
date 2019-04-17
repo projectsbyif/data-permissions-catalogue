@@ -1,7 +1,7 @@
 ---
 title: Short-distance sharing
 
-category: Giving access to data
+category: Getting access to data
 weight: 1
 images:
  - url: /images/short-distance-sharing.svg

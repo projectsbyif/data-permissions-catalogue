@@ -112,6 +112,10 @@ nav.page, nav.patterns {
   z-index: 500;
 }
 
+nav.patterns .made-by {
+  color: #242249;
+}
+
 nav img {
   height: 30px;
 }

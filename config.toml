@@ -1,6 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "en-uk"
-title = "Patterns Catalogue"
+title = "Data Patterns Catalogue"
 [params]
   twitterText = " from the data patterns catalogue curated by @projectsbyif #patternsbyif"
   twitterHandle = "projectsbyif"

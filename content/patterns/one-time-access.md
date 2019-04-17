@@ -3,7 +3,7 @@ illustration_version: 1
 
 title: One-time access
 weight: 1
-category: Sharing data
+category: Giving access to data
 
 images:
   - url: /images/one-time-access.svg

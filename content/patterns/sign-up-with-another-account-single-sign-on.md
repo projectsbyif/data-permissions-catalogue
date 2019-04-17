@@ -1,7 +1,7 @@
 ---
 title: Sign-up with another account (single sign-on)
 
-category:
+category: Signing in to a service
 
 weight: 1
 
@@ -37,4 +37,6 @@ date: 2019-04-16T17:32:29+01:00
 lastmod: 2019-04-16
 ---
 
-Allowing users to sign-up to a new service, through a service where they already have an account. For example, the user can sign-up with their Google account to create a new account in a calendar app. In this scenario Google would be referred to as a single sign-on provider.
+Allowing users to sign-up to a new service, through a service where they already have an account.
+
+For example, the user can sign-up with their Google account to create a new account in a calendar app. In this scenario Google would be referred to as a single sign-on provider.

@@ -4,29 +4,14 @@
   <div class="grid-x grid-padding-x">
     <div class="large-offset-1 large-10 small-12 cell">
       <header>
-        <div class="pattern-status">
-          {{ $dateAdded := .Params.Date }}
-          {{ if ge $dateAdded (now.AddDate 0 -1 0) }}
-          <p class="new-pattern">Just added ✨</p>
-          {{ end }}
-          {{ if eq .Params.archived true }}
-          <p class="archived">
-            <span>Archived 🗄️</span>
-            {{ .Params.archive_reason }}
-          </p>
-          {{ else if eq .Params.future_pattern true }}
-          <p class="future-pattern"><span>Future pattern 🔮</span>
-            This is a placeholder for future pattern description.
-          </p>
-          {{ end }}
-        </div>
+        <p class="pattern-heading-category">{{ .Params.category }}</p>
         <div class="pattern-heading">
           <h1 class="pattern-heading-title">{{ .Title }}</h1>
-          <ul class="pattern-heading-share">
-            <li class="desktop-only"><a onclick="window.print()" class="print" href="#">Print  🖨 </a></li>
+          <ul class="pattern-share-links">
+            <li class="desktop-only"><a onclick="window.print()" class="print" href="#">Print</a></li>
             <li class="share-li">
               <a class="share twitter-share-button"
-                 href="https://twitter.com/intent/tweet?text=‘{{ .Title }}’{{ .Site.Params.twitterText }}&url={{ .Permalink }}&via={{ .Site.Params.twitterHandle }}" target="_blank">Tweet 🐦</a>
+                 href="https://twitter.com/intent/tweet?text=‘{{ .Title }}’{{ .Site.Params.twitterText }}&url={{ .Permalink }}&via={{ .Site.Params.twitterHandle }}" target="_blank">Tweet</a>
             </li>
           </ul>
         </div>
@@ -37,6 +22,19 @@
   <section class="pattern-image grid-x grid-padding-x">
   <div class="large-10 large-offset-1 small-12 cell">
     <div class="pattern-image-div {{ urlize .Params.category }}">
+      <div class="pattern-status">
+        {{ if eq .Params.archived true }}
+        <details class="archived">
+          <summary>Archived 🗄️</summary>
+          {{ .Params.archive_reason }}
+        </details>
+        {{ else if eq .Params.future_pattern true }}
+        <details class="future-pattern">
+          <summary>Future pattern 🔮</summary>
+          {{ .Params.future_pattern_reason }}
+        </details>
+        {{ end }}
+      </div>
       {{ if isset .Params "images" }}
       <img id="content" tabindex="0" class="" src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}" />
       {{ end }}
@@ -94,6 +92,7 @@
   </div>
   <div class="large-6 small-12 cell">
     <ul>
+      {{ $category := .Params.category }}
       {{ range .Params.examples }}
       <li>
         <div>
@@ -104,8 +103,7 @@
           {{ end }}
           {{ if isset . "title" }}
           <p class="examples-title">
-            <a href="{{ .url }}">{{ .title }}</a>
-            <img src="{{ "images/link-arrow.svg" | relURL }}" alt="">
+            <a class="{{ urlize $category }}" href="{{ .url }}">{{ .title }}</a>
           </p>
           {{ end }}
           <p>{{ humanize .description }}</p>
@@ -132,15 +130,28 @@
       {{ $patternsInCategory := shuffle $patternsInCategory }}
       {{ range $index, $pattern := $patternsInCategory }}
       {{ if lt $index 2 }}
-      <li class="large-5 small-12 cell pattern-card">
-        <div onclick="window.location.assign('/patterns/{{ urlize .Params.title }}')" class="related-patterns-image {{ urlize .Params.category }}">
-            {{ partial "pattern-card-tags.html" . }}
-            {{ if isset .Params "images" }}
+
+      <li class="{{ urlize .Params.category }} large-5 small-12 cell">
+        <a class="wrap-link " href="/patterns/{{ urlize .Params.title }}">
+        <div class="related-patterns-image {{ urlize .Params.category }}">
+            <!-- TODO - customize tags partial -->
+              <div class="tags">
+                {{ if eq .Params.archived true }}
+                <p class="archived">Archived 🗄️</p>
+                {{ else if eq .Params.future_pattern true }}
+                <p class="future-pattern">Future pattern 🔮</p>
+                {{ end }}
+              </div>
+              {{ if isset .Params "images" }}
             <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
             {{ end }}
         </div>
-        <a href="/patterns/{{ urlize .Params.title }}">{{ .Params.title }}</a>
+        <div class="related-patterns-title">
+          <p>{{ .Params.title }}</p>
+        </div>
+        </a>
       </li>
+
       {{ end }}
       {{ end }}
     </ul>

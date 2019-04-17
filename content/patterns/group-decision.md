@@ -1,7 +1,7 @@
 ---
 title: Group decision
 
-category: Sharing Data
+category: Giving and removing consent
 
 weight: 1
 
