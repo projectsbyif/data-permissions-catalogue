@@ -1,11 +1,15 @@
 /* General */
 
+.grid-container.patterns {
+  background: white;
+}
+
 main.patterns section {
   margin: 2rem 0;
 }
 
 main.patterns header {
-  margin: 3rem 0 0 0;
+  margin: 4rem 0 0 0;
 }
 
 main.patterns section:last-of-type {
