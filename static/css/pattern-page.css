@@ -171,6 +171,15 @@ summary::-webkit-details-marker {
 .advantages li::before,
 .limitations li::before {
   content: "— ";
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.advantages li span,
+.limitations li span {
+display: inline-block;
+    width: calc(100% - 20px);
 }
 
 .advantages li:first-of-type, .limitations li:first-of-type {
