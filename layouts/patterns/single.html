@@ -4,7 +4,7 @@
   <div class="grid-x grid-padding-x">
     <div class="large-offset-1 large-10 small-12 cell">
       <header>
-        <p class="pattern-heading-category">{{ .Params.category }}</p>
+        <p class="pattern-heading-category"><a href="/#{{ urlize .Params.category }}">{{ .Params.category }}</a></p>
         <div class="pattern-heading">
           <h1 class="pattern-heading-title">{{ .Title }}</h1>
           <ul class="pattern-share-links">

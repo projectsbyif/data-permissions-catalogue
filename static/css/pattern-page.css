@@ -41,6 +41,10 @@ main.patterns section li {
   font-weight: 700;
 }
 
+.pattern-heading-category a {
+  color: #898993;
+}
+
 .pattern-heading-category:hover {
   color: #242249;
 }
