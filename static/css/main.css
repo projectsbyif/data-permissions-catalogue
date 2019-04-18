@@ -13,7 +13,7 @@ body.page {
 
 main {
   background-color: white;
-  margin-bottom: 38em;
+  margin-bottom: 46em;
   z-index: 10;
 }
 
@@ -230,7 +230,7 @@ footer {
   color: white;
   bottom: 0;
   left: 0;
-  height: 38em;
+  height: 46em;
   padding: 2em 0 4em 0;
   position: fixed;
   width: 100%;
@@ -242,7 +242,7 @@ footer hr {
 }
 
 footer div.cell {
-  padding: 2em 0 0 0;
+  padding: 1em 0 0 0;
 }
 
 footer h2 {
@@ -264,6 +264,19 @@ footer h4 {
   font-weight: 600;
   margin-bottom: 0;
   margin-top: 1em;
+}
+
+footer a p,
+footer a h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+footer a p {
+  font-weight: 400;
+  margin-top: 0;
 }
 
 footer p {
