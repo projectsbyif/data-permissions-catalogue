@@ -388,6 +388,10 @@ footer .fix-to-bottom {
     display: none !important;
   }
 
+  .desktop-only {
+    display: unset;
+  }
+
   footer.desktop-only {
     display: unset !important;
   }
