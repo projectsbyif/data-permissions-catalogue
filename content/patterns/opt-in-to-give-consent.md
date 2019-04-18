@@ -5,7 +5,7 @@ archived: false
 future_pattern: false
 images:
   - url: /images/opt-in-to-give-consent.svg
-weight: 1
+weight: 4
 alt: An organ donor card in front a form for joining the Organ Donor's Register.
 advantages:
  - It’s a low friction way for the user to agree to regular data sharing for a specific purpose e.g. a weekly newsletter without having to repeat the consent process every time

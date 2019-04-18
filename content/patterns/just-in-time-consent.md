@@ -2,7 +2,7 @@
 title: Just-in-time consent
 
 category: Giving and removing consent
-weight: 1
+weight: 2
 images:
   - url: /images/just-in-time-consent.svg
 alt: A prompt asking to access the location of a device to tag a photograph.
@@ -40,9 +40,6 @@ further_reading:
  - title: Tech Crunch
    url: https://techcrunch.com/2014/04/04/the-right-way-to-ask-users-for-ios-permissions/
    description: The right way to ask users for iOS permissions
-
-date: 2019-04-04T14:58:05+01:00
-lastmod: 2019-04-04
 ---
 
 Asking for a specific permission at the exact moment it’s needed to complete a task. For example, if a user wants to tag a photo with their location, the user is asked for permission to access location data as they add the tag.

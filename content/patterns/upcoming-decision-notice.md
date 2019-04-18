@@ -3,7 +3,7 @@ title: Upcoming decision notice
 
 
 category: Understanding automated decisions
-weight: 1
+weight: 2
 images:
 - url: /images/upcoming-decision-notice.svg
 

@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: One-time access
-weight: 1
+weight: 3
 category: Giving access to data
 
 images:

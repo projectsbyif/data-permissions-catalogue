@@ -2,7 +2,7 @@
 title: Authentication using a security object
 
 category: Signing in to a service
-weight: 1
+weight: 2
 images:
   - url: /images/authentication-using-a-security-object.svg
 

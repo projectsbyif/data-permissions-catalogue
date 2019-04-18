@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Authentication by secret answer
-weight: 1
+weight: 4
 category: Signing in to a service
 
 advantages:

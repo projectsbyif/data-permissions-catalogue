@@ -1,10 +1,10 @@
 ---
 illustration_version: 1
 
-title: Opt-out to stop sharing data
+title: Opt-out to remove consent
 
 category: Giving and removing consent
-weight: 1
+weight: 4
 images:
   - url: /images/opt-out-to-remove-consent.svg
 
@@ -26,4 +26,6 @@ examples:
     url: https://digital.nhs.uk/about-nhs-digital/our-work/keeping-patient-data-safe/how-we-look-after-your-health-and-care-information/your-information-choices/opting-out-of-sharing-your-confidential-patient-information
 ---
 
-Permission to access data is granted by default. The user has to take action to stop access. For example, NHS patients can choose to stop sharing confidential information for research and planning purposes.
+Permission to access data is granted by default. The user has to take action to stop access.
+
+For example, NHS patients can choose to stop sharing confidential information for research and planning purposes.

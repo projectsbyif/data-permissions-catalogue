@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Time-limited sharing
-weight: 1
+weight: 4
 category: Giving access to data
 
 images:

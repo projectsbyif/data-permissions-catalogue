@@ -1,8 +1,8 @@
 ---
 illustration_version: 1
 
-title: Geofencing
-weight: 2
+title: Location-based event
+weight: 4
 category: Getting access to data
 
 images:

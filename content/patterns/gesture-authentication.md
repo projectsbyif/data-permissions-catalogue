@@ -2,7 +2,7 @@
 title: Gesture authentication
 
 category: Signing in to a service
-weight: 1
+weight: 4
 images:
   - url: /images/gesture-authentication.svg
 

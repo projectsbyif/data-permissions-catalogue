@@ -1,8 +1,8 @@
 ---
 illustration_version: 1
 
-title: Private link
-weight: 1
+title: Sharing using a private link
+weight: 4
 category: Giving access to data
 
 advantages:

@@ -3,7 +3,7 @@ title: Masking personal data
 
 category: Getting access to data
 
-weight: 1
+weight: 2
 
 archived: false
 
@@ -35,8 +35,5 @@ examples:
  - title: Mixpanel analytics allow the use of random identifiers to refer to individual users
    url: https://help.mixpanel.com/hc/en-us/articles/360000679006-Managing-Personal-Information#use-randomly-generated-identifiers
 
-date: 2019-04-11T17:17:35+01:00
-
-lastmod: 2019-04-11
 ---
 Personal data is masked using a code to make it harder to trace it back to the individual, without the correct authorisation reveal the data. For example, a blood sample is labelled with a code, and only the doctor can work out who the blood came from by checking the code against a database.

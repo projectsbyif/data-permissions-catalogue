@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Checking active access
-weight: 1
+weight: 4
 category: Signing in to a service
 
 images:
@@ -12,16 +12,17 @@ alt: Checking active access.
 
 advantages:
  - There’s virtually no friction for the user because they just continue using the service in the same way
- - There’s less risk of an active session being exposed if a user doesn’t take active steps to deauthenticate
+ - It can reduce the risk of someone being able to use the account if they gain access to a currently logged in device
 
 limitations:
  - If overused this pattern can be frustrating, requiring a user to actively prevent the session from expiring
- - Active prevention of session expiry could make it harder for people with accessibility needs to use the service
+ - Depending on implementation, this could make it harder for people with accessibility needs to use the service
 
 examples:
   - title: Automatic logging out of online baking after a period of inactivity
   - title: Apple Watch
-    description: stops access to Apple Pay when the watch senses it's no longer being worn
+    description: Stops access to Apple Pay when the watch senses it's no longer being worn
+    url: https://www.imore.com/apple-watch-apple-pay-and-wrist-detection-what-you-need-know
 ---
 
 Some products and services automatically expire active sessions after a specific time or using other signs of inactivity for added security.

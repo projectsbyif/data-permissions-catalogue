@@ -2,7 +2,7 @@
 title: Minimal sharing
 
 category: Giving access to data
-weight: 1
+weight: 2
 images:
   - url: /images/minimal-sharing.svg
 

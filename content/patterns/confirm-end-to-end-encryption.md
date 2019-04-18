@@ -2,7 +2,7 @@
 title: Confirm end-to-end encryption
 
 category: Doing security checks
-weight: 1
+weight: 2
 images:
   - url: /images/confirm-end-to-end-encryption-1.svg
   - url: /images/confirm-end-to-end-encryption-2.svg

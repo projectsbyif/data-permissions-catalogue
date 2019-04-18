@@ -3,7 +3,7 @@ title: Group decision
 
 category: Giving and removing consent
 
-weight: 1
+weight: 3
 
 archived: false
 
@@ -31,10 +31,6 @@ examples:
    url: https://www.theguardian.com/technology/2014/feb/28/seven-people-keys-worldwide-internet-security-web
  - title: Quorum authentication (M of N access control) on AWS CloudHSM
    url: https://docs.aws.amazon.com/cloudhsm/latest/userguide/quorum-authentication.html
-
-date: 2019-04-11T17:30:30+01:00
-
-lastmod: 2019-04-11
 ---
 
 A set group of users must give consent at the same time for data to be accessed or changed. For example, seven people hold keys that are used to secure the system at the heart of the web. When they come together, their keys create a master key, which allows them access.

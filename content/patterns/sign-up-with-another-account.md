@@ -1,9 +1,9 @@
 ---
-title: Sign-up with another account (single sign-on)
+title: Sign-up with another account
 
 category: Signing in to a service
 
-weight: 1
+weight: 4
 
 archived: false
 
@@ -31,10 +31,6 @@ limitations:
 examples:
  - title: When creating accounts in some online shops
  - title: Using work-issued Google account to sign up for time-tracking software Harvest
-
-date: 2019-04-16T17:32:29+01:00
-
-lastmod: 2019-04-16
 ---
 
 Allowing users to sign-up to a new service, through a service where they already have an account.

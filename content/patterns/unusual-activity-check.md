@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Unusual activity check
-weight: 1
+weight: 4
 category: Doing security checks
 
 images:
