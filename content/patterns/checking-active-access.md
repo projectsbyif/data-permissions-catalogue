@@ -6,9 +6,9 @@ weight: 1
 category: Signing in to a service
 
 images:
-  - url: /images/inactivity-checking.svg
+  - url: /images/checking-active-access.svg
 
-alt: A message on a mobile phone which reads Are you still there? Data published in 29 seconds.
+alt: Checking active access.
 
 advantages:
  - There’s virtually no friction for the user because they just continue using the service in the same way
