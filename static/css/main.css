@@ -13,7 +13,7 @@ body.page {
 
 main {
   background-color: white;
-  margin-bottom: 46em;
+  margin-bottom: 94vh;
   z-index: 10;
 }
 
@@ -47,6 +47,11 @@ hr {
 
 hr.hover {
   border-bottom: 1px solid #F6776C;
+}
+
+.grid-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .mobile-only {
@@ -230,7 +235,7 @@ footer {
   color: white;
   bottom: 0;
   left: 0;
-  height: 46em;
+  height: 94vh;
   padding: 2em 0 4em 0;
   position: fixed;
   width: 100%;
@@ -283,6 +288,10 @@ footer p {
   font-size: 1.6em;
 }
 
+footer .title {
+  display: none;
+}
+
 footer .license {
   color: rgb(189, 189, 200);
   font-size: 1em;
@@ -292,6 +301,7 @@ footer .license {
 
 footer.mobile-only .license {
   margin-top: 1em;
+  line-height: 1.3em;
 }
 
 footer .license a {
@@ -337,16 +347,73 @@ footer li a:hover {
   color: white;
 }
 
+footer .logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+footer .logo div {
+  margin-right: 1em;
+}
+
+footer .grid-container {
+  height: 100%;
+  position: relative;
+}
+
+footer .fix-to-bottom {
+  position: fixed;
+  bottom: 2em;
+  width: 100%;
+}
+
 /* Media Queries */
 
 /* Large mobile eg. tablet or vertical orientation */
-@media (min-width: 48em) {
+@media (min-width: 40em) {
   main {
-    margin-bottom: 34em;
+    margin-bottom: 24em;
   }
 
   footer {
-    height: 34em;
+    height: 24em;
+  }
+
+  footer .title {
+    display: inline-block;
+  }
+
+  .mobile-only {
+    display: none !important;
+  }
+
+  footer.desktop-only {
+    display: unset !important;
+  }
+
+  footer .get-in-touch {
+    margin-top: 0.3em;
+  }
+
+  footer .get-in-touch h4 {
+    margin-top: 0;
+  }
+
+  footer .links {
+    margin-top: 0.4em;
+  }
+  footer .logo {
+    display: unset;
+  }
+}
+
+@media (min-width: 64em) and (max-width: 1415px) {
+  footer .grid-x > .large-3 {
+    width: 30%;
+  }
+  footer .large-offset-1 {
+    margin-left: 4.333%
   }
 }
 
@@ -391,7 +458,11 @@ footer li a:hover {
   }
 
   footer .contact.cell {
-    padding-top: 2.27em;
+    padding-top: 1.27em;
+  }
+
+  footer .links {
+    margin-top: 0;
   }
 
   footer .get-in-touch {
@@ -408,9 +479,11 @@ footer li a:hover {
     padding-top: 1.7em;
   }
 
-  footer .logo.cell {
-    padding-top: 0.9em;
+  footer .large-offset-5 {
+    margin-left: 39%;
   }
+
+
 
   footer .get-in-touch h4,
   footer .get-in-touch p,
@@ -430,14 +503,6 @@ footer li a:hover {
 
   footer .license {
     font-size: 0.9em;
-  }
-
-  .mobile-only {
-    display: none !important;
-  }
-
-  .desktop-only {
-    display: unset !important;
   }
 
   .expand-all.desktop-only {
