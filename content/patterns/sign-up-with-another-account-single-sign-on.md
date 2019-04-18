@@ -14,7 +14,7 @@ future_pattern: false
 future_pattern_reason:
 
 images:
- - url: /images/sign-up-with-another-account
+ - url: /images/sign-up-with-another-account.svg
 alt: Sign-up with another account
 
 advantages:

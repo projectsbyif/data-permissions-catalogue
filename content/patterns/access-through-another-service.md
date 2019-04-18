@@ -6,7 +6,7 @@ weight: 1
 category: Signing in to a service
 
 images:
-  - url: /images/access-through-secondary-means.svg
+  - url: /images/access-through-another-service.svg
 
 alt: An email has a link which logs you in to another service.
 

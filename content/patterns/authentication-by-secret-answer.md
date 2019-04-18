@@ -16,7 +16,7 @@ limitations:
 
 
 images:
-  - url: /images/secret-answer.svg
+  - url: /images/authentication-by-secret-answer.svg
 
 alt: A form on a website asking for a password and answer to a secret question.
 

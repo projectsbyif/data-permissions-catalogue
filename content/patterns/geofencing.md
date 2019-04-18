@@ -2,7 +2,7 @@
 illustration_version: 1
 
 title: Geofencing
-weight: 1
+weight: 2
 category: Getting access to data
 
 images:
