@@ -4,9 +4,7 @@ title: Confirm end-to-end encryption
 category: Doing security checks
 weight: 2
 images:
-  - url: /images/confirm-end-to-end-encryption-1.svg
   - url: /images/confirm-end-to-end-encryption-2.svg
-  - url: /images/confirm-end-to-end-encryption-3.svg
 
 alt: A person generates a code on their device for another person to scan.
 

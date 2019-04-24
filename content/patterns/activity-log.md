@@ -28,11 +28,9 @@ examples:
  - title: Frequent locations in iOS
    url: https://support.apple.com/en-us/HT203033
    description: A list of locations the phone has been in and then recorded, which helps Siri choose a person’s home and work location
-   img_src:
  - title: Activity log in Facebook
    url: https://www.facebook.com/help/activitylog
    description: A private list showing actions someone has taken, such as their searches, likes and comments
-   img_src:
 
 ---
 

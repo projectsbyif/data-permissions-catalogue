@@ -3,6 +3,9 @@ title: Behavioural authentication
 
 category: Doing security checks
 weight: 1
+
+future_pattern: true
+
 images:
   - url: /images/behavioural-biometrics.svg
 
@@ -14,6 +17,14 @@ advantages:
 limitations:
  - It won’t be effective if it’s used on a shared device
  - It can’t be used in isolation, it needs to be combined with other authentication methods
+
+examples:
+ - title: An Efficient User Verification System via Mouse Movements (PDF)
+   url: http://www.cs.wm.edu/~hnw/paper/ccs11.p
+ - title: DIGIPASS for apps
+   url: https://www.vasco.com/behavioral-authentication.html
+ - title: Continuous authentication
+   url: https://www2.nopassword.com/continuous-authentication/#start
 
 further_reading:
   - title: An Efficient User Verification System via Mouse Movements (PDF)
