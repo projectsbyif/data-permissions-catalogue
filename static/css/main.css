@@ -393,7 +393,7 @@ footer .fix-to-bottom {
   }
 
   footer.desktop-only {
-    display: unset !important;
+    display: unset;
   }
 
   footer .get-in-touch {
@@ -409,15 +409,6 @@ footer .fix-to-bottom {
   }
   footer .logo {
     display: unset;
-  }
-}
-
-@media (min-width: 64em) and (max-width: 1415px) {
-  footer .grid-x > .large-3 {
-    width: 30%;
-  }
-  footer .large-offset-1 {
-    margin-left: 4.333%
   }
 }
 
@@ -483,11 +474,9 @@ footer .fix-to-bottom {
     padding-top: 1.7em;
   }
 
-  footer .large-offset-5 {
+  /* footer .large-offset-5 {
     margin-left: 39%;
-  }
-
-
+  } */
 
   footer .get-in-touch h4,
   footer .get-in-touch p,

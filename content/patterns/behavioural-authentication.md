@@ -6,6 +6,8 @@ weight: 1
 
 future_pattern: true
 
+future_pattern_reason: Not in use yet but useful for designing possible futures.
+
 images:
   - url: /images/behavioural-biometrics.svg
 

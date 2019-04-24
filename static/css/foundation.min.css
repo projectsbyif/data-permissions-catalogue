@@ -760,7 +760,7 @@ ul.no-bullet, ol.no-bullet {
 
 @media print {
   * {
-    background: transparent !important;
+    /* background: transparent !important; */
     box-shadow: none !important;
     color: black !important;
     text-shadow: none !important; }

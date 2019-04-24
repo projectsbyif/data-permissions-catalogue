@@ -5,6 +5,7 @@ title: Word matching
 
 archived: true
 weight: 10
+archive_date: 24/04/2019
 
 archive_reason: We’ve decided to archive this pattern because we can’t find an example of it being used in a service.
 

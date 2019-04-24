@@ -1,9 +1,18 @@
+.grid-container {
+  padding: 0;
+}
+
+main.patterns header {
+  margin-top: 0;
+}
+
 .patterns .page-nav,
 .patterns .print,
-.patterns .twitter-share-button,
-.patterns .feedback-and-status,
-.patterns footer {
-  display: none;
+.patterns .pattern-share-links,
+footer.desktop-only,
+footer.mobile-only,
+.patterns .feedback-and-status {
+  display: none !important;
 }
 
 a[href]:after {

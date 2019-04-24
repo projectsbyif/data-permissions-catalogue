@@ -139,13 +139,14 @@ main.patterns section li {
 /* Archive */
 
 main.patterns section.archive-description {
-  color: #898993;
+  color: #686778;
   margin-bottom: 3rem;
   margin-top: 4rem;
 }
 
-.archive-description h2{
+main.patterns .archive-description h2{
   width: 85%;
+  line-height: 1.1em
 }
 
 .archive-description p {
@@ -406,7 +407,7 @@ display: inline-block;
 .pattern-image-div.giving-and-removing-consent,
 .related-patterns-image.giving-and-removing-consent,
 .pattern-heading-category.giving-and-removing-consent {
-  background-color: rgb(150,225,170);
+  background-color: rgb(140,235,200);
 }
 
 .related-patterns li.giving-and-removing-consent:hover {
@@ -414,7 +415,7 @@ display: inline-block;
 }
 
 .examples-title a.giving-and-removing-consent:hover {
-  box-shadow: inset 0 -3px 0 rgb(150,225,170);
+  box-shadow: inset 0 -3px 0 rgb(140,235,200);
 }
 
 .pattern-image-div.signing-in-to-a-service,
@@ -489,6 +490,12 @@ display: inline-block;
 
 /* Media queries */
 
+@media (min-width: 64em) and (max-width: 72em) {
+  .feedback-form input {
+    margin: 0 0.2em 0 0;
+  }
+}
+
 @media (min-width: 64em) {
   main.patterns header {
     margin-top: 7rem;
@@ -547,6 +554,12 @@ display: inline-block;
 
   .pattern-image-div {
     height: 500px;
+  }
+
+  /* Archive description */
+
+  .archive-description p {
+    font-size: 1.2em;
   }
 
   /* Description */

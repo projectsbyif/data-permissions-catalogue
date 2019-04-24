@@ -28,9 +28,7 @@
           Archived on {{ .Params.archive_date }} 🗄️
         </p>
         {{ else if eq .Params.future_pattern true }}
-        <p class="future-pattern-tag">
-          Future pattern 🔮
-        </p>
+        <p class="future-pattern-tag">Future pattern 🔮</p>
         {{ end }}
       </div>
       {{ if isset .Params "images" }}
@@ -127,7 +125,7 @@
 
   <section class="related-patterns grid-x grid-padding-x">
   <div class="large-2 large-offset-1 small-12 cell">
-    <h2>Related Patterns</h2>
+    <h2>Related patterns</h2>
   </div>
   <div class="large-7 small-12 cell">
     <ul class="grid-x pattern-card-container">
