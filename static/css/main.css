@@ -130,7 +130,8 @@ nav.page, nav.patterns {
   z-index: 500;
 }
 
-nav.patterns .made-by {
+nav.patterns .made-by,
+body.error .made-by {
   color: #242249;
 }
 
@@ -226,6 +227,32 @@ nav .made-by:hover {
 .global-category-nav-list a:focus,
 .global-category-nav-list a:active {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* Error page */
+.error-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-page h1 {
+  font-size: 5em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.error-page p {
+  width: 50%;
+  color: #898993;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.error-page a {
+  color: rgb(36, 34, 73);
 }
 
 /* Footer */
@@ -439,6 +466,11 @@ footer .fix-to-bottom {
   main {
     margin-bottom: 25em;
   }
+
+  /* Error page */
+
+
+
 
   /* Footer */
 
