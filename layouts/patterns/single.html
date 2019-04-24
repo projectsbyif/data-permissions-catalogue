@@ -24,15 +24,13 @@
     <div class="pattern-image-div {{ urlize .Params.category }}">
       <div class="pattern-status">
         {{ if eq .Params.archived true }}
-        <details class="archived">
-          <summary>Archived 🗄️</summary>
-          {{ .Params.archive_reason }}
-        </details>
+        <p class="archive-tag">
+          Archived on {{ .Params.archive_date }} 🗄️
+        </p>
         {{ else if eq .Params.future_pattern true }}
-        <details class="future-pattern">
-          <summary>Future pattern 🔮</summary>
-          {{ .Params.future_pattern_reason }}
-        </details>
+        <p class="future-pattern-tag">
+          Future pattern 🔮
+        </p>
         {{ end }}
       </div>
       {{ if isset .Params "images" }}
@@ -41,6 +39,17 @@
     </div>
   </div>
   </section>
+
+  {{ if eq .Params.archived true }}
+  <section class="archive-description grid-x grid-padding-x">
+    <div class="large-2 large-offset-1 small-12 cell">
+      <h2>Reason for archiving</h2>
+    </div>
+    <div class="large-7 small-12 cell">
+      <p>{{ .Params.archive_reason }}</p>
+    </div>
+  </section>
+  {{ end }}
 
   <section class="description grid-x grid-padding-x">
   <div class="large-2 large-offset-1 small-12 cell">

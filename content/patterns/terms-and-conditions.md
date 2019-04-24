@@ -5,9 +5,12 @@ title: Terms and conditions
 
 category: Giving and removing consent
 
-archived: true
 weight: 10
+
+archived: true
 archive_reason: We discourage the use of this pattern in services, as in our view it does not help the user give informed consent.
+archive_date: 24/04/2019
+
 images:
   - url: /images/terms-and-conditions.svg
 
