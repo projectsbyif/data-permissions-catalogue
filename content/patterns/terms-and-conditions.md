@@ -13,6 +13,10 @@ images:
 
 alt: A dialog box showing a terms and conditions agreement above Agree and Disagree buttons.
 
+limitations:
+  - They are usually placed in the middle of signing up to a service so users don’t have time to read them or understand the contents
+  - They’re usually long and written with complex language so its difficult for users to understand what data will be collected and how it will be used
+
 examples:
   - description: Most software during installation and digital services during registration
 
