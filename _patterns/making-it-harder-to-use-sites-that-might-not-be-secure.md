@@ -11,7 +11,7 @@ images:
 alt: A message on a computer screen that says 'Your connection is not private'. A button underneath the message says 'Back to safety'.
 
 advantages:
- - Guides users towards a safer course of action without them having to understand complex systems and technologies, like [Certificate Transparency](https://www.certificate-transparency.org/) for example.
+ - Guides users towards a safer course of action without them having to understand complex systems and technologies, like Certificate Transparency for example.
 
 limitations:
  - Some users will want to access websites regardless of the risk and will find this experience difficult

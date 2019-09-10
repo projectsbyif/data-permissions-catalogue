@@ -8,7 +8,7 @@ category: Share data
 images:
 - url: /images/indicating-that-something-is-not-secure.svg
 
-alt: A message on a computer monitor that reads 'Not secure'
+alt: A message on a computer monitor that reads 'Not secure' next to an exclamation mark.
 
 advantages:
  - Users don’t have to understand any of the underlying technology to be aware that a service may be risky to use and decide whether to continue
