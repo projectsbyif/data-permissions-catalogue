@@ -3,12 +3,12 @@ layout: pattern
 
 title: Making it harder to use sites that might not be secure
 
-category: Control access
+category: Share data
 
 images:
-- url: /images/access-through-letter.svg
+- url: /images/making-it-harder-to-use-sites-that-might-not-be-secure.svg
 
-alt: A person's hand hovers their mobile phone over a bar code in an energy bill.
+alt: A message on a computer screen that says 'Your connection is not private'. A button underneath the message says 'Back to safety'.
 
 advantages:
  - Guides users towards a safer course of action without them having to understand complex systems and technologies, like [Certificate Transparency](https://www.certificate-transparency.org/) for example.

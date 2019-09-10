@@ -3,12 +3,12 @@ layout: pattern
 
 title: Indicating that something is secure
 
-category: Control access
+category: Share data
 
 images:
-- url: /images/access-through-letter.svg
+- url: /images/indicating-that-something-is-secure.svg
 
-alt: A person's hand hovers their mobile phone over a bar code in an energy bill.
+alt: A message on a computer screen that reads 'Secure' next to a locked padlock icon.
 
 advantages:
  - Users don’t have to understand any of the underlying technology to be reassured by the icon.
