@@ -21,8 +21,7 @@ limitations:
 
 examples:
   - title: Chrome, Firefox and Safari web browsers.
-    url: https://support.mozilla.org/en-US/kb/how-do-i-tell-if-my-connection-is-secure
-  - title: Whatsapp ‘not in your contact list’
+  - title: WhatsApp ‘not in your contact list’
     url: https://faq.whatsapp.com/21197244/
 
 ---

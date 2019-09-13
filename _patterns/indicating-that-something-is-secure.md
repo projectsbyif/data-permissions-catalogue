@@ -23,11 +23,10 @@ limitations:
 
 examples:
   - title: Chrome, Firefox and Safari web browsers.
-    url: https://support.mozilla.org/en-US/kb/how-do-i-tell-if-my-connection-is-secure
 
 ---
 
 A lock icon, or another kind of kite mark, in the search bar is a visual cue that suggests to the user that data shared between the server and the browser is secure and encrypted.
 If that communication is broken, messages can be intercepted and read by anyone, in phishing attacks or other hacks.
 
-If a website has a valid certificate, issued by certificate authorities, most web browsers (Chrome, Firefox, Safari or Microsoft Edge), will show the user a padlock next to the URL.
+If a website has a valid certificate, issued by [certificate authorities](https://en.wikipedia.org/wiki/Certificate_authority), most web browsers (Chrome, Firefox, Safari or Microsoft Edge), will show the user a padlock next to the URL.
