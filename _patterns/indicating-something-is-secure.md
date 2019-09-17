@@ -23,15 +23,17 @@ limitations:
 
 examples:
   - title: Chrome web browser
+    description: Chrome has announced plans to phase out positive security indicators.
     url: https://support.google.com/chrome/answer/95617?hl=en-GB
   - title: Firefox web browser
     url: https://support.mozilla.org/en-US/kb/how-do-i-tell-if-my-connection-is-secure
   - title: Safari web browser
-    url: https://support.apple.com/en-gb/HT208672
+    url: https://support.apple.com/en-gb/guide/safari/sfri40697/mac
 
 ---
 
 A lock icon in the search bar (or another kind of kite mark) is a visual cue that suggests that the data shared between the server and the browser is secure and encrypted.
+
 If that communication is broken, messages can be intercepted. They can then be read by anyone and used in phishing attacks or other hacks.
 
 If a website has a valid certificate, issued by [certificate authorities](https://en.wikipedia.org/wiki/Certificate_authority), most web browsers (Chrome, Firefox, Safari or Microsoft Edge), will show the user a padlock next to the URL. IF doesn’t think this pattern works: we’ve only included it as a reference.

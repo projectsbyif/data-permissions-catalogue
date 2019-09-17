@@ -28,4 +28,4 @@ examples:
 
 Some services, like web browsers, make it difficult for users to access websites that are considered unsafe.
 
-Usually, browsers check if websites have certificates that prove websites are authentic and that data exchanged between the browser and the server is encrypted. If browsers can’t find a valid certificate, they add friction to the user experience by displaying an error page, or prompting the user to confirm they want to navigate to a potentially unsafe page.
+Usually, browsers check if websites have certificates that prove websites are authentic and that data exchanged between the browser and the server is encrypted. If browsers can’t find a valid certificate, they add friction to the user experience by displaying an error page, or prompting the user to confirm they want to navigate to a potentially unsafe page. 

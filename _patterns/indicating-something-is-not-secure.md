@@ -32,6 +32,6 @@ examples:
 
 ---
 
-An alert icon in the search bar is a visual cue that suggests to the user that data shared between the server and the browser is not secure. If the communication between the server and browser is broken, messages can be intercepted. They can then be read by anyone, in phishing attacks or other hacks.
+An alert icon in the search bar is a visual cue that suggests to the user that data shared between the server and the browser is not secure. If the communication between the server and browser is broken, messages can be intercepted. They can then be used in phishing attacks or other hacks.
 
-If a website does not have a valid certificate, issued by [certificate authorities](https://en.wikipedia.org/wiki/Certificate_authority), most web browsers (Chrome, Firefox, Safari or Microsoft Edge), will show the user an alert icon and the text  ‘Not secure’ next to the URL. At IF, we think this is a better pattern than [Indicating something is secure](/patterns/indicating-something-is-secure), but still inadequate by itself.
+If a website does not have a valid certificate, issued by [certificate authorities](https://en.wikipedia.org/wiki/Certificate_authority), most web browsers (Chrome, Firefox, Safari or Microsoft Edge), will show the user an alert icon and the text  ‘Not secure’ next to the URL. At IF, we think this is a better pattern than [Indicating something is secure](/patterns/indicating-something-is-secure), but still inadequate by itself. 
