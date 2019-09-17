@@ -20,6 +20,7 @@ limitations:
 
 examples:
   - title: Chrome web browser
+    description: Go to "chrome://interstitials/" in the Chrome browser to see examples of error pages.
   - title: Firefox web browser
     url: https://support.mozilla.org/en-US/kb/error-codes-secure-websites
   - title: Safari web browser
