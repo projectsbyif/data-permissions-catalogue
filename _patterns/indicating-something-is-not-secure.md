@@ -21,7 +21,14 @@ limitations:
  - There’s an ongoing question about the fairness of expecting end users to understand enough about information security to assess risks and make decisions.
 
 examples:
-  - title: Chrome, Firefox and Safari web browsers.
+  - title: Chrome web browser
+    url: https://support.google.com/chrome/answer/95617?hl=en-GB
+  - title: Firefox web browser
+    url: https://support.mozilla.org/en-US/kb/how-do-i-tell-if-my-connection-is-secure
+  - title: Safari web browser
+    url: https://support.apple.com/en-gb/HT208672
+  - title: Falling rocks sign
+    url: https://commons.wikimedia.org/wiki/Category:Falling_stones_signs
 
 ---
 

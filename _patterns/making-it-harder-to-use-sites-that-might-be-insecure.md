@@ -19,7 +19,10 @@ limitations:
  - Organisations who run browsers and similar services have the power to influence what websites users can access.
 
 examples:
-  - title: Chrome, Firefox and Safari web browsers.
+  - title: Chrome web browser
+  - title: Firefox web browser
+    url: https://support.mozilla.org/en-US/kb/error-codes-secure-websites
+  - title: Safari web browser
 
 ---
 

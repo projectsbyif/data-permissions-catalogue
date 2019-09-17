@@ -22,7 +22,12 @@ limitations:
  - Certificate Authorities that issue certificates have been hacked in the past. This meant legitimate certificates were issued for untrustworthy websites.
 
 examples:
-  - title: Chrome, Firefox and Safari web browsers.
+  - title: Chrome web browser
+    url: https://support.google.com/chrome/answer/95617?hl=en-GB
+  - title: Firefox web browser
+    url: https://support.mozilla.org/en-US/kb/how-do-i-tell-if-my-connection-is-secure
+  - title: Safari web browser
+    url: https://support.apple.com/en-gb/HT208672
 
 ---
 
