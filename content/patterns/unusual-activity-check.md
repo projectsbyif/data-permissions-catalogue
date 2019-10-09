@@ -6,7 +6,7 @@ weight: 4
 category: Doing security checks
 
 images:
-  - url: /images/behavioural-patterns.svg
+  - url: /images/unusual-activity-check.svg
 
 alt: A message on a phone asking to confirm your password because it is a new or unfamiliar device.
 
