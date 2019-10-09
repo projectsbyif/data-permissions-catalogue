@@ -1,4 +1,4 @@
-{{ $patterns := .Site.RegularPages }}
+{{ $patterns := where .Site.RegularPages "Section" "patterns" }}
 
 <section class="homepage-section most-recent-view">
   <div class="grid-container">

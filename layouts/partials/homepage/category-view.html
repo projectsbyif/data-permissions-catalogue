@@ -1,4 +1,4 @@
-{{ $pages := .Site.RegularPages }}
+{{ $pages := where .Site.RegularPages "Section" "patterns" }}
 
 <section class="homepage-section category-view">
   <div class="grid-container expand-all-container">
