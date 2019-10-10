@@ -523,3 +523,9 @@ header.page {
     font-size: 1.4em;
   }
 }
+
+@media (min-width: 2000px) {
+  .homepage-intro {
+    height: 40vh;
+  }
+}
