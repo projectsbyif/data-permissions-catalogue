@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://catalogue.projectsbyif.com/"
 languageCode = "en-uk"
 title = "Data Patterns Catalogue"
 [params]

@@ -8,7 +8,6 @@
         <div class="pattern-heading">
           <h1 class="pattern-heading-title">{{ .Title }}</h1>
           <ul class="pattern-share-links">
-            <li class="desktop-only"><a onclick="window.print()" class="print" href="#">Print</a></li>
             <li class="share-li">
               <a class="share twitter-share-button"
                  href="https://twitter.com/intent/tweet?text=‘{{ .Title }}’{{ .Site.Params.twitterText }}&url={{ .Permalink }}&via={{ .Site.Params.twitterHandle }}" target="_blank">Tweet</a>
