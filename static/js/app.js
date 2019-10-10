@@ -14,8 +14,8 @@ const $menuToggle = $('.toggle-menu')
 const $expandToggle = $('.expand-toggle')
 const $topNav = $('.nav-bg')
 const $topNavHeight = $topNav.height()
-const $bgImage = $('.background-image')
-const $bgImageHeight = $bgImage.height()
+const $bg = $('.header-background')
+const $bgHeight = $bg.height()
 
 $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
   e.preventDefault();
@@ -204,9 +204,8 @@ $(window).scroll(function() {
 })
 
 function animateStickyNavOpacity() {
-  // console.log($bgImage.offset().top)
   var scrollTop = $(window).scrollTop()
-  var visibleImg = Math.max(0, $bgImageHeight - scrollTop)
+  var visibleImg = Math.max(0, $bgHeight - scrollTop)
   var percentageVisible = visibleImg / $topNavHeight
   if (percentageVisible > 1) percentageVisible = 1
   var percentageOpacity = 1 - percentageVisible
