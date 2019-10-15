@@ -100,9 +100,25 @@ $('.category-view .see-more-button').click(function(e){
   const container = $(this).parent()
   const fullList = $(container).siblings('.pattern-card-full-list')
   fullList.slideToggle("slow", function() {
-    $(this).toggleClass('preview')
+    if ($(this).is(":visible")) {
+      categoryIsExpanded(container)
+    } else {
+      categoryIsCollapsed(container)
+    }
   })
 })
+
+function categoryIsExpanded(category) {
+  const seeMoreButton = $(category).find('.see-more-button');
+  $(seeMoreButton).html(collapseCategoryText).addClass('view-arrow')
+}
+
+function categoryIsCollapsed(category) {
+  const seeMoreButton = $(category).find('.see-more-button');
+  $(category).addClass('preview')
+  $('.expand-all').html(expandAllText).removeClass('add-arrow')
+  $(seeMoreButton).html(expandCategoryText).removeClass('view-arrow')
+}
 
 function expandCategory(category) {
   const patternCards = Array.from($(category).find('.pattern-card-container'));
