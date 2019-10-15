@@ -52,6 +52,9 @@ $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
   $('html, body').animate({ scrollTop: 0 }, 500)
 })
 
+/* Pattern category lists on homepage */
+
+// Expand all categories when at least 1 category is closed.
 $('.expand-all').click(function(e) {
   e.preventDefault()
   $('.category-view').show()
@@ -63,20 +66,30 @@ function toggleExpandAllCategories(button) {
   const isExpandAll = $(button).html() == expandAllText
   if (isExpandAll) {
     $('.category-section').each(function(index, category) {
-      expandCategory(category)
+      const fullList = $(category).children('.pattern-card-full-list')
+      fullList.slideToggle("slow", function() {
+        categoryIsExpanded(category)
+        if ($(fullList).is(":hidden")) {
+          $(fullList).show();
+        }
+      })
     })
     $(button).html(collapseAllText).addClass('add-arrow')
     return
   }
   $('.category-section').each(function(index, category) {
+    const fullList = $(category).children('.pattern-card-full-list')
     if (!$(category).hasClass('preview')) {
-      collapseCategory(category)
+      fullList.slideToggle("slow", function() {
+        categoryIsCollapsed(category)
+        if ($(fullList).is(":visible")) {
+          $(fullList).hide();
+        }
+      })
     }
   })
   $(button).html(expandAllText).removeClass('add-arrow')
 }
-
-/* Pattern category lists on homepage */
 
 // Add class 'preview' to full-list div using JS, so when JS is not present all patterns are visible.
 $('.pattern-card-full-list').each(function(index, list) {
@@ -110,6 +123,7 @@ $('.category-view .see-more-button').click(function(e){
 
 function categoryIsExpanded(category) {
   const seeMoreButton = $(category).find('.see-more-button');
+  $(category).removeClass('preview')
   $(seeMoreButton).html(collapseCategoryText).addClass('view-arrow')
 }
 
