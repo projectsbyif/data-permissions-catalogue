@@ -49,24 +49,21 @@ header.page {
 
 .homepage-intro h1 {
   margin: 3rem auto 1em auto;
-  color: white;
-  text-shadow: 1px 1px 14px rgba(0, 0,0, 0.3);
   width: 90%;
 }
 
 .homepage-intro p {
-  color: white;
   font-family: 'acumin-pro', sans-serif;
   font-weight: 500;
   margin: 0 auto 3em auto;
   font-size: 1.1em;
   line-height: 1.3;
   width: 90%;
-  text-shadow: 1px 1px 14px rgba(0, 0,0, 0.3);
 }
 
 .homepage-intro p a {
-  color: white;
+  color: #242249;
+  text-decoration: underline;
 }
 
 /* Category Nav */
