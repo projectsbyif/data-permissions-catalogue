@@ -194,6 +194,9 @@ header.page {
 }
 
 /* View by category */
+.pattern-card-full-list.preview {
+  display: none;
+}
 
 .category-section.preview .pattern-card-container {
   display: none;

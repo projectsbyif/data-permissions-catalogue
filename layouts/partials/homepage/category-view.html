@@ -15,13 +15,22 @@
           <h2>{{ .name }} <span>({{ len $patterns }})</span></h2>
         </div>
       </div>
-      <div class="grid-x grid-padding-x pattern-card-list">
-        {{ range $patterns }}
+      <div class="grid-x grid-padding-x pattern-card-preview-list">
+        {{ range first 3 $patterns }}
         {{ partial "homepage/pattern-card.html" . }}
         {{ end }}
       </div>
+      <div class="pattern-card-full-list">
+        <div class="pattern-card-full-list-div grid-x grid-padding-x">
+        {{ range $index, $element := $patterns }}
+          {{ if gt $index 2 }}
+            {{ partial "homepage/pattern-card.html" $element }}
+          {{ end }}
+        {{ end }}
+        </div>
+      </div>
     <div class="see-more-button-container">
-      <a class="see-more-button" href="#{{ urlize .name }}" data-category="{{ urlize .name }}">Expand category</a>
+      <a class="see-more-button" data-category="{{ urlize .name }}">Expand category</a>
     </div>
   </div>
   <hr data-category="{{ urlize .name }}">

@@ -17,6 +17,7 @@ const $topNavHeight = $topNav.height()
 const $bg = $('.header-background')
 const $bgHeight = $bg.height()
 
+// Toggle view between category-view, recent-view, alphabetical-view
 $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
   e.preventDefault();
 
@@ -25,7 +26,7 @@ $('.category-nav a, .global-category-nav .toggle-view').click(function(e) {
   $('.category-nav a, .global-category-nav .toggle-view').removeClass('active')
 
   $(this).addClass('active')
-  toggleMenu($menu)
+  toggleMenu($menu) // mobile menu
 
   const targetLink = this.classList[0]
 
@@ -77,32 +78,30 @@ function toggleExpandAllCategories(button) {
 
 /* Pattern category lists on homepage */
 
-$('.category-section').each(function(index, category) {
-  const patternsList = Array.from($(category).find('.pattern-card'))
-  const seeMoreButton = $(category).find('.see-more-button');
-  $(category).addClass('preview')
+// Add class 'preview' to full-list div using JS, so when JS is not present all patterns are visible.
+$('.pattern-card-full-list').each(function(index, list) {
+  $(list).addClass('preview')
 })
 
 // Show/hide extra patterns on button click
 $('.category-view .category-heading').click(function(e) {
-  const parentCategory = $(this).parents('.category-section');
-
-  if ($(parentCategory).hasClass('preview')) {
-    expandCategory(parentCategory)
-  } else {
-    collapseCategory(parentCategory)
-  }
+  const parentCategory = $(this).parent()
+  const fullList = $(this).siblings('.pattern-card-full-list')
+  fullList.slideToggle("slow", function() {
+    if ($(this).is(":visible")) {
+      categoryIsExpanded(parentCategory)
+    } else {
+      categoryIsCollapsed(parentCategory)
+    }
+  })
 })
 
 $('.category-view .see-more-button').click(function(e){
-  const seeMoreButton = $(this);
-  const parentCategory = $(seeMoreButton).parents('.category-section');
-
-  if ($(parentCategory).hasClass('preview')) {
-    expandCategory(parentCategory)
-  } else {
-    collapseCategory(parentCategory)
-  }
+  const container = $(this).parent()
+  const fullList = $(container).siblings('.pattern-card-full-list')
+  fullList.slideToggle("slow", function() {
+    $(this).toggleClass('preview')
+  })
 })
 
 function expandCategory(category) {
