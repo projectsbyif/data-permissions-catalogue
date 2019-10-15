@@ -194,8 +194,8 @@ header.page {
 }
 
 /* View by category */
-.pattern-card-full-list.preview {
-  display: none;
+.pattern-card-full-list {
+  display: flex;
 }
 
 .category-section.preview .pattern-card-container {

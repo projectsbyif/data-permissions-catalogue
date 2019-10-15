@@ -91,11 +91,6 @@ function toggleExpandAllCategories(button) {
   $(button).html(expandAllText).removeClass('add-arrow')
 }
 
-// Add class 'preview' to full-list div using JS, so when JS is not present all patterns are visible.
-$('.pattern-card-full-list').each(function(index, list) {
-  $(list).addClass('preview')
-})
-
 // Show/hide extra patterns on button click
 $('.category-view .category-heading').click(function(e) {
   const parentCategory = $(this).parent()
@@ -123,63 +118,13 @@ $('.category-view .see-more-button').click(function(e){
 
 function categoryIsExpanded(category) {
   const seeMoreButton = $(category).find('.see-more-button');
-  $(category).removeClass('preview')
   $(seeMoreButton).html(collapseCategoryText).addClass('view-arrow')
 }
 
 function categoryIsCollapsed(category) {
   const seeMoreButton = $(category).find('.see-more-button');
-  $(category).addClass('preview')
   $('.expand-all').html(expandAllText).removeClass('add-arrow')
   $(seeMoreButton).html(expandCategoryText).removeClass('view-arrow')
-}
-
-function expandCategory(category) {
-  const patternCards = Array.from($(category).find('.pattern-card-container'));
-  const seeMoreButton = $(category).find('.see-more-button');
-
-  // Get list of hidden cards.
-  const hiddenPatternCards = patternCards.filter(function(card) {
-    const currentDisplay = $(card).css('display');
-    if (currentDisplay == "none") {
-      return card;
-    }
-  });
-
-  // Change hidden card opacity to 0
-  $(hiddenPatternCards).each(function(index, card) {
-    $(card).css('opacity', '0')
-  })
-
-  // Set hidden card display to 'block'
-  $(category).removeClass('preview')
-
-  // Trigger opacity transition animation
-  $(hiddenPatternCards).each(function(index, card) {
-    window.setTimeout(function(){
-      $(card).css('opacity', '1');
-    }, 100)
-  })
-
-  categoriesExpanded++
-
-  if (categoriesExpanded === numberOfCategories) {
-    $('.expand-all').html(collapseAllText).addClass('add-arrow')
-  }
-
-  // And then update the button
-  $(seeMoreButton).html(collapseCategoryText).addClass('view-arrow')
-}
-
-function collapseCategory(category) {
-  const seeMoreButton = $(category).find('.see-more-button');
-  $(category).addClass('preview')
-  categoriesExpanded--
-
-  $('.expand-all').html(expandAllText).removeClass('add-arrow')
-  // Update button
-  $(category).find('.see-more-button').html(expandCategoryText)
-  $(seeMoreButton).removeClass('view-arrow')
 }
 
 /* Fancy hover effects */

@@ -20,14 +20,12 @@
         {{ partial "homepage/pattern-card.html" . }}
         {{ end }}
       </div>
-      <div class="pattern-card-full-list">
-        <div class="pattern-card-full-list-div grid-x grid-padding-x">
+      <div style="display:none" class="grid-x grid-padding-x pattern-card-full-list">
         {{ range $index, $element := $patterns }}
           {{ if gt $index 2 }}
             {{ partial "homepage/pattern-card.html" $element }}
           {{ end }}
         {{ end }}
-        </div>
       </div>
     <div class="see-more-button-container">
       <a class="see-more-button" data-category="{{ urlize .name }}">Expand category</a>
