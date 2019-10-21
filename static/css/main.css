@@ -153,7 +153,7 @@ nav .made-by {
   color: white;
   font-size: 1.05em;
   line-height: 30px;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.01rem;
   font-weight: 700;
 }
 
@@ -172,7 +172,7 @@ nav .made-by-alt {
   color: rgb(189, 189, 200);
   font-size: 1.1em;
   line-height: 30px;
-  letter-spacing: -1px;
+  letter-spacing: -0.01rem;
   margin-bottom: 0;
   font-weight: 700;
   position: absolute;
@@ -234,8 +234,8 @@ nav .made-by:hover {
   display: inline-block;
   position: relative;
   top: 3px;
-  width: 14px;
-  height: 14px;
+  width: .8rem;
+  height: .8rem;
   border-radius: 2px;
 }
 
@@ -264,7 +264,7 @@ nav .made-by:hover {
 }
 
 .global-category-nav-list p {
-  padding-left: 1rem;
+  padding-left: .6rem;
   margin: 0;
   font-size: 1.1em;
 }
