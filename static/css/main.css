@@ -32,6 +32,10 @@ h1 {
   font-weight: 600;
 }
 
+p {
+  margin-bottom: .5em;
+}
+
 ul {
   list-style: none;
   margin: 0;
