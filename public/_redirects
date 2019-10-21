@@ -1,0 +1,15 @@
+patterns/access-through-secondary-means   patterns/sign-up-with-another-account/
+patterns/secret-answer                    patterns/authentication-by-secret-answer/
+patterns/multi-factor-using-a-generator   patterns/multi-factor-authentication-using-a-code-generator/
+patterns/multi-factor-using-text-message  patterns/multi-factor-authentication-using-text-message/
+patterns/up-front-consent                 patterns/setting-permissions-up-front/
+patterns/key-ceremony                     patterns/group-decision/
+patterns/geofencing                       patterns/location-based-event/
+patterns/pseudo-anonymous-data            patterns/masking-personal-data/
+patterns/proximity-sharing                patterns/short-distance-sharing/
+patterns/zero-knowledge-sharing           patterns/minimal-sharing/
+patterns/time-limiting                    patterns/time-limited-sharing/
+patterns/future-decision-notice           patterns/upcoming-decision-notice/
+patterns/verifiable-proof                 patterns/confirm-end-to-end-encryption/
+patterns/behavioural-patterns             patterns/unusual-activity-check/
+patterns/activity-based-permission        patterns/access-based-on-context/
