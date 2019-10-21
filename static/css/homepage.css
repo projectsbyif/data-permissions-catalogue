@@ -61,11 +61,6 @@ header.page {
   width: 90%;
 }
 
-.homepage-intro p a {
-  color: #242249;
-  text-decoration: underline;
-}
-
 /* Category Nav */
 
 .grid-container.nav {
