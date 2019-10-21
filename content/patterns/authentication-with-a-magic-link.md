@@ -1,7 +1,7 @@
 ---
 illustration_version: 1
 
-title: Authentication without password
+title: Authentication with a magic link
 weight: 1
 category: Signing in to a service
 
