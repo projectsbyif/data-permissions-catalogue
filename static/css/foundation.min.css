@@ -528,7 +528,7 @@ td {
   padding: 0; }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   font-size: inherit;
   line-height: 1.6;
   text-rendering: optimizeLegibility; }
