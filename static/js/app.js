@@ -144,6 +144,9 @@ $(document).ready(function() {
 $(document).ready(function() {
   $menuToggle.click(function(e) {
     e.preventDefault();
+    $(this).text((index, text) => {
+      return text === 'menu' ? 'close' : 'menu';
+    })
     toggleMenu($menu)
   })
 
