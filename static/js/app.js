@@ -144,15 +144,12 @@ $(document).ready(function() {
 $(document).ready(function() {
   $menuToggle.click(function(e) {
     e.preventDefault();
-    $(this).text((index, text) => {
-      return text === 'menu' ? 'close' : 'menu';
-    })
     toggleMenu($menu)
   })
 
   $expandToggle.click(function(e) {
     $('.category-view').show();
-    expandToggledCategory(this)
+    goToSelectedCategory(this)
   })
 })
 
@@ -168,10 +165,9 @@ function toggleMenu($menu) {
   }
 }
 
-function expandToggledCategory(expandToggle) {
+function goToSelectedCategory(expandToggle) {
   var category = $(expandToggle).data('category')
   var categoryEl = $('#'+category)
-  expandCategory(categoryEl)
   toggleMenu($menu)
 }
 

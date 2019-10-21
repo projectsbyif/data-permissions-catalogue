@@ -24,7 +24,7 @@
       {{ $categories := .Site.GetPage "/categories" }}
       {{ range $categories.Params.list_of_categories }}
       <li>
-        <a href="#{{ urlize .name }}" class="expand-toggle {{ urlize .name  }}" data-category="{{ urlize .name }}">
+        <a href="/#{{ urlize .name }}" class="expand-toggle {{ urlize .name  }}" data-category="{{ urlize .name }}">
           <div class="wrapper">
             <div class="box {{ urlize .name }}"></div>
           </div>
