@@ -37,7 +37,7 @@ header.page {
 
 .homepage-intro {
   text-align: center;
-  height: 50vh;
+  min-height: 25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +49,7 @@ header.page {
 
 .homepage-intro h1 {
   margin: 3rem auto 1em auto;
+  letter-spacing: -2px;
   width: 90%;
 }
 
@@ -57,6 +58,7 @@ header.page {
   font-weight: 500;
   margin: 0 auto 3em auto;
   font-size: 1.1em;
+  letter-spacing: -0.2px;
   line-height: 1.3;
   width: 90%;
 }
@@ -419,8 +421,25 @@ header.page {
 /* Media queries */
 
 @media (min-width: 40em) {
+  .homepage-intro {
+    min-height: 50vh;
+  }
   .homepage-intro div {
-    width: 70%;
+    width: 600px;
+  }
+
+  .homepage-intro h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .homepage-intro p {
+    margin: 0 0 5rem 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    font-size: 21.25px;
+    line-height: 1.3;
   }
   /* Category List */
   .category-section .pattern-card-container:nth-child(1),
@@ -435,22 +454,7 @@ header.page {
   /* Header */
   .homepage-intro h1 {
     margin: 7rem auto 1.6rem auto;
-    letter-spacing: -2px;
     width: 100%;
-  }
-
-  .homepage-intro p {
-    margin: 0 0 5rem 0;
-    font-size: 1.25em;
-    line-height: 1.3;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    letter-spacing: -0.2px;
-  }
-
-  .homepage-intro div {
-    width: 50%;
   }
 
   /* Nav */
