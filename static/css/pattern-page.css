@@ -176,6 +176,14 @@ main.patterns .archive-description h2{
   margin-bottom: 0;
 }
 
+.description a {
+  text-decoration: underline;
+}
+
+.description a:hover a:focus {
+  color: #010e7e;
+}
+
 /* Advantages & Limitations */
 .advantages li,
 .limitations li {
@@ -576,10 +584,6 @@ display: inline-block;
   .description p {
     font-size: 1.45rem;
     line-height: 1.2;
-  }
-
-  .description a {
-    text-decoration: underline;
   }
 
   .advantages li,
