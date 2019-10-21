@@ -23,16 +23,17 @@ main.patterns h1 {
 }
 
 main.patterns h2 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 700;
   line-height: 30px;
   position: sticky;
   top: 11em;
+  margin-bottom: 0;
 }
 
 main.patterns section p,
 main.patterns section li {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* Heading */
@@ -164,7 +165,7 @@ main.patterns .archive-description h2{
 /* Description */
 
 .description p {
-  font-size: 1.5em;
+  font-size: 1.45em;
   line-height: 1.2;
   letter-spacing: -0.01em;
   font-weight: 500;
@@ -573,8 +574,12 @@ display: inline-block;
   /* Description */
 
   .description p {
-    font-size: 1.7rem;
+    font-size: 1.45rem;
     line-height: 1.2;
+  }
+
+  .description a {
+    text-decoration: underline;
   }
 
   .advantages li,
