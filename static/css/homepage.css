@@ -48,6 +48,8 @@ header.page {
 }
 
 .homepage-intro h1 {
+  font-weight: 700;
+  letter-spacing: -0.062rem;
   margin: 3rem auto 1em auto;
   width: 90%;
 }
@@ -439,8 +441,9 @@ header.page {
 @media (min-width: 64em) {
   /* Header */
   .homepage-intro h1 {
+    font-weight: 700;
+    letter-spacing: -0.1rem;
     margin: 7rem auto 1.6rem auto;
-    letter-spacing: -2px;
     width: 100%;
   }
 
