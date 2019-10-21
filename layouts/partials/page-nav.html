@@ -1,0 +1,44 @@
+<div class="nav-bg mobile-only"></div>
+<nav class="grid-container {{ .Type }}">
+  <a class="skip-to-content" href="#content">Skip to content</a>
+  <a class="skip-to-content-noscript" href="#content-noscript">Skip to content</a>
+  <div class="page-nav">
+    <h1>
+      <a href="/" class="title">
+        {{ .Site.Title }}
+      </a>
+    </h1>
+    <div class="push desktop-only">
+      <a href="https://www.projectsbyif.com"><p class="made-by">made by IF</p></a>
+    </div>
+    <div class="push mobile-only">
+      <a href="#" class="toggle-menu">menu</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="page-menu global-category-nav mobile-only" role="navigation">
+  <div class="menu-item">
+    <h3><a href="#" class="view-by-category toggle-view">Categories</a></h3>
+    <ul class="global-category-nav-list">
+      {{ $categories := .Site.GetPage "/categories" }}
+      {{ range $categories.Params.list_of_categories }}
+      <li>
+        <a href="/#{{ urlize .name }}" class="expand-toggle {{ urlize .name  }}" data-category="{{ urlize .name }}">
+          <div class="wrapper">
+            <div class="box {{ urlize .name }}"></div>
+          </div>
+          <p>{{ .name  }}</p>
+        </a>
+      </li>
+  {{ end }}
+    </ul>
+  </div>
+  <div class="menu-item">
+    <h3><a href="#" class="view-most-recent toggle-view">Most recent</a></h3>
+  </div>
+  <div class="menu-item">
+    <h3><a href="#" class="view-alphabetically toggle-view">Alphabetical</a></h3>
+  </div>
+  <p class="made-by-alt">made by IF</p>
+</nav>

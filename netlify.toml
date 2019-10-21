@@ -1,3 +1,8 @@
-[context."catalogue-update-2019"]
+[context.production.environment]
+  HUGO_ENV = "production"
+  command = "hugo"
+  publish = "public"
+
+[context.branch-deploy]
   command = "hugo"
   publish = "public"

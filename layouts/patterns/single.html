@@ -1,0 +1,170 @@
+{{ define "main" }}
+
+<div class="grid-container">
+  <div class="grid-x grid-padding-x">
+    <div class="large-offset-1 large-10 small-12 cell">
+      <header>
+        <p class="pattern-heading-category"><a href="/#{{ urlize .Params.category }}">{{ .Params.category }}</a></p>
+        <div class="pattern-heading">
+          <h1 class="pattern-heading-title">{{ .Title }}</h1>
+          <ul class="pattern-share-links">
+            <li class="share-li">
+              <a class="share twitter-share-button"
+                 href="https://twitter.com/intent/tweet?text=‘{{ .Title }}’{{ .Site.Params.twitterText }}&url={{ .Permalink }}&via={{ .Site.Params.twitterHandle }}" target="_blank">Tweet</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <section class="pattern-image grid-x grid-padding-x">
+  <div class="large-10 large-offset-1 small-12 cell">
+    <div class="pattern-image-div {{ urlize .Params.category }}">
+      <div class="pattern-status">
+        {{ if eq .Params.archived true }}
+        <p class="archive-tag">
+          Archived on {{ .Params.archive_date }} 🗄️
+        </p>
+        {{ else if eq .Params.future_pattern true }}
+        <p class="future-pattern-tag">Future pattern 🔮</p>
+        {{ end }}
+      </div>
+      {{ if isset .Params "images" }}
+      <img id="content" tabindex="0" class="" src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}" />
+      {{ end }}
+    </div>
+  </div>
+  </section>
+
+  {{ if eq .Params.archived true }}
+  <section class="archive-description grid-x grid-padding-x">
+    <div class="large-2 large-offset-1 small-12 cell">
+      <h2>Reason for archiving</h2>
+    </div>
+    <div class="large-7 small-12 cell">
+      <p>{{ .Params.archive_reason }}</p>
+    </div>
+  </section>
+  {{ end }}
+
+  <section class="description grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h2>Description</h2>
+  </div>
+  <div class="large-7 small-12 cell">
+  {{ .Content }}
+  </div>
+  </section>
+
+  {{ if isset .Params "advantages" }}
+  <section class="advantages grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h2>Advantages</h2>
+  </div>
+  <div class="large-6 small-12 cell">
+    <ul>
+      {{ range .Params.advantages }}
+      <li>
+        <span>{{ . }}</span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  </section>
+  {{ end }}
+
+  {{ if isset .Params "limitations" }}
+  <section class="limitations grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h2>Limitations</h2>
+  </div>
+  <div class="large-6 small-12 cell">
+    <ul>
+      {{ range .Params.limitations }}
+      <li>
+        <span>{{ . }}</span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  </section>
+  {{ end }}
+
+  {{ if isset .Params "examples" }}
+  <section class="examples grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h2>Examples</h2>
+  </div>
+  <div class="large-6 small-12 cell">
+    <ul>
+      {{ $category := .Params.category }}
+      {{ range .Params.examples }}
+      <li>
+        <div>
+          {{ if isset . "img_src" }}
+          <div class="examples-image">
+            <img src="{{ .img_src | relURL }}" alt="{{ .alt_text | relURL }}">
+          </div>
+          {{ end }}
+          {{ if isset . "title" }}
+          <p class="examples-title">
+            <a class="{{ urlize $category }}" href="{{ .url }}">{{ .title }} →</a>
+          </p>
+          {{ end }}
+          <p>{{ .description }}</p>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  </section>
+  {{ end }}
+
+
+  <section class="related-patterns grid-x grid-padding-x">
+  <div class="large-2 large-offset-1 small-12 cell">
+    <h2>Related patterns</h2>
+  </div>
+  <div class="large-7 small-12 cell">
+    <ul class="grid-x pattern-card-container">
+      {{ $currentCategory := .Params.category }}
+      {{ $currentTitle := .Params.title }}
+      <!-- Get different patterns in same category and shuffle -->
+      {{ $patternsInCategory := where .Site.RegularPages ".Params.category" $currentCategory }}
+      {{ $patternsInCategory := where $patternsInCategory ".Params.title" "!=" $currentTitle }}
+      {{ $patternsInCategory := shuffle $patternsInCategory }}
+      {{ range $index, $pattern := $patternsInCategory }}
+      {{ if lt $index 2 }}
+
+      <li class="{{ urlize .Params.category }} large-5 small-12 cell">
+        <a class="wrap-link " href="/patterns/{{ urlize .Params.title }}">
+        <div class="related-patterns-image {{ urlize .Params.category }}">
+            <!-- TODO - customize tags partial -->
+              <div class="tags">
+                {{ if eq .Params.archived true }}
+                <p class="archived">Archived 🗄️</p>
+                {{ else if eq .Params.future_pattern true }}
+                <p class="future-pattern">Future pattern 🔮</p>
+                {{ end }}
+              </div>
+              {{ if isset .Params "images" }}
+            <img src="{{ (index .Params.images 0).url | relURL }}" alt="{{ .Params.alt }}">
+            {{ end }}
+        </div>
+        <div class="related-patterns-title">
+          <p>{{ .Params.title }}</p>
+        </div>
+        </a>
+      </li>
+
+      {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+  </section>
+</div>
+
+{{ partial "pattern-page-feedback.html" }}
+
+{{ end }}

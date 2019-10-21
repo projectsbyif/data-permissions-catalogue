@@ -1,0 +1,36 @@
+{{ $pages := where .Site.RegularPages "Section" "patterns" }}
+
+<section class="homepage-section category-view">
+  <div class="grid-container expand-all-container">
+    <a class="expand-all desktop-only" href="#">Expand all categories</a>
+  </div>
+
+{{ $categories := .Site.GetPage "/categories" }}
+{{ range $categories.Params.list_of_categories }}
+
+{{ $patterns := where $pages ".Params.category" "=" .name }}
+  <div id="{{ urlize .name }}" class="grid-container category-section {{ urlize .name }}">
+      <div class="category-heading grid-x grid-padding-x">
+        <div class="small-12 large-9 cell">
+          <h2>{{ .name }} <span>({{ len $patterns }})</span></h2>
+        </div>
+      </div>
+      <div class="grid-x grid-padding-x pattern-card-preview-list">
+        {{ range first 3 $patterns }}
+        {{ partial "homepage/pattern-card.html" . }}
+        {{ end }}
+      </div>
+      <div style="display:none" class="grid-x grid-padding-x pattern-card-full-list">
+        {{ range $index, $element := $patterns }}
+          {{ if gt $index 2 }}
+            {{ partial "homepage/pattern-card.html" $element }}
+          {{ end }}
+        {{ end }}
+      </div>
+    <div class="see-more-button-container">
+      <a class="see-more-button" data-category="{{ urlize .name }}">Expand category</a>
+    </div>
+  </div>
+  <hr data-category="{{ urlize .name }}">
+{{ end }}
+</section>

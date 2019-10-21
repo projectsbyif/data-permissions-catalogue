@@ -1,84 +1,66 @@
-# Data Permissions ​Catalogue
+# Data Patterns ​Catalogue
 
 An evolving collection of design patterns for sharing data. Maintained by [IF](https://projectsbyif.com/).
 
 ## How to contribute
 
-You can contribute to the catalogue on GitHub by creating an issue or submitting a pull request. The catalogue website runs on [Jekyll](https://jekyllrb.com/).
-
-There's also a [Google Form](https://docs.google.com/forms/d/e/1FAIpQLScFapR7V1TQ45IA7wW0heNGR-OtT-sICkmje31OUeSsAM1NRQ/viewform?usp=sf_link) for contributing missing patterns.
+You can contribute to the catalogue on GitHub by creating an issue or submitting a pull request. The catalogue website runs on [Hugo](https://gohugo.io/).
 
 ## Getting started
 
 **Requirements**
 
-* Ruby 2.4.2 (on Mac OS, install using [Homebrew](https://brew.sh))
-
-* Bundler (install with `gem install bundler`)
+* Hugo v0.58.3 (on Mac OS, install using [Homebrew](https://brew.sh))
 
 **Instructions**
 
 1. Clone this repository
 
-2. `cd` into the repository and run `bundle install`
+2. `cd` into the repository and run `hugo` to build the site.
 
-3. Run `bundle exec jekyll serve`
+3. Run `hugo server`
 
-4. Go to [http://localhost:4000](http://localhost:4000) in your browser
+4. Go to [http://localhost:1313](http://localhost:1313) in your browser
 
 ## Creating and editing patterns
 
-Each pattern has a [Markdown](https://daringfireball.net/projects/markdown/syntax) file in the `_patterns` folder. To create a new pattern, create a new Markdown file. Name the new file with the slugified version of the pattern name.
+Each pattern has a [Markdown](https://daringfireball.net/projects/markdown/syntax) file in the `content/patterns` folder. To create a new pattern, use the Hugo `archetype` template, located in `archetypes/patterns.md`.
 
-For example `This is a new pattern` would be called `this-is-a-new-pattern.md`.
+1. Name the new file with the slugified version of the pattern name. For example `This is a new pattern` would be called `this-is-a-new-pattern.md`.
 
-Next, copy and edit this example:
+2. In the repository, run `hugo new patterns/[NEW-FILE-NAME]`
 
-```
----
-layout: pattern
-
-title: Automation detection
-
-category: Control access
-
-images:
-- url: /images/automation-detection.svg
-
-advantages:
- - Reduces impact of automated access to systems, like denial of service, SPAM
- - Can be used to train machine learning models
-
-limitations:
- - Progress in machine learning can allow computers to complete some challenges
- - Accessibility issues for people using assistive technologies
-
-examples:
-  - title: Google reCAPTCHA
-    url: https://www.google.com/recaptcha/intro/
----
-
-Preventing automated access to data by setting challenges that are easy for humans and hard for computers to complete. Common challenges include reading distorted text and identifying objects in a photo.
-
-```
+3. Open your new pattern file and fill in the relevant front matter.
 
 The *front matter* of the Markdown file (the bit at the top between the three dashes) can have the following [YAML](https://en.wikipedia.org/wiki/YAML) fields:
 
-* `layout`: should always be `pattern` (required)
+* `title`: [String] the new pattern title. (required)
 
-* `title`: name of the pattern (required)
+* `category`: [String] name of the category this pattern belongs to. A list of categories can be found [below](#creating-and-editing-categories) (required)
 
-* `category`: name of the category this pattern belongs to (required)
+* `weight`: [Integer] value between 1 and 4 that places the pattern card on the Categories view on homepage. 1 - 3 will place the pattern in the relevant spot on the Category preview. 4 will hide the pattern until the Category is expanded
 
-* `images`: a list of images that illustrate this pattern
+* `archived`: [Boolean] setting this to true will add an Archive tag to the pattern
 
-* `advantages`: what's good about this patterns (optional)
+* `archive_reason`: [String] why this pattern is archived
 
-* `limitations`: where the pattern falls short (optional)
+* `future_pattern`: [Boolean] setting this to true will add an Future Pattern tag to the pattern
 
-* `examples`: real-world uses of this design pattern. Each example can contain a `title`, `description` and `url`.
+* `future_pattern_reason`: [String] why this is a future pattern
 
-* `further_reading`: articles about this design pattern. Each item can contain a `title`, `description` and `url`.
+* `images`: [String] a list of images that illustrate this pattern. Each`images` contains a `url` ([String] path to pattern image)
+
+* `alt`: [String] alternative text for the image
+
+* `advantages`: [String] what's good about this patterns
+
+* `limitations`: [String] where the pattern falls short
+
+* `examples`: real-world uses of this design pattern. Each example can contain a `title`, `description` and `url` [All Strings].
+
+`date` and `lastmod` are automatically generated and should not be changed.
+
+4. Add pattern description to the body of the Mardown file.
 
 The body of the Markdown file (the bit underneath the three dashes) is a short description of the design pattern.
 
@@ -86,25 +68,14 @@ The body of the Markdown file (the bit underneath the three dashes) is a short d
 
 We've created several categories that patterns can belong to. Right now, these are:
 
-* Authentication
-* Backup data
-* Control access
-* Give consent
-* Manage consent
-* Other
-* See access
-* Share data
-* Social Consent
+* Signing in to a service
+* Giving and removing consent
+* Giving access to data
+* Getting access to data
+* Understanding automated decisions
+* Doing security checks
 
-Categories are defined with Markdown files in the `_category` folder. To create a new category, create a new Markdown file, and use this template:
-
-```
----
-layout: category
-title: (Name of category)
-category: (Name of category)
----
-```
+Categories are defined in `content/categories/_index.md`. To create a new category, add it to the list in `_index.md`.
 
 ## Images
 

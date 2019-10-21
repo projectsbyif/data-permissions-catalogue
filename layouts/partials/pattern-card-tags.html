@@ -1,0 +1,11 @@
+<div class="tags">
+  {{ $dateAdded := .Params.Date }}
+  {{ if ge $dateAdded (now.AddDate 0 -1 0) }}
+  <p class="new-pattern">Just added ✨</p>
+  {{ end }}
+  {{ if eq .Params.archived true }}
+  <p class="archived">Archived 🗄️</p>
+  {{ else if eq .Params.future_pattern true }}
+  <p class="future-pattern">Future pattern 🔮</p>
+  {{ end }}
+</div>

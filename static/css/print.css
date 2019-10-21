@@ -1,0 +1,20 @@
+.grid-container {
+  padding: 0;
+}
+
+main.patterns header {
+  margin-top: 0;
+}
+
+.patterns .page-nav,
+.patterns .print,
+.patterns .pattern-share-links,
+footer.desktop-only,
+footer.mobile-only,
+.patterns .feedback-and-status {
+  display: none !important;
+}
+
+a[href]:after {
+  content: none !important;
+}

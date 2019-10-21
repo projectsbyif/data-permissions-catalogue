@@ -1,0 +1,17 @@
+{{ $patterns := where .Site.RegularPages "Section" "patterns" }}
+
+<section class="homepage-section most-recent-view">
+  <div class="grid-container">
+    <div class="category-heading grid-x grid-padding-x">
+      <div class="small-12 large-9 cell">
+        <h2>Most recent patterns</h2>
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x pattern-card-list">
+      {{ range sort $patterns .Params "date" "asc" }}
+      {{ partial "homepage/pattern-card.html" . }}
+      {{ end }}
+    </div>
+  </div>
+
+</section>
