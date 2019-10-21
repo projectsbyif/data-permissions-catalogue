@@ -112,7 +112,7 @@
             <a class="{{ urlize $category }}" href="{{ .url }}">{{ .title }} →</a>
           </p>
           {{ end }}
-          <p>{{ humanize .description }}</p>
+          <p>{{ .description }}</p>
         </div>
       </li>
       {{ end }}
