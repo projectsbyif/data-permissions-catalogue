@@ -84,9 +84,8 @@ hr.hover {
 }
 
 .menu-item {
-  border-bottom: 1px solid rgb(189, 189, 200);
   padding: 1em 4px;
-  margin: 0 3em;
+  margin: 0 2em;
 }
 
 /* Accessibility */
@@ -174,10 +173,10 @@ nav .made-by-alt {
   font-size: 1.1em;
   line-height: 30px;
   letter-spacing: -1px;
+  margin-bottom: 0;
   font-weight: 700;
   position: absolute;
   bottom: 1em;
-  left: 0.625em;
 }
 
 nav .how-to p {
@@ -202,7 +201,7 @@ nav .made-by:hover {
   background-color: #242249;
   width: 100%;
   height: 100%;
-  padding: 5em 0.625em;
+  padding: 5em 1rem;
   position: fixed;
   top: 0;
   right: -100%;
@@ -215,16 +214,59 @@ nav .made-by:hover {
 
 .global-category-nav-list {
   margin-bottom: 0;
+  padding-left: 2rem;
 }
 
 .global-category-nav-list li {
-  display: block
+  padding: 0.4rem 0;
 }
 
 .global-category-nav-list a {
-  display: block;
-  padding: 0.75em 0.5em;
-  font-size: 1.3em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.global-category-nav-list div.wrapper {
+  position: relative;
+}
+
+.global-category-nav-list div.box {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.global-category-nav-list div.signing-in-to-a-service {
+  background: #87D7EB;
+}
+
+.global-category-nav-list div.giving-and-removing-consent {
+  background: #8CEBC8;
+}
+
+.global-category-nav-list div.giving-access-to-data {
+  background: #BADE7D;
+}
+
+.global-category-nav-list div.getting-access-to-data {
+  background: #FFD75F;
+}
+
+.global-category-nav-list div.understanding-automated-decisions {
+  background: #FF9169;
+}
+
+.global-category-nav-list div.doing-security-checks {
+  background: #FAA0AA;
+}
+
+.global-category-nav-list p {
+  padding-left: 1rem;
+  margin: 0;
+  font-size: 1.1em;
 }
 
 .global-category-nav-list a:hover,
