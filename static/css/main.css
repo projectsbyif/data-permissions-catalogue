@@ -70,7 +70,7 @@ hr.hover {
   display: none !important;
 }
 
-.toggle-menu, .toggle-menu:hover {
+.toggle-menu {
   font-weight: 700;
   color: rgb(36, 34, 73);
 }
