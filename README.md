@@ -6,7 +6,7 @@ An evolving collection of design patterns for sharing data. Maintained by [IF](h
 
 You can contribute to the catalogue on GitHub by creating an issue or submitting a pull request. The catalogue website runs on [Hugo](https://gohugo.io/).
 
-## Getting started
+## Installation
 
 **Requirements**
 
@@ -14,21 +14,40 @@ You can contribute to the catalogue on GitHub by creating an issue or submitting
 
 **Instructions**
 
-1. Clone this repository
+1. Save the repository on your machine using GitHub Desktop or via the terminal.
+  - How to save using [GitHub Desktop](https://help.github.com/en/desktop/contributing-to-projects/cloning-a-repository-from-github-to-github-desktop)
+  - How to save using the [terminal](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) (and some [helpful terminal commands](https://medium.com/@grace.m.nolan/terminal-for-beginners-e492ba10902a))
 
-2. `cd` into the repository and run `hugo` to build the site.
+2. Open the terminal and install Hugo [using Homebrew](https://gohugo.io/getting-started/installing/#homebrew-macos).
 
-3. Run `hugo server`
-
-4. Go to [http://localhost:1313](http://localhost:1313) in your browser
+  If you get `brew: command not found`, you can install Homebrew using instructions on [their website](https://brew.sh/).
 
 ## Creating and editing patterns
 
+**Getting Started**
+
+1. Create a new branch to work on. You can do this in GitHub Desktop or via the terminal.
+
+**⚠️Changes should always be made on branch.⚠️** This is because any changes committed directly on `master` will automatically deploy live.
+
+  - How to create a new branch on [GitHub Desktop](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository)
+  - How to create a new branch via the [terminal](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
+
+2. In the terminal, `cd` into the website folder and run `hugo server` to start the development server.
+
+Any changes you make will be automatically displayed at http://localhost:1313
+
+3. Open the website folder in a text editor of your choice (like [Atom](https://atom.io/) or [VSCode](https://code.visualstudio.com/)).
+
+**Adding or editing a pattern**
+
 Each pattern has a [Markdown](https://daringfireball.net/projects/markdown/syntax) file in the `content/patterns` folder. To create a new pattern, use the Hugo `archetype` template, located in `archetypes/patterns.md`.
 
-1. Name the new file with the slugified version of the pattern name. For example `This is a new pattern` would be called `this-is-a-new-pattern.md`.
+1. Name the new file with the slugified version of the pattern name. For example, `This is a new pattern` would be called `this-is-a-new-pattern.md`.
 
-2. In the repository, run `hugo new patterns/[NEW-FILE-NAME]`
+2. In the terminal, run `hugo new patterns/[NEW-FILE-NAME]`.
+
+For example, to create pattern called `This is a new pattern`, you would run `hugo new patterns/this-is-a-new-pattern.md`
 
 3. Open your new pattern file and fill in the relevant front matter.
 
@@ -75,7 +94,7 @@ We've created several categories that patterns can belong to. Right now, these a
 * Understanding automated decisions
 * Doing security checks
 
-Categories are defined in `content/categories/_index.md`. To create a new category, add it to the list in `_index.md`.
+Categories are defined in `content/categories/_index.md`. To create a new category or edit an existing one, simply edit this file.
 
 ## Images
 
