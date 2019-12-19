@@ -25,7 +25,7 @@ alt: A code is shown in a text message on a mobile device and entered into a com
 examples:
 - title: Two Factor Auth List
   url: https://twofactorauth.org/
-  description: a directory of online services and whether they allow multi-factor authentication
+  description: A directory of online services and whether they allow multi-factor authentication
 ---
 
 Multi-factor authentication adds an extra layer of security on top of a username and password. In this kind of multi-factor authentication, a service sends someone a text message with a unique code which they can use to access the service. The code is unique to that person and device. It’s single-use and expires after a short period of time. When installing a mobile banking app, for example, a customer receives a code that they enter to complete the setup.
