@@ -7,16 +7,27 @@ images:
   - url: /images/up-front-consent.svg
 
 advantages:
- - Preferences are set before using the service, allowing full functionality straight away
+ - People can set some preferences quickly so they can start using the service straight away.
+ - Allows people to set more nuanced permissions rather than accepting all terms and conditions.
 
 limitations:
- - In some cases, users won’t have enough information to make the decision. In this case might be useful to use Just-In-Time Consent
+ - People don’t have enough information to make an informed decision.
+ - Nudges people to make decisions quickly so they can access the service.
+ - People usually don’t revisit their permissions preferences if they’re buried in settings.
+ - Usually implemented using binary toggle interactions. These don’t give people input into how, when and where data is collected.
 
 alt: A list of data a service has permission to access.
 
 examples:
-  - title: Adding Mobile Device Management (MDM) in MacOS
-    description: When adding a Mobile Device Management (MDM) Profile in macOS the permissions necessary for performing remote management are presented up-front. Setting permissions up-front makes sense in this case as it’s not possible to seek consent when trying to remotely wipe a laptop which is lost or stolen.
+  - title: Ask up front in Android
+    url: https://material.io/design/platform-guidance/android-permissions.html#request-types
+    description: Only critical permissions should be requested up-front.
+  - title: Mobile Device Management (MDM) Profile in macOS
+    url: https://developer.apple.com/documentation/devicemanagement/mdm
+    description: Setting permissions up-front makes sense in this case as it’s not possible to seek consent when trying to remotely wipe a laptop which is lost or stolen.
+    img_src: /images/mdm-config.png
 ---
 
-Users are asked to set their permissions before they access or install a service. For example, when installing a messaging app the user might be asked to give access to their media files, their contacts or wifi connection information.
+People set their permissions before they use a service. When installing a messaging app, you might give it access to basic information, like contacts or WiFi connection.
+
+IF thinks this pattern does not give people enough agency over data about them. It requires people to make quick decisions about data sharing without knowing how it will be used, or whether they like the service.
