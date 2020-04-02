@@ -35,4 +35,5 @@ examples:
 The device (or app) automatically revokes access when it hasn’t been used for a while. Some banking apps automatically log customers out after a period of inactivity or if they open another app.
 
 IF thinks this is a useful pattern for securing accounts without placing an extra burden on people. It’s easy to forget to log out. However, getting someone to log in again every time they leave the app may cause too much friction, outweighing the  potential harms of someone else gaining access.
+
 In the future, it might be replaced with [Ongoing authentication through behaviour](https://catalogue.projectsbyif.com/patterns/ongoing-authentication-through-behaviour/).
