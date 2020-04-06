@@ -25,7 +25,6 @@ examples:
   - title: Mobile Device Management (MDM) Profile in macOS
     url: https://developer.apple.com/documentation/devicemanagement/mdm
     description: Setting permissions up-front makes sense in this case as it’s not possible to seek consent when trying to remotely wipe a laptop which is lost or stolen.
-    img_src: /images/mdm-config.png
 ---
 
 People set their permissions before they use a service. When installing a messaging app, you might give it access to basic information, like contacts or WiFi connection.
