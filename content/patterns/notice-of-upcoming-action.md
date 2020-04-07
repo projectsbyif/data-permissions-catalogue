@@ -22,7 +22,7 @@ limitations:
 
 
 examples:
-  - title: Chip -  automated savings service
+  - title: Chip, an automated savings service
     url: https://getchip.uk/
     description: Chip is a service that integrates with someone’s bank account to help them save money by actively pulling money out of their connected accounts. It sends an alert to customers before pulling money to give them a few days notice to review and edit any of these transactions.
 
