@@ -214,6 +214,14 @@ display: inline-block;
   margin-bottom: 0;
 }
 
+.advantages a, .limitations a {
+  text-decoration: underline;
+}
+
+.advantages a:hover a:focus, .limitations a:hover a:focus {
+  color: #010e7e;
+}
+
 /* Examples */
 
 .examples li {
