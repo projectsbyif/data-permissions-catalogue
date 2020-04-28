@@ -26,4 +26,4 @@ examples:
 
 Access services by entering _secret_ answers, that only the account owner should know. Passwords, numeric codes or answers to personal questions can all count as a secret.
 
-IF thinks this pattern does not show care for people as they have to remember separate ‘secret answers’ for all the services they use. This means people often make up passwords or numeric codes that are easy to remember and insecure or use the same ones for multiple services.
+IF thinks this pattern does not show care for people as they have to remember separate ‘secret answers’ for all the services they use. This means people often make up passwords or numeric codes that are easy to remember and insecure or use the same ones for multiple services. Instead, we recommend using other patterns such as [authentication with a magic link](https://catalogue.projectsbyif.com/patterns/authentication-with-a-magic-link/) or [sign-up with another account](https://catalogue.projectsbyif.com/patterns/sign-up-with-another-account/).
