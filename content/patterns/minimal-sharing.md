@@ -22,7 +22,7 @@ limitations:
 
 examples:
  - title: Yoti age verification
-   url: https://www.yoti.com/blog/how-to-prove-your-age-with-your-phone/
+   url: https://www.yoti.com/blog/provemyage-anonymous-age-verification/
 
 ---
 
