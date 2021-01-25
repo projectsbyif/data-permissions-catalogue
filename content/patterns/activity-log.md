@@ -27,14 +27,12 @@ limitations:
 
 examples:
  - title: My Activity in Google
-   url: https://www.facebook.com/help/activitylog
+   url: https://myactivity.google.com/myactivity
    description: A private record showing actions someone has taken in Google services, such as Google searches, Chrome and Youtube history, apps used in Android or location history.
  - title: Activity log in Facebook
    url: https://www.facebook.com/help/activitylog
    description: A list of locations the phone has been in and then recorded, which helps Siri choose a person’s home and work location.
- - title: Frequent locations in iOS
-   url: https://support.apple.com/en-us/HT203033
-   description: A list of locations the phone has been in and then recorded, which helps Siri choose a person’s home and work location.
+ - description: Your bank's record of transactions could also be considered an activity log.
 
 ---
 
