@@ -32,7 +32,7 @@ examples:
  - title: Activity log in Facebook
    url: https://www.facebook.com/help/activitylog
    description: A list of locations the phone has been in and then recorded, which helps Siri choose a person’s home and work location.
- - description: Your bank's record of transactions could also be considered an activity log.
+ - description: Your bank's record of transactions can also be considered an activity log.
 
 ---
 
