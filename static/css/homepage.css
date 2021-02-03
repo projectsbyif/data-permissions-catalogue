@@ -387,7 +387,7 @@ header.page {
   box-shadow: 0px 0px 30px 12px rgba(255,215,95, 0.25);
 }
 
-.pattern-card.understanding-automated-decisions:hover {
+.pattern-card.understanding-decisions:hover {
   box-shadow: 0px 0px 30px 12px rgba(255,145,105, 0.25);
 }
 
@@ -411,7 +411,7 @@ header.page {
   background-color: rgb(255,215,95);
 }
 
-.pattern-card.understanding-automated-decisions .pattern-card-image {
+.pattern-card.understanding-decisions .pattern-card-image {
   background-color: rgb(255,145,105);
 }
 
