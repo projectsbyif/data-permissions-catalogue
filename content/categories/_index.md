@@ -8,6 +8,6 @@ list_of_categories:
   - name: "Giving and removing consent"
   - name: "Giving access to data"
   - name: "Getting access to data"
-  - name: "Understanding automated decisions"
+  - name: "Understanding decisions"
   - name: "Doing security checks"
 ---

@@ -1,7 +1,7 @@
 ---
 title: Activity log
 
-category: Understanding automated decisions
+category: Understanding decisions
 
 weight: 3
 
