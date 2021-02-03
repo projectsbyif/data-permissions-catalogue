@@ -2,7 +2,7 @@
 title: Notice of upcoming action
 
 
-category: Understanding automated decisions
+category: Understanding decisions
 weight: 2
 images:
 - url: /images/notice-of-upcoming-action.svg

@@ -1,7 +1,7 @@
 ---
 title: Activity log
 
-category: Understanding automated decisions
+category: Understanding decisions
 
 weight: 3
 
@@ -15,7 +15,7 @@ future_pattern_reason:
 
 images:
  - url: /images/activity-log.svg
-alt: A table with a record of different events. The metadata about the events includes type of data, reason why it was accessed and who accessed it.
+alt: A record of events. There's an event highlighted that reads "Searched for data patterns catalogue".
 
 advantages:
  - Proof of when an action was taken, by whom and the reason why.
@@ -40,4 +40,4 @@ A chronological record of events. These records can contain an action taken, whe
 
 For example, you can see a log of your activity kept by Google. This can include your search history, websites visited on Chrome, videos seen on Youtube, the apps you have used in your Android phone or your location history.
 
-IF thinks that allowing people to see a record of actions taken or data recorded about them is an essential step towards making a service more transparent. This record should be made actionable by allowing people to query events, tweak permissions in context or setup auto-delete.
+IF thinks that allowing people to see a record of actions taken or data recorded about them is an essential step towards making a service more transparent. This record should be made actionable by allowing people to [query events](/patterns/query-an-event), tweak permissions in context or setup auto-delete.
