@@ -19,12 +19,12 @@ limitations:
  - Setting up 2 factor authentication can be complicated, adding the need to create and store recovery codes may add to the complexity for some people
 
 examples:
-  - title: Google Mail recovery codes
-  url: https://support.google.com/accounts/answer/1187538?co=GENIE.Platform%3DDesktop&hl=en
-  description: Most services that use multi factor authentication create recovery codes for use when the other factor is unavailable.
-  - title: Github recovery codes
-  url: https://help.github.com/en/articles/recovering-your-account-if-you-lose-your-2fa-credentials
-  description: Github, like Google, provides recovery codes in multi factor authentication. Many other services do this as well, such as LastPass.
+ - title: Google Mail recovery codes
+ url: https://support.google.com/accounts/answer/1187538?co=GENIE.Platform%3DDesktop&hl=en
+ description: Most services that use multi factor authentication create recovery codes for use when the other factor is unavailable.
+ - title: Github recovery codes
+ url: https://help.github.com/en/articles/recovering-your-account-if-you-lose-your-2fa-credentials
+ description: Github, like Google, provides recovery codes in multi factor authentication. Many other services do this as well, such as LastPass.
 
 ---
 
