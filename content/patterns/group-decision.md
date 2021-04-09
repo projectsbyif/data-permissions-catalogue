@@ -15,6 +15,7 @@ future_pattern_reason:
 
 images:
  - url: /images/group-decision.svg
+
 alt: Group decision
 
 advantages:
