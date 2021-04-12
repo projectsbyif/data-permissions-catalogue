@@ -22,7 +22,7 @@ examples:
     url: https://support.apple.com/en-gb/HT208090
     description: The iPhone senses when you’re driving and prevents notifications
   - title: Smart Lock Android
-    url: https://support.google.com/nexus/answer/6093922?hl=en-GB
+    url: https://support.google.com/nexus/answer/6093922
     description: Keep an Android phone unlocked if you're close to home or the phone is in your pocket
   - title: Wrist detection on Apple Watch
   url: ttps://www.imore.com/apple-watch-apple-pay-and-wrist-detection-what-you-need-know
