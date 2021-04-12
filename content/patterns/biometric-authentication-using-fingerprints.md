@@ -18,12 +18,11 @@ limitations:
  - Secure implementations of this pattern require additional hardware and software components. For example, Apple’s [Secure Enclave](https://www.apple.com/business/docs/site/iOS_Security_Guide.pdf) or a [Trusted Execution Environment](https://source.android.com/security/trusty) on a processor to store fingerprint data separate from other applications on device.
  - Enrolling a fingerprint can take time, effort, and a number of interactions. This has implications for user experience, including for [accessibility](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5864003/).
 
-
 examples:
-  - title: Android fingerprint
-    url: https://material.io/design/platform-guidance/android-fingerprint.html
-  - title: iOS TouchID
-    url: https://support.apple.com/en-gb/guide/iphone/iph672384a0b/ios
+ - title: Android fingerprint
+   url: https://material.io/design/platform-guidance/android-fingerprint.html
+ - title: iOS TouchID
+   url: https://support.apple.com/en-gb/guide/iphone/iph672384a0b/ios
 ---
 
 Check someone is who they say they are using their unique physical features, like their fingerprint, iris, face or voice.

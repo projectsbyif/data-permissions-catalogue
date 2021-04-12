@@ -29,8 +29,7 @@ advantages:
 limitations:
 - If the single sign-on account is compromised, the security of linked services is at risk and people might be locked out of them
 - Single sign-on providers might track users’ online movements and preferences
-- Third-party services might ask for additional permissions at sign-in. They might require to, for example, access your contact list, tweet on your behalf, etc. ( [Google](https://support.google.com/accounts/answer/3466521) )
-
+- Third-party services might ask for additional permissions at sign-in. They might require to, for example, access your contact list, tweet on your behalf, etc. ([Google](https://support.google.com/accounts/answer/3466521))
 
 examples:
  - title: Sign in with Google

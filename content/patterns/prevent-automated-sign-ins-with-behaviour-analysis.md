@@ -12,7 +12,6 @@ advantages:
  - Reduces the impact of automated access to systems, such as [denial of service](https://en.wikipedia.org/wiki/Denial-of-service_attack), spam or fake users
  - Behavioural analysis causes less friction than asking people to complete challenges
 
-
 limitations:
  - It’s not accurate enough yet on its own and is often combined with [prevent automated sign-ins with image and audio challenges](https://catalogue.projectsbyif.com/patterns/prevent-automated-sign-ins-with-challenges/), which have accessibility issues.
  - Requires access to large amounts of data for training behavioural analysis machine learning models.
@@ -33,4 +32,4 @@ An example of this could be analysing someones’ mouse movements or typing patt
 
 IF thinks that preventing automated sign-ins will become more difficult but also more critical, as machine learning algorithms improve. This pattern removes burden from people to verify they’re human but requires continuous data collection and monitoring. You should consider the risk of automated sign-ins with the impact of continuous data collection in context. It might not work if people use privacy-preserving features such as incognito mode. Alternatively, other patterns could be used to prevent automated sign ins, such as [multi-factor authentication using text message](https://catalogue.projectsbyif.com/patterns/multi-factor-authentication-using-text-message/) or [biometric](https://catalogue.projectsbyif.com/patterns/biometric-authentication-using-fingerprints/) [authentication](https://catalogue.projectsbyif.com/patterns/biometric-authentication-using-facial-recognition/).
 
-Read more: [The inaccessibilities of CAPTCHA](https://www.w3.org/TR/turingtest/)
+Read more: [The inaccessibilities of CAPTCHA](https://www.w3.org/TR/turingtest/).

@@ -6,7 +6,7 @@ weight: 3
 images:
   - url: /images/biometric-using-facial-recognition.svg
 
-alt: A simulated facial recognition matrix to authentication.
+alt: A facial recognition matrix for authentication.
 
 advantages:
  - Can be quicker, more convenient and more secure than using a password
@@ -14,7 +14,7 @@ advantages:
 
 limitations:
  - Facial recognition systems might be less accurate for twins, faces that are still developing (e.g. Apple’s FaceID system is less effective with [children under 13](https://support.apple.com/en-gb/HT208108) ), or [black faces](https://www.wired.com/story/best-algorithms-struggle-recognize-black-faces-equally/).
- - Facial recognition systems [can be tricked](https://www.kaspersky.co.uk/blog/face-unlock-insecurity/13250/) using photos and videos of individuals. To avoid this, recognition systems often require additional technological requirements like additional hardware components ( [e.g. infrared camera](https://www.kaspersky.co.uk/blog/face-unlock-insecurity/13250/) ), more effective software to process images, and secure storage on devices.
+ - Facial recognition systems [can be tricked](https://www.kaspersky.co.uk/blog/face-unlock-insecurity/13250/) using photos and videos of individuals. To avoid this, recognition systems often require additional technological requirements like additional hardware components ([e.g. infrared camera](https://www.kaspersky.co.uk/blog/face-unlock-insecurity/13250/)), more effective software to process images, and secure storage on devices.
  - It’s possible to take advantage of facial recognition systems to access s someone’s device without their consent. For example, when someone is asleep or unresponsive or if they are forced to (sometimes by police and government services - like in [Hong Kong](https://www.nytimes.com/2019/07/26/technology/hong-kong-protests-facial-recognition-surveillance.html) and [USA](https://www.forbes.com/sites/thomasbrewster/2019/01/14/feds-cant-force-you-to-unlock-your-iphone-with-finger-or-face-judge-rules/#57885db842b7) ). By default, [Apple iOS](https://support.apple.com/en-gb/HT208108) and [Google Pixel](https://www.theverge.com/2020/4/6/21211230/google-update-pixel-4-eyes-open-fix-face-unlock) devices only unlock the device when you have the eyes open and are looking directly at it.
 
 
