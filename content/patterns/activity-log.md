@@ -1,7 +1,7 @@
 ---
 title: Activity log
 
-category: Understanding decisions
+category: Understanding and influencing decisions
 
 weight: 3
 

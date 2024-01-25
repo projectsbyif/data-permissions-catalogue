@@ -1,7 +1,7 @@
 ---
 title: Query an event
 
-category: Understanding decisions
+category: Understanding and influencing decisions
 
 weight: 3
 

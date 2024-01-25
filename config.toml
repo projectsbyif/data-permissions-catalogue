@@ -1,7 +1,7 @@
 baseURL = "https://catalogue.projectsbyif.com/"
 languageCode = "en-uk"
-title = "Data Patterns Catalogue"
+title = "Design Patterns Catalogue"
 [params]
-  twitterText = " from the data patterns catalogue curated by @projectsbyif #patternsbyif"
+  twitterText = " from the patterns catalogue curated by @projectsbyif #patternsbyif"
   twitterHandle = "projectsbyif"
 enableGitInfo = true

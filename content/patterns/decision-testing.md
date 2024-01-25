@@ -1,7 +1,7 @@
 ---
 title: Decision testing
 
-category: Understanding decisions
+category: Understanding and influencing decisions
 weight: 1
 images:
 - url: /images/decision-testing.svg
@@ -11,11 +11,11 @@ alt: Two mobile phones side by side showing different outcomes of an automated d
 advantages:
  - A low-friction way to help users understand more about how automated decisions are made that doesn’t require lots of previous knowledge.
  - Helps someone test the output before they commit to a course of action.
- - This pattern allows people to test a model using dummy data. (They don’t necessarily have to share any real data about themselves.)
-
+ - Allows people to test a model without using real data about themselves.
 
 limitations:
  - People might create their own theories for why outcomes change, unless it’s combined with other explanation methods. This could work against the intent of the pattern by undermining understanding and explainability.
+ - Could be gamed by people and lead to an increase in the number of false inputs.
 
 examples:
   - title: Risk metric on Flock
@@ -24,10 +24,11 @@ examples:
   - title: ImageNet Roulette
     description: ImageNet Roulette was an experiment published by the AINow Institute that used an algorithm trained using images of people from ImageNet to classify photos uploaded by users. The authors said:“...ImageNet contains a number of problematic, offensive, and bizarre categories. Hence, the results ImageNet Roulette returns often draw upon those categories. That is by design we want to shed light on what happens when technical systems are trained using problematic training data.”
     url: https://www.excavating.ai/
+  - title: Google Flights
+    description: Google Flights allows users to view the price for the same, or comparative flight, in a data grid view. This lets users see whether the cost is more or less, at any date in the future.
+    url: https://www.google.com/travel/flights
 ---
 
-People can test how an automated decision changes by trying different data inputs before committing to the result.
-
-For example, when buying car insurance, someone could test how parking their car in different places change the cost of the policy before they purchase it.
-
-IF thinks this pattern is useful because it exposes how automated systems make decisions without overwhelming someone with technical information. This pattern works best when combined with ways to feedback or get support if the result doesn’t look right.
+People can test how an AI model output changes by trying different input values before committing to the result.
+For example, when buying car insurance, someone could test how parking their car in different places changes the cost of the policy before they purchase it.
+IF thinks this pattern is useful because it exposes how automated systems make decisions without overwhelming someone with technical information. This pattern works best when combined with ways to give feedback or get support if the result doesn’t look right.
