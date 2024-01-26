@@ -485,17 +485,17 @@ display: inline-block;
   box-shadow: inset 0 -0.2em 0 rgb(255,215,95);
 }
 
-.pattern-image-div.understanding-decisions,
-.related-patterns-image.understanding-decisions,
-.pattern-heading-category.understanding-decisions {
+.pattern-image-div.understanding-and-influencing-decisions,
+.related-patterns-image.understanding-and-influencing-decisions,
+.pattern-heading-category.understanding-and-influencing-decisions {
   background-color: rgb(255,145,105);
 }
 
-.related-patterns li.understanding-decisions:hover {
+.related-patterns li.understanding-and-influencing-decisions:hover {
   box-shadow: 0px 0px 30px 12px rgba(255,145,105, 0.25);
 }
 
-.examples-title a.understanding-decisions:hover {
+.examples-title a.understanding-and-influencing-decisions:hover {
   box-shadow: inset 0 -0.2em 0 rgb(255,145,105);
 }
 

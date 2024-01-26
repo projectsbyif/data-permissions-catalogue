@@ -91,7 +91,7 @@ We've created several categories that patterns can belong to. Right now, these a
 * Giving and removing consent
 * Giving access to data
 * Getting access to data
-* Understanding decisions
+* Understanding and influencing decisions
 * Doing security checks
 
 Categories are defined in `content/categories/_index.md`. To create a new category or edit an existing one, simply edit this file.

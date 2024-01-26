@@ -2,7 +2,7 @@
 title: Decision testing
 
 category: Understanding and influencing decisions
-weight: 1
+weight: 3
 images:
 - url: /images/decision-testing.svg
 
