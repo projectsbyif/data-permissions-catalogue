@@ -36,7 +36,7 @@ examples:
 
 ---
 
-Use context [specific displays](https://pair.withgoogle.com/chapter/explainability-trust/#section3) to surface confidence levels in a decision or a suggestion made by an AI system. Support people to understand the implications of differing levels of confidence, and methods of redress if the system is less than fully confident.
+Use [context specific displays](https://pair.withgoogle.com/chapter/explainability-trust/#section3) to surface confidence levels in a decision or a suggestion made by an AI system. Support people to understand the implications of differing levels of confidence, and methods of redress if the system is less than fully confident.
 
 For example, a product identification tool could verbally express its confidence in a prediction, in a way that is easy to interpret for a person.
 
