@@ -2,8 +2,8 @@
 title: Notice of upcoming action
 
 
-category: Understanding decisions
-weight: 2
+category: Understanding and influencing decisions
+weight: 3
 images:
 - url: /images/notice-of-upcoming-action.svg
 
