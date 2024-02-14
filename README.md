@@ -1,6 +1,6 @@
-# Data Patterns ​Catalogue
+# Design Patterns ​Catalogue
 
-An evolving collection of design patterns for sharing data. Maintained by [IF](https://projectsbyif.com/).
+An evolving collection of design patterns. Maintained by [IF](https://projectsbyif.com/).
 
 ## How to contribute
 
@@ -79,7 +79,7 @@ The *front matter* of the Markdown file (the bit at the top between the three da
 
 `date` and `lastmod` are automatically generated and should not be changed.
 
-4. Add pattern description to the body of the Mardown file.
+4. Add pattern description to the body of the Markdown file.
 
 The body of the Markdown file (the bit underneath the three dashes) is a short description of the design pattern.
 
