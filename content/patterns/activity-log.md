@@ -3,7 +3,7 @@ title: Activity log
 
 category: Understanding and influencing decisions
 
-weight: 3
+weight: 10
 
 archived: false
 

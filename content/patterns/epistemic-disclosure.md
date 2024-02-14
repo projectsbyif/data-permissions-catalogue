@@ -15,14 +15,12 @@ future_pattern_reason:
 
 images:
  - url: /images/epistemic-disclosure.svg
-alt: A description of a Saxford Advisor's training data. The data was collected from 2020-2025, sampled from 18-75 years old, resident in Saxford, and funded by Saxford Council.
+alt: Contextual information about a Saxford Advisor model. The text says "This is an AI model. Funded by Saxford Council. Trained by SaxCorp. Last updated on July 2024". There are indications that more information is available.
 
 advantages:
  - Helps people understand how automated decisions were made.
  - Allows people to inspect and interrogate suggestions, decisions and the workings of an AI system.
  - Increased knowledge of the AI system supply chain will help the AI system provide manage internal risks and meet compliance requirements.
-
-
 
 limitations:
  - Needs to be designed with user needs in mind, so that people do not get overwhelmed.
@@ -41,7 +39,7 @@ examples:
 
 Provide insights on the influences, and validity, of the information and data that cause an AI system to reach a particular decision.
 
-This requires breaking down and presenting the information and data that an AI system uses to create its output.
+This requires presenting the contextual information that shapes or impacts the output. For example, capturing what the model was trained or fine-tuned for, or what the bias metrics are of the resulting model
 
 In some contexts the epistemic disclosure will be more important, for example in public sector services that use AI systems. To achieve epistemic disclosure, the technical architecture will need to be designed in such a way that AI systems are intentionally composed as smaller machines, rather than one singular version of the truth. [Examples of this kind of emerging architecture are called compositional chaining](https://maggieappleton.com/squish-structure).
 

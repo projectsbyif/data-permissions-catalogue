@@ -3,11 +3,11 @@ title: AI presence
 
 category: Understanding and influencing decisions
 
-weight: 3
+weight: 40
 
-archived: false
+archived: true
 
-archive_reason:
+archive_reason: AI is increasingly becoming part of how software is built so will be present in everything, all the time.
 
 future_pattern: false
 
