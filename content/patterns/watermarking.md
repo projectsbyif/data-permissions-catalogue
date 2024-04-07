@@ -40,8 +40,8 @@ examples:
 
 ---
 
-Make it clear whether an AI system is in use to create all of, or part of, the interface or experience so that a person can make the right decisions for them. This pattern is important where the information or interface given has a material impact on the person’s choices. This is context specific.
+Watermarking AI content is now a widespread regulatory requirement around the world. The idea is to confirm, through imperceptible marks, if content was AI generated and therefore help reduce misinformation.
 
-Besides stating it plainly, other common indicators an AI system is in use include a “glow” or a sparkle icon.
+For example, in physical cash watermarks are used to help people check that their cash is not fraudulent.
 
-IF thinks this pattern will become more important as organisations use more AI systems, and uncover the tacit user needs of making different choices depending on whether an AI is present or not.
+IF thinks this pattern has limited usefulness mainly because watermarks are so easy to circumvent through removal or false positives. It also raises questions about where society should have boundaries around synthetic content, because lots of content today is made by humans and AI. For example, most smartphone photographs are created by a combination of human eye and AI technology.

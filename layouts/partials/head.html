@@ -8,6 +8,18 @@
     {{ .Title }}
     {{ end }}
   </title>
+  <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "image": "https://catalogue.projectsbyif.com/images/IF-logo%e2%80%93regular.svg",
+    "url": "https://catalogue.projectsbyif.com/",
+    "logo": "https://catalogue.projectsbyif.com/images/IF-logo%e2%80%93regular.svg",
+    "name": "Design Patterns Catalogue",
+    "description": "Build services that earn trust.IF curates this catalogue to help teams design trustworthy services that work for people.",
+    "email": "hello@projectsbyif.com"
+     }
+     </script>
   <link rel="apple-touch-icon" sizes="152x152" href="{{ "/images/apple-touch-icon.png?v=WGoJrwxmWP" | relURL }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/images/favicon-32x32.png?v=WGoJrwxmWP" | relURL }}">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=WGoJrwxmWP">
@@ -26,17 +38,17 @@
   <!-- TODO: add page specific content and images -->
   <meta property="og:url" content="{{ .Site.BaseURL }}">
   <meta property="og:title" content="{{ .Title }} - IF">
-  <meta property="og:description" content="">
+  <meta property="og:description" content="Build services that earn trust. IF curates this catalogue to help teams design trustworthy services that work for people.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@projectsbyif">
   <meta name="twitter:creator" content="@projectsbyif">
   <meta name="twitter:title" content="{{ .Title }} - IF">
   <meta name="twitter:description" content="{{ .Content }}">
   {{ if isset .Params "images" }}
-    <meta name="twitter:image" content="{{ (index .Params.images 0).url | relURL }}">
-    <meta property="og:image" content="{{ (index .Params.images 0).url | relURL }}">
+    <meta name="twitter:image" content="/images/change-the-output.svg">
+    <meta property="og:image" content="/images/change-the-output.svg">
   {{ else }}
-    <meta name="twitter:image" content="">
-    <meta property="og:image" content="">
+    <meta name="twitter:image" content="/images/change-the-output.svg">
+    <meta property="og:image" content="/images/change-the-output.svg">
   {{ end }}
 </head>
