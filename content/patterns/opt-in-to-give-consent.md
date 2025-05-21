@@ -23,7 +23,7 @@ limitations:
 
 examples:
  - title: EU 'Cookie Law'
-   url: https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/#consent
+   url: https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/
    description: Current European Union legislation requires users to opt-in to cookies being stored on devices.
 
 ---
