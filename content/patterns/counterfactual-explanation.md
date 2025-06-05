@@ -26,8 +26,8 @@ limitations:
 
 examples:
   - title: Skyscanner
-    url: https://support.google.com/docs/answer/75509?hl=en&co=GENIE.Platform%3DDesktop
-    description: It list the flights that are possible to take across the day. The prices for those flights are also listed, so a user can see that travelling at different times of day impacts the price they pay
+    url: https://www.skyscanner.com/
+    description: Skyscanner lists the flights it's possible to take across a day. The prices for those flights are also listed, so a user can see that travelling at different times impacts the price they could pay.
 ---
 
 Counterfactual explanations provide a simple way for people to grasp how an AI system generates a result. These explanations rely on examples and occur after the fact. They present statements related to the variables used in reaching the outcome.
